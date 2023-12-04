@@ -26,18 +26,38 @@ const Footer = () => {
 					</div>
 					<nav className={cn(['d-flex', cl.navList])}>
 						<ul>
-							<li>Услуги</li>
-							<li>Взрослое направление</li>
-							<li>Детское направление</li>
-							<li>Врачи</li>
-							<li>Наши работы</li>
+							<li>
+								<Link to="/">Услуги</Link>
+							</li>
+							<li>
+								<Link to="/">Взрослое направление</Link>
+							</li>
+							<li>
+								<Link to="/">Детское направление</Link>
+							</li>
+							<li>
+								<Link to="/">Врачи</Link>
+							</li>
+							<li>
+								<Link to="/">Наши работы</Link>
+							</li>
 						</ul>
 						<ul>
-							<li>Акции</li>
-							<li>Блог</li>
-							<li>О компании</li>
-							<li>Контакты</li>
-							<li>Отзывы</li>
+							<li>
+								<Link to="/">Акции</Link>
+							</li>
+							<li>
+								<Link to="/">Блог</Link>
+							</li>
+							<li>
+								<Link to="/">О компании</Link>
+							</li>
+							<li>
+								<Link to="/">Контакты</Link>
+							</li>
+							<li>
+								<Link to="/">Отзывы</Link>
+							</li>
 						</ul>
 					</nav>
 				</div>
