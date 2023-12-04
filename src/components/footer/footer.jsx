@@ -61,7 +61,7 @@ const Footer = () => {
 						</ul>
 					</nav>
 				</div>
-				<div className="d-flex justify-content-between">
+				<div className="d-flex justify-content-between p-3">
 					<Link className={cl.copyright} to="/">
 						Правовая информация
 					</Link>
