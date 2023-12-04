@@ -1,16 +1,16 @@
-import Header from '@components/header'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
+import Footer from '@components/footer/footer.jsx'
 
 function Routes() {
 	const router = createBrowserRouter([
 		{
 			path: '/',
-			element: <Header/>,
-		},
+			element: <Footer />
+		}
 	])
 
-	return <RouterProvider router={ router }/>
+	return <RouterProvider router={router} />
 }
 
 export default Routes
