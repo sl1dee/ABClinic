@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="microscope">
+<path id="Vector" d="M16 48H37.3333" stroke="#F1F3FF" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M8 58.6667H56" stroke="#F1F3FF" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M37.3332 58.6666C42.2839 58.6666 47.0318 56.6999 50.5325 53.1992C54.0332 49.6986 55.9998 44.9506 55.9998 39.9999C55.9998 35.0492 54.0332 30.3013 50.5325 26.8006C47.0318 23.2999 42.2839 21.3333 37.3332 21.3333H34.6665" stroke="#F1F3FF" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M24 37.3333H29.3333" stroke="#F1F3FF" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M23.9998 32C22.5853 32 21.2288 31.4381 20.2286 30.4379C19.2284 29.4377 18.6665 28.0812 18.6665 26.6667V16H34.6665V26.6667C34.6665 28.0812 34.1046 29.4377 33.1044 30.4379C32.1042 31.4381 30.7477 32 29.3332 32H23.9998Z" stroke="#F1F3FF" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M32.0002 15.9999V7.99992C32.0002 7.29267 31.7192 6.6144 31.2191 6.1143C30.719 5.6142 30.0407 5.33325 29.3335 5.33325H24.0002C23.2929 5.33325 22.6146 5.6142 22.1145 6.1143C21.6144 6.6144 21.3335 7.29267 21.3335 7.99992V15.9999" stroke="#F1F3FF" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

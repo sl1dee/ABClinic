@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="layout-list">
+<path id="Vector" d="M24 8H10.6667C9.19391 8 8 9.19391 8 10.6667V24C8 25.4728 9.19391 26.6667 10.6667 26.6667H24C25.4728 26.6667 26.6667 25.4728 26.6667 24V10.6667C26.6667 9.19391 25.4728 8 24 8Z" stroke="#484D72" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M24 37.3333H10.6667C9.19391 37.3333 8 38.5272 8 40V53.3333C8 54.8061 9.19391 56 10.6667 56H24C25.4728 56 26.6667 54.8061 26.6667 53.3333V40C26.6667 38.5272 25.4728 37.3333 24 37.3333Z" stroke="#484D72" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M37.334 10.6667H56.0007" stroke="#484D72" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M37.334 24H56.0007" stroke="#484D72" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M37.334 40H56.0007" stroke="#484D72" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M37.334 53.3333H56.0007" stroke="#484D72" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
