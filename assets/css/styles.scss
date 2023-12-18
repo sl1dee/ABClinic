@@ -3,7 +3,7 @@
   font-family: 'Manrope', sans-serif;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -15,7 +15,7 @@ $additionalTextColor: #000;
 
 $whiteColor: #fff;
 
-.btn{
+.btn {
   padding: 8px 13px;
   font-size: 18px;
   font-weight: 600;
@@ -24,44 +24,50 @@ $whiteColor: #fff;
   cursor: pointer;
   border: 2px solid $mainColor;
   border-radius: 100px;
-  span{
+
+  span {
     margin-bottom: 0;
     user-select: none;
   }
 }
 
-.btn{
-  &-dark-trnsp{
+.btn {
+  &-dark-trnsp {
     background-color: $mainColor;
     color: $whiteColor;
     transition: background-color .3s ease, color .3s ease;
-    &:hover{
+
+    &:hover {
       color: $mainColor;
       background-color: transparent;
     }
   }
-  &-trnsp-dark{
+
+  &-trnsp-dark {
     background-color: transparent;
     color: $mainColor;
     transition: color .3s ease, background-color .3s ease;
-    &:hover{
+
+    &:hover {
       color: $whiteColor;
       background-color: $mainColor;
     }
   }
-  &-white-trnsp{
+
+  &-white-trnsp {
     background-color: $whiteColor;
     color: $mainColor;
     border: 2px solid $whiteColor;
     transition: color .3s ease, background-color .3s ease;
-    &:hover{
+
+    &:hover {
       color: $whiteColor;
       background-color: transparent;
     }
   }
 }
 
-.header{
+.header {
   background-color: $additionalColor;
   position: sticky;
   top: 0;
@@ -69,27 +75,33 @@ $whiteColor: #fff;
   right: 0;
   padding: 24px 0;
   z-index: 100;
-  &-logo{
-    img{
+
+  &-logo {
+    img {
       height: 51px;
     }
   }
-  &-links{
+
+  &-links {
     column-gap: 25px;
-    .link{
+
+    .link {
       column-gap: 5px;
       position: relative;
-      span{
+
+      span {
         color: #000;
         font-size: 18px;
         font-weight: 500;
         line-height: 110%;
       }
-      img{
+
+      img {
         width: 24px;
         height: 24px;
       }
-      &-menu{
+
+      &-menu {
         position: absolute;
         top: -100px;
         left: 50%;
@@ -99,13 +111,15 @@ $whiteColor: #fff;
         transition: top .3s ease, transform .3s ease;
         pointer-events: none;
         z-index: 1;
-        .content{
+
+        .content {
           row-gap: 20px;
           border-radius: 30px;
           background-color: $whiteColor;
           padding: 50px 40px;
-          &-bigLink{
-            span{
+
+          &-bigLink {
+            span {
               color: $mainTextColor;
               font-size: 32px;
               font-weight: 700;
@@ -113,10 +127,12 @@ $whiteColor: #fff;
               letter-spacing: -0.64px;
             }
           }
-          &-additionalLinks{
+
+          &-additionalLinks {
             row-gap: 5px;
-            >div{
-              span{
+
+            > div {
+              span {
                 color: $mainTextColor;
                 font-size: 20px;
                 font-weight: 500;
@@ -126,8 +142,9 @@ $whiteColor: #fff;
           }
         }
       }
-      &:hover{
-        .link-menu{
+
+      &:hover {
+        .link-menu {
           top: 100%;
           transform: translate(-50%, 0);
           pointer-events: auto;
@@ -135,24 +152,29 @@ $whiteColor: #fff;
       }
     }
   }
-  &-additional{
+
+  &-additional {
     column-gap: 30px;
-    .contacts{
+
+    .contacts {
       column-gap: 20px;
-      &-phone{
-        span{
+
+      &-phone {
+        span {
           color: $mainTextColor;
           font-size: 20px;
           font-weight: 500;
           line-height: 150%;
         }
       }
-      .btn{
+
+      .btn {
         padding: 10px 18px;
         min-width: 178px;
       }
     }
-    .sidenavTrigger{
+
+    .sidenavTrigger {
       display: block;
       position: relative;
       width: 34px;
@@ -170,7 +192,7 @@ $whiteColor: #fff;
   }
 }
 
-.sidebar{
+.sidebar {
   position: fixed;
   top: 0;
   right: 0;
@@ -181,16 +203,19 @@ $whiteColor: #fff;
   opacity: 0;
   transition: opacity .3s ease;
   transition-delay: .3s;
-  &.open{
+
+  &.open {
     pointer-events: auto;
     opacity: 1;
     transition-delay: 0s;
-    .sidebar-content{
+
+    .sidebar-content {
       right: 0;
       transition-delay: .3s;
     }
   }
-  &-bckg{
+
+  &-bckg {
     position: absolute;
     top: 0;
     right: 0;
@@ -201,7 +226,7 @@ $whiteColor: #fff;
     cursor: pointer;
   }
 
-  .closer{
+  .closer {
     position: absolute;
     top: 30px;
     right: 37px;
@@ -209,7 +234,8 @@ $whiteColor: #fff;
     height: 20px;
     cursor: pointer;
     z-index: 1;
-    &::after, &::before{
+
+    &::after, &::before {
       position: absolute;
       content: '';
       background-color: $mainColor;
@@ -217,15 +243,17 @@ $whiteColor: #fff;
       height: 3px;
       border-radius: 20px;
     }
-    &::after{
+
+    &::after {
       transform: rotate(45deg);
     }
-    &::before{
+
+    &::before {
       transform: rotate(-45deg);
     }
   }
 
-  &-content{
+  &-content {
     background-color: #fff;
     position: absolute;
     top: 0;
@@ -241,41 +269,46 @@ $whiteColor: #fff;
     transition-delay: 0s;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    &::-webkit-scrollbar{
+
+    &::-webkit-scrollbar {
       width: 0;
       height: 0;
       display: none;
       background: transparent;
     }
-    &::-webkit-scrollbar-button{
+
+    &::-webkit-scrollbar-button {
       width: 0;
       height: 0;
       display: none;
       background: transparent;
     }
-    &::-webkit-scrollbar-thumb{
+
+    &::-webkit-scrollbar-thumb {
       width: 0;
       display: none;
       background: transparent;
     }
 
-    .menu{
+    .menu {
       row-gap: 20px;
 
-      &-logo{
+      &-logo {
         height: 45px;
       }
 
-      &-links{
+      &-links {
         row-gap: 8px;
-        &_header{
+
+        &_header {
           color: #131313;
           font-size: 20px;
           font-weight: 700;
           line-height: 120%;
           letter-spacing: -0.4px;
         }
-        &_link{
+
+        &_link {
           color: $mainTextColor;
           font-size: 16px;
           font-weight: 500;
@@ -284,25 +317,30 @@ $whiteColor: #fff;
       }
     }
 
-    .contacts{
+    .contacts {
       row-gap: 16px;
-      &-info{
+
+      &-info {
         row-gap: 8px;
-        &_link{
+
+        &_link {
           column-gap: 12px;
-          img{
+
+          img {
             width: 20px;
             height: 20px;
           }
-          p{
+
+          p {
             color: $mainTextColor;
             font-size: 14px;
             font-weight: 500;
             line-height: 150%;
           }
         }
-        &_time{
-          p{
+
+        &_time {
+          p {
             color: $mainColor;
             font-size: 12px;
             font-weight: 500;
@@ -310,82 +348,98 @@ $whiteColor: #fff;
           }
         }
       }
-      .btn{
+
+      .btn {
         font-size: 14px;
       }
     }
   }
 }
 
-.mainSlider{
+.mainSlider {
   padding: 45px 0 75px;
   background-color: $additionalColor;
-  &-slide{
-    >div{
+
+  &-slide {
+    > div {
       height: 500px !important;
       column-gap: 20px;
-      .text{
+
+      .text {
         background-color: $whiteColor;
         border-radius: 30px;
         padding: 90px 135px 50px 40px;
         position: relative;
         z-index: 0;
         row-gap: 20px;
-        .bckgIcon{
+
+        .bckgIcon {
           position: absolute;
           z-index: -1;
           bottom: 18px;
           right: 83px;
         }
-        &-content{
+
+        &-content {
           row-gap: 22px;
-          h2, p{
+
+          h2, p {
             color: #131313;
           }
-          h2{
+
+          h2 {
             font-size: 38px;
             font-weight: 700;
             line-height: 120%;
             letter-spacing: -0.76px;
           }
-          p{
+
+          p {
             font-size: 18px;
             font-weight: 500;
             line-height: 150%;
             max-width: 510px;
           }
-          .btn{
+
+          .btn {
             padding: 14px 24px;
           }
         }
       }
-      .photo{
+
+      .photo {
         border-radius: 30px;
         overflow: hidden;
         width: 100%;
         max-width: 392px;
-        img{
+
+        img {
           object-fit: cover;
           width: 100%;
         }
       }
-      .arrows{
+
+      .arrows {
         column-gap: 16px;
-        .swiper-button-next, .swiper-button-prev{
+
+        .swiper-button-next, .swiper-button-prev {
           width: 40px;
           height: 40px;
           cursor: pointer;
           position: unset;
           margin-top: 0;
-          &::after{
+
+          &::after {
             content: unset;
           }
-          img{
+
+          img {
             width: 100%;
             height: 100%;
           }
         }
-        span{
+
+        span {
           color: $mainColor;
           font-size: 18px;
           font-weight: 600;
@@ -397,14 +451,16 @@ $whiteColor: #fff;
   }
 }
 
-.services{
+.services {
   padding: 75px 0;
   background-color: $additionalColor;
-  >div{
+
+  > div {
     row-gap: 20px;
   }
-  &-preHeader{
-    p{
+
+  &-preHeader {
+    p {
       color: $mainTextColor;
       font-size: 24px;
       font-weight: 600;
@@ -412,12 +468,15 @@ $whiteColor: #fff;
       letter-spacing: -0.48px;
     }
   }
-  &-content{
+
+  &-content {
     row-gap: 40px;
   }
-  &-tabs{
+
+  &-tabs {
     column-gap: 40px;
-    &-el{
+
+    &-el {
       color: $mainColor;
       opacity: .5;
       font-size: 38px;
@@ -427,7 +486,8 @@ $whiteColor: #fff;
       transition: opacity .3s ease, color .3s ease;
       position: relative;
       cursor: pointer;
-      &::after{
+
+      &::after {
         height: 3px;
         background-color: $mainTextColor;
         opacity: 0;
@@ -439,33 +499,38 @@ $whiteColor: #fff;
         right: 0;
       }
 
-      &.active, &.single{
+      &.active, &.single {
         color: $additionalTextColor;
         opacity: 1;
-        &::after{
+
+        &::after {
           opacity: 1;
         }
       }
 
-      &.single{
+      &.single {
         cursor: default;
-        &::after{
+
+        &::after {
           content: unset;
         }
       }
     }
   }
-  &-tabsContent{
+
+  &-tabsContent {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     position: relative;
     z-index: 0;
-    .onlyImage{
+
+    .onlyImage {
       border-radius: 30px;
       overflow: hidden;
       position: relative;
-      img{
+
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -473,45 +538,53 @@ $whiteColor: #fff;
         position: absolute;
       }
     }
-    .additionalImage{
+
+    .additionalImage {
       position: absolute;
       right: 20px;
       top: 70px;
       transform: translate(0, -100%);
       z-index: -1;
       max-height: 190px;
-      img{
+
+      img {
         height: 100%;
       }
     }
-    >div:not(.onlyImage, .additionalImage){
+
+    > div:not(.onlyImage, .additionalImage) {
       background-color: $whiteColor;
       padding: 40px;
       border-radius: 30px;
       min-height: 290px;
       gap: 14px;
       overflow: hidden;
-      .text{
+
+      .text {
         row-gap: 12px;
-        h2{
+
+        h2 {
           color: $mainTextColor;
           font-size: 24px;
           font-weight: 600;
           line-height: 140%;
           letter-spacing: -0.48px;
         }
-        p{
+
+        p {
           color: $mainColor;
           font-size: 18px;
           font-weight: 500;
           line-height: 150%;
         }
       }
-      .badge{
+
+      .badge {
         padding: 4px 20px;
         background-color: $additionalColor;
         border-radius: 30px;
-        span{
+
+        span {
           color: $mainColor;
           font-size: 18px;
           font-weight: 500;
@@ -522,8 +595,8 @@ $whiteColor: #fff;
   }
 }
 
-.favorites, .employeesSlider, .ourWorks, .reviewsSlider, .articles, .about{
-  &-header{
+.favorites, .employeesSlider, .ourWorks, .reviewsSlider, .articles, .about {
+  &-header {
     color: $mainTextColor;
     font-size: 38px;
     font-weight: 700;
@@ -532,22 +605,26 @@ $whiteColor: #fff;
   }
 }
 
-.favorites{
+.favorites {
   padding: 75px 0;
   background-color: $additionalColor;
-  >div{
+
+  > div {
     row-gap: 40px;
   }
-  &-content{
+
+  &-content {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    .onlyImage{
+
+    .onlyImage {
       border-radius: 30px;
       overflow: hidden;
       position: relative;
-      img{
+
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -555,38 +632,45 @@ $whiteColor: #fff;
         position: absolute;
       }
     }
-    &-el{
+
+    &-el {
       padding: 40px;
       border-radius: 30px;
       background-color: $whiteColor;
       row-gap: 40px;
-      .text{
+
+      .text {
         row-gap: 14px;
-        &-header{
+
+        &-header {
           color: $mainTextColor;
           font-size: 24px;
           font-weight: 600;
           line-height: 140%;
           letter-spacing: -0.48px;
         }
-        &-description{
+
+        &-description {
           color: $mainColor;
           font-size: 18px;
           font-weight: 500;
           line-height: 150%;
         }
       }
-      .photo{
-        img{
+
+      .photo {
+        img {
           width: 64px;
           height: 64px;
         }
       }
-      &.dark{
+
+      &.dark {
         background-color: $mainColor;
         grid-column: span 2;
-        .text{
-          &-header, &-description{
+
+        .text {
+          &-header, &-description {
             color: $whiteColor;
           }
         }
@@ -595,54 +679,64 @@ $whiteColor: #fff;
   }
 }
 
-.employeesSlider{
+.employeesSlider {
   padding: 75px 0;
   background-color: $additionalColor;
   overflow: hidden;
-  >div{
+
+  > div {
     row-gap: 40px;
   }
-  .swiper{
+
+  .swiper {
     overflow: visible;
   }
-  .arrows{
+
+  .arrows {
     column-gap: 16px;
-    .swiper-button-next, .swiper-button-prev{
+
+    .swiper-button-next, .swiper-button-prev {
       width: 40px;
       height: 40px;
       cursor: pointer;
       position: unset;
       margin-top: 0;
       user-select: none;
-      &::after{
+
+      &::after {
         content: unset;
       }
-      img{
+
+      img {
         width: 100%;
         height: 100%;
       }
     }
   }
-  &-slide{
+
+  &-slide {
     border-radius: 30px;
     overflow: hidden;
     position: relative;
     max-height: 490px;
     max-width: 320px;
-    .photo{
+
+    .photo {
       width: 100%;
       height: 100%;
       user-select: none;
       border-radius: 0 0 35px 35px;
       overflow: hidden;
-      img{
+
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: top;
       }
     }
-    .info{
+
+    .info {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -652,27 +746,32 @@ $whiteColor: #fff;
       background-color: $whiteColor;
       min-height: 180px;
       row-gap: 20px;
-      &-text{
+
+      &-text {
         row-gap: 6px;
-        &-name{
+
+        &-name {
           color: $mainTextColor;
           font-size: 24px;
           font-weight: 600;
           line-height: 120%;
           letter-spacing: -0.48px;
         }
-        &-position{
+
+        &-position {
           color: $mainColor;
           font-size: 18px;
           font-weight: 500;
           line-height: 130%;
         }
       }
-      &-badge{
+
+      &-badge {
         border-radius: 82px;
         background: $additionalColor;
         padding: 4px 12px;
-        p{
+
+        p {
           color: $mainColor;
           font-size: 18px;
           font-weight: 500;
@@ -683,33 +782,37 @@ $whiteColor: #fff;
   }
 }
 
-.ourWorks{
+.ourWorks {
   padding: 75px 0;
   background-color: $additionalColor;
   overflow: hidden;
 
-  &-headerWrap{
+  &-headerWrap {
     column-gap: 20px;
   }
 
-  .arrows{
+  .arrows {
     column-gap: 16px;
-    .swiper-button-next, .swiper-button-prev{
+
+    .swiper-button-next, .swiper-button-prev {
       width: 40px;
       height: 40px;
       cursor: pointer;
       position: unset;
       margin-top: 0;
       user-select: none;
-      &::after{
+
+      &::after {
         content: unset;
       }
-      img{
+
+      img {
         width: 100%;
         height: 100%;
       }
     }
-    span{
+
+    span {
       color: $mainColor;
       font-size: 18px;
       font-weight: 600;
@@ -718,55 +821,64 @@ $whiteColor: #fff;
     }
   }
 
-  &-content{
-    row-gap:  40px;
+  &-content {
+    row-gap: 40px;
     padding: 50px;
     background-color: $whiteColor;
     border-radius: 30px;
   }
 
-  .swiper{
+  .swiper {
     width: 100%;
   }
 
-  &-slide{
+  &-slide {
     width: 100%;
     column-gap: 40px;
-    .compare{
+
+    .compare {
       position: relative;
       min-height: 215px;
       min-width: 350px;
       width: 100%;
       border-radius: 30px;
       overflow: hidden;
-      >div{
+
+      > div {
         height: 100% !important;
       }
-      &-handler{
+
+      &-handler {
         width: 70px;
         height: 70px;
         border-radius: 100px;
         background-color: #F1F3FF;
-        img{
+
+        img {
           width: 44px;
           height: 44px;
         }
       }
     }
-    .compareWrap{
+
+    .compareWrap {
       row-gap: 20px;
-      .compare{
+
+      .compare {
         height: 100%;
       }
     }
-    .textWrap{
+
+    .textWrap {
       column-gap: 40px;
     }
-    .description{
+
+    .description {
       row-gap: 20px;
       max-width: 300px;
-      &-header{
-        p{
+
+      &-header {
+        p {
           color: $additionalTextColor;
           font-size: 20px;
           font-weight: 600;
@@ -774,36 +886,43 @@ $whiteColor: #fff;
           letter-spacing: -0.4px;
         }
       }
-      &-text{
-        p{
+
+      &-text {
+        p {
           color: $mainColor;
           font-size: 16px;
           font-weight: 500;
           line-height: 150%;
         }
       }
-      &-content{
+
+      &-content {
         row-gap: 10px;
       }
     }
-    .person{
+
+    .person {
       column-gap: 12px;
-      &-avatar{
+
+      &-avatar {
         width: 63px;
         height: 63px;
         border-radius: 100px;
         background-size: 125%;
         background-position: center 20%;
       }
-      &-text{
+
+      &-text {
         row-gap: 2px;
-        &-position{
+
+        &-position {
           color: $mainColor;
           font-size: 16px;
           font-weight: 600;
           line-height: 150%;
         }
-        &-name{
+
+        &-name {
           color: $additionalTextColor;
           font-size: 18px;
           font-weight: 600;
@@ -814,54 +933,64 @@ $whiteColor: #fff;
   }
 }
 
-.reviewsSlider{
+.reviewsSlider {
   padding: 75px 0;
   background-color: $additionalColor;
   overflow: hidden;
-  >div{
+
+  > div {
     row-gap: 40px;
   }
-  .swiper{
+
+  .swiper {
     overflow: visible;
   }
-  .arrows{
+
+  .arrows {
     column-gap: 16px;
-    .swiper-button-next, .swiper-button-prev{
+
+    .swiper-button-next, .swiper-button-prev {
       width: 40px;
       height: 40px;
       cursor: pointer;
       position: unset;
       margin-top: 0;
       user-select: none;
-      &::after{
+
+      &::after {
         content: unset;
       }
-      img{
+
+      img {
         width: 100%;
         height: 100%;
       }
     }
   }
-  &-slide{
+
+  &-slide {
     border-radius: 30px;
     overflow: hidden;
     position: relative;
     max-height: 490px;
     max-width: 320px;
-    .photo{
+
+    .photo {
       width: 100%;
       height: 100%;
       user-select: none;
       border-radius: 0 0 35px 35px;
       overflow: hidden;
-      img{
+
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: top;
       }
     }
-    .icon{
+
+    .icon {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -870,39 +999,46 @@ $whiteColor: #fff;
   }
 }
 
-.articles{
+.articles {
   padding: 75px 0;
   background-color: $additionalColor;
-  >div{
+
+  > div {
     row-gap: 40px;
   }
-  .btn.btn-trnsp-dark{
+
+  .btn.btn-trnsp-dark {
     padding: 16px 26px;
   }
-  &-content{
+
+  &-content {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    &-el{
+
+    &-el {
       border-radius: 30px;
       overflow: hidden;
       position: relative;
       max-height: 490px;
-      .photo{
+
+      .photo {
         width: 100%;
         height: 100%;
         user-select: none;
         border-radius: 0 0 35px 35px;
         overflow: hidden;
-        img{
+
+        img {
           width: 100%;
           height: 80%;
           object-fit: cover;
           object-position: top center;
         }
       }
-      .text{
+
+      .text {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -912,14 +1048,16 @@ $whiteColor: #fff;
         background-color: $whiteColor;
         min-height: 160px;
         row-gap: 8px;
-        &-header{
+
+        &-header {
           color: $mainTextColor;
           font-size: 24px;
           font-weight: 600;
           line-height: 120%;
           letter-spacing: -0.48px;
         }
-        &-date{
+
+        &-date {
           color: $mainColor;
           font-size: 18px;
           font-weight: 500;
@@ -930,21 +1068,25 @@ $whiteColor: #fff;
   }
 }
 
-.about{
+.about {
   padding: 75px 0;
   background-color: $additionalColor;
   overflow: hidden;
-  >div{
+
+  > div {
     row-gap: 50px;
   }
-  .swiper{
+
+  .swiper {
     overflow: visible;
     width: 100%;
   }
-  &-headerWrap{
+
+  &-headerWrap {
     column-gap: 40px;
   }
-  &-description{
+
+  &-description {
     color: #484D72;
     font-size: 18px;
     font-weight: 500;
@@ -952,12 +1094,14 @@ $whiteColor: #fff;
     max-width: 710px;
     width: 80%;
   }
-  &-slide{
+
+  &-slide {
     border-radius: 40px;
     overflow: hidden;
     position: relative;
     width: auto !important;
-    img{
+
+    img {
       max-height: 360px;
       max-width: 600px;
       object-fit: cover;
@@ -966,21 +1110,24 @@ $whiteColor: #fff;
   }
 }
 
-.contactsBlock{
+.contactsBlock {
   padding: 75px 0 150px;
   background-color: $additionalColor;
-  &-mapWrap{
+
+  &-mapWrap {
     position: relative;
     z-index: 0;
   }
-  &-map{
+
+  &-map {
     width: 100%;
     min-height: 650px;
     border-radius: 30px;
     overflow: hidden;
     z-index: -1;
   }
-  &-info{
+
+  &-info {
     row-gap: 8px;
     padding: 40px;
     border-radius: 30px;
@@ -989,20 +1136,23 @@ $whiteColor: #fff;
     position: absolute;
     top: 40px;
     left: 40px;
-    &-header{
+
+    &-header {
       color: $mainTextColor;
       font-size: 30px;
       font-weight: 700;
       line-height: 140%;
       letter-spacing: -0.6px;
     }
-    &-contact{
+
+    &-contact {
       color: $mainTextColor;
       font-size: 20px;
       font-weight: 500;
       line-height: 150%;
     }
-    &-time{
+
+    &-time {
       color: $mainColor;
       font-size: 16px;
       font-weight: 500;
@@ -1011,17 +1161,20 @@ $whiteColor: #fff;
   }
 }
 
-.footer{
+.footer {
   padding: 40px 0 30px;
   background-color: $mainColor;
-  >div{
+
+  > div {
     row-gap: 70px;
   }
-  &-content{
+
+  &-content {
     column-gap: 40px;
   }
-  &-bottom{
-    &-link{
+
+  &-bottom {
+    &-link {
       color: $additionalColor;
       opacity: .7;
       font-size: 16px;
@@ -1029,38 +1182,46 @@ $whiteColor: #fff;
       line-height: 150%;
     }
   }
-  &-logo{
-    img{
+
+  &-logo {
+    img {
       height: 50px;
     }
   }
-  &-links{
+
+  &-links {
     row-gap: 10px;
-    p{
+
+    p {
       color: $whiteColor;
       font-size: 18px;
       font-weight: 600;
       line-height: 150%;
     }
   }
-  &-contacts{
+
+  &-contacts {
     row-gap: 20px;
-    &-el{
+
+    &-el {
       row-gap: 6px;
-      .label{
+
+      .label {
         color: $additionalColor;
         font-size: 16px;
         font-weight: 500;
         line-height: 150%;
       }
-      .contact{
+
+      .contact {
         color: $whiteColor;
         font-size: 18px;
         font-weight: 600;
         line-height: 150%;
       }
     }
-    .btn.btn-white-trnsp{
+
+    .btn.btn-white-trnsp {
       padding: 16px 26px;
     }
   }
@@ -1075,14 +1236,17 @@ $whiteColor: #fff;
   height: 100%;
   z-index: 1100;
   overflow: hidden;
-  &.active{
+
+  &.active {
     display: flex;
-    .ask-block{
+
+    .ask-block {
       opacity: 1;
       transform: translate(0, 0);
     }
   }
-  &-overlay{
+
+  &-overlay {
     position: absolute;
     cursor: pointer;
     z-index: -1;
@@ -1092,6 +1256,7 @@ $whiteColor: #fff;
     right: 0;
     left: 0;
   }
+
   &-block {
     max-width: 1025px;
     position: relative;
@@ -1103,42 +1268,50 @@ $whiteColor: #fff;
     opacity: 0;
     transform: translate(0, -100px);
     transition: transform .3s ease, opacity .3s ease;
-    &-text{
+
+    &-text {
       row-gap: 30px;
     }
-    &-image{
+
+    &-image {
       background-size: cover;
       background-position: center;
       border-radius: 30px;
       max-width: 340px;
     }
-    .text{
+
+    .text {
       row-gap: 20px;
-      .request{
+
+      .request {
         color: $mainTextColor;
         font-size: 34px;
         font-style: normal;
         font-weight: 700;
         letter-spacing: -0.68px;
       }
-      .request2{
+
+      .request2 {
         color: $mainColor;
         font-size: 18px;
         font-weight: 500;
         line-height: 150%;
       }
     }
+
     form {
       margin-bottom: 0;
       row-gap: 20px;
-      >div{
+
+      > div {
         row-gap: 20px;
       }
+
       .ask-block-fields {
         width: 100%;
         row-gap: 20px;
 
-        input{
+        input {
           padding: 14px 15px 14px 30px;
           background: #FFFFFF;
           border-radius: 60px;
@@ -1148,28 +1321,34 @@ $whiteColor: #fff;
           line-height: 20px;
           width: 100%;
           color: $mainColor;
-          &::placeholder{
+
+          &::placeholder {
             color: $mainColor;
             opacity: .6;
           }
         }
+
         #ask {
           padding: 12px 13px;
         }
+
         > div {
           width: 100%;
           position: relative;
         }
       }
+
       .btn {
         padding: 10px 15px;
       }
+
       p.text-center {
         font-weight: 500;
         font-size: 12px;
         line-height: 15px;
         color: #999999;
         margin: 0;
+
         a {
           color: #999999;
           text-decoration: underline;
@@ -1179,7 +1358,49 @@ $whiteColor: #fff;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1200px){
+.stock {
+  //max-width: none;
+  padding-bottom: 110px;
+  margin: 0;
+  background-color: $additionalColor;
+  //max-width: 1216px;
+}
+
+.stockHeader {
+  font-size: 48px;
+  font-weight: 700;
+  padding: 70px 0 40px 0;
+}
+
+.stockContent {
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.stockImg {
+
+}
+
+.stockBlock {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  gap: 20px;
+  width: 100%;
+}
+
+.stockTitle {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.stockText {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
   .container {
     max-width: none;
     padding: 0 20px;
@@ -1189,27 +1410,32 @@ $whiteColor: #fff;
   .ask {
     &-block {
       column-gap: 50px;
-      &-text{
+
+      &-text {
         row-gap: 30px;
       }
-      &-image{
+
+      &-image {
         min-width: 340px;
       }
     }
   }
 
-  .mainSlider{
+  .mainSlider {
     padding: 35px 0 75px;
-    &-slide{
-      >div{
-        .text{
+
+    &-slide {
+      > div {
+        .text {
           padding: 50px 55px 50px 40px;
-          .bckgIcon{
+
+          .bckgIcon {
             bottom: 23px;
             right: 40px;
           }
-          &-content{
-            p{
+
+          &-content {
+            p {
               max-width: unset;
             }
           }
@@ -1218,54 +1444,72 @@ $whiteColor: #fff;
     }
   }
 
-  .services{
-    &-tabsContent{
+  .services {
+    &-tabsContent {
       grid-template-columns: 1fr 1fr;
-      >div:not(.onlyImage, .additionalImage){
+
+      > div:not(.onlyImage, .additionalImage) {
         min-height: 275px;
       }
-      .additionalImage{
+
+      .additionalImage {
         right: 30px;
         top: 35px;
-        img{
+
+        img {
           max-height: 180px;
         }
       }
     }
   }
 
-  .ourWorks{
-    &-content{
+  .ourWorks {
+    &-content {
       row-gap: 30px;
       padding: 50px;
     }
 
-    &-slide{
+    &-slide {
       column-gap: 50px;
-      .compareWrap{
+
+      .compareWrap {
         row-gap: 20px;
         width: 100%;
-        .compare{
+
+        .compare {
           min-width: 300px;
           min-height: 220px;
           height: 100%;
         }
       }
-      .compare{
-        &-handler{
+
+      .compare {
+        &-handler {
           width: 52px;
           height: 48px;
-          img{
+
+          img {
             width: 33px;
             height: 33px;
           }
         }
       }
-      .description{
+
+      .description {
         row-gap: 40px;
         max-width: unset;
       }
     }
+  }
+
+  .stockHeader {
+    padding: 60px 0 40px 0;
+  }
+  .stockTitle {
+    font-size: 32px;
+  }
+  .stockText {
+    font-size: 18px;
   }
 }
 
@@ -1276,7 +1520,7 @@ $whiteColor: #fff;
     margin: 0;
   }
 
-  .btn{
+  .btn {
     font-size: 16px;
   }
 
@@ -1284,32 +1528,41 @@ $whiteColor: #fff;
     &-block {
       padding: 40px;
       column-gap: 50px;
-      &-text{
+
+      &-text {
         row-gap: 30px;
       }
-      &-image{
+
+      &-image {
         border-radius: 30px;
         max-width: 280px;
         min-width: 275px;
       }
-      .text{
+
+      .text {
         row-gap: 10px;
-        .request{
+
+        .request {
           font-size: 28px;
           letter-spacing: -0.56px;
         }
-        .request2{
+
+        .request2 {
           font-size: 16px;
         }
       }
+
       form {
         row-gap: 30px;
-        >div{
+
+        > div {
           row-gap: 20px;
         }
+
         .ask-block-fields {
           row-gap: 20px;
         }
+
         .btn {
           padding: 10px 15px;
         }
@@ -1317,37 +1570,44 @@ $whiteColor: #fff;
     }
   }
 
-  .favorites, .employeesSlider, .ourWorks, .reviewsSlider, .articles, .about{
-    &-header{
+  .favorites, .employeesSlider, .ourWorks, .reviewsSlider, .articles, .about {
+    &-header {
       font-size: 28px;
       letter-spacing: -0.56px;
     }
   }
 
-  .favorites{
+  .favorites {
     padding: 55px 0;
-    &-content{
+
+    &-content {
       grid-template-columns: 1fr 1fr;
       gap: 16px;
-      .onlyImage{
+
+      .onlyImage {
         min-height: 210px;
       }
-      &-el{
+
+      &-el {
         padding: 30px;
         column-gap: 30px;
         grid-column: span 2;
-        .text{
+
+        .text {
           row-gap: 8px;
-          &-header{
+
+          &-header {
             font-size: 22px;
             letter-spacing: -0.44px;
           }
-          &-description{
+
+          &-description {
             font-size: 16px;
           }
         }
-        .photo{
-          img{
+
+        .photo {
+          img {
             width: 50px;
             height: 50px;
           }
@@ -1356,30 +1616,38 @@ $whiteColor: #fff;
     }
   }
 
-  .mainSlider{
+  .mainSlider {
     padding: 25px 0 55px;
-    &-slide{
-      >div{
+
+    &-slide {
+      > div {
         column-gap: 18px;
-        .text{
+
+        .text {
           padding: 50px 40px;
-          .bckgIcon{
+
+          .bckgIcon {
             bottom: 47px;
             right: 31px;
           }
-          &-content{
+
+          &-content {
             row-gap: 22px;
-            h2{
+
+            h2 {
               font-size: 27px;
             }
-            p{
+
+            p {
               font-size: 16px;
             }
           }
         }
-        .photo{
+
+        .photo {
           max-width: 302px;
-          img{
+
+          img {
             height: 100%;
           }
         }
@@ -1387,86 +1655,105 @@ $whiteColor: #fff;
     }
   }
 
-  .services{
+  .services {
     padding: 55px 0;
-    >div{
+
+    > div {
       row-gap: 26px;
     }
-    &-preHeader{
-      p{
+
+    &-preHeader {
+      p {
         color: $mainTextColor;
         font-size: 20px;
         letter-spacing: -0.4px;
       }
     }
-    &-content{
+
+    &-content {
       row-gap: 52px;
     }
-    &-tabs{
-      &-el{
+
+    &-tabs {
+      &-el {
         font-size: 28px;
         letter-spacing: -0.56px;
-        &::after{
+
+        &::after {
           height: 2.5px;
         }
       }
     }
-    &-tabsContent{
+
+    &-tabsContent {
       grid-template-columns: 1fr 1fr;
       gap: 16px;
-      >div:not(.onlyImage, .additionalImage){
+
+      > div:not(.onlyImage, .additionalImage) {
         background-color: $whiteColor;
         padding: 30px;
         min-height: 225px;
         gap: 14px;
-        .text{
+
+        .text {
           row-gap: 8px;
-          h2{
+
+          h2 {
             font-size: 22px;
             letter-spacing: -0.44px;
           }
-          p{
+
+          p {
             font-size: 16px;
           }
         }
-        .badge{
+
+        .badge {
           border-radius: 82px;
-          span{
+
+          span {
             font-size: 16px;
           }
         }
       }
-      .additionalImage{
+
+      .additionalImage {
         right: 5px;
         top: 30px;
-        img{
+
+        img {
           max-height: 145px;
         }
       }
     }
   }
 
-  .employeesSlider{
+  .employeesSlider {
     padding: 55px 0;
-    >div{
+
+    > div {
       row-gap: 40px;
     }
-    .swiper{
+
+    .swiper {
       overflow: visible;
     }
-    &-slide{
-      .info{
-        &-text{
-          &-name{
+
+    &-slide {
+      .info {
+        &-text {
+          &-name {
             font-size: 22px;
             letter-spacing: -0.44px;
           }
-          &-position{
+
+          &-position {
             font-size: 16px;
           }
         }
-        &-badge{
-          p{
+
+        &-badge {
+          p {
             font-size: 16px;
           }
         }
@@ -1474,28 +1761,33 @@ $whiteColor: #fff;
     }
   }
 
-  .ourWorks{
+  .ourWorks {
     padding: 55px 0;
 
-    &-content{
+    &-content {
       padding: 50px 40px;
     }
 
-    &-slide{
+    &-slide {
       row-gap: 40px;
-      .compare{
+
+      .compare {
         width: 445px;
       }
-      .compareWrap{
+
+      .compareWrap {
         row-gap: 20px;
-        .compare{
+
+        .compare {
           height: 315px;
         }
       }
-      .textWrap{
+
+      .textWrap {
         column-gap: 40px;
       }
-      .description{
+
+      .description {
         row-gap: 20px;
         max-width: unset;
         width: 50%;
@@ -1503,34 +1795,41 @@ $whiteColor: #fff;
     }
   }
 
-  .reviewsSlider{
+  .reviewsSlider {
     padding: 55px 0;
-    >div{
+
+    > div {
       row-gap: 40px;
     }
-    .swiper{
+
+    .swiper {
       overflow: visible;
     }
   }
 
-  .articles{
+  .articles {
     padding: 55px 0;
-    >div{
+
+    > div {
       row-gap: 50px;
     }
-    &-content{
+
+    &-content {
       display: grid;
       grid-template-rows: 1fr;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      &-el{
-        .text{
+
+      &-el {
+        .text {
           min-height: 165px;
-          &-header{
+
+          &-header {
             font-size: 22px;
             letter-spacing: -0.44px;
           }
-          &-date{
+
+          &-date {
             font-size: 18px;
           }
         }
@@ -1538,61 +1837,84 @@ $whiteColor: #fff;
     }
   }
 
-  .about{
+  .about {
     padding: 55px 0;
-    >div{
+
+    > div {
       row-gap: 40px;
     }
-    &-headerWrap{
+
+    &-headerWrap {
       row-gap: 20px;
     }
-    &-description{
+
+    &-description {
       max-width: unset;
       width: 100%;
     }
-    &-slide{
+
+    &-slide {
       border-radius: 40px;
     }
   }
 
-  .contactsBlock{
+  .contactsBlock {
     padding: 55px 0 110px;
-    &-map{
+
+    &-map {
       min-height: 440px;
     }
-    &-info{
-      &-header{
+
+    &-info {
+      &-header {
         font-size: 28px;
         letter-spacing: -0.56px;
       }
     }
   }
 
-  .footer{
+  .footer {
     padding: 40px 0;
-    >div{
+
+    > div {
       row-gap: 50px;
     }
-    &-content{
+
+    &-content {
       column-gap: 30px;
     }
-    &-links{
+
+    &-links {
       row-gap: 6px;
-      p{
+
+      p {
         font-size: 16px;
       }
     }
-    &-contacts{
-      &-el{
+
+    &-contacts {
+      &-el {
         row-gap: 6px;
-        .label{
+
+        .label {
           font-size: 14px;
         }
-        .contact{
+
+        .contact {
           font-size: 16px;
         }
       }
     }
+  }
+  .stockHeader {
+    font-size: 36px;
+    padding: 50px 0 40px 0;
+  }
+  .stockTitle {
+    font-size: 28px;
+  }
+  .stockText {
+    font-size: 16px;
   }
 }
 
@@ -1603,7 +1925,7 @@ $whiteColor: #fff;
     margin: 0;
   }
 
-  .btn{
+  .btn {
     font-size: 14px;
   }
 
@@ -1611,27 +1933,35 @@ $whiteColor: #fff;
     &-block {
       padding: 30px 20px;
       max-width: 350px;
-      &-text{
+
+      &-text {
         row-gap: 16px;
       }
-      .text{
+
+      .text {
         row-gap: 8px;
-        .request{
+
+        .request {
           font-size: 20px;
           letter-spacing: -0.4px;
         }
-        .request2{
+
+        .request2 {
           font-size: 14px;
         }
       }
+
       form {
         row-gap: 8px;
-        >div{
+
+        > div {
           row-gap: 8px;
         }
+
         .ask-block-fields {
           row-gap: 8px;
         }
+
         .btn {
           padding: 10px 13px;
         }
@@ -1639,76 +1969,88 @@ $whiteColor: #fff;
     }
   }
 
-  .header{
+  .header {
     padding: 20px 0;
-    &-logo{
-      img{
+
+    &-logo {
+      img {
         height: 45px;
       }
     }
   }
 
-  .sidebar{
-    .closer{
+  .sidebar {
+    .closer {
       right: 27px;
     }
 
-    &-content{
+    &-content {
       max-width: 320px;
       padding: 20px;
       row-gap: 16px;
       border-radius: 30px;
 
-      .menu{
+      .menu {
         row-gap: 16px;
       }
     }
   }
 
-  .mainSlider{
+  .mainSlider {
     padding: 50px 0 40px;
     background-color: $additionalColor;
-    &-slide{
-      >div{
+
+    &-slide {
+      > div {
         height: unset !important;
         row-gap: 16px;
         background-color: $whiteColor;
         border-radius: 20px;
         padding: 30px 20px;
-        .text{
+
+        .text {
           padding: unset;
-          &-content{
+
+          &-content {
             row-gap: 8px;
-            h2{
+
+            h2 {
               font-size: 20px;
               letter-spacing: -0.9px;
             }
-            p{
+
+            p {
               font-size: 14px;
               max-width: unset;
             }
-            .btnWrap{
+
+            .btnWrap {
               padding-top: 12px;
-              .btn{
+
+              .btn {
                 padding: 10px 24px;
               }
             }
           }
         }
-        .photo{
+
+        .photo {
           border-radius: 20px;
           max-width: unset;
-          img{
+
+          img {
             aspect-ratio: 1 / 1;
             object-position: top;
           }
         }
-        .arrows{
-          .swiper-button-next, .swiper-button-prev{
+
+        .arrows {
+          .swiper-button-next, .swiper-button-prev {
             width: 32px;
             height: 32px;
           }
-          span{
+
+          span {
             font-size: 14.4px;
             letter-spacing: -0.288px;
           }
@@ -1717,57 +2059,71 @@ $whiteColor: #fff;
     }
   }
 
-  .services{
+  .services {
     padding: 40px 0;
-    >div{
+
+    > div {
       row-gap: 16px;
     }
-    &-preHeader{
-      p{
+
+    &-preHeader {
+      p {
         font-size: 16px;
         letter-spacing: -0.32px;
       }
     }
-    &-content{
+
+    &-content {
       row-gap: 32px;
     }
-    &-tabs{
+
+    &-tabs {
       column-gap: 20px;
-      &-el{
+
+      &-el {
         font-size: 20px;
         letter-spacing: -0.4px;
-        &::after{
+
+        &::after {
           height: 2px;
           bottom: -8px;
         }
       }
     }
-    &-tabsContent{
+
+    &-tabsContent {
       grid-template-rows: 1fr;
       grid-template-columns: 1fr;
       gap: 12px;
-      .onlyImage{
+
+      .onlyImage {
         border-radius: 20px;
         min-height: 150px;
       }
-      >div:not(.onlyImage){
+
+      > div:not(.onlyImage) {
         padding: 20px;
         border-radius: 20px;
         min-height: 150px;
         gap: 10px;
-        .text{
+
+        .text {
           row-gap: 4px;
-          h2{
+
+          h2 {
             font-size: 18px;
             letter-spacing: -0.36px;
           }
-          p{
+
+          p {
             font-size: 14px;
           }
         }
-        .badge{
+
+        .badge {
           border-radius: 82px;
-          span{
+
+          span {
             font-size: 14px;
           }
         }
@@ -1775,81 +2131,98 @@ $whiteColor: #fff;
     }
   }
 
-  .favorites, .employeesSlider, .ourWorks, .reviewsSlider, .articles, .about{
-    &-header{
+  .favorites, .employeesSlider, .ourWorks, .reviewsSlider, .articles, .about {
+    &-header {
       font-size: 20px;
       letter-spacing: -0.4px;
     }
   }
 
-  .favorites{
+  .favorites {
     padding: 40px 0;
-    >div{
+
+    > div {
       row-gap: 20px;
     }
-    &-content{
+
+    &-content {
       display: grid;
       grid-template-rows: 1fr;
       grid-template-columns: 1fr;
       gap: 12px;
-      .onlyImage{
+
+      .onlyImage {
         border-radius: 20px;
         min-height: 210px;
       }
-      &-el{
+
+      &-el {
         padding: 20px;
         border-radius: 20px;
         row-gap: 16px;
-        .text{
+
+        .text {
           row-gap: 8px;
-          &-header{
+
+          &-header {
             font-size: 18px;
             letter-spacing: -0.36px;
           }
-          &-description{
+
+          &-description {
             font-size: 14px;
           }
         }
-        .photo{
-          img{
+
+        .photo {
+          img {
             width: 40px;
             height: 40px;
           }
         }
-        &.dark{
+
+        &.dark {
           grid-column: unset;
         }
       }
     }
   }
 
-  .employeesSlider{
+  .employeesSlider {
     padding: 40px 0;
-    >div{
+
+    > div {
       row-gap: 20px;
     }
-    &-slide{
+
+    &-slide {
       border-radius: 20px;
       max-height: 395px;
       max-width: 260px;
-      .info{
+
+      .info {
         border-radius: 20px 20px 0 0;
         padding: 24px;
         min-height: 145px;
-        &-text{
+
+        &-text {
           row-gap: 5px;
-          &-name{
+
+          &-name {
             font-size: 18px;
             letter-spacing: -0.36px;
           }
-          &-position{
+
+          &-position {
             font-size: 14px;
           }
         }
-        &-badge{
+
+        &-badge {
           border-radius: 82px;
           padding: 3px 10px;
-          p{
+
+          p {
             font-size: 14px;
           }
         }
@@ -1857,35 +2230,38 @@ $whiteColor: #fff;
     }
   }
 
-  .ourWorks{
+  .ourWorks {
     padding: 40px 0;
 
-    &-headerWrap{
+    &-headerWrap {
       row-gap: 20px;
     }
 
-    .arrows{
+    .arrows {
       column-gap: 12px;
-      .swiper-button-next, .swiper-button-prev{
+
+      .swiper-button-next, .swiper-button-prev {
         width: 32px;
         height: 32px;
       }
-      span{
+
+      span {
         font-size: 14px;
         letter-spacing: -0.28px;
       }
     }
 
-    &-content{
+    &-content {
       row-gap: 20px;
       padding: 30px 20px;
       border-radius: 20px;
     }
 
-    &-slide{
+    &-slide {
       width: 100%;
       row-gap: 16px;
-      .compare{
+
+      .compare {
         position: relative;
         min-height: 215px;
         min-width: unset;
@@ -1893,49 +2269,60 @@ $whiteColor: #fff;
         border-radius: 30px;
         overflow: hidden;
         aspect-ratio: 2/1;
-        &-handler{
+
+        &-handler {
           width: 37px;
           height: 37px;
-          img{
+
+          img {
             width: 24px;
             height: 24px;
           }
         }
       }
-      .compareWrap{
+
+      .compareWrap {
         row-gap: 20px;
       }
-      .textWrap{
+
+      .textWrap {
         row-gap: 16px;
       }
-      .description{
+
+      .description {
         row-gap: 16px;
         max-width: unset;
-        &-header{
-          p{
+
+        &-header {
+          p {
             font-size: 18px;
             letter-spacing: -0.36px;
           }
         }
-        &-text{
-          p{
+
+        &-text {
+          p {
             font-size: 14px;
           }
         }
-        &-content{
+
+        &-content {
           row-gap: 10px;
         }
       }
-      .person{
-        &-avatar{
+
+      .person {
+        &-avatar {
           width: 55px;
           height: 55px;
         }
-        &-text{
-          &-position{
+
+        &-text {
+          &-position {
             font-size: 14px;
           }
-          &-name{
+
+          &-name {
             font-size: 16px;
           }
         }
@@ -1943,43 +2330,52 @@ $whiteColor: #fff;
     }
   }
 
-  .reviewsSlider{
+  .reviewsSlider {
     padding: 40px 0;
-    >div{
+
+    > div {
       row-gap: 20px;
     }
-    &-slide{
+
+    &-slide {
       border-radius: 20px;
       max-height: 395px;
       max-width: 260px;
     }
   }
 
-  .articles{
+  .articles {
     padding: 40px 0;
-    >div{
+
+    > div {
       row-gap: 20px;
     }
-    .btn.btn-trnsp-dark{
+
+    .btn.btn-trnsp-dark {
       padding: 12px 26px;
     }
-    &-content{
+
+    &-content {
       display: grid;
       grid-template-rows: 1fr;
       grid-template-columns: 1fr;
       gap: 16px;
-      &-el{
+
+      &-el {
         border-radius: 20px;
         min-height: 260px;
-        .text{
+
+        .text {
           border-radius: 20px 20px 0 0;
           padding: 20px;
           min-height: 120px;
-          &-header{
+
+          &-header {
             font-size: 18px;
             letter-spacing: -0.36px;
           }
-          &-date{
+
+          &-date {
             font-size: 14px;
           }
         }
@@ -1987,38 +2383,46 @@ $whiteColor: #fff;
     }
   }
 
-  .about{
+  .about {
     padding: 40px 0;
-    >div{
+
+    > div {
       row-gap: 30px;
     }
-    &-headerWrap{
+
+    &-headerWrap {
       row-gap: 10px;
     }
-    &-description{
+
+    &-description {
       max-width: unset;
       width: 100%;
-      p{
+
+      p {
         font-size: 14px;
       }
     }
-    &-slide{
+
+    &-slide {
       border-radius: 20px;
-      img{
+
+      img {
         max-width: 100%;
         max-height: 170px;
       }
     }
   }
 
-  .contactsBlock{
+  .contactsBlock {
     padding: 40px 0 80px;
-    &-map{
+
+    &-map {
       min-height: 440px;
       border-radius: 20px;
       max-height: 550px;
     }
-    &-info{
+
+    &-info {
       row-gap: 8px;
       padding: 20px;
       border-radius: 20px;
@@ -2028,53 +2432,81 @@ $whiteColor: #fff;
       bottom: 55px;
       max-width: 260px;
       width: 100%;
-      &-header{
+
+      &-header {
         font-size: 20px;
         letter-spacing: -0.4px;
       }
-      &-contact{
+
+      &-contact {
         font-size: 14px;
       }
-      &-time{
+
+      &-time {
         font-size: 12px;
       }
     }
   }
 
-  .footer{
+  .footer {
     padding: 40px 0;
-    >div{
+
+    > div {
       row-gap: 30px;
     }
-    &-content{
+
+    &-content {
       row-gap: 20px;
     }
-    &-bottom{
+
+    &-bottom {
       row-gap: 10px;
-      &-link{
+
+      &-link {
         font-size: 14px;
       }
     }
-    &-links{
+
+    &-links {
       row-gap: 6px;
-      p{
+
+      p {
         font-size: 16px;
       }
     }
-    &-contacts{
+
+    &-contacts {
       row-gap: 20px;
-      &-el{
+
+      &-el {
         row-gap: 6px;
-        .label{
+
+        .label {
           font-size: 14px;
         }
-        .contact{
+
+        .contact {
           font-size: 14px;
         }
       }
-      .btn.btn-white-trnsp{
+
+      .btn.btn-white-trnsp {
         padding: 12px 26px;
       }
     }
+  }
+  .stockBlock {
+    padding: 20px;
+    gap: 16px;
+  }
+  .stockHeader {
+    font-size: 24px;
+    padding: 40px 0 30px 0;
+  }
+  .stockTitle {
+    font-size: 18px;
+  }
+  .stockText {
+    font-size: 14px;
   }
 }
