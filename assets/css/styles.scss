@@ -1364,55 +1364,146 @@ $whiteColor: #fff;
   margin: 0;
   background-color: $additionalColor;
   //max-width: 1216px;
+
+  .stockHeader {
+    font-size: 48px;
+    font-weight: 700;
+    padding: 70px 0 40px 0;
+  }
+
+  .stockContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
+  }
+
+  .firstBanner {
+    &::before {
+      content: url('/assets/img/stock/firstBanner.svg');
+    }
+  }
+
+  .secondBanner {
+    &::before {
+      content: url('/assets/img/stock/secondBanner.svg');
+    }
+  }
+
+  .thirdBanner {
+    &::before {
+      content: url('/assets/img/stock/thirdBanner.svg');
+    }
+  }
+
+  .stockBlock {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .stockTitle {
+    font-size: 38px;
+    font-weight: 700;
+  }
+
+  .stockText {
+    font-size: 18px;
+    font-weight: 500;
+  }
 }
 
-.stockHeader {
-  font-size: 48px;
-  font-weight: 700;
-  padding: 70px 0 40px 0;
+.article {
+  //padding: 0 103px 150px 103px;
+  margin: 0;
+  background-color: $additionalColor;
+
+  .articleContent {
+    padding: 70px 143px 150px 143px;
+    gap: 40px;
+  }
+
+  .articlesRoute {
+    font-size: 18px;
+    font-weight: 500;
+    color: $mainColor;
+    opacity: 0.5;
+  }
+
+  .articleTitle {
+    font-size: 38px;
+    font-weight: 700;
+    color: $mainTextColor;
+  }
 }
 
-.stockContent {
+
+.doctor {
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding-bottom: 40px;
-}
-
-.firstBanner {
-  &::before {
-    content: url('/assets/img/stock/firstBanner.svg');
-  }
-}
-
-.secondBanner {
-  &::before {
-    content: url('/assets/img/stock/secondBanner.svg');
-  }
-}
-
-.thirdBanner {
-  &::before {
-    content: url('/assets/img/stock/thirdBanner.svg');
-  }
-}
-
-.stockBlock {
-  background-color: white;
+  background-color: #484D72;
+  padding: 40px 50px 40px 50px;
   border-radius: 20px;
-  padding: 40px;
-  gap: 20px;
-  width: 100%;
+  gap: 60px;
+
+  .doctorProfile {
+    width: 55%;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .doctorInformation {
+    //grid-template-rows: 1fr 1fr;
+    //gap: 16px;
+  }
+
+  .doctorProfession {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+
+  .doctorName {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
 }
 
-.stockTitle {
-  font-size: 38px;
-  font-weight: 700;
+.questions {
+  align-items: center;
+
+  .questionList {
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+  }
 }
 
-.stockText {
-  font-size: 18px;
-  font-weight: 500;
+.advices {
+  background-color: #FFFFFF;
+  padding: 60px;
+  border-radius: 30px;
+  gap: 30px;
+
+  .adviceBlock {
+    gap: 10px;
+  }
+
+  .adviceTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #484D72;
+
+  }
+
+  .adviceText {
+    font-size: 18px;
+    font-weight: 500;
+    color: #484D72;
+  }
 }
+
 
 @media (min-width: 992px) and (max-width: 1200px) {
   .container {

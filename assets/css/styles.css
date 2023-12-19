@@ -1129,47 +1129,111 @@ a {
   margin: 0;
   background-color: #F1F3FF;
 }
-
-.stockHeader {
+.stock .stockHeader {
   font-size: 48px;
   font-weight: 700;
   padding: 70px 0 40px 0;
 }
-
-.stockContent {
+.stock .stockContent {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding-bottom: 40px;
 }
-
-.firstBanner::before {
+.stock .firstBanner::before {
   content: url("/assets/img/stock/firstBanner.svg");
 }
-
-.secondBanner::before {
+.stock .secondBanner::before {
   content: url("/assets/img/stock/secondBanner.svg");
 }
-
-.thirdBanner::before {
+.stock .thirdBanner::before {
   content: url("/assets/img/stock/thirdBanner.svg");
 }
-
-.stockBlock {
+.stock .stockBlock {
   background-color: white;
   border-radius: 20px;
   padding: 40px;
   gap: 20px;
   width: 100%;
 }
-
-.stockTitle {
+.stock .stockTitle {
   font-size: 38px;
   font-weight: 700;
 }
-
-.stockText {
+.stock .stockText {
   font-size: 18px;
   font-weight: 500;
+}
+
+.article {
+  margin: 0;
+  background-color: #F1F3FF;
+}
+.article .articleContent {
+  padding: 70px 143px 150px 143px;
+  gap: 40px;
+}
+.article .articlesRoute {
+  font-size: 18px;
+  font-weight: 500;
+  color: #484D72;
+  opacity: 0.5;
+}
+.article .articleTitle {
+  font-size: 38px;
+  font-weight: 700;
+  color: #16171B;
+}
+
+.doctor {
+  grid-template-columns: 1fr 1fr;
+  background-color: #484D72;
+  padding: 40px 50px 40px 50px;
+  border-radius: 20px;
+  gap: 60px;
+}
+.doctor .doctorProfile {
+  width: 55%;
+  gap: 16px;
+  align-items: center;
+}
+.doctor .doctorProfession {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+.doctor .doctorName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.questions {
+  align-items: center;
+}
+.questions .questionList {
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.advices {
+  background-color: #FFFFFF;
+  padding: 60px;
+  border-radius: 30px;
+  gap: 30px;
+}
+.advices .adviceBlock {
+  gap: 10px;
+}
+.advices .adviceTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #484D72;
+}
+.advices .adviceText {
+  font-size: 18px;
+  font-weight: 500;
+  color: #484D72;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
