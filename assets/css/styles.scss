@@ -1364,54 +1364,64 @@ $whiteColor: #fff;
   margin: 0;
   background-color: $additionalColor;
   //max-width: 1216px;
-}
+  .stockHeader {
+    font-size: 48px;
+    font-weight: 700;
+    padding: 70px 0 40px 0;
+  }
 
-.stockHeader {
-  font-size: 48px;
-  font-weight: 700;
-  padding: 70px 0 40px 0;
-}
+  .stockContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
 
-.stockContent {
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding-bottom: 40px;
-}
+    .firstBanner {
+      &::before {
+        content: url('/assets/img/stock/firstBanner.svg');
+      }
+    }
 
-.firstBanner {
-  &::before {
-    content: url('/assets/img/stock/firstBanner.svg');
+    .secondBanner {
+      &::before {
+        content: url('/assets/img/stock/secondBanner.svg');
+      }
+    }
+
+    .thirdBanner {
+      &::before {
+        content: url('/assets/img/stock/thirdBanner.svg');
+      }
+    }
+
+    .stockBlock {
+      background-color: white;
+      border-radius: 20px;
+      padding: 40px;
+      gap: 20px;
+      width: 100%;
+
+      .stockTitle {
+        font-size: 38px;
+        font-weight: 700;
+      }
+
+      .stockText {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
   }
 }
 
-.secondBanner {
-  &::before {
-    content: url('/assets/img/stock/secondBanner.svg');
+.doctorsContainer {
+  padding-top: 40px;
+  background-color: $additionalColor;
+
+  .MamaRadmiraShluha {
+    font-size: 18px;
+    font-weight: 500;
+    color: red;
   }
-}
-
-.thirdBanner {
-  &::before {
-    content: url('/assets/img/stock/thirdBanner.svg');
-  }
-}
-
-.stockBlock {
-  background-color: white;
-  border-radius: 20px;
-  padding: 40px;
-  gap: 20px;
-  width: 100%;
-}
-
-.stockTitle {
-  font-size: 38px;
-  font-weight: 700;
-}
-
-.stockText {
-  font-size: 18px;
-  font-weight: 500;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {

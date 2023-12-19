@@ -3,8 +3,9 @@ import { Route, Routes } from 'react-router-dom'
 import Footer from './Bars/Footer/Footer'
 import Header from './Bars/Header/Header'
 import MakeRecord from './Components/Modals/MakeRecord/MakeRecord'
+import DoctorPage from './Pages/Doctors-page/doctor-page.jsx'
 import Main from './Pages/Main/Main'
-import Stock from './Pages/Main/Stock'
+import StockPage from './Pages/Stock-page/stock-page.jsx'
 
 
 export default function App() {
@@ -17,7 +18,10 @@ export default function App() {
 						<Route index element={ <Main /> } />
 					</Route>
 					<Route path='/stock'>
-						<Route index element={ <Stock /> } />
+						<Route index element={ <StockPage /> } />
+					</Route>
+					<Route path='/doctors'>
+						<Route index element={ <DoctorPage /> } />
 					</Route>
 				</Routes>
 			</main>
