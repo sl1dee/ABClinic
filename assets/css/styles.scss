@@ -1364,6 +1364,7 @@ $whiteColor: #fff;
   margin: 0;
   background-color: $additionalColor;
   //max-width: 1216px;
+
   .stockHeader {
     font-size: 48px;
     font-weight: 700;
@@ -1374,55 +1375,135 @@ $whiteColor: #fff;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding-bottom: 40px;
+  }
 
-    .firstBanner {
-      &::before {
-        content: url('/assets/img/stock/firstBanner.svg');
-      }
-    }
-
-    .secondBanner {
-      &::before {
-        content: url('/assets/img/stock/secondBanner.svg');
-      }
-    }
-
-    .thirdBanner {
-      &::before {
-        content: url('/assets/img/stock/thirdBanner.svg');
-      }
-    }
-
-    .stockBlock {
-      background-color: white;
-      border-radius: 20px;
-      padding: 40px;
-      gap: 20px;
-      width: 100%;
-
-      .stockTitle {
-        font-size: 38px;
-        font-weight: 700;
-      }
-
-      .stockText {
-        font-size: 18px;
-        font-weight: 500;
-      }
+  .firstBanner {
+    &::before {
+      content: url('/assets/img/stock/firstBanner.svg');
     }
   }
-}
 
-.doctorsContainer {
-  padding-top: 40px;
-  background-color: $additionalColor;
+  .secondBanner {
+    &::before {
+      content: url('/assets/img/stock/secondBanner.svg');
+    }
+  }
 
-  .MamaRadmiraShluha {
+  .thirdBanner {
+    &::before {
+      content: url('/assets/img/stock/thirdBanner.svg');
+    }
+  }
+
+  .stockBlock {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .stockTitle {
+    font-size: 38px;
+    font-weight: 700;
+  }
+
+  .stockText {
     font-size: 18px;
     font-weight: 500;
-    color: red;
   }
 }
+
+.article {
+  //padding: 0 103px 150px 103px;
+  margin: 0;
+  background-color: $additionalColor;
+
+  .articleContent {
+    padding: 70px 143px 150px 143px;
+    gap: 40px;
+  }
+
+  .articlesRoute {
+    font-size: 18px;
+    font-weight: 500;
+    color: $mainColor;
+    opacity: 0.5;
+  }
+
+  .articleTitle {
+    font-size: 38px;
+    font-weight: 700;
+    color: $mainTextColor;
+  }
+
+  .doctor {
+    grid-template-columns: 1fr 1fr;
+    background-color: #484D72;
+    padding: 40px 50px 40px 50px;
+    border-radius: 20px;
+    gap: 60px;
+
+    .doctorProfile {
+      width: 55%;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .doctorInformation {
+      //grid-template-rows: 1fr 1fr;
+      //gap: 16px;
+    }
+
+    .doctorProfession {
+      font-size: 16px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .doctorName {
+      font-size: 18px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+  }
+
+  .questions {
+    align-items: center;
+
+    .questionList {
+      font-size: 18px;
+      font-weight: 500;
+      color: #FFFFFF;
+    }
+  }
+}
+
+
+.advices {
+  background-color: #FFFFFF;
+  padding: 60px;
+  border-radius: 30px;
+  gap: 30px;
+
+  .adviceBlock {
+    gap: 10px;
+  }
+
+  .adviceTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #484D72;
+
+  }
+
+  .adviceText {
+    font-size: 18px;
+    font-weight: 500;
+    color: #484D72;
+  }
+}
+
 
 @media (min-width: 992px) and (max-width: 1200px) {
   .container {
@@ -1525,15 +1606,27 @@ $whiteColor: #fff;
       }
     }
   }
+  .stock {
+    .stockHeader {
+      padding: 60px 0 40px 0;
+    }
 
-  .stockHeader {
-    padding: 60px 0 40px 0;
+    .stockTitle {
+      font-size: 32px;
+    }
+
+    .stockText {
+      font-size: 18px;
+    }
   }
-  .stockTitle {
-    font-size: 32px;
-  }
-  .stockText {
-    font-size: 18px;
+  .article {
+    margin: 0;
+    background-color: $additionalColor;
+
+    .articleContent {
+      padding: 60px 0px 150px 0px;
+      gap: 40px;
+    }
   }
 }
 
@@ -1930,15 +2023,19 @@ $whiteColor: #fff;
       }
     }
   }
-  .stockHeader {
-    font-size: 36px;
-    padding: 50px 0 40px 0;
-  }
-  .stockTitle {
-    font-size: 28px;
-  }
-  .stockText {
-    font-size: 16px;
+  .stock {
+    .stockHeader {
+      font-size: 36px;
+      padding: 50px 0 40px 0;
+    }
+
+    .stockTitle {
+      font-size: 28px;
+    }
+
+    .stockText {
+      font-size: 16px;
+    }
   }
 
   .firstBanner {
@@ -1954,6 +2051,90 @@ $whiteColor: #fff;
   .thirdBanner {
     &::before {
       content: url('/assets/img/stock/thirdBanner768.svg');
+    }
+  }
+
+  .article {
+    //padding: 0 103px 150px 103px;
+    margin: 0;
+    background-color: $additionalColor;
+
+    .articleContent {
+      padding: 50px 0px 1px 0px;
+      gap: 40px;
+    }
+
+    .articlesRoute {
+      font-size: 16px;
+    }
+
+    .articleTitle {
+      font-size: 28px;
+    }
+
+    .doctor {
+      grid-template-columns: 1fr 1fr;
+      background-color: #484D72;
+      padding: 40px 30px 40px 30px;
+      border-radius: 20px;
+      gap: 60px;
+
+      .doctorProfile {
+        width: 65%;
+        gap: 8px;
+        //align-items: center;
+      }
+
+      .doctorInformation {
+        //grid-template-rows: 1fr 1fr;
+        //gap: 16px;
+      }
+
+      .doctorProfession {
+        font-size: 14px;
+        font-weight: 600;
+        color: #FFFFFF;
+      }
+
+      .doctorName {
+        font-size: 16px;
+        font-weight: 600;
+        color: #FFFFFF;
+      }
+    }
+
+    .questions {
+      //align-items: center;
+
+      .questionList {
+        font-size: 16px;
+        font-weight: 500;
+        color: #FFFFFF;
+      }
+    }
+
+    .advices {
+      background-color: #FFFFFF;
+      padding: 60px;
+      border-radius: 30px;
+      gap: 30px;
+
+      .adviceBlock {
+        gap: 10px;
+      }
+
+      .adviceTitle {
+        font-size: 22px;
+        font-weight: 600;
+        color: #484D72;
+
+      }
+
+      .adviceText {
+        font-size: 16px;
+        font-weight: 500;
+        color: #484D72;
+      }
     }
   }
 }
@@ -2535,19 +2716,24 @@ $whiteColor: #fff;
       }
     }
   }
-  .stockBlock {
-    padding: 20px;
-    gap: 16px;
-  }
-  .stockHeader {
-    font-size: 24px;
-    padding: 40px 0 30px 0;
-  }
-  .stockTitle {
-    font-size: 18px;
-  }
-  .stockText {
-    font-size: 14px;
+  .stock {
+    .stockBlock {
+      padding: 20px;
+      gap: 16px;
+    }
+
+    .stockHeader {
+      font-size: 24px;
+      padding: 40px 0 30px 0;
+    }
+
+    .stockTitle {
+      font-size: 18px;
+    }
+
+    .stockText {
+      font-size: 14px;
+    }
   }
 
   .firstBanner {
@@ -2569,6 +2755,89 @@ $whiteColor: #fff;
       content: url('/assets/img/stock/thirdBanner320.svg');
       display: flex;
       justify-content: center;
+    }
+  }
+  .article {
+    //padding: 0 103px 150px 103px;
+    margin: 0;
+    background-color: $additionalColor;
+
+    .articleContent {
+      padding: 50px 0px 1px 0px;
+      gap: 40px;
+    }
+
+    .articlesRoute {
+      font-size: 14px;
+    }
+
+    .articleTitle {
+      font-size: 20px;
+    }
+
+    .doctor {
+      grid-template-columns: 1fr 1fr;
+      background-color: #484D72;
+      padding: 40px 30px 40px 30px;
+      border-radius: 20px;
+      gap: 60px;
+
+      .doctorProfile {
+        width: 65%;
+        gap: 8px;
+        //align-items: center;
+      }
+
+      .doctorInformation {
+        //grid-template-rows: 1fr 1fr;
+        //gap: 16px;
+      }
+
+      .doctorProfession {
+        font-size: 14px;
+        font-weight: 600;
+        color: #FFFFFF;
+      }
+
+      .doctorName {
+        font-size: 16px;
+        font-weight: 600;
+        color: #FFFFFF;
+      }
+    }
+
+    .questions {
+      //align-items: center;
+
+      .questionList {
+        font-size: 16px;
+        font-weight: 500;
+        color: #FFFFFF;
+      }
+    }
+
+    .advices {
+      background-color: #FFFFFF;
+      padding: 60px;
+      border-radius: 30px;
+      gap: 30px;
+
+      .adviceBlock {
+        gap: 10px;
+      }
+
+      .adviceTitle {
+        font-size: 22px;
+        font-weight: 600;
+        color: #484D72;
+
+      }
+
+      .adviceText {
+        font-size: 16px;
+        font-weight: 500;
+        color: #484D72;
+      }
     }
   }
 }
