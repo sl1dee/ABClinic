@@ -37,7 +37,7 @@ const Stock = () => {
 				<h1 className='stockHeader'>Акции</h1>
 				{ stockList.map(({ id, title, text, img, className }) => (
 					<div key={ id } className='d-flex flex-column flex-sm-row stockContent'>
-						<img src={ img } alt='' />
+						<img src={ img } className='banner' alt='' />
 						<div className='d-flex flex-column stockBlock'>
 							<h3 className='stockTitle'>{ title }</h3>
 							<div className='stockText'>{ text }</div>
