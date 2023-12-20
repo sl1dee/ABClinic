@@ -3,9 +3,9 @@ import React from 'react'
 
 const DoctorsContainer = () => {
 	return (
-		<div className='doctorsContainer'>
+		<div className='doctorsСontainer'>
 			<div className='container'>
-				<h1 className='MamaRadmiraShluha'>Врачи</h1>
+				<h1 >Врачи</h1>
 				<div>фильтры</div>
 				<div className='employeesSlider-slide d-flex flex-column'>
 					<div className='photo'>

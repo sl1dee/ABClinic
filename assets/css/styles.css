@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   outline: none;
   font-family: "Manrope", sans-serif;
@@ -1232,6 +1233,36 @@ a {
   font-size: 18px;
   font-weight: 500;
   color: #484D72;
+}
+
+.doctorsContainer {
+  padding-top: 40px;
+  background-color: #F1F3FF;
+}
+
+.advices {
+  background-color: #FFFFFF;
+  padding: 60px;
+  border-radius: 30px;
+  gap: 30px;
+}
+.advices .adviceBlock {
+  gap: 10px;
+}
+.advices .adviceTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #484D72;
+}
+.advices .adviceText {
+  font-size: 18px;
+  font-weight: 500;
+  color: #484D72;
+}
+
+.doctorsСontainer {
+  padding-top: 50px;
+  background-color: #F1F3FF;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
