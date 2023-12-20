@@ -1129,47 +1129,109 @@ a {
   margin: 0;
   background-color: #F1F3FF;
 }
-
-.stockHeader {
+.stock .stockHeader {
   font-size: 48px;
   font-weight: 700;
   padding: 70px 0 40px 0;
 }
-
-.stockContent {
+.stock .stockContent {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding-bottom: 40px;
 }
-
-.firstBanner::before {
+.stock .firstBanner::before {
   content: url("/assets/img/stock/firstBanner.svg");
 }
-
-.secondBanner::before {
+.stock .secondBanner::before {
   content: url("/assets/img/stock/secondBanner.svg");
 }
-
-.thirdBanner::before {
+.stock .thirdBanner::before {
   content: url("/assets/img/stock/thirdBanner.svg");
 }
-
-.stockBlock {
+.stock .stockBlock {
   background-color: white;
   border-radius: 20px;
   padding: 40px;
   gap: 20px;
   width: 100%;
 }
-
-.stockTitle {
+.stock .stockTitle {
   font-size: 38px;
   font-weight: 700;
 }
-
-.stockText {
+.stock .stockText {
   font-size: 18px;
   font-weight: 500;
+}
+
+.article {
+  margin: 0;
+  background-color: #F1F3FF;
+}
+.article .articleContent {
+  padding: 70px 143px 150px 143px;
+  gap: 40px;
+}
+.article .articlesRoute {
+  font-size: 18px;
+  font-weight: 500;
+  color: #484D72;
+  opacity: 0.5;
+}
+.article .articleTitle {
+  font-size: 38px;
+  font-weight: 700;
+  color: #16171B;
+}
+.article .doctor {
+  grid-template-columns: 1fr 1fr;
+  background-color: #484D72;
+  padding: 40px 50px 40px 50px;
+  border-radius: 20px;
+  gap: 60px;
+}
+.article .doctor .doctorProfile {
+  width: 55%;
+  gap: 16px;
+  align-items: center;
+}
+.article .doctor .doctorProfession {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+.article .doctor .doctorName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+.article .questions {
+  align-items: center;
+}
+.article .questions .questionList {
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.advices {
+  background-color: #FFFFFF;
+  padding: 60px;
+  border-radius: 30px;
+  gap: 30px;
+}
+.advices .adviceBlock {
+  gap: 10px;
+}
+.advices .adviceTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #484D72;
+}
+.advices .adviceText {
+  font-size: 18px;
+  font-weight: 500;
+  color: #484D72;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -1241,14 +1303,22 @@ a {
     row-gap: 40px;
     max-width: unset;
   }
-  .stockHeader {
+  .stock .stockHeader {
     padding: 60px 0 40px 0;
   }
-  .stockTitle {
+  .stock .stockTitle {
     font-size: 32px;
   }
-  .stockText {
+  .stock .stockText {
     font-size: 18px;
+  }
+  .article {
+    margin: 0;
+    background-color: #F1F3FF;
+  }
+  .article .articleContent {
+    padding: 60px 0px 150px 0px;
+    gap: 40px;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -1535,14 +1605,14 @@ a {
   .footer-contacts-el .contact {
     font-size: 16px;
   }
-  .stockHeader {
+  .stock .stockHeader {
     font-size: 36px;
     padding: 50px 0 40px 0;
   }
-  .stockTitle {
+  .stock .stockTitle {
     font-size: 28px;
   }
-  .stockText {
+  .stock .stockText {
     font-size: 16px;
   }
   .firstBanner::before {
@@ -1553,6 +1623,65 @@ a {
   }
   .thirdBanner::before {
     content: url("/assets/img/stock/thirdBanner768.svg");
+  }
+  .article {
+    margin: 0;
+    background-color: #F1F3FF;
+  }
+  .article .articleContent {
+    padding: 50px 0px 1px 0px;
+    gap: 40px;
+  }
+  .article .articlesRoute {
+    font-size: 16px;
+  }
+  .article .articleTitle {
+    font-size: 28px;
+  }
+  .article .doctor {
+    grid-template-columns: 1fr 1fr;
+    background-color: #484D72;
+    padding: 40px 30px 40px 30px;
+    border-radius: 20px;
+    gap: 60px;
+  }
+  .article .doctor .doctorProfile {
+    width: 65%;
+    gap: 8px;
+  }
+  .article .doctor .doctorProfession {
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+  .article .doctor .doctorName {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+  .article .questions .questionList {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+  }
+  .article .advices {
+    background-color: #FFFFFF;
+    padding: 60px;
+    border-radius: 30px;
+    gap: 30px;
+  }
+  .article .advices .adviceBlock {
+    gap: 10px;
+  }
+  .article .advices .adviceTitle {
+    font-size: 22px;
+    font-weight: 600;
+    color: #484D72;
+  }
+  .article .advices .adviceText {
+    font-size: 16px;
+    font-weight: 500;
+    color: #484D72;
   }
 }
 @media (max-width: 768px) {
@@ -1991,18 +2120,18 @@ a {
   .footer-contacts .btn.btn-white-trnsp {
     padding: 12px 26px;
   }
-  .stockBlock {
+  .stock .stockBlock {
     padding: 20px;
     gap: 16px;
   }
-  .stockHeader {
+  .stock .stockHeader {
     font-size: 24px;
     padding: 40px 0 30px 0;
   }
-  .stockTitle {
+  .stock .stockTitle {
     font-size: 18px;
   }
-  .stockText {
+  .stock .stockText {
     font-size: 14px;
   }
   .firstBanner::before {
@@ -2019,6 +2148,65 @@ a {
     content: url("/assets/img/stock/thirdBanner320.svg");
     display: flex;
     justify-content: center;
+  }
+  .article {
+    margin: 0;
+    background-color: #F1F3FF;
+  }
+  .article .articleContent {
+    padding: 50px 0px 1px 0px;
+    gap: 40px;
+  }
+  .article .articlesRoute {
+    font-size: 14px;
+  }
+  .article .articleTitle {
+    font-size: 20px;
+  }
+  .article .doctor {
+    grid-template-columns: 1fr 1fr;
+    background-color: #484D72;
+    padding: 40px 30px 40px 30px;
+    border-radius: 20px;
+    gap: 60px;
+  }
+  .article .doctor .doctorProfile {
+    width: 65%;
+    gap: 8px;
+  }
+  .article .doctor .doctorProfession {
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+  .article .doctor .doctorName {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+  .article .questions .questionList {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+  }
+  .article .advices {
+    background-color: #FFFFFF;
+    padding: 60px;
+    border-radius: 30px;
+    gap: 30px;
+  }
+  .article .advices .adviceBlock {
+    gap: 10px;
+  }
+  .article .advices .adviceTitle {
+    font-size: 22px;
+    font-weight: 600;
+    color: #484D72;
+  }
+  .article .advices .adviceText {
+    font-size: 16px;
+    font-weight: 500;
+    color: #484D72;
   }
 }
 
