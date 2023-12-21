@@ -4,7 +4,7 @@
 // import header from './Bars/header/header'
 // import MakeRecord from './components/Modals/MakeRecord/MakeRecord.jsx'
 // import DoctorPage from './pages/Doctors-page/doctor-page.jsx'
-// import ArticlePage from './pages/article-page/ArticlePage.jsx'
+// import ArticlePage from './pages/article-page/article-page.jsx'
 // import main-page from './pages/main-page/main-page'
 // import StockPage from './pages/Stock-page/stock-page.jsx'
 //

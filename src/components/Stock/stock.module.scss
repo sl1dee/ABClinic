@@ -1,0 +1,169 @@
+* {
+  outline: none;
+  font-family: 'Manrope', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+$mainColor: #484D72;
+$mainTextColor: #16171B;
+
+$additionalColor: #F1F3FF;
+$additionalTextColor: #000;
+
+$whiteColor: #fff;
+
+//потом убрать верхний код
+
+.stock {
+  //max-width: none;
+  padding-bottom: 110px;
+  margin: 0;
+  background-color: $additionalColor;
+  //max-width: 1216px;
+
+  .stockHeader {
+    font-size: 48px;
+    font-weight: 700;
+    padding: 70px 0 40px 0;
+  }
+
+  .stockContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
+  }
+
+  .firstBanner {
+    &::before {
+      content: url('/assets/img/stock/firstBanner.svg');
+    }
+  }
+
+  .secondBanner {
+    &::before {
+      content: url('/assets/img/stock/secondBanner.svg');
+    }
+  }
+
+  .thirdBanner {
+    &::before {
+      content: url('/assets/img/stock/thirdBanner.svg');
+    }
+  }
+
+  .stockBlock {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .stockTitle {
+    font-size: 38px;
+    font-weight: 700;
+  }
+
+  .stockText {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .stock {
+    .stockHeader {
+      padding: 60px 0 40px 0;
+    }
+
+    .stockTitle {
+      font-size: 32px;
+    }
+
+    .stockText {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .stock {
+    .stockHeader {
+      font-size: 36px;
+      padding: 50px 0 40px 0;
+    }
+
+    .stockTitle {
+      font-size: 28px;
+    }
+
+    .stockText {
+      font-size: 16px;
+    }
+  }
+
+  .firstBanner {
+    &::before {
+      content: url('/assets/img/stock/firstBanner768.svg');
+    }
+  }
+  .secondBanner {
+    &::before {
+      content: url('/assets/img/stock/secondBanner768.svg');
+    }
+  }
+  .thirdBanner {
+    &::before {
+      content: url('/assets/img/stock/thirdBanner768.svg');
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .stock {
+    .stockBlock {
+      padding: 20px;
+      gap: 16px;
+    }
+
+    .stockHeader {
+      font-size: 24px;
+      padding: 40px 0 30px 0;
+    }
+
+    .stockTitle {
+      font-size: 18px;
+    }
+
+    .stockText {
+      font-size: 14px;
+    }
+  }
+
+  .firstBanner {
+    &::before {
+      content: url('/assets/img/stock/firstBanner320.svg');
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .secondBanner {
+    &::before {
+      content: url('/assets/img/stock/secondBanner320.svg');
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .thirdBanner {
+    &::before {
+      content: url('/assets/img/stock/thirdBanner320.svg');
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+

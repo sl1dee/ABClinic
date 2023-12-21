@@ -1,13 +1,9 @@
 import React from 'react'
-import Stock from '../../components/Stock/Stock.jsx'
 
+import Stock from '@components/Stock/stock.jsx'
 
 const StockPage = () => {
-	return (
-		<>
-			<Stock />
-		</>
-	)
+	return <Stock />
 }
 
 export default StockPage

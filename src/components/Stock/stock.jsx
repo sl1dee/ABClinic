@@ -1,9 +1,10 @@
+import cn from 'classnames'
 import React, { useMemo } from 'react'
+
 import { toggleMakeRecordModal } from '../../store/actions/makeRecordModal/makeRecordModal.js'
+import cl from './stock.module.scss'
 
-
-const Stock = () => {
-
+const stock = () => {
 	const stockList = useMemo(
 		() => [
 			{
@@ -32,29 +33,29 @@ const Stock = () => {
 	)
 
 	return (
-		<div className='stock'>
-			<div className='container'>
-				<h1 className='stockHeader'>Акции</h1>
-				{ stockList.map(({ id, title, text, img, className }) => (
-					<div key={ id } className='d-flex flex-column flex-sm-row stockContent'>
-						<img src={ img } className='banner' alt='' />
-						<div className='d-flex flex-column stockBlock'>
-							<h3 className='stockTitle'>{ title }</h3>
-							<div className='stockText'>{ text }</div>
-							<div className='d-flex btnWrap'>
+		<div className={cl.stock}>
+			<div className="container">
+				<h1 className={cl.stockHeader}>Акции</h1>
+				{stockList.map(({ id, title, text, img, className }) => (
+					<div key={id} className={cn([cl.stockContent, 'd-flex', 'flex-column', 'flex-sm-row'])}>
+						<img src={img} className="banner" alt="" />
+						<div className={cn([cl.stockBlock, 'd-flex', 'flex-column'])}>
+							<h3 className={cl.stockTitle}>{title}</h3>
+							<div className={cl.stockText}>{text}</div>
+							<div className="d-flex btnWrap">
 								<div
-									className='btn btn-dark-trnsp flex-grow-1 flex-md-grow-0'
-									onClick={ () => dispatch(toggleMakeRecordModal(true)) }
-								>Записаться
+									className="btn btn-dark-trnsp flex-grow-1 flex-md-grow-0"
+									onClick={() => dispatch(toggleMakeRecordModal(true))}
+								>
+									Записаться
 								</div>
 							</div>
 						</div>
 					</div>
-				)) }
+				))}
 			</div>
 		</div>
-
 	)
 }
 
-export default Stock
+export default stock
