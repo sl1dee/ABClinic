@@ -15,10 +15,10 @@ const Routes = () => {
 		// 	path: `/doctors`,
 		// 	element: <DoctorPage />
 		// },
-		// {
-		// 	path: `/article`,
-		// 	element: <ArticlePage />
-		// },
+		{
+			path: `/article`,
+			element: <ArticlePage />
+		},
 		{
 			path: `/stock`,
 			element: <StockPage />
