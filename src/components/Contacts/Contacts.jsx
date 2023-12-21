@@ -1,6 +1,6 @@
 import { Map, Placemark, YMaps } from "@pbe/react-yandex-maps";
 import React, { useEffect, useRef, useState } from "react";
-import { debounce } from "../../Functions/debounce";
+import { debounce } from "../../hooks/debounce.js";
 
 
 export default function Contacts() {

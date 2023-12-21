@@ -1,15 +1,17 @@
 import React from 'react'
-import MainSlider from '../../Components/MainSlider/MainSlider'
-import Services from '../../Components/Services/Services'
-import Favorites from '../../Components/Favorites/Favorites'
+
+import About from '../../Components/About/About'
+import Articles from '../../Components/Articles/Articles'
+import Contacts from '../../Components/Contacts/Contacts'
 import EmployeesSlider from '../../Components/EmployeesSlider/EmployeesSlider'
+import Favorites from '../../Components/Favorites/Favorites'
+import MainSlider from '../../Components/MainSlider/MainSlider'
 import OurWorks from '../../Components/OurWorks/OurWorks'
 import ReviewsSlider from '../../Components/ReviewsSlider/ReviewsSlider'
-import Articles from '../../Components/Articles/Articles'
-import About from '../../Components/About/About'
-import Contacts from '../../Components/Contacts/Contacts'
+import Services from '../../Components/Services/Services'
+import MainLayout from '../../layout/main/index.js'
 
-export default function Main() {
+export default function MainPage() {
 	const services = [
 		{
 			header: 'Для взрослых',
@@ -114,16 +116,17 @@ export default function Main() {
 	}
 
 	return (
-		<>
-			<MainSlider />
-			<Services preHeader="Выберите направление услуг" services={services} />
-			<Favorites favorites={favorites} />
-			<EmployeesSlider />
-			<OurWorks />
-			<ReviewsSlider />
-			<Articles />
+		<MainLayout>
+			<h1>Привет</h1>
+			{/* <MainSlider /> */}
+			{/* <Services preHeader="Выберите направление услуг" services={services} /> */}
+			{/* <Favorites favorites={favorites} /> */}
+			{/* <EmployeesSlider /> */}
+			{/* <OurWorks /> */}
+			{/* <ReviewsSlider /> */}
+			{/* <Articles /> */}
 			<About />
-			<Contacts />
-		</>
+			{/* <Contacts /> */}
+		</MainLayout>
 	)
 }
