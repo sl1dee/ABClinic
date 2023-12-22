@@ -1,17 +1,18 @@
 import React from 'react'
 
+import Map from '@components/yandex-map/yandex-map.jsx'
+
 import About from '../../Components/About/About'
 import Articles from '../../Components/Articles/Articles'
-import Contacts from '../../Components/Contacts/Contacts'
 import EmployeesSlider from '../../Components/EmployeesSlider/EmployeesSlider'
 import Favorites from '../../Components/Favorites/Favorites'
 import MainSlider from '../../Components/MainSlider/MainSlider'
 import OurWorks from '../../Components/OurWorks/OurWorks'
 import ReviewsSlider from '../../Components/ReviewsSlider/ReviewsSlider'
 import Services from '../../Components/Services/Services'
-import MainLayout from '../../layout/main/index.js'
+import MainLayout from '../../layout/main'
 
-export default function MainPage() {
+const MainPage = () => {
 	const services = [
 		{
 			header: 'Для взрослых',
@@ -117,7 +118,6 @@ export default function MainPage() {
 
 	return (
 		<MainLayout>
-			<h1>Привет</h1>
 			{/* <MainSlider /> */}
 			{/* <Services preHeader="Выберите направление услуг" services={services} /> */}
 			{/* <Favorites favorites={favorites} /> */}
@@ -126,7 +126,8 @@ export default function MainPage() {
 			{/* <ReviewsSlider /> */}
 			{/* <Articles /> */}
 			<About />
-			{/* <Contacts /> */}
+			{/* <yandex-map /> */}
 		</MainLayout>
 	)
 }
+export default MainPage

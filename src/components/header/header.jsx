@@ -3,7 +3,7 @@
 import arrDown from '@assets/img/header/arr_down.svg'
 import logo from '@assets/img/logos/logo_b_hor.svg'
 import cn from 'classnames'
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 
 import Button from '@ui/button/index.js'
 

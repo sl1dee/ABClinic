@@ -1,0 +1,263 @@
+@use '@assets/styles/vars/colors';
+
+.article {
+  //padding: 0 103px 150px 103px;
+  margin: 0;
+  background-color: colors.$additionalColor;
+
+  .articleContent {
+    padding: 70px 143px 150px 143px;
+    gap: 40px;
+
+    .articlesRoute {
+      font-size: 18px;
+      font-weight: 500;
+      opacity: 0.5;
+      color: colors.$mainColor;
+    }
+
+    .articleTitle {
+      font-size: 38px;
+      font-weight: 700;
+      color: colors.$mainTextColor;
+    }
+
+    .advices {
+      background-color: colors.$whiteColor;
+      padding: 60px 80px 60px 80px;
+      border-radius: 30px;
+      gap: 30px;
+
+      .adviceBlock {
+        gap: 10px;
+      }
+
+      .adviceTitle {
+        font-size: 24px;
+        font-weight: 600;
+        color: colors.$mainColor;
+
+      }
+
+      .adviceText {
+        font-size: 18px;
+        font-weight: 500;
+        color: colors.$mainColor;
+        opacity: 0.5;
+      }
+
+    }
+    .doctor {
+      grid-template-columns: 1fr 1fr;
+      background-color: colors.$mainColor;
+      padding: 40px 50px 40px 50px;
+      border-radius: 20px;
+      gap: 60px;
+
+      .doctorPortrait {
+        max-width: 94px;
+        max-height: 94px;
+      }
+
+      .doctorProfile {
+        width: 65%;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .doctorInformation {
+      }
+
+      .doctorProfession {
+        font-size: 16px;
+        font-weight: 600;
+        color: colors.$whiteColor;
+      }
+
+      .doctorName{
+        font-size: 18px;
+        font-weight: 600;
+        color: colors.$whiteColor;
+      }
+
+    }
+
+    .questions {
+      align-items: center;
+
+      .questionList {
+        font-size: 18px;
+        font-weight: 500;
+        color: colors.$whiteColor;
+      }
+
+      color: colors.$mainColor;
+    }
+
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .article {
+
+    .articleContent {
+      padding: 60px 0px 150px 0px;
+      gap: 40px;
+
+      .advices {
+        padding: 60px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .article {
+
+    .articleContent {
+      padding: 50px 0px 1px 0px;
+      gap: 40px;
+
+      .articlesRoute {
+        font-size: 16px;
+      }
+
+      .articleTitle {
+        font-size: 28px;
+      }
+      .advices {
+        padding: 50px 40px 50px 40px;
+        gap: 30px;
+        .adviceBlock {
+          gap: 10px;
+        }
+
+        .adviceTitle {
+          font-size: 22px;
+        }
+
+        .adviceText {
+          font-size: 16px;
+        }
+      }
+
+      .doctor {
+        padding: 40px 30px 40px 30px;
+        gap: 40px;
+
+        .doctorPortrait {
+          max-width: 64px;
+          max-height: 64px;
+        }
+
+        .doctorProfile {
+          width: 65%;
+          gap: 8px;
+        }
+
+        .doctorInformation {
+        }
+
+        .doctorProfession {
+          font-size: 14px;
+          font-weight: 600;
+          color: colors.$whiteColor;
+        }
+
+        .doctorName {
+          font-size: 16px;
+          font-weight: 600;
+          color: colors.$whiteColor;
+        }
+      }
+
+      .questions {
+
+        .questionList {
+          font-size: 16px;
+          font-weight: 500;
+          color: colors.$whiteColor;
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 768px) {
+  .article {
+
+    .articleContent {
+      padding: 50px 0px 1px 0px;
+      gap: 40px;
+
+      .articlesRoute {
+        font-size: 14px;
+      }
+
+      .articleTitle {
+        font-size: 20px;
+      }
+
+      .advices {
+        border-radius: 20px;
+        padding: 30px 20px 30px 20px;
+        gap: 16px;
+
+        .adviceBlock {
+          gap: 10px;
+        }
+
+        .adviceTitle {
+          font-size: 16px;
+
+        }
+
+        .adviceText {
+          font-size: 14px;
+        }
+      }
+
+      .doctor {
+        padding: 20px;
+        gap: 26px;
+
+        .doctorPortrait {
+          max-width: 64px;
+          max-height: 64px;
+        }
+
+        .doctorProfile {
+          width: 100%;
+          gap: 8px;
+        }
+
+        .doctorInformation {
+        }
+
+        .doctorProfession {
+          font-size: 12px;
+          font-weight: 600;
+          color: colors.$whiteColor;
+        }
+
+        .doctorName {
+          font-size: 14px;
+          font-weight: 600;
+          color: colors.$whiteColor;
+        }
+      }
+
+      .questions {
+
+        .questionList {
+          font-size: 14px;
+          font-weight: 500;
+          color: colors.$whiteColor;
+        }
+      }
+    }
+  }
+}
+
+
