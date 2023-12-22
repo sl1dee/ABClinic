@@ -1,129 +1,97 @@
-* {
-  outline: none;
-  font-family: 'Manrope', sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-$mainColor: #484D72;
-$mainTextColor: #16171B;
-
-$additionalColor: #F1F3FF;
-$additionalTextColor: #000;
-
-$whiteColor: #fff;
-
-//потом убрать верхний код
+@use '@assets/styles/vars/colors';
 
 .article {
   //padding: 0 103px 150px 103px;
   margin: 0;
-  background-color: $additionalColor;
+  background-color: colors.$additionalColor;
 
   .articleContent {
     padding: 70px 143px 150px 143px;
     gap: 40px;
 
     .articlesRoute {
-      .advices {
-        background-color: #FFFFFF;
-        padding: 60px;
-        border-radius: 30px;
-        gap: 30px;
+      font-size: 18px;
+      font-weight: 500;
+      opacity: 0.5;
+      color: colors.$mainColor;
+    }
 
-        .adviceBlock {
-          gap: 10px;
-        }
+    .articleTitle {
+      font-size: 38px;
+      font-weight: 700;
+      color: colors.$mainTextColor;
+    }
 
-        .adviceTitle {
-          font-size: 24px;
-          font-weight: 600;
-          color: #484D72;
+    .advices {
+      background-color: colors.$whiteColor;
+      padding: 60px 80px 60px 80px;
+      border-radius: 30px;
+      gap: 30px;
 
-        }
-
-        .adviceText {
-          font-size: 18px;
-          font-weight: 500;
-          color: $mainColor;
-          opacity: 0.5;
-        }
-
-        .articleTitle {
-          font-size: 38px;
-          font-weight: 700;
-          color: $mainTextColor;
-        }
-
-        .doctor {
-          grid-template-columns: 1fr 1fr;
-          background-color: #484D72;
-          padding: 40px 50px 40px 50px;
-          border-radius: 20px;
-          gap: 60px;
-
-          .doctorProfile {
-            width: 55%;
-            gap: 16px;
-            align-items: center;
-          }
-
-          .doctorInformation {
-            //grid-template-rows: 1fr 1fr;
-            //gap: 16px;
-          }
-
-          .doctorProfession {
-            font-size: 16px;
-            font-weight: 600;
-            color: #FFFFFF;
-          }
-
-          .doctorName {
-            font-size: 18px;
-            font-weight: 600;
-            color: #FFFFFF;
-          }
-
-          .advices {
-            background-color: #FFFFFF;
-            padding: 60px;
-            border-radius: 30px;
-            gap: 30px;
-
-            .adviceBlock {
-              gap: 10px;
-            }
-
-            .adviceTitle {
-              font-size: 24px;
-              font-weight: 600;
-              color: #484D72;
-
-            }
-
-            .adviceText {
-              font-size: 18px;
-              font-weight: 500;
-              color: #484D72;
-            }
-          }
-        }
-
-        .questions {
-          align-items: center;
-
-          .questionList {
-            font-size: 18px;
-            font-weight: 500;
-            color: #FFFFFF;
-          }
-
-          color: #484D72;
-        }
+      .adviceBlock {
+        gap: 10px;
       }
+
+      .adviceTitle {
+        font-size: 24px;
+        font-weight: 600;
+        color: colors.$mainColor;
+
+      }
+
+      .adviceText {
+        font-size: 18px;
+        font-weight: 500;
+        color: colors.$mainColor;
+        opacity: 0.5;
+      }
+
+    }
+    .doctor {
+      grid-template-columns: 1fr 1fr;
+      background-color: colors.$mainColor;
+      padding: 40px 50px 40px 50px;
+      border-radius: 20px;
+      gap: 60px;
+
+      .doctorPortrait {
+        max-width: 94px;
+        max-height: 94px;
+      }
+
+      .doctorProfile {
+        width: 65%;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .doctorInformation {
+      }
+
+      .doctorProfession {
+        font-size: 16px;
+        font-weight: 600;
+        color: colors.$whiteColor;
+      }
+
+      .doctorName{
+        font-size: 18px;
+        font-weight: 600;
+        color: colors.$whiteColor;
+      }
+
+    }
+
+    .questions {
+      align-items: center;
+
+      .questionList {
+        font-size: 18px;
+        font-weight: 500;
+        color: colors.$whiteColor;
+      }
+
+      color: colors.$mainColor;
     }
 
   }
@@ -131,183 +99,162 @@ $whiteColor: #fff;
 
 @media (min-width: 992px) and (max-width: 1200px) {
   .article {
-    margin: 0;
-    background-color: $additionalColor;
 
     .articleContent {
       padding: 60px 0px 150px 0px;
       gap: 40px;
+
+      .advices {
+        padding: 60px;
+      }
     }
   }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
   .article {
-    //padding: 0 103px 150px 103px;
-    margin: 0;
-    background-color: $additionalColor;
 
     .articleContent {
       padding: 50px 0px 1px 0px;
       gap: 40px;
-    }
 
-    .articlesRoute {
-      font-size: 16px;
-    }
-
-    .articleTitle {
-      font-size: 28px;
-    }
-
-    .doctor {
-      grid-template-columns: 1fr 1fr;
-      background-color: #484D72;
-      padding: 40px 30px 40px 30px;
-      border-radius: 20px;
-      gap: 60px;
-
-      .doctorProfile {
-        width: 65%;
-        gap: 8px;
-        //align-items: center;
-      }
-
-      .doctorInformation {
-        //grid-template-rows: 1fr 1fr;
-        //gap: 16px;
-      }
-
-      .doctorProfession {
-        font-size: 14px;
-        font-weight: 600;
-        color: #FFFFFF;
-      }
-
-      .doctorName {
+      .articlesRoute {
         font-size: 16px;
-        font-weight: 600;
-        color: #FFFFFF;
+      }
+
+      .articleTitle {
+        font-size: 28px;
+      }
+      .advices {
+        padding: 50px 40px 50px 40px;
+        gap: 30px;
+        .adviceBlock {
+          gap: 10px;
+        }
+
+        .adviceTitle {
+          font-size: 22px;
+        }
+
+        .adviceText {
+          font-size: 16px;
+        }
+      }
+
+      .doctor {
+        padding: 40px 30px 40px 30px;
+        gap: 40px;
+
+        .doctorPortrait {
+          max-width: 64px;
+          max-height: 64px;
+        }
+
+        .doctorProfile {
+          width: 65%;
+          gap: 8px;
+        }
+
+        .doctorInformation {
+        }
+
+        .doctorProfession {
+          font-size: 14px;
+          font-weight: 600;
+          color: colors.$whiteColor;
+        }
+
+        .doctorName {
+          font-size: 16px;
+          font-weight: 600;
+          color: colors.$whiteColor;
+        }
+      }
+
+      .questions {
+
+        .questionList {
+          font-size: 16px;
+          font-weight: 500;
+          color: colors.$whiteColor;
+        }
       }
     }
 
-    .questions {
-      //align-items: center;
-
-      .questionList {
-        font-size: 16px;
-        font-weight: 500;
-        color: #FFFFFF;
-      }
-    }
-
-    .advices {
-      background-color: #FFFFFF;
-      padding: 60px;
-      border-radius: 30px;
-      gap: 30px;
-
-      .adviceBlock {
-        gap: 10px;
-      }
-
-      .adviceTitle {
-        font-size: 22px;
-        font-weight: 600;
-        color: #484D72;
-
-      }
-
-      .adviceText {
-        font-size: 16px;
-        font-weight: 500;
-        color: #484D72;
-      }
-    }
   }
 }
 
 @media (max-width: 768px) {
   .article {
-    //padding: 0 103px 150px 103px;
-    margin: 0;
-    background-color: $additionalColor;
 
     .articleContent {
       padding: 50px 0px 1px 0px;
       gap: 40px;
-    }
 
-    .articlesRoute {
-      font-size: 14px;
-    }
-
-    .articleTitle {
-      font-size: 20px;
-    }
-
-    .doctor {
-      grid-template-columns: 1fr 1fr;
-      background-color: #484D72;
-      padding: 40px 30px 40px 30px;
-      border-radius: 20px;
-      gap: 60px;
-
-      .doctorProfile {
-        width: 65%;
-        gap: 8px;
-        //align-items: center;
-      }
-
-      .doctorInformation {
-        //grid-template-rows: 1fr 1fr;
-        //gap: 16px;
-      }
-
-      .doctorProfession {
+      .articlesRoute {
         font-size: 14px;
-        font-weight: 600;
-        color: #FFFFFF;
       }
 
-      .doctorName {
-        font-size: 16px;
-        font-weight: 600;
-        color: #FFFFFF;
-      }
-    }
-
-    .questions {
-      //align-items: center;
-
-      .questionList {
-        font-size: 16px;
-        font-weight: 500;
-        color: #FFFFFF;
-      }
-    }
-
-    .advices {
-      background-color: #FFFFFF;
-      padding: 60px;
-      border-radius: 30px;
-      gap: 30px;
-
-      .adviceBlock {
-        gap: 10px;
+      .articleTitle {
+        font-size: 20px;
       }
 
-      .adviceTitle {
-        font-size: 22px;
-        font-weight: 600;
-        color: #484D72;
+      .advices {
+        border-radius: 20px;
+        padding: 30px 20px 30px 20px;
+        gap: 16px;
 
+        .adviceBlock {
+          gap: 10px;
+        }
+
+        .adviceTitle {
+          font-size: 16px;
+
+        }
+
+        .adviceText {
+          font-size: 14px;
+        }
       }
 
-      .adviceText {
-        font-size: 16px;
-        font-weight: 500;
-        color: #484D72;
+      .doctor {
+        padding: 20px;
+        gap: 26px;
+
+        .doctorPortrait {
+          max-width: 64px;
+          max-height: 64px;
+        }
+
+        .doctorProfile {
+          width: 100%;
+          gap: 8px;
+        }
+
+        .doctorInformation {
+        }
+
+        .doctorProfession {
+          font-size: 12px;
+          font-weight: 600;
+          color: colors.$whiteColor;
+        }
+
+        .doctorName {
+          font-size: 14px;
+          font-weight: 600;
+          color: colors.$whiteColor;
+        }
+      }
+
+      .questions {
+
+        .questionList {
+          font-size: 14px;
+          font-weight: 500;
+          color: colors.$whiteColor;
+        }
       }
     }
   }

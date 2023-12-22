@@ -1,6 +1,7 @@
 import DoctorPage from '@pages/Doctors-page/doctor-page.jsx'
-import StockPage from '@pages/Stock-page/stock-page.jsx'
 import ArticlePage from '@pages/article-page/article-page.jsx'
+import ContactsPage from '@pages/contacts-page/contacts-page.jsx'
+import StockPage from '@pages/stock-page/stock-page.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import MainPage from './pages/main-page'
@@ -22,6 +23,10 @@ const Routes = () => {
 		{
 			path: `/stock`,
 			element: <StockPage />
+		},
+		{
+			path: `/contacts`,
+			element: <ContactsPage />
 		}
 	])
 

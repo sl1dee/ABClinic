@@ -1,27 +1,10 @@
-* {
-  outline: none;
-  font-family: 'Manrope', sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-$mainColor: #484D72;
-$mainTextColor: #16171B;
-
-$additionalColor: #F1F3FF;
-$additionalTextColor: #000;
-
-$whiteColor: #fff;
-
-//потом убрать верхний код
+@use '@assets/styles/vars/colors';
 
 .stock {
   //max-width: none;
   padding-bottom: 110px;
   margin: 0;
-  background-color: $additionalColor;
+  background-color: colors.$additionalColor;
   //max-width: 1216px;
 
   .stockHeader {
@@ -37,25 +20,19 @@ $whiteColor: #fff;
   }
 
   .firstBanner {
-    &::before {
       content: url('/assets/img/stock/firstBanner.svg');
-    }
   }
 
   .secondBanner {
-    &::before {
       content: url('/assets/img/stock/secondBanner.svg');
-    }
   }
 
   .thirdBanner {
-    &::before {
       content: url('/assets/img/stock/thirdBanner.svg');
-    }
   }
 
   .stockBlock {
-    background-color: white;
+    background-color: colors.$whiteColor;
     border-radius: 20px;
     padding: 40px;
     gap: 20px;
@@ -107,19 +84,13 @@ $whiteColor: #fff;
   }
 
   .firstBanner {
-    &::before {
       content: url('/assets/img/stock/firstBanner768.svg');
-    }
   }
   .secondBanner {
-    &::before {
       content: url('/assets/img/stock/secondBanner768.svg');
-    }
   }
   .thirdBanner {
-    &::before {
       content: url('/assets/img/stock/thirdBanner768.svg');
-    }
   }
 }
 
@@ -145,25 +116,19 @@ $whiteColor: #fff;
   }
 
   .firstBanner {
-    &::before {
       content: url('/assets/img/stock/firstBanner320.svg');
       display: flex;
       justify-content: center;
-    }
   }
   .secondBanner {
-    &::before {
       content: url('/assets/img/stock/secondBanner320.svg');
       display: flex;
       justify-content: center;
-    }
   }
   .thirdBanner {
-    &::before {
       content: url('/assets/img/stock/thirdBanner320.svg');
       display: flex;
       justify-content: center;
-    }
   }
 }
 

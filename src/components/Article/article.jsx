@@ -1,8 +1,11 @@
+import cn from 'classnames'
 import React, { useMemo } from 'react'
 
-import MakeRecord from '../Modals/MakeRecord/MakeRecord.jsx'
+import cl from './article.module.scss'
 
-const article = () => {
+// import MakeRecord from '../Modals/MakeRecord/MakeRecord.jsx'
+
+const Article = () => {
 	const questionList = useMemo(
 		() => [
 			{
@@ -62,42 +65,42 @@ const article = () => {
 	)
 
 	return (
-		<div className="article">
+		<div className={cl.article}>
 			<div className="container">
-				<div className="d-flex flex-column articleContent">
-					<div className="articlesRoute">Блог / Как выбрать зубную щетку и пасту?</div>
-					<div className="articleTitle">Как выбрать зубную щётку и пасту?</div>
+				<div className={cn([cl.articleContent, 'd-flex', 'flex-column'])}>
+					<div className={cl.articlesRoute}>Блог / Как выбрать зубную щетку и пасту?</div>
+					<div className={cl.articleTitle}>Как выбрать зубную щётку и пасту?</div>
 					<img src="/assets/img/article/toothbrushes-XL.svg" alt="" />
-					<div className="d-flex doctor">
-						<div className="d-flex doctorProfile">
-							<img src="/assets/img/article/doctor-portrait-M.svg" alt="doctorPortrait" />
-							<div className="d-flex flex-column doctorInformation">
-								<div className="doctorProfession">Врач-ортодонт</div>
-								<div className="doctorName">Иванова Александра</div>
+					<div className={cn([cl.doctor, 'd-flex', 'flex-column', 'flex-sm-row'])}>
+						<div className={cn([cl.doctorProfile, 'd-flex'])}>
+							<img src="/assets/img/article/doctor-portrait-M.svg" className={cl.doctorPortrait} alt="doctorPortrait" />
+							<div className={cn([cl.doctorInformation, 'd-flex', 'flex-column'])}>
+								<div className={cl.doctorProfession}>Врач-ортодонт</div>
+								<div className={cl.doctorName}>Иванова Александра</div>
 							</div>
 						</div>
-						<div className="questions">
-							<ul className="questionList">
+						<div className={cl.questions}>
+							<ul className={cl.questionList}>
 								{questionList.map(({ id, text }) => (
 									<li key={id}>{text}</li>
 								))}
 							</ul>
 						</div>
 					</div>
-					<div className="d-flex flex-column advices">
+					<div className={cn([cl.advices, 'd-flex', 'flex-column'])}>
 						{adviceList.map(({ id, title, text }) => (
-							<div className="d-flex flex-column adviceBlock">
-								<div className="adviceTitle">
+							<div className={cn([cl.adviceBlock, 'd-flex', 'flex-column'])}>
+								<div className={cl.adviceTitle}>
 									{id}. {title}
 								</div>
-								<div className="adviceText">{text}</div>
+								<div className={cl.adviceText}>{text}</div>
 							</div>
 						))}
 					</div>
-					<div className="articlesRoute">Опубликовано 11.11.23</div>
-					<div className="d-flex appointment">
+					<div className={cl.articlesRoute}>Опубликовано 11.11.23</div>
+					<div className={cn([cl.appointment, 'd-flex'])}>
 						{/* <MakeRecord /> */}
-						{/* <img src='/media/makeRecord/1.jpg' className='tools' alt='' /> */}
+						{/* <img src="/media/makeRecord/1.jpg" className={cl.tools} alt="" /> */}
 					</div>
 				</div>
 			</div>
@@ -105,4 +108,4 @@ const article = () => {
 	)
 }
 
-export default article
+export default Article

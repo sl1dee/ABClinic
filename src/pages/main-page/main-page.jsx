@@ -1,8 +1,9 @@
 import React from 'react'
 
+import Map from '@components/Yandex-map/yandex-map.jsx'
+
 import About from '../../Components/About/About'
 import Articles from '../../Components/Articles/Articles'
-import Contacts from '../../Components/Contacts/Contacts'
 import EmployeesSlider from '../../Components/EmployeesSlider/EmployeesSlider'
 import Favorites from '../../Components/Favorites/Favorites'
 import MainSlider from '../../Components/MainSlider/MainSlider'
@@ -126,7 +127,7 @@ export default function MainPage() {
 			{/* <ReviewsSlider /> */}
 			{/* <Articles /> */}
 			<About />
-			{/* <Contacts /> */}
+			{/* <Yandex-map /> */}
 		</MainLayout>
 	)
 }
