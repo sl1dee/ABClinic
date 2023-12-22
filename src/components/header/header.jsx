@@ -10,7 +10,7 @@ import Button from '@ui/button/index.js'
 import cl from './header.module.scss'
 import Sidebar from './sidebar'
 
-export default function Header() {
+const Header = () => {
 	const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
 	// const dispatch = useDispatch()
 
@@ -141,3 +141,5 @@ export default function Header() {
 		</>
 	)
 }
+
+export default memo(Header)

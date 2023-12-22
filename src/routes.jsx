@@ -1,5 +1,5 @@
-
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+
 import MainPage from './pages/main-page'
 
 const Routes = () => {
@@ -7,7 +7,7 @@ const Routes = () => {
 		{
 			path: '/',
 			element: <MainPage />
-		},
+		}
 		// {
 		// 	path: `/doctors`,
 		// 	element: <DoctorPage />
