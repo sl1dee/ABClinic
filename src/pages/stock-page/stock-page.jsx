@@ -1,9 +1,15 @@
 import React from 'react'
 
-import Stock from '@components/Stock/stock.jsx'
+import Stock from '@components/stock'
+
+import MainLayout from '../../layout/main/index.js'
 
 const StockPage = () => {
-	return <Stock />
+	return (
+		<MainLayout>
+			<Stock />
+		</MainLayout>
+	)
 }
 
 export default StockPage

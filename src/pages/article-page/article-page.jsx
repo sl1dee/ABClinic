@@ -1,9 +1,15 @@
 import React from 'react'
 
-import Article from '@components/Article/article.jsx'
+import Article from '@components/article '
+
+import MainLayout from '../../layout/main'
 
 const ArticlePage = () => {
-	return <Article />
+	return (
+		<MainLayout>
+			<Article />
+		</MainLayout>
+	)
 }
 
 export default ArticlePage

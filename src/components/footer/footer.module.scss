@@ -1,0 +1,152 @@
+@use '@assets/styles/vars/colors';
+
+.footer {
+  padding: 40px 0 30px;
+  background-color: colors.$mainColor;
+
+  > div {
+    row-gap: 70px;
+  }
+
+  &Content {
+    column-gap: 40px;
+  }
+
+  &Bottom {
+    &Link {
+      color: colors.$additionalColor;
+      opacity: .7;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
+
+  &Logo {
+    img {
+      height: 50px;
+    }
+  }
+
+  &Links {
+    row-gap: 10px;
+
+    p {
+      color: colors.$whiteColor;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 150%;
+    }
+  }
+
+  &Contacts {
+    row-gap: 20px;
+
+    &El {
+      row-gap: 6px;
+
+      .label {
+        color: colors.$additionalColor;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 150%;
+      }
+
+      .contact {
+        color: colors.$whiteColor;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 150%;
+      }
+    }
+
+    .btn {
+      padding: 16px 26px;
+    }
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {.footer {
+  padding: 40px 0;
+
+  > div {
+    row-gap: 50px;
+  }
+
+  &Content {
+    column-gap: 30px;
+  }
+
+  &Links {
+    row-gap: 6px;
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  &Contacts {
+    &El {
+      row-gap: 6px;
+
+      .label {
+        font-size: 14px;
+      }
+
+      .contact {
+        font-size: 16px;
+      }
+    }
+  }
+}}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0;
+
+    > div {
+      row-gap: 30px;
+    }
+
+    &Content {
+      row-gap: 20px;
+    }
+
+    &Bottom {
+      row-gap: 10px;
+
+      &Link {
+        font-size: 14px;
+      }
+    }
+
+    &Links {
+      row-gap: 6px;
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    &Contacts {
+      row-gap: 20px;
+
+      &El {
+        row-gap: 6px;
+
+        .label {
+          font-size: 14px;
+        }
+
+        .contact {
+          font-size: 14px;
+        }
+      }
+
+      .btn {
+        padding: 12px 26px;
+      }
+    }
+  }
+}

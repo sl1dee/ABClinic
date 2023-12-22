@@ -826,71 +826,7 @@ $whiteColor: #fff;
   }
 }
 
-.footer {
-  padding: 40px 0 30px;
-  background-color: $mainColor;
 
-  > div {
-    row-gap: 70px;
-  }
-
-  &-content {
-    column-gap: 40px;
-  }
-
-  &-bottom {
-    &-link {
-      color: $additionalColor;
-      opacity: .7;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 150%;
-    }
-  }
-
-  &-logo {
-    img {
-      height: 50px;
-    }
-  }
-
-  &-links {
-    row-gap: 10px;
-
-    p {
-      color: $whiteColor;
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 150%;
-    }
-  }
-
-  &-contacts {
-    row-gap: 20px;
-
-    &-el {
-      row-gap: 6px;
-
-      .label {
-        color: $additionalColor;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 150%;
-      }
-
-      .contact {
-        color: $whiteColor;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 150%;
-      }
-    }
-
-    .btn.btn-white-trnsp {
-      padding: 16px 26px;
-    }
-  }
-}
 
 .ask {
   display: none;
@@ -1493,40 +1429,6 @@ $whiteColor: #fff;
       }
     }
   }
-
-  .footer {
-    padding: 40px 0;
-
-    > div {
-      row-gap: 50px;
-    }
-
-    &-content {
-      column-gap: 30px;
-    }
-
-    &-links {
-      row-gap: 6px;
-
-      p {
-        font-size: 16px;
-      }
-    }
-
-    &-contacts {
-      &-el {
-        row-gap: 6px;
-
-        .label {
-          font-size: 14px;
-        }
-
-        .contact {
-          font-size: 16px;
-        }
-      }
-    }
-  }
 }
 
 @media (max-width: 768px) {
@@ -1580,32 +1482,9 @@ $whiteColor: #fff;
     }
   }
 
-  .header {
-    padding: 20px 0;
 
-    &-logo {
-      img {
-        height: 45px;
-      }
-    }
-  }
 
-  .sidebar {
-    .closer {
-      right: 27px;
-    }
 
-    &-content {
-      max-width: 320px;
-      padding: 20px;
-      row-gap: 16px;
-      border-radius: 30px;
-
-      .menu {
-        row-gap: 16px;
-      }
-    }
-  }
 
   .mainSlider {
     padding: 50px 0 40px;
@@ -2059,52 +1938,6 @@ $whiteColor: #fff;
     }
   }
 
-  .footer {
-    padding: 40px 0;
 
-    > div {
-      row-gap: 30px;
-    }
-
-    &-content {
-      row-gap: 20px;
-    }
-
-    &-bottom {
-      row-gap: 10px;
-
-      &-link {
-        font-size: 14px;
-      }
-    }
-
-    &-links {
-      row-gap: 6px;
-
-      p {
-        font-size: 16px;
-      }
-    }
-
-    &-contacts {
-      row-gap: 20px;
-
-      &-el {
-        row-gap: 6px;
-
-        .label {
-          font-size: 14px;
-        }
-
-        .contact {
-          font-size: 14px;
-        }
-      }
-
-      .btn.btn-white-trnsp {
-        padding: 12px 26px;
-      }
-    }
-  }
 
 }

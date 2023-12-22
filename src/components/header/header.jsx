@@ -3,14 +3,14 @@
 import arrDown from '@assets/img/header/arr_down.svg'
 import logo from '@assets/img/logos/logo_b_hor.svg'
 import cn from 'classnames'
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 
 import Button from '@ui/button/index.js'
 
 import cl from './header.module.scss'
 import Sidebar from './sidebar'
 
-export default function Header() {
+const Header = () => {
 	const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
 	// const dispatch = useDispatch()
 
@@ -141,3 +141,5 @@ export default function Header() {
 		</>
 	)
 }
+
+export default memo(Header)

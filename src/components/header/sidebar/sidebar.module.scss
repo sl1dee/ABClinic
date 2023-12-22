@@ -163,3 +163,22 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .sidebar {
+    .closer {
+      right: 27px;
+    }
+
+    &Content {
+      max-width: 320px;
+      padding: 20px;
+      row-gap: 16px;
+      border-radius: 30px;
+
+      .menu {
+        row-gap: 16px;
+      }
+    }
+  }
+}

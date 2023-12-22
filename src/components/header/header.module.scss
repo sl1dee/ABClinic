@@ -119,3 +119,15 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 0;
+
+    &Logo {
+      img {
+        height: 45px;
+      }
+    }
+  }
+}
