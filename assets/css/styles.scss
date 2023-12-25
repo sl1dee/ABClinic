@@ -21,100 +21,7 @@ $whiteColor: #fff;
 
 
 
-.mainSlider {
-  padding: 45px 0 75px;
-  background-color: $additionalColor;
 
-  &-slide {
-    > div {
-      height: 500px !important;
-      column-gap: 20px;
-
-      .text {
-        background-color: $whiteColor;
-        border-radius: 30px;
-        padding: 90px 135px 50px 40px;
-        position: relative;
-        z-index: 0;
-        row-gap: 20px;
-
-        .bckgIcon {
-          position: absolute;
-          z-index: -1;
-          bottom: 18px;
-          right: 83px;
-        }
-
-        &-content {
-          row-gap: 22px;
-
-          h2, p {
-            color: #131313;
-          }
-
-          h2 {
-            font-size: 38px;
-            font-weight: 700;
-            line-height: 120%;
-            letter-spacing: -0.76px;
-          }
-
-          p {
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 150%;
-            max-width: 510px;
-          }
-
-          .btn {
-            padding: 14px 24px;
-          }
-        }
-      }
-
-      .photo {
-        border-radius: 30px;
-        overflow: hidden;
-        width: 100%;
-        max-width: 392px;
-
-        img {
-          object-fit: cover;
-          width: 100%;
-        }
-      }
-
-      .arrows {
-        column-gap: 16px;
-
-        .swiper-button-next, .swiper-button-prev {
-          width: 40px;
-          height: 40px;
-          cursor: pointer;
-          position: unset;
-          margin-top: 0;
-
-          &::after {
-            content: unset;
-          }
-
-          img {
-            width: 100%;
-            height: 100%;
-          }
-        }
-
-        span {
-          color: $mainColor;
-          font-size: 18px;
-          font-weight: 600;
-          line-height: 120%;
-          letter-spacing: -0.36px;
-        }
-      }
-    }
-  }
-}
 
 .services {
   padding: 75px 0;
@@ -984,28 +891,7 @@ $whiteColor: #fff;
     }
   }
 
-  .mainSlider {
-    padding: 35px 0 75px;
 
-    &-slide {
-      > div {
-        .text {
-          padding: 50px 55px 50px 40px;
-
-          .bckgIcon {
-            bottom: 23px;
-            right: 40px;
-          }
-
-          &-content {
-            p {
-              max-width: unset;
-            }
-          }
-        }
-      }
-    }
-  }
 
   .services {
     &-tabsContent {
@@ -1170,44 +1056,7 @@ $whiteColor: #fff;
     }
   }
 
-  .mainSlider {
-    padding: 25px 0 55px;
 
-    &-slide {
-      > div {
-        column-gap: 18px;
-
-        .text {
-          padding: 50px 40px;
-
-          .bckgIcon {
-            bottom: 47px;
-            right: 31px;
-          }
-
-          &-content {
-            row-gap: 22px;
-
-            h2 {
-              font-size: 27px;
-            }
-
-            p {
-              font-size: 16px;
-            }
-          }
-        }
-
-        .photo {
-          max-width: 302px;
-
-          img {
-            height: 100%;
-          }
-        }
-      }
-    }
-  }
 
   .services {
     padding: 55px 0;
@@ -1483,68 +1332,7 @@ $whiteColor: #fff;
 
 
 
-  .mainSlider {
-    padding: 50px 0 40px;
-    background-color: $additionalColor;
 
-    &-slide {
-      > div {
-        height: unset !important;
-        row-gap: 16px;
-        background-color: $whiteColor;
-        border-radius: 20px;
-        padding: 30px 20px;
-
-        .text {
-          padding: unset;
-
-          &-content {
-            row-gap: 8px;
-
-            h2 {
-              font-size: 20px;
-              letter-spacing: -0.9px;
-            }
-
-            p {
-              font-size: 14px;
-              max-width: unset;
-            }
-
-            .btnWrap {
-              padding-top: 12px;
-
-              .btn {
-                padding: 10px 24px;
-              }
-            }
-          }
-        }
-
-        .photo {
-          border-radius: 20px;
-          max-width: unset;
-
-          img {
-            aspect-ratio: 1 / 1;
-            object-position: top;
-          }
-        }
-
-        .arrows {
-          .swiper-button-next, .swiper-button-prev {
-            width: 32px;
-            height: 32px;
-          }
-
-          span {
-            font-size: 14.4px;
-            letter-spacing: -0.288px;
-          }
-        }
-      }
-    }
-  }
 
   .services {
     padding: 40px 0;

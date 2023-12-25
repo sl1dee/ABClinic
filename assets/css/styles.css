@@ -7,84 +7,6 @@ a {
   text-decoration: none;
 }
 
-.mainSlider {
-  padding: 45px 0 75px;
-  background-color: #F1F3FF;
-}
-.mainSlider-slide > div {
-  height: 500px !important;
-  column-gap: 20px;
-}
-.mainSlider-slide > div .text {
-  background-color: #fff;
-  border-radius: 30px;
-  padding: 90px 135px 50px 40px;
-  position: relative;
-  z-index: 0;
-  row-gap: 20px;
-}
-.mainSlider-slide > div .text .bckgIcon {
-  position: absolute;
-  z-index: -1;
-  bottom: 18px;
-  right: 83px;
-}
-.mainSlider-slide > div .text-content {
-  row-gap: 22px;
-}
-.mainSlider-slide > div .text-content h2, .mainSlider-slide > div .text-content p {
-  color: #131313;
-}
-.mainSlider-slide > div .text-content h2 {
-  font-size: 38px;
-  font-weight: 700;
-  line-height: 120%;
-  letter-spacing: -0.76px;
-}
-.mainSlider-slide > div .text-content p {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 150%;
-  max-width: 510px;
-}
-.mainSlider-slide > div .text-content .btn {
-  padding: 14px 24px;
-}
-.mainSlider-slide > div .photo {
-  border-radius: 30px;
-  overflow: hidden;
-  width: 100%;
-  max-width: 392px;
-}
-.mainSlider-slide > div .photo img {
-  object-fit: cover;
-  width: 100%;
-}
-.mainSlider-slide > div .arrows {
-  column-gap: 16px;
-}
-.mainSlider-slide > div .arrows .swiper-button-next, .mainSlider-slide > div .arrows .swiper-button-prev {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  position: unset;
-  margin-top: 0;
-}
-.mainSlider-slide > div .arrows .swiper-button-next::after, .mainSlider-slide > div .arrows .swiper-button-prev::after {
-  content: unset;
-}
-.mainSlider-slide > div .arrows .swiper-button-next img, .mainSlider-slide > div .arrows .swiper-button-prev img {
-  width: 100%;
-  height: 100%;
-}
-.mainSlider-slide > div .arrows span {
-  color: #484D72;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: -0.36px;
-}
-
 .services {
   padding: 75px 0;
   background-color: #F1F3FF;
@@ -807,19 +729,6 @@ a {
   .ask-block-image {
     min-width: 340px;
   }
-  .mainSlider {
-    padding: 35px 0 75px;
-  }
-  .mainSlider-slide > div .text {
-    padding: 50px 55px 50px 40px;
-  }
-  .mainSlider-slide > div .text .bckgIcon {
-    bottom: 23px;
-    right: 40px;
-  }
-  .mainSlider-slide > div .text-content p {
-    max-width: unset;
-  }
   .services-tabsContent {
     grid-template-columns: 1fr 1fr;
   }
@@ -937,34 +846,6 @@ a {
   .favorites-content-el .photo img {
     width: 50px;
     height: 50px;
-  }
-  .mainSlider {
-    padding: 25px 0 55px;
-  }
-  .mainSlider-slide > div {
-    column-gap: 18px;
-  }
-  .mainSlider-slide > div .text {
-    padding: 50px 40px;
-  }
-  .mainSlider-slide > div .text .bckgIcon {
-    bottom: 47px;
-    right: 31px;
-  }
-  .mainSlider-slide > div .text-content {
-    row-gap: 22px;
-  }
-  .mainSlider-slide > div .text-content h2 {
-    font-size: 27px;
-  }
-  .mainSlider-slide > div .text-content p {
-    font-size: 16px;
-  }
-  .mainSlider-slide > div .photo {
-    max-width: 302px;
-  }
-  .mainSlider-slide > div .photo img {
-    height: 100%;
   }
   .services {
     padding: 55px 0;
@@ -1160,53 +1041,6 @@ a {
   }
   .ask-block form .btn {
     padding: 10px 13px;
-  }
-  .mainSlider {
-    padding: 50px 0 40px;
-    background-color: #F1F3FF;
-  }
-  .mainSlider-slide > div {
-    height: unset !important;
-    row-gap: 16px;
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 30px 20px;
-  }
-  .mainSlider-slide > div .text {
-    padding: unset;
-  }
-  .mainSlider-slide > div .text-content {
-    row-gap: 8px;
-  }
-  .mainSlider-slide > div .text-content h2 {
-    font-size: 20px;
-    letter-spacing: -0.9px;
-  }
-  .mainSlider-slide > div .text-content p {
-    font-size: 14px;
-    max-width: unset;
-  }
-  .mainSlider-slide > div .text-content .btnWrap {
-    padding-top: 12px;
-  }
-  .mainSlider-slide > div .text-content .btnWrap .btn {
-    padding: 10px 24px;
-  }
-  .mainSlider-slide > div .photo {
-    border-radius: 20px;
-    max-width: unset;
-  }
-  .mainSlider-slide > div .photo img {
-    aspect-ratio: 1/1;
-    object-position: top;
-  }
-  .mainSlider-slide > div .arrows .swiper-button-next, .mainSlider-slide > div .arrows .swiper-button-prev {
-    width: 32px;
-    height: 32px;
-  }
-  .mainSlider-slide > div .arrows span {
-    font-size: 14.4px;
-    letter-spacing: -0.288px;
   }
   .services {
     padding: 40px 0;
