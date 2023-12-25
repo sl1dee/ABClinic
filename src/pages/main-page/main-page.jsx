@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Education from '@components/Doctors-detail-container/education/index.js'
 import About from '@components/about/about.jsx'
 import Favorites from '@components/favorites/index.js'
 import Services from '@components/services'
