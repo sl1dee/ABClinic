@@ -1,6 +1,6 @@
-import DoctorPage from '@pages/Doctors-page/doctor-page.jsx'
 import ArticlePage from '@pages/article-page'
 import ContactsPage from '@pages/contacts-page'
+import DoctorsPage from '@pages/doctors-page'
 import StockPage from '@pages/stock-page'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
@@ -14,7 +14,7 @@ const Routes = () => {
 		},
 		{
 			path: `/doctors`,
-			element: <DoctorPage />
+			element: <DoctorsPage />
 		},
 		{
 			path: `/article`,
