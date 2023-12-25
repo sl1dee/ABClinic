@@ -17,23 +17,23 @@
 
   &HeaderWrap {
     column-gap: 40px;
+  }
 
-    &Header {
-      color: colors.$mainTextColor;
-      font-size: 38px;
-      font-weight: 700;
-      line-height: 120%;
-      letter-spacing: -0.76px;
-    }
+  &Header {
+    color: colors.$mainTextColor;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.76px;
+  }
 
-    &Description {
-      color: #484D72;
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 150%;
-      max-width: 710px;
-      width: 80%;
-    }
+  &Description {
+    color: #484D72;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    max-width: 710px;
+    width: 80%;
   }
 
   &Slide {

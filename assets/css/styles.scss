@@ -1638,36 +1638,36 @@ $whiteColor: #fff;
       }
     }
   }
+  //.about {
+  //  padding: 40px 0;
+  //
+  //  > div {
+  //    row-gap: 30px;
+  //  }
+  //
+  //  &-headerWrap {
+  //    row-gap: 10px;
+  //  }
+  //
+  //  &-description {
+  //    max-width: unset;
+  //    width: 100%;
+  //
+  //    p {
+  //      font-size: 14px;
+  //    }
+  //  }
+  //
+  //  &-slide {
+  //    border-radius: 20px;
+  //
 
-  .about {
-    padding: 40px 0;
-
-    > div {
-      row-gap: 30px;
-    }
-
-    &-headerWrap {
-      row-gap: 10px;
-    }
-
-    &-description {
-      max-width: unset;
-      width: 100%;
-
-      p {
-        font-size: 14px;
-      }
-    }
-
-    &-slide {
-      border-radius: 20px;
-
-      img {
-        max-width: 100%;
-        max-height: 170px;
-      }
-    }
-  }
+  //    img {
+  //      max-width: 100%;
+  //      max-height: 170px;
+  //    }
+  //  }
+  //}
 
   .contactsBlock {
     padding: 40px 0 80px;

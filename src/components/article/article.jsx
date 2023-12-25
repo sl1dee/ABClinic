@@ -100,7 +100,7 @@ const Article = () => {
 					<div className={cl.articlesRoute}>Опубликовано 11.11.23</div>
 					<div className={cn([cl.appointment, 'd-flex'])}>
 						{/* <MakeRecord /> */}
-						{/* <img src="/media/makeRecord/1.jpg" className={cl.tools} alt="" /> */}
+						{/* <img src="/media/makeRecord/one.jpg" className={cl.tools} alt="" /> */}
 					</div>
 				</div>
 			</div>
