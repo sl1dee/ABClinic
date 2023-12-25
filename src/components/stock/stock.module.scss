@@ -17,38 +17,34 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding-bottom: 40px;
-  }
-
-  .firstBanner {
+    .firstBanner {
       content: url('/assets/img/stock/firstBanner.svg');
-  }
-
-  .secondBanner {
+    }
+    .secondBanner {
       content: url('/assets/img/stock/secondBanner.svg');
-  }
-
-  .thirdBanner {
+    }
+    .thirdBanner {
       content: url('/assets/img/stock/thirdBanner.svg');
-  }
+    }
 
-  .stockBlock {
-    background-color: colors.$whiteColor;
-    border-radius: 20px;
-    padding: 40px;
-    gap: 20px;
-    width: 100%;
-  }
+    .stockBlock {
+      background-color: colors.$whiteColor;
+      border-radius: 20px;
+      padding: 40px;
+      gap: 20px;
+      width: 100%;
 
-  .stockTitle {
-    font-size: 38px;
-    font-weight: 700;
-  }
+      .stockTitle {
+        font-size: 38px;
+        font-weight: 700;
+      }
 
-  .stockText {
-    font-size: 18px;
-    font-weight: 500;
+      .stockText {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
   }
-
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -57,12 +53,26 @@
       padding: 60px 0 40px 0;
     }
 
-    .stockTitle {
-      font-size: 32px;
-    }
+    .stockContent {
+      .firstBanner {
+        content: url('/assets/img/stock/firstBanner1000.svg');
+      }
+      .secondBanner {
+        content: url('/assets/img/stock/secondBanner1000.svg');
+      }
+      .thirdBanner {
+        content: url('/assets/img/stock/thirdBanner1000.svg');
+      }
 
-    .stockText {
-      font-size: 18px;
+      .stockBlock{
+        .stockTitle {
+          font-size: 32px;
+        }
+
+        .stockText {
+          font-size: 18px;
+        }
+      }
     }
   }
 }
@@ -74,23 +84,28 @@
       padding: 50px 0 40px 0;
     }
 
-    .stockTitle {
-      font-size: 28px;
+    .stockContent {
+      .firstBanner {
+        content: url('/assets/img/stock/firstBanner768.svg');
+      }
+      .secondBanner {
+        content: url('/assets/img/stock/secondBanner768.svg');
+      }
+      .thirdBanner {
+        content: url('/assets/img/stock/thirdBanner768.svg');
+      }
+
+      .stockBlock {
+        .stockTitle {
+          font-size: 28px;
+        }
+
+        .stockText {
+          font-size: 16px;
+        }
+      }
     }
 
-    .stockText {
-      font-size: 16px;
-    }
-  }
-
-  .firstBanner {
-      content: url('/assets/img/stock/firstBanner768.svg');
-  }
-  .secondBanner {
-      content: url('/assets/img/stock/secondBanner768.svg');
-  }
-  .thirdBanner {
-      content: url('/assets/img/stock/thirdBanner768.svg');
   }
 }
 
@@ -106,29 +121,34 @@
       padding: 40px 0 30px 0;
     }
 
-    .stockTitle {
-      font-size: 18px;
-    }
+    .stockContent{
+      .firstBanner {
+        content: url('/assets/img/stock/firstBanner320.svg');
+        display: flex;
+        justify-content: center;
+      }
+      .secondBanner {
+        content: url('/assets/img/stock/secondBanner320.svg');
+        display: flex;
+        justify-content: center;
+      }
+      .thirdBanner {
+        content: url('/assets/img/stock/thirdBanner320.svg');
+        display: flex;
+        justify-content: center;
+      }
 
-    .stockText {
-      font-size: 14px;
+      .stockBlock {
+        .stockTitle {
+          font-size: 18px;
+        }
+
+        .stockText {
+          font-size: 14px;
+        }
+      }
     }
   }
 
-  .firstBanner {
-      content: url('/assets/img/stock/firstBanner320.svg');
-      display: flex;
-      justify-content: center;
-  }
-  .secondBanner {
-      content: url('/assets/img/stock/secondBanner320.svg');
-      display: flex;
-      justify-content: center;
-  }
-  .thirdBanner {
-      content: url('/assets/img/stock/thirdBanner320.svg');
-      display: flex;
-      justify-content: center;
-  }
 }
 
