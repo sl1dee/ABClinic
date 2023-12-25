@@ -6,10 +6,10 @@ import About from '../../Components/About/About'
 import Articles from '../../Components/Articles/Articles'
 import EmployeesSlider from '../../Components/EmployeesSlider/EmployeesSlider'
 import Favorites from '../../Components/Favorites/Favorites'
-import MainSlider from '../../Components/MainSlider/MainSlider'
 import OurWorks from '../../Components/OurWorks/OurWorks'
 import ReviewsSlider from '../../Components/ReviewsSlider/ReviewsSlider'
 import Services from '../../Components/Services/Services'
+import MainSlider from '../../components/main-slider/main-slider'
 import MainLayout from '../../layout/main'
 
 const MainPage = () => {
@@ -79,7 +79,7 @@ const MainPage = () => {
 					badge: 'Детская хирургия'
 				},
 				{
-					image: '/media/services/1.jpeg'
+					image: '/media/services/aliya.jpeg'
 				}
 			]
 		}
@@ -118,7 +118,7 @@ const MainPage = () => {
 
 	return (
 		<MainLayout>
-			{/* <MainSlider /> */}
+			<MainSlider />
 			{/* <Services preHeader="Выберите направление услуг" services={services} /> */}
 			{/* <Favorites favorites={favorites} /> */}
 			{/* <EmployeesSlider /> */}
