@@ -112,8 +112,8 @@ const MainPage = () => {
 				dark: true
 			}
 		],
-		image1: '/media/favorites/2.jpg',
-		image2: '/media/favorites/1.jpg'
+		image1: '/media/favorites/two.jpg',
+		image2: '/media/favorites/one.jpg'
 	}
 
 	return (

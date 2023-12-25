@@ -1,4 +1,7 @@
-import src from '@media/about/1.jpg'
+import four from '@media/about/four.jpg'
+import one from '@media/about/one.jpg'
+import three from '@media/about/three.jpg'
+import two from '@media/about/two.jpg'
 import cn from 'classnames'
 import React from 'react'
 import 'swiper/css'
@@ -25,16 +28,16 @@ export default function About() {
 				</div>
 				<Swiper slidesPerView="auto" spaceBetween={20} allowTouchMove loop={false}>
 					<SwiperSlide className={cl.aboutSlide}>
-						<img src={src} alt="" />
+						<img src={one} alt="" />
 					</SwiperSlide>
 					<SwiperSlide className={cl.aboutSlide}>
-						<img src="/media/about/2.jpg" alt="" />
+						<img src={two} alt="" />
 					</SwiperSlide>
 					<SwiperSlide className={cl.aboutSlide}>
-						<img src="/media/about/3.jpg" alt="" />
+						<img src={three} alt="" />
 					</SwiperSlide>
 					<SwiperSlide className={cl.aboutSlide}>
-						<img src="/media/about/4.jpg" alt="" />
+						<img src={four} alt="" />
 					</SwiperSlide>
 				</Swiper>
 			</div>
