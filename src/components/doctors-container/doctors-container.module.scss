@@ -82,19 +82,18 @@
               font-weight: 500;
               line-height: 130%;
             }
-          }
 
-          &Badge {
-            border-radius: 82px;
-            background: colors.$additionalColor;
-            padding: 4px 12px;
+            &Badge {
+              border-radius: 82px;
+              background: colors.$additionalColor;
+              padding: 4px 12px;
 
-            p {
-              color: colors.$mainColor;
-              font-size: 18px;
-              font-weight: 500;
-              line-height: 130%;
-              display: inline-block;
+              p {
+                color: colors.$mainColor;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 130%;
+              }
             }
           }
         }
