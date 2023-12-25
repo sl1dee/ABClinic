@@ -1,0 +1,314 @@
+@use '@assets/styles/vars/colors';
+
+.services {
+  padding: 75px 0;
+  background-color: colors.$additionalColor;
+
+  > div {
+    row-gap: 20px;
+  }
+
+  &PreHeader {
+    p {
+      color: colors.$mainTextColor;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 140%;
+      letter-spacing: -0.48px;
+    }
+  }
+
+  &Content {
+    row-gap: 40px;
+  }
+
+  &Tabs {
+    column-gap: 40px;
+
+    &El {
+      color: colors.$mainColor;
+      opacity: .5;
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: -0.76px;
+      transition: opacity .3s ease, color .3s ease;
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        height: 3px;
+        background-color: colors.$mainTextColor;
+        opacity: 0;
+        transition: opacity .3s ease;
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+      }
+
+      &.active, &.single {
+        color: colors.$additionalTextColor;
+        opacity: 1;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      &.single {
+        cursor: default;
+
+        &::after {
+          content: unset;
+        }
+      }
+    }
+  }
+
+  &TabsContent {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    position: relative;
+    z-index: 0;
+
+    .onlyImage {
+      border-radius: 30px;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+      }
+    }
+
+    .additionalImage {
+      position: absolute;
+      right: 20px;
+      top: 70px;
+      transform: translate(0, -100%);
+      z-index: -1;
+      max-height: 190px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    > div:not(.onlyImage, .additionalImage) {
+      background-color: colors.$whiteColor;
+      padding: 40px;
+      border-radius: 30px;
+      min-height: 290px;
+      gap: 14px;
+      overflow: hidden;
+
+      .text {
+        row-gap: 12px;
+
+        h2 {
+          color: colors.$mainTextColor;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 140%;
+          letter-spacing: -0.48px;
+        }
+
+        p {
+          color: colors.$mainColor;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 150%;
+        }
+      }
+
+      .badge {
+        padding: 4px 20px;
+        background-color: colors.$additionalColor;
+        border-radius: 30px;
+
+        span {
+          color: colors.$mainColor;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .services {
+    &TabsContent {
+      grid-template-columns: 1fr 1fr;
+
+      > div:not(.onlyImage, .additionalImage) {
+        min-height: 275px;
+      }
+
+      .additionalImage {
+        right: 30px;
+        top: 35px;
+
+        img {
+          max-height: 180px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .services {
+    padding: 55px 0;
+
+    > div {
+      row-gap: 26px;
+    }
+
+    &PreHeader {
+      p {
+        color: colors.$mainTextColor;
+        font-size: 20px;
+        letter-spacing: -0.4px;
+      }
+    }
+
+    &Content {
+      row-gap: 52px;
+    }
+
+    &Tabs {
+      &El {
+        font-size: 28px;
+        letter-spacing: -0.56px;
+
+        &::after {
+          height: 2.5px;
+        }
+      }
+    }
+
+    &TabsContent {
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+
+      > div:not(.onlyImage, .additionalImage) {
+        background-color: colors.$whiteColor;
+        padding: 30px;
+        min-height: 225px;
+        gap: 14px;
+
+        .text {
+          row-gap: 8px;
+
+          h2 {
+            font-size: 22px;
+            letter-spacing: -0.44px;
+          }
+
+          p {
+            font-size: 16px;
+          }
+        }
+
+        .badge {
+          border-radius: 82px;
+
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .additionalImage {
+        right: 5px;
+        top: 30px;
+
+        img {
+          max-height: 145px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 40px 0;
+
+    > div {
+      row-gap: 16px;
+    }
+
+    &PreHeader {
+      p {
+        font-size: 16px;
+        letter-spacing: -0.32px;
+      }
+    }
+
+    &Content {
+      row-gap: 32px;
+    }
+
+    &Tabs {
+      column-gap: 20px;
+
+      &El {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+
+        &::after {
+          height: 2px;
+          bottom: -8px;
+        }
+      }
+    }
+
+    &TabsContent {
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr;
+      gap: 12px;
+
+      .onlyImage {
+        border-radius: 20px;
+        min-height: 150px;
+      }
+
+      > div:not(.onlyImage) {
+        padding: 20px;
+        border-radius: 20px;
+        min-height: 150px;
+        gap: 10px;
+
+        .text {
+          row-gap: 4px;
+
+          h2 {
+            font-size: 18px;
+            letter-spacing: -0.36px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+
+        .badge {
+          border-radius: 82px;
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

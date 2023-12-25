@@ -2,14 +2,14 @@ import React from 'react'
 
 import Education from '@components/Doctors-detail-container/education/index.js'
 import About from '@components/about/about.jsx'
+import Favorites from '@components/favorites/index.js'
+import Services from '@components/services'
 import Map from '@components/yandex-map/yandex-map.jsx'
 
 import Articles from '../../Components/Articles/Articles'
-import EmployeesSlider from '../../Components/EmployeesSlider/EmployeesSlider'
-import Favorites from '../../Components/Favorites/Favorites'
 import OurWorks from '../../Components/OurWorks/OurWorks'
 import ReviewsSlider from '../../Components/ReviewsSlider/ReviewsSlider'
-import Services from '../../Components/Services/Services'
+import EmployeesSlider from '../../components/employees-slider/employees-slider'
 import MainSlider from '../../components/main-slider/main-slider'
 import MainLayout from '../../layout/main'
 
@@ -80,7 +80,7 @@ const MainPage = () => {
 					badge: 'Детская хирургия'
 				},
 				{
-					image: '/media/services/aliya.jpeg'
+					image: '/media/services/one.jpeg'
 				}
 			]
 		}
@@ -122,12 +122,11 @@ const MainPage = () => {
 			<MainSlider />
 			{/* <Services preHeader="Выберите направление услуг" services={services} /> */}
 			{/* <Favorites favorites={favorites} /> */}
-			{/* <EmployeesSlider /> */}
+			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" />
 			{/* <OurWorks /> */}
 			{/* <ReviewsSlider /> */}
 			{/* <Articles /> */}
-			<Education />
-			<About />
+			{/* <About /> */}
 			{/* <yandex-map /> */}
 		</MainLayout>
 	)
