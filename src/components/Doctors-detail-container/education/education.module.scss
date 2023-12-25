@@ -1,0 +1,93 @@
+@use '@assets/styles/vars/colors';
+
+.eduactionContainer {
+  background-color: colors.$additionalColor;
+
+  .title {
+    font-size: 38px;
+    font-weight: 700;
+    color: colors.$mainTextColor;
+    padding-bottom: 40px;
+  }
+
+  .block {
+    background-color: colors.$whiteColor;
+    padding: 50px 40px 50px 40px;
+    border-radius: 30px;
+
+    .blockPoints {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+
+      .point {
+        font-size: 20px;
+        font-weight: 500;
+        color: colors.$mainColor;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .eduactionContainer {
+    background-color: colors.$additionalColor;
+
+    .block {
+      background-color: colors.$whiteColor;
+      padding: 40px;
+
+      .blockPoints {
+        gap: 20px;
+
+        .point {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .eduactionContainer {
+    background-color: colors.$additionalColor;
+
+    .title {
+      font-size: 28px;
+      padding-bottom: 20px;
+    }
+
+    .block {
+
+      .blockPoints {
+
+        .point {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .eduactionContainer {
+    background-color: colors.$additionalColor;
+
+    .title {
+      font-size: 20px;
+      padding-bottom: 20px;
+    }
+
+    .block {
+      padding: 20px;
+      border-radius: 20px;
+
+      .blockPoints {
+
+        .point {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

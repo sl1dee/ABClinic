@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Education from '@components/Doctors-detail-container/education/index.js'
 import About from '@components/about/about.jsx'
 import Map from '@components/yandex-map/yandex-map.jsx'
 
@@ -125,6 +126,7 @@ const MainPage = () => {
 			{/* <OurWorks /> */}
 			{/* <ReviewsSlider /> */}
 			{/* <Articles /> */}
+			<Education />
 			<About />
 			{/* <yandex-map /> */}
 		</MainLayout>
