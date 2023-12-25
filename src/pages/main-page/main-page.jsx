@@ -1,8 +1,8 @@
 import React from 'react'
 
+import About from '@components/about/about.jsx'
 import Map from '@components/yandex-map/yandex-map.jsx'
 
-import About from '../../Components/About/About'
 import Articles from '../../Components/Articles/Articles'
 import EmployeesSlider from '../../Components/EmployeesSlider/EmployeesSlider'
 import Favorites from '../../Components/Favorites/Favorites'

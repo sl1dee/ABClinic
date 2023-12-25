@@ -167,7 +167,7 @@ $whiteColor: #fff;
   }
 }
 
-.favorites, .employeesSlider, .ourWorks, .reviewsSlider, .articles, .about {
+.favorites, .employeesSlider, .ourWorks, .reviewsSlider, .articles {
   &-header {
     color: $mainTextColor;
     font-size: 38px;
@@ -640,47 +640,47 @@ $whiteColor: #fff;
   }
 }
 
-.about {
-  padding: 75px 0;
-  background-color: $additionalColor;
-  overflow: hidden;
-
-  > div {
-    row-gap: 50px;
-  }
-
-  .swiper {
-    overflow: visible;
-    width: 100%;
-  }
-
-  &-headerWrap {
-    column-gap: 40px;
-  }
-
-  &-description {
-    color: #484D72;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 150%;
-    max-width: 710px;
-    width: 80%;
-  }
-
-  &-slide {
-    border-radius: 40px;
-    overflow: hidden;
-    position: relative;
-    width: auto !important;
-
-    img {
-      max-height: 360px;
-      max-width: 600px;
-      object-fit: cover;
-      object-position: center;
-    }
-  }
-}
+//.about {
+//  padding: 75px 0;
+//  background-color: $additionalColor;
+//  overflow: hidden;
+//
+//  > div {
+//    row-gap: 50px;
+//  }
+//
+//  .swiper {
+//    overflow: visible;
+//    width: 100%;
+//  }
+//
+//  &-headerWrap {
+//    column-gap: 40px;
+//  }
+//
+//  &-description {
+//    color: #484D72;
+//    font-size: 18px;
+//    font-weight: 500;
+//    line-height: 150%;
+//    max-width: 710px;
+//    width: 80%;
+//  }
+//
+//  &-slide {
+//    border-radius: 40px;
+//    overflow: hidden;
+//    position: relative;
+//    width: auto !important;
+//
+//    img {
+//      max-height: 360px;
+//      max-width: 600px;
+//      object-fit: cover;
+//      object-position: center;
+//    }
+//  }
+//}
 
 .contactsBlock {
   padding: 75px 0 150px;
@@ -1240,26 +1240,7 @@ $whiteColor: #fff;
     }
   }
 
-  .about {
-    padding: 55px 0;
 
-    > div {
-      row-gap: 40px;
-    }
-
-    &-headerWrap {
-      row-gap: 20px;
-    }
-
-    &-description {
-      max-width: unset;
-      width: 100%;
-    }
-
-    &-slide {
-      border-radius: 40px;
-    }
-  }
 
   .contactsBlock {
     padding: 55px 0 110px;
