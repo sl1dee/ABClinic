@@ -81,7 +81,7 @@ const DoctorsContainer = () => {
 	)
 
 	return (
-		<div className={cl.doctorsСontainer}>
+		<div className={cl.doctorsContainer}>
 			<div className="container">
 				<h1>Врачи</h1>
 				<div>фильтры</div>

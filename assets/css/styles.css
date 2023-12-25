@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   outline: none;
   font-family: "Manrope", sans-serif;
@@ -791,11 +790,6 @@ a {
 .ask-block form p.text-center a {
   color: #999999;
   text-decoration: underline;
-}
-
-.doctorsСontainer {
-  padding-top: 50px;
-  background-color: #F1F3FF;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
