@@ -276,9 +276,6 @@ a {
     padding: 0 20px;
     margin: 0;
   }
-  .btn {
-    font-size: 16px;
-  }
   .favorites-header {
     font-size: 28px;
     letter-spacing: -0.56px;
@@ -372,9 +369,6 @@ a {
     max-width: none;
     padding: 0 20px;
     margin: 0;
-  }
-  .btn {
-    font-size: 14px;
   }
   .services {
     padding: 40px 0;

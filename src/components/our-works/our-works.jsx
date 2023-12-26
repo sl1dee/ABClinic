@@ -154,7 +154,7 @@ export default function OurWorks() {
 												<p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>
 											</div>
 										</div>
-										<Button onClick={openModalHandler} className="btn" colorStyle="primary">
+										<Button onClick={openModalHandler} className="btn" colorStyle="outlined">
 											Записаться
 										</Button>
 									</div>
@@ -203,7 +203,7 @@ export default function OurWorks() {
 												<p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>
 											</div>
 										</div>
-										<Button onClick={openModalHandler} className="btn" colorStyle="primary">
+										<Button onClick={openModalHandler}  className={cl.btn} colorStyle="outlined">
 											Записаться
 										</Button>
 									</div>
@@ -278,7 +278,7 @@ export default function OurWorks() {
 												<p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>
 											</div>
 										</div>
-										<Button onClick={openModalHandler} className="btn" colorStyle="primary">
+										<Button onClick={openModalHandler} className="btn" colorStyle="outlined">
 											Записаться
 										</Button>
 									</div>
@@ -327,7 +327,7 @@ export default function OurWorks() {
 												<p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>
 											</div>
 										</div>
-										<Button onClick={openModalHandler} className="btn" colorStyle="primary">
+										<Button onClick={openModalHandler}  className="btn" colorStyle="outlined">
 											Записаться
 										</Button>
 									</div>

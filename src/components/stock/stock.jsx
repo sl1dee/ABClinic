@@ -52,7 +52,9 @@ const Stock = () => {
 							<h3 className={cl.stockTitle}>{title}</h3>
 							<div className={cl.stockText}>{text}</div>
 							<div className="d-flex btnWrap">
-								<Button onClick={openModalHandler}>Записаться</Button>
+								<Button onClick={openModalHandler} className={cl.btn}>
+									Записаться
+								</Button>
 							</div>
 						</div>
 					</div>
