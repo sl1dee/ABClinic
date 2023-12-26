@@ -127,6 +127,10 @@
         &Content {
           row-gap: 10px;
         }
+
+        .btn{
+
+        }
       }
 
       .person {
@@ -241,6 +245,7 @@
           row-gap: 20px;
           max-width: unset;
           width: 50%;
+
         }
       }
   }
@@ -349,5 +354,10 @@
         }
       }
     }
+  }
+  .btn{
+    text-align: center;
+    width: 100%;
+
   }
 }

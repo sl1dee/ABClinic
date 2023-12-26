@@ -1,7 +1,8 @@
 import logo from '@assets/img/logos/logo_b_hor.svg'
 import loc from '@assets/img/sidebar/loc.svg'
 import phone from '@assets/img/sidebar/phone.svg'
-import { setBurgerIsOpen } from '@store/modules/modals.js'
+import { setBurgerIsOpen, setSignUpIsOpen } from '@store/modules/modals.js'
+import Button from '@ui/button/index.js'
 import cn from 'classnames'
 import React, { memo, useEffect, useMemo } from 'react'
 import { useDispatch } from 'react-redux'
@@ -18,6 +19,9 @@ const Sidebar = () => {
 	},[])
 	const closeHandler = () => {
 		dispatch(setBurgerIsOpen(false))
+	}
+	const openModalHandler = () => {
+		dispatch(setSignUpIsOpen(true))
 	}
 
 	const navigationList = useMemo(
@@ -110,7 +114,7 @@ const Sidebar = () => {
 	)
 
 	return (
-		<div className={cn([cl.sidebar, cl.sidebarOpen])}>
+		<div className={cl.sidebar}>
 			<div className={cl.sidebarBckg} onClick={closeHandler} title="Закрыть" />
 			<div className={cn([cl.sidebarContent, 'd-flex', 'flex-column', 'justify-content-md-between', 'h-100'])}>
 				<div
@@ -162,16 +166,7 @@ const Sidebar = () => {
 								<p className="mb-0">Открыто с 10:00 до 21:00</p>
 							</div>
 						</div>
-						{/* <div */}
-						{/*	className={cn([cl.btn, 'btn-trnsp-dark'])} */}
-						{/*	onClick={() => { */}
-						{/*		// dispatch(toggleMakeRecordModal(true)) */}
-						{/*		// props.toggle(false) */}
-						{/*		// Это кнопка компонент */}
-						{/*	}} */}
-						{/* > */}
-						{/*	Записаться */}
-						{/* </div> */}
+						<Button onClick={openModalHandler} colorStyle="outlined" className={cl.btn}> Записаться </Button>
 					</div>
 				</div>
 			</div>

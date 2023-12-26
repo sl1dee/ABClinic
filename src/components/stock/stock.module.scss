@@ -45,6 +45,10 @@
       }
     }
   }
+  .btn{
+    padding: 16px 26px;
+  }
+
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -148,6 +152,11 @@
         }
       }
     }
+  }
+  .btn{
+    padding: 12px;
+    text-align: center;
+    width: 100%;
   }
 
 }
