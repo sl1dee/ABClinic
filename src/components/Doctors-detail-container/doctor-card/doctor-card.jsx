@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:src/components/Doctors-detail-container/doctor-card/doctor-card.jsx
 import React from 'react'
 
 import { toggleMakeRecordModal } from '../../../store/actions/makeRecordModal/makeRecordModal.js'
@@ -36,3 +37,5 @@ const DoctorCard = () => {
 }
 
 export default DoctorCard
+=======
+>>>>>>> Stashed changes:src/components/doctors-detail-container/doctor-card/doctor-card.jsx

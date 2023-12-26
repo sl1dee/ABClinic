@@ -23,12 +23,6 @@ a {
   z-index: 0;
   row-gap: 20px;
 }
-.mainSlider-slide > div .text .bckgIcon {
-  position: absolute;
-  z-index: -1;
-  bottom: 18px;
-  right: 83px;
-}
 .mainSlider-slide > div .text-content {
   row-gap: 22px;
 }
@@ -206,7 +200,7 @@ a {
   line-height: 150%;
 }
 
-.favorites-header, .employeesSlider-header, .ourWorks-header, .reviewsSlider-header, .articles-header, .about-header {
+.favorites-header, .employeesSlider-header, .ourWorks-header, .reviewsSlider-header, .articles-header {
   color: #16171B;
   font-size: 38px;
   font-weight: 700;
@@ -597,42 +591,6 @@ a {
   font-size: 18px;
   font-weight: 500;
   line-height: 130%;
-}
-
-.about {
-  padding: 75px 0;
-  background-color: #F1F3FF;
-  overflow: hidden;
-}
-.about > div {
-  row-gap: 50px;
-}
-.about .swiper {
-  overflow: visible;
-  width: 100%;
-}
-.about-headerWrap {
-  column-gap: 40px;
-}
-.about-description {
-  color: #484D72;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 150%;
-  max-width: 710px;
-  width: 80%;
-}
-.about-slide {
-  border-radius: 40px;
-  overflow: hidden;
-  position: relative;
-  width: auto !important;
-}
-.about-slide img {
-  max-height: 360px;
-  max-width: 600px;
-  object-fit: cover;
-  object-position: center;
 }
 
 .contactsBlock {
@@ -1096,22 +1054,6 @@ a {
   .articles-content-el .text-date {
     font-size: 18px;
   }
-  .about {
-    padding: 55px 0;
-  }
-  .about > div {
-    row-gap: 40px;
-  }
-  .about-headerWrap {
-    row-gap: 20px;
-  }
-  .about-description {
-    max-width: unset;
-    width: 100%;
-  }
-  .about-slide {
-    border-radius: 40px;
-  }
   .contactsBlock {
     padding: 55px 0 110px;
   }
@@ -1452,29 +1394,6 @@ a {
   }
   .articles-content-el .text-date {
     font-size: 14px;
-  }
-  .about {
-    padding: 40px 0;
-  }
-  .about > div {
-    row-gap: 30px;
-  }
-  .about-headerWrap {
-    row-gap: 10px;
-  }
-  .about-description {
-    max-width: unset;
-    width: 100%;
-  }
-  .about-description p {
-    font-size: 14px;
-  }
-  .about-slide {
-    border-radius: 20px;
-  }
-  .about-slide img {
-    max-width: 100%;
-    max-height: 170px;
   }
   .contactsBlock {
     padding: 40px 0 80px;
