@@ -1,5 +1,6 @@
 import cn from 'classnames'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import cl from './articles.module.scss'
 
@@ -9,7 +10,9 @@ export default function Articles() {
 			<div className="container d-flex flex-column">
 				<div className="d-flex align-items-center justify-content-between">
 					<h2 className={cn([cl.articlesHeader, 'mb-0'])}>Полезныe статьи</h2>
-					<div className={cn([cl.btn, 'd-none', 'd-md-block'])}>Все статьи</div>
+					<Link to="/article">
+						<div className={cn([cl.btn, 'd-none', 'd-md-block'])}>Все статьи</div>
+					</Link>
 				</div>
 				<div className={cl.articlesContent}>
 					<div
@@ -26,9 +29,11 @@ export default function Articles() {
 							'justify-content-lg-between'
 						])}
 					>
-						<div className={cl.photo}>
-							<img src="/media/articles/1.jpg" alt="" />
-						</div>
+						<Link to="/article">
+							<div className={cl.photo}>
+								<img src="/media/articles/1.jpg" alt="" />
+							</div>
+						</Link>
 						<div className={cn([cl.text, 'd-flex', 'flex-column'])}>
 							<p className={cn([cl.textDate, 'mb-0'])}>11.11.23</p>
 							<p className={cn([cl.textHeader, 'mb-0'])}>Как научить ребенка чистить зубы?</p>
@@ -46,9 +51,11 @@ export default function Articles() {
 							'justify-content-lg-between'
 						])}
 					>
-						<div className={cl.photo}>
-							<img src="/media/articles/1.jpg" alt="" />
-						</div>
+						<Link to="/article">
+							<div className={cl.photo}>
+								<img src="/media/articles/1.jpg" alt="" />
+							</div>
+						</Link>
 						<div className={cn([cl.text, 'd-flex', 'flex-column'])}>
 							<p className={cn([cl.textDate, 'mb-0'])}>11.11.23</p>
 							<p className={cn([cl.textHeader, 'mb-0'])}>Как научить ребенка чистить зубы?</p>

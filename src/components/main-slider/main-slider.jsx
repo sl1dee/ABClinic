@@ -2,6 +2,7 @@ import arrowLeft from '@assets/img/mainSlider/arrow-left.svg'
 import arrowRight from '@assets/img/mainSlider/arrow-right.svg'
 import union from '@assets/img/mainSlider/union.svg'
 import aliya from '@media/mainSlider/aliya.jpeg'
+import { setSignUpIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
 import React, { useState } from 'react'
 import { Navigation } from 'swiper'
@@ -13,14 +14,18 @@ import Button from '@ui/button/button.jsx'
 
 import cl from './main-slider.module.scss'
 
-// import { useDispatch } from 'react-redux'
-// import { toggleMakeRecordModal } from '../../store/actions/makeRecordModal/makeRecordModal'
+import { useDispatch } from 'react-redux'
+
 
 export default function MainSlider() {
 	const [activeSlide, setActiveSlide] = useState(0)
 	const [slidesCount, setSlidesCount] = useState(0)
-	//  const dispatch = useDispatch()
-	//
+	const dispatch = useDispatch()
+
+	const openModalHandler = () => {
+		dispatch(setSignUpIsOpen(true))
+	}
+
 	const updateCounts = (activeIndex, count) => {
 		setActiveSlide(activeIndex + 1)
 		setSlidesCount(count)
@@ -32,6 +37,8 @@ export default function MainSlider() {
 	const nextSwipeHandler = () => {
 		swiper?.slideNext()
 	}
+
+
 
 	return (
 		<section className={cl.mainSlider}>
@@ -61,7 +68,7 @@ export default function MainSlider() {
 										Современная стоматология в Уфе для взрослых и детей. Запишитесь на бесплатную консультацию
 									</p>
 									<div className={cn([cl.btnWrapper, 'd-flex'])}>
-										<Button colorStyle="primary" className={cn([cl.btn, 'flex-md-grow-0'])}>
+										<Button onClick={openModalHandler} colorStyle="primary" className={cn([cl.btn, 'flex-md-grow-0'])}>
 											Записаться
 										</Button>
 									</div>
@@ -109,7 +116,7 @@ export default function MainSlider() {
 										Современная стоматология в Уфе для взрослых и детей. Запишитесь на бесплатную консультацию
 									</p>
 									<div className={cn([cl.btnWrapper, 'd-flex'])}>
-										<Button colorStyle="primary" className={cn([cl.btn, 'flex-md-grow-0'])}>
+										<Button onClick={openModalHandler} colorStyle="primary" className={cn([cl.btn, 'flex-md-grow-0'])}>
 											Записаться
 										</Button>
 									</div>
@@ -157,7 +164,7 @@ export default function MainSlider() {
 										Современная стоматология в Уфе для взрослых и детей. Запишитесь на бесплатную консультацию
 									</p>
 									<div className={cn([cl.btnWrapper, 'd-flex'])}>
-										<Button colorStyle="primary" className={cn([cl.btn, 'flex-md-grow-0'])}>
+										<Button onClick={openModalHandler} colorStyle="primary" className={cn([cl.btn, 'flex-md-grow-0'])}>
 											Записаться
 										</Button>
 									</div>
@@ -205,7 +212,7 @@ export default function MainSlider() {
 										Современная стоматология в Уфе для взрослых и детей. Запишитесь на бесплатную консультацию
 									</p>
 									<div className={cn([cl.btnWrapper, 'd-flex'])}>
-										<Button colorStyle="primary" className={cn([cl.btn, 'flex-md-grow-0'])}>
+										<Button onClick={openModalHandler} colorStyle="primary" className={cn([cl.btn, 'flex-md-grow-0'])}>
 											Записаться
 										</Button>
 									</div>

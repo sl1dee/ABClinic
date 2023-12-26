@@ -1,12 +1,20 @@
+import useDisableScroll from '@hooks/use-disable-scroll.js'
+import { setSignUpIsOpen } from '@store/modules/modals.js'
+import cn from 'classnames'
 import React, { createRef, useState } from 'react'
 import InputMask from 'react-input-mask'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
-import { toggleMakeRecordModal } from '../../../store/actions/makeRecordModal/makeRecordModal'
+import Button from '@ui/button/index.js'
 
-export default function MakeRecord(props) {
-	const isOpen = useSelector((state) => state.makeRecordModal)
+import cl from './sign-up-modal.module.scss'
+
+const SignUpModal = () => {
 	const dispatch = useDispatch()
+	useDisableScroll()
+	const closeHandler = () => {
+		dispatch(setSignUpIsOpen(false))
+	}
 
 	const form = createRef()
 
@@ -30,27 +38,21 @@ export default function MakeRecord(props) {
 	}
 
 	return (
-		<div className={`ask ${isOpen ? 'active justify-content-center align-items-center' : ''}`}>
-			<div
-				className="ask-overlay"
-				onClick={() => {
-					dispatch(toggleMakeRecordModal(false))
-				}}
-				title="Закрыть"
-			/>
-			<div className="ask-block d-flex">
-				{/* <div className="ask-block-close" onClick={()=>{dispatch(toggleMakeRecordModal(false))}}/> */}
-				<div className="ask-block-text d-flex flex-column">
+		<div className={cn([cl.ask, 'justify-content-center', 'align-items-center'])}>
+			<div className={cl.askOverlay} onClick={closeHandler} title="Закрыть" />
+			<div className={cn([cl.askBlock, 'd-flex'])}>
+				<div className={cn([cl.askBlockText, 'd-flex', 'flex-column'])}>
+					<div className={cl.askBlockClose} onClick={closeHandler} />
 					{isOk === 1 ? (
-						<div className="text d-flex flex-column">
-							<p className="request mb-0">Спасибо!</p>
-							<span className="request2 mb-0">Скоро мы с вами свяжемся.</span>
+						<div className={cn([cl.text, 'd-flex', 'flex-column'])}>
+							<p className={cn([cl.request, 'mb-0'])}>Спасибо!</p>
+							<span className={cn([cl.request2, 'mb-0'])}>Скоро мы с вами свяжемся.</span>
 						</div>
 					) : isOk === 2 ? (
 						<>
-							<div className="text d-flex flex-column">
-								<p className="request mb-0">Запись на прием</p>
-								<p className="request2 mb-0">
+							<div className={cn([cl.text, 'd-flex', 'flex-column'])}>
+								<p className={cn([cl.request, 'mb-0'])}>Запись на прием</p>
+								<p className={cn([cl.request2, 'mb-0'])}>
 									Мы рады предложить вам нашу помощь в решении любых вопросов и проблем. Заполните форму обратного
 									звонка, и наши специалисты свяжутся с вами.
 								</p>
@@ -63,7 +65,7 @@ export default function MakeRecord(props) {
 									submitForm(e)
 								}}
 							>
-								<div className="ask-block-fields ask-block-fields-buy d-flex flex-column">
+								<div className={cn([cl.askBlockFields, 'd-flex', 'flex-column'])}>
 									<div className="d-flex flex-column">
 										<input name="name" placeholder="Имя" type="text" required="" />
 									</div>
@@ -72,8 +74,8 @@ export default function MakeRecord(props) {
 									</div>
 								</div>
 								<div className="d-flex flex-column">
-									<button className="btn btn-dark-trnsp">Отправить</button>
-									<p className="text-center">
+									<Button className={cl.btn}>Отправить</Button>
+									<p className={cl.textCenter}>
 										Нажимая на кнопку, вы соглашаетесь с{' '}
 										<a href="/policy" target="_blank">
 											Политикой конфиденциальности
@@ -83,17 +85,19 @@ export default function MakeRecord(props) {
 							</form>
 						</>
 					) : (
-						<div className="text d-flex flex-column">
-							<p className="request mb-0">Ошибка!</p>
-							<span className="request2 mb-0">Произошла ошибка, попробуйте снова позже.</span>
+						<div className={cn([cl.text, 'd-flex', 'flex-column'])}>
+							<p className={cn([cl.request, 'mb-0'])}>Ошибка!</p>
+							<span className={cn([cl.request2, 'mb-0'])}>Произошла ошибка, попробуйте снова позже.</span>
 						</div>
 					)}
 				</div>
 				<div
-					className="ask-block-image d-none d-md-block w-100"
+					className={cn([cl.askBlockImage, 'd-none', 'd-md-block', 'w-100'])}
 					style={{ backgroundImage: 'url("/media/makeRecord/one.jpg")' }}
 				/>
 			</div>
 		</div>
 	)
 }
+
+export default SignUpModal

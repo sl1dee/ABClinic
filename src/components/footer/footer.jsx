@@ -1,6 +1,8 @@
 import logo from '@assets/img/logos/logo_w.svg'
+import { setSignUpIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
 import React, { memo } from 'react'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import Button from '@ui/button/index.js'
@@ -8,6 +10,11 @@ import Button from '@ui/button/index.js'
 import cl from './footer.module.scss'
 
 const Footer = () => {
+	const dispatch = useDispatch()
+
+	const openModalHandler = () => {
+		dispatch(setSignUpIsOpen(true))
+	}
 	return (
 		<footer className={cl.footer}>
 			<div className="container d-flex flex-column">
@@ -45,7 +52,7 @@ const Footer = () => {
 							</div>
 						</div>
 						<div className="d-flex">
-							<Button className={cl.btn} colorStyle="secondary">
+							<Button onClick={openModalHandler} className={cl.btn} colorStyle="secondary">
 								Записаться на прием
 							</Button>
 						</div>
@@ -67,7 +74,7 @@ const Footer = () => {
 							</Link>
 						</div>
 						<div>
-							<Link to="/">
+							<Link to="/doctors">
 								<p className="mb-0">Врачи</p>
 							</Link>
 						</div>
@@ -77,12 +84,12 @@ const Footer = () => {
 							</Link>
 						</div>
 						<div className="d-block d-lg-none">
-							<Link to="/">
+							<Link to="/stock">
 								<p className="mb-0">Акции</p>
 							</Link>
 						</div>
 						<div className="d-block d-lg-none">
-							<Link to="/">
+							<Link to="/blog">
 								<p className="mb-0">Блог</p>
 							</Link>
 						</div>
@@ -92,7 +99,7 @@ const Footer = () => {
 							</Link>
 						</div>
 						<div className="d-block d-lg-none">
-							<Link to="/">
+							<Link to="/contacts">
 								<p className="mb-0">Контакты</p>
 							</Link>
 						</div>
@@ -104,12 +111,12 @@ const Footer = () => {
 					</div>
 					<div className={cn([cl.footerLinks, 'd-none', 'd-lg-flex', 'flex-column'])}>
 						<div>
-							<Link to="/">
+							<Link to="/stock">
 								<p className="mb-0">Акции</p>
 							</Link>
 						</div>
 						<div>
-							<Link to="/">
+							<Link to="/blog">
 								<p className="mb-0">Блог</p>
 							</Link>
 						</div>
@@ -119,7 +126,7 @@ const Footer = () => {
 							</Link>
 						</div>
 						<div>
-							<Link to="/">
+							<Link to="/contacts">
 								<p className="mb-0">Контакты</p>
 							</Link>
 						</div>
