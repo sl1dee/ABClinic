@@ -8,7 +8,7 @@ const DoctorsContainer = () => {
 		() => [
 			{
 				id: 0,
-				img: '/media/employeesSlider/aliya.svg',
+				img: '/media/employeesSlider/aliya.jpg',
 				name: 'Алия Беглова',
 				qualification: 'Врач-ортодонт',
 				price: 'от 2500',
@@ -16,7 +16,7 @@ const DoctorsContainer = () => {
 			},
 			{
 				id: 1,
-				img: '/media/employeesSlider/nasima.svg',
+				img: '/media/employeesSlider/nasima.jpg',
 				name: 'Насима Шагаева',
 				qualification: 'Врач-стоматолог-ортопед',
 				price: 'от 2500',
@@ -24,7 +24,7 @@ const DoctorsContainer = () => {
 			},
 			{
 				id: 2,
-				img: '/media/employeesSlider/eliza.svg',
+				img: '/media/employeesSlider/eliza.jpg',
 				name: 'Элиза Мигранова',
 				qualification: 'Врач-стоматолог-терапевт',
 				price: 'от 2500',
@@ -32,7 +32,7 @@ const DoctorsContainer = () => {
 			},
 			{
 				id: 3,
-				img: '/media/employeesSlider/almaz.svg',
+				img: '/media/employeesSlider/almaz.jpg',
 				name: 'Алмаз Гафурьянов',
 				qualification: 'Врач-гигиенист',
 				price: 'от 2500',
@@ -40,7 +40,7 @@ const DoctorsContainer = () => {
 			},
 			{
 				id: 4,
-				img: '/media/employeesSlider/adel.svg',
+				img: '/media/employeesSlider/adel.jpg',
 				name: 'Адель Ахметова',
 				qualification: 'Врач-стоматолог-ортодонт',
 				price: 'от 2500',
@@ -48,7 +48,7 @@ const DoctorsContainer = () => {
 			},
 			{
 				id: 5,
-				img: '/media/employeesSlider/timur.svg',
+				img: '/media/employeesSlider/timur.jpg',
 				name: 'Тимур Ишмухаметов',
 				qualification: 'Стоматолог общей практики',
 				price: 'от 2500',
@@ -56,7 +56,7 @@ const DoctorsContainer = () => {
 			},
 			{
 				id: 6,
-				img: '/media/employeesSlider/ilgiz.svg',
+				img: '/media/employeesSlider/ilgiz.jpg',
 				name: 'Ильгиз Каримов',
 				qualification: 'Врач-стоматолог-терапевт',
 				price: 'от 2500',
@@ -64,7 +64,7 @@ const DoctorsContainer = () => {
 			},
 			{
 				id: 7,
-				img: '/media/employeesSlider/aliya.svg',
+				img: '/media/employeesSlider/aliya.jpg',
 				name: 'Сединкин Евгений',
 				qualification: 'Врач-стоматолог-ортопед',
 				price: 'от 2500',
@@ -72,7 +72,7 @@ const DoctorsContainer = () => {
 			},
 			{
 				id: 8,
-				img: '/media/employeesSlider/alena.svg',
+				img: '/media/employeesSlider/alena.jpg',
 				name: 'Взрослый врач',
 				qualification: 'Главная медсестра',
 				price: 'от 2500',
@@ -80,7 +80,7 @@ const DoctorsContainer = () => {
 			},
 			{
 				id: 9,
-				img: '/media/employeesSlider/elvira.svg',
+				img: '/media/employeesSlider/elvira.jpg',
 				name: 'Эльвира Яхина',
 				qualification: 'Администратор',
 				price: 'от 2500',
@@ -93,7 +93,7 @@ const DoctorsContainer = () => {
 	return (
 		<div className={cl.doctorsContainer}>
 			<div className="container">
-				<h1>Врачи</h1>
+				<h1 className={cl.title}>Врачи</h1>
 				<div>фильтры</div>
 				<div className={cl.doctorsCards}>
 					{doctorsList.map(({ id, img, name, qualification, price, information }) => (

@@ -2,6 +2,15 @@
 
 .blogContainer {
   background-color: colors.$additionalColor;
+  padding-top: 70px;
+
+  .title{
+    color: colors.$mainTextColor;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.2px;
+  }
 
   .blogCards {
     display: grid;
@@ -94,6 +103,9 @@
 @media (min-width: 992px) and (max-width: 1200px) {
   .blogContainer {
     background-color: colors.$additionalColor;
+    padding-top: 60px;
+
+
 
     .blogCards {
       display: grid;
@@ -189,6 +201,12 @@
 @media (min-width: 768px) and (max-width: 992px) {
   .blogContainer {
     background-color: colors.$additionalColor;
+    padding-top: 50px;
+
+    .title{
+      color: colors.$mainTextColor;
+      font-size: 36px;
+    }
 
     .blogCards {
       display: grid;
@@ -284,6 +302,12 @@
 @media (max-width: 768px) {
   .blogContainer {
     background-color: colors.$additionalColor;
+    padding-top: 40px;
+
+
+    .title {
+      font-size: 24px;
+    }
 
     .blogCards {
       display: flex;

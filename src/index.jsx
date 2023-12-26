@@ -6,7 +6,7 @@
 // import {applyMiddleware, createStore} from "redux";
 // import {Provider} from 'react-redux';
 // import {thunk} from "redux-thunk";
-// import reducer from "./store/redusers/redusers";
+// import reducer from "./store/reducers/reducers";
 // import App from "./App";
 //
 // const history = createBrowserHistory();

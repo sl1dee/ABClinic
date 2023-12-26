@@ -1,9 +1,11 @@
+import doctorPortraitM from '@assets/img/article/doctor-portrait-M.svg'
+import toothbrushesXL from '@assets/img/article/toothbrushes-XL.svg'
 import cn from 'classnames'
 import React, { useMemo } from 'react'
 
 import cl from './article.module.scss'
 
-// import MakeRecord from '../Modals/MakeRecord/MakeRecord.jsx'
+// import sign-up-modal from '../modals/sign-up-modal/sign-up-modal.jsx'
 
 const Article = () => {
 	const questionList = useMemo(
@@ -70,10 +72,10 @@ const Article = () => {
 				<div className={cn([cl.articleContent, 'd-flex', 'flex-column'])}>
 					<div className={cl.articlesRoute}>Блог / Как выбрать зубную щетку и пасту?</div>
 					<div className={cl.articleTitle}>Как выбрать зубную щётку и пасту?</div>
-					<img src="/assets/img/article/toothbrushes-XL.svg" alt="" />
+					<img src={toothbrushesXL} alt="" />
 					<div className={cn([cl.doctor, 'd-flex', 'flex-column', 'flex-sm-row'])}>
 						<div className={cn([cl.doctorProfile, 'd-flex'])}>
-							<img src="/assets/img/article/doctor-portrait-M.svg" className={cl.doctorPortrait} alt="doctorPortrait" />
+							<img src={doctorPortraitM} className={cl.doctorPortrait} alt="doctorPortrait" />
 							<div className={cn([cl.doctorInformation, 'd-flex', 'flex-column'])}>
 								<div className={cl.doctorProfession}>Врач-ортодонт</div>
 								<div className={cl.doctorName}>Иванова Александра</div>
@@ -99,7 +101,7 @@ const Article = () => {
 					</div>
 					<div className={cl.articlesRoute}>Опубликовано 11.11.23</div>
 					<div className={cn([cl.appointment, 'd-flex'])}>
-						{/* <MakeRecord /> */}
+						{/* <sign-up-modal /> */}
 						{/* <img src="/media/makeRecord/one.jpg" className={cl.tools} alt="" /> */}
 					</div>
 				</div>

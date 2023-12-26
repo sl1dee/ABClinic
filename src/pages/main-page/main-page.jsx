@@ -1,30 +1,15 @@
 import React from 'react'
 
-<<<<<<< Updated upstream
-import Education from '@components/Doctors-detail-container/education/index.js'
-import HeroScreen from '@components/Doctors-detail-container/hero-screen/index.js'
-import About from '@components/about/about.jsx'
-import Map from '@components/yandex-map/yandex-map.jsx'
-import YandexMap from '@components/yandex-map/yandex-map.jsx'
-=======
 import About from '@components/about'
 import Articles from '@components/articles'
 import EmployeesSlider from '@components/employees-slider'
-import Favorites from '@components/favorites'
+import Favorites from '@components/favorites/index.js'
 import MainSlider from '@components/main-slider'
 import OurWorks from '@components/our-works'
 import ReviewsSlider from '@components/reviews-slider'
 import Services from '@components/services'
 import YandexMap from '@components/yandex-map'
->>>>>>> Stashed changes
 
-import Articles from '../../Components/Articles/Articles'
-import EmployeesSlider from '../../Components/EmployeesSlider/EmployeesSlider'
-import Favorites from '../../Components/Favorites/Favorites'
-import MainSlider from '../../Components/MainSlider/MainSlider'
-import OurWorks from '../../Components/OurWorks/OurWorks'
-import ReviewsSlider from '../../Components/ReviewsSlider/ReviewsSlider'
-import Services from '../../Components/Services/Services'
 import MainLayout from '../../layout/main'
 
 const MainPage = () => {
@@ -94,7 +79,7 @@ const MainPage = () => {
 					badge: 'Детская хирургия'
 				},
 				{
-					image: '/media/services/1.jpeg'
+					image: '/media/services/one.jpeg'
 				}
 			]
 		}
@@ -133,18 +118,15 @@ const MainPage = () => {
 
 	return (
 		<MainLayout>
-			{/* <MainSlider /> */}
-			{/* <Services preHeader="Выберите направление услуг" services={services} /> */}
-			{/* <Favorites favorites={favorites} /> */}
-			{/* <EmployeesSlider /> */}
-			{/* <OurWorks /> */}
-			{/* <ReviewsSlider /> */}
-			{/* <Articles /> */}
-			<HeroScreen />
-			<Education />
+			<MainSlider />
+			<Services preHeader="Выберите направление услуг" services={services} />
+			<Favorites favorites={favorites} />
+			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" />
+			<OurWorks />
+			<ReviewsSlider />
+			<Articles />
 			<About />
 			<YandexMap />
-			{/* <yandex-map /> */}
 		</MainLayout>
 	)
 }

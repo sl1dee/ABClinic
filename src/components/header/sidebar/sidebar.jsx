@@ -1,16 +1,28 @@
-// import { toggleMakeRecordModal } from '@store/actions/makeRecordModal/makeRecordModal.js'
 import logo from '@assets/img/logos/logo_b_hor.svg'
 import loc from '@assets/img/sidebar/loc.svg'
 import phone from '@assets/img/sidebar/phone.svg'
+import { setBurgerIsOpen, setSignUpIsOpen } from '@store/modules/modals.js'
+import Button from '@ui/button/index.js'
 import cn from 'classnames'
-import React, { memo, useMemo } from 'react'
+import React, { memo, useEffect, useMemo } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import cl from './sidebar.module.scss'
 
-const Sidebar = ({ props }) => {
-	// const dispatch = useDispatch()
+const Sidebar = () => {
+	const dispatch = useDispatch()
+	useEffect(()=> {
+		return () => {
+			dispatch(setBurgerIsOpen(false))
+		}
+	},[])
+	const closeHandler = () => {
+		dispatch(setBurgerIsOpen(false))
+	}
+	const openModalHandler = () => {
+		dispatch(setSignUpIsOpen(true))
+	}
 
 	const navigationList = useMemo(
 		() => [
@@ -72,7 +84,7 @@ const Sidebar = ({ props }) => {
 
 			{
 				id: 2,
-				href: '/',
+				href: '/doctors',
 				header: 'Врачи'
 			},
 			{
@@ -82,17 +94,17 @@ const Sidebar = ({ props }) => {
 				links: [
 					{
 						id: 0,
-						href: '/',
+						href: '/contacts',
 						text: 'Контакты'
 					},
 					{
 						id: 1,
-						href: '/',
+						href: '/stock',
 						text: 'Акции'
 					},
 					{
 						id: 2,
-						href: '/',
+						href: '/blog',
 						text: 'Блог'
 					}
 				]
@@ -102,12 +114,12 @@ const Sidebar = ({ props }) => {
 	)
 
 	return (
-		<div className={cn({ [cl.sidebar]: !props.isOpen, [cl.sidebarOpen]: props.isOpen })}>
-			<div className={cl.sidebarBckg} onClick={() => props.toggle(false)} title="Закрыть" />
+		<div className={cl.sidebar}>
+			<div className={cl.sidebarBckg} onClick={closeHandler} title="Закрыть" />
 			<div className={cn([cl.sidebarContent, 'd-flex', 'flex-column', 'justify-content-md-between', 'h-100'])}>
 				<div
 					className={cn([cl.closer, 'd-flex', 'align-items-center', 'justify-content-center'])}
-					onClick={() => props.toggle(false)}
+					onClick={closeHandler}
 					title="Закрыть"
 				/>
 				<div className={cn([cl.menu, 'd-flex', 'flex-column'])}>
@@ -121,7 +133,7 @@ const Sidebar = ({ props }) => {
 									<p className={cn([cl.menuLinks_header, 'mb-0'])}>{header}</p>
 								</div>
 							</Link>
-							{links.map(({ id, text, href }) => (
+							{links?.map(({ id, text, href }) => (
 								<Link key={id} to={href}>
 									<div>
 										<p className={cn([cl.menuLinks_link, 'mb-0'])}>{text}</p>
@@ -154,16 +166,7 @@ const Sidebar = ({ props }) => {
 								<p className="mb-0">Открыто с 10:00 до 21:00</p>
 							</div>
 						</div>
-						{/* <div */}
-						{/*	className={cn([cl.btn, 'btn-trnsp-dark'])} */}
-						{/*	onClick={() => { */}
-						{/*		// dispatch(toggleMakeRecordModal(true)) */}
-						{/*		// props.toggle(false) */}
-						{/*		// Это кнопка компонент */}
-						{/*	}} */}
-						{/* > */}
-						{/*	Записаться */}
-						{/* </div> */}
+						<Button onClick={openModalHandler} colorStyle="outlined" className={cl.btn}> Записаться </Button>
 					</div>
 				</div>
 			</div>

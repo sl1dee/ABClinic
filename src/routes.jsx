@@ -1,10 +1,10 @@
 import ArticlePage from '@pages/article-page'
+import BlogPage from '@pages/blog-page'
 import ContactsPage from '@pages/contacts-page'
+import DoctorsDetailPage from '@pages/doctors-detail-page'
 import DoctorsPage from '@pages/doctors-page'
 import StockPage from '@pages/stock-page'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-
-import Blog from '@components/blog/index.js'
 
 import MainPage from './pages/main-page'
 
@@ -17,6 +17,10 @@ const Routes = () => {
 		{
 			path: `/doctors`,
 			element: <DoctorsPage />
+		},
+		{
+			path: `/doctor/:id`,
+			element: <DoctorsDetailPage />
 		},
 		{
 			path: `/article`,
@@ -32,11 +36,7 @@ const Routes = () => {
 		},
 		{
 			path: `/blog`,
-			element: <Blog />
-		},
-		{
-			path: `/doctorsdetail`,
-			element: <DoctorsPage />
+			element: <BlogPage />
 		}
 	])
 

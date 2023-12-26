@@ -1,5 +1,7 @@
+import { setSignUpIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
 import React, { useMemo } from 'react'
+import { useDispatch } from 'react-redux'
 
 import Button from '@ui/button/index.js'
 
@@ -7,6 +9,11 @@ import Button from '@ui/button/index.js'
 import cl from './stock.module.scss'
 
 const Stock = () => {
+	const dispatch = useDispatch()
+
+	const openModalHandler = () => {
+		dispatch(setSignUpIsOpen(true))
+	}
 	const stockList = useMemo(
 		() => [
 			{
@@ -45,7 +52,9 @@ const Stock = () => {
 							<h3 className={cl.stockTitle}>{title}</h3>
 							<div className={cl.stockText}>{text}</div>
 							<div className="d-flex btnWrap">
-								<Button>Записаться</Button>
+								<Button onClick={openModalHandler} className={cl.btn}>
+									Записаться
+								</Button>
 							</div>
 						</div>
 					</div>
