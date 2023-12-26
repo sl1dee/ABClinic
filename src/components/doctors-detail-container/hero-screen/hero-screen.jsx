@@ -4,7 +4,7 @@ import React, { useMemo } from 'react'
 
 import Button from '@ui/button/index.js'
 
-import cl from '@components/Doctors-detail-container/hero-screen/hero-screen.module.scss'
+import cl from '@components/doctors-detail-container/hero-screen/hero-screen.module.scss'
 
 const HeroScreen = () => {
 	const doctorsList = useMemo(
