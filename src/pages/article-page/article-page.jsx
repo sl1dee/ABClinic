@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Article from '@components/article '
+import Article from '@components/article'
 
 import MainLayout from '../../layout/main'
 

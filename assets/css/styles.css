@@ -195,118 +195,6 @@ a {
   color: #fff;
 }
 
-.ask {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1100;
-  overflow: hidden;
-}
-.ask.active {
-  display: flex;
-}
-.ask.active .ask-block {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-.ask-overlay {
-  position: absolute;
-  cursor: pointer;
-  z-index: -1;
-  background-color: rgba(53, 53, 53, 0.6);
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
-.ask-block {
-  max-width: 1025px;
-  position: relative;
-  width: calc(100% - 40px);
-  padding: 50px;
-  background-color: #fff;
-  border-radius: 30px;
-  column-gap: 55px;
-  opacity: 0;
-  transform: translate(0, -100px);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.ask-block-text {
-  row-gap: 30px;
-}
-.ask-block-image {
-  background-size: cover;
-  background-position: center;
-  border-radius: 30px;
-  max-width: 340px;
-}
-.ask-block .text {
-  row-gap: 20px;
-}
-.ask-block .text .request {
-  color: #16171B;
-  font-size: 34px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: -0.68px;
-}
-.ask-block .text .request2 {
-  color: #484D72;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 150%;
-}
-.ask-block form {
-  margin-bottom: 0;
-  row-gap: 20px;
-}
-.ask-block form > div {
-  row-gap: 20px;
-}
-.ask-block form .ask-block-fields {
-  width: 100%;
-  row-gap: 20px;
-}
-.ask-block form .ask-block-fields input {
-  padding: 14px 15px 14px 30px;
-  background: #FFFFFF;
-  border-radius: 60px;
-  border: 1px solid #484D72;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  width: 100%;
-  color: #484D72;
-}
-.ask-block form .ask-block-fields input::placeholder {
-  color: #484D72;
-  opacity: 0.6;
-}
-.ask-block form .ask-block-fields #ask {
-  padding: 12px 13px;
-}
-.ask-block form .ask-block-fields > div {
-  width: 100%;
-  position: relative;
-}
-.ask-block form .btn {
-  padding: 10px 15px;
-}
-.ask-block form p.text-center {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
-  color: #999999;
-  margin: 0;
-}
-.ask-block form p.text-center a {
-  color: #999999;
-  text-decoration: underline;
-}
-
 .contactsBlock {
   padding: 75px 0 150px;
   background-color: #F1F3FF;
@@ -358,15 +246,6 @@ a {
     padding: 0 20px;
     margin: 0;
   }
-  .ask-block {
-    column-gap: 50px;
-  }
-  .ask-block-text {
-    row-gap: 30px;
-  }
-  .ask-block-image {
-    min-width: 340px;
-  }
   .services-tabsContent {
     grid-template-columns: 1fr 1fr;
   }
@@ -379,34 +258,6 @@ a {
   }
   .services-tabsContent .additionalImage img {
     max-height: 180px;
-  }
-  .ourWorks-content {
-    row-gap: 30px;
-    padding: 50px;
-  }
-  .ourWorks-slide {
-    column-gap: 50px;
-  }
-  .ourWorks-slide .compareWrap {
-    row-gap: 20px;
-    width: 100%;
-  }
-  .ourWorks-slide .compareWrap .compare {
-    min-width: 300px;
-    min-height: 220px;
-    height: 100%;
-  }
-  .ourWorks-slide .compare-handler {
-    width: 52px;
-    height: 48px;
-  }
-  .ourWorks-slide .compare-handler img {
-    width: 33px;
-    height: 33px;
-  }
-  .ourWorks-slide .description {
-    row-gap: 40px;
-    max-width: unset;
   }
   .contactsBlock {
     padding: 55px 0 110px;
@@ -428,41 +279,7 @@ a {
   .btn {
     font-size: 16px;
   }
-  .ask-block {
-    padding: 40px;
-    column-gap: 50px;
-  }
-  .ask-block-text {
-    row-gap: 30px;
-  }
-  .ask-block-image {
-    border-radius: 30px;
-    max-width: 280px;
-    min-width: 275px;
-  }
-  .ask-block .text {
-    row-gap: 10px;
-  }
-  .ask-block .text .request {
-    font-size: 28px;
-    letter-spacing: -0.56px;
-  }
-  .ask-block .text .request2 {
-    font-size: 16px;
-  }
-  .ask-block form {
-    row-gap: 30px;
-  }
-  .ask-block form > div {
-    row-gap: 20px;
-  }
-  .ask-block form .ask-block-fields {
-    row-gap: 20px;
-  }
-  .ask-block form .btn {
-    padding: 10px 15px;
-  }
-  .favorites-header, .ourWorks-header {
+  .favorites-header {
     font-size: 28px;
     letter-spacing: -0.56px;
   }
@@ -549,32 +366,6 @@ a {
   .services-tabsContent .additionalImage img {
     max-height: 145px;
   }
-  .ourWorks {
-    padding: 55px 0;
-  }
-  .ourWorks-content {
-    padding: 50px 40px;
-  }
-  .ourWorks-slide {
-    row-gap: 40px;
-  }
-  .ourWorks-slide .compare {
-    width: 445px;
-  }
-  .ourWorks-slide .compareWrap {
-    row-gap: 20px;
-  }
-  .ourWorks-slide .compareWrap .compare {
-    height: 315px;
-  }
-  .ourWorks-slide .textWrap {
-    column-gap: 40px;
-  }
-  .ourWorks-slide .description {
-    row-gap: 20px;
-    max-width: unset;
-    width: 50%;
-  }
 }
 @media (max-width: 768px) {
   .container {
@@ -584,35 +375,6 @@ a {
   }
   .btn {
     font-size: 14px;
-  }
-  .ask-block {
-    padding: 30px 20px;
-    max-width: 350px;
-  }
-  .ask-block-text {
-    row-gap: 16px;
-  }
-  .ask-block .text {
-    row-gap: 8px;
-  }
-  .ask-block .text .request {
-    font-size: 20px;
-    letter-spacing: -0.4px;
-  }
-  .ask-block .text .request2 {
-    font-size: 14px;
-  }
-  .ask-block form {
-    row-gap: 8px;
-  }
-  .ask-block form > div {
-    row-gap: 8px;
-  }
-  .ask-block form .ask-block-fields {
-    row-gap: 8px;
-  }
-  .ask-block form .btn {
-    padding: 10px 13px;
   }
   .services {
     padding: 40px 0;
@@ -669,7 +431,7 @@ a {
   .services-tabsContent > div:not(.onlyImage) .badge span {
     font-size: 14px;
   }
-  .favorites-header, .ourWorks-header {
+  .favorites-header {
     font-size: 20px;
     letter-spacing: -0.4px;
   }
@@ -710,79 +472,6 @@ a {
   }
   .favorites-content-el.dark {
     grid-column: unset;
-  }
-  .ourWorks {
-    padding: 40px 0;
-  }
-  .ourWorks-headerWrap {
-    row-gap: 20px;
-  }
-  .ourWorks .arrows {
-    column-gap: 12px;
-  }
-  .ourWorks .arrows .swiper-button-next, .ourWorks .arrows .swiper-button-prev {
-    width: 32px;
-    height: 32px;
-  }
-  .ourWorks .arrows span {
-    font-size: 14px;
-    letter-spacing: -0.28px;
-  }
-  .ourWorks-content {
-    row-gap: 20px;
-    padding: 30px 20px;
-    border-radius: 20px;
-  }
-  .ourWorks-slide {
-    width: 100%;
-    row-gap: 16px;
-  }
-  .ourWorks-slide .compare {
-    position: relative;
-    min-height: 215px;
-    min-width: unset;
-    width: 100%;
-    border-radius: 30px;
-    overflow: hidden;
-    aspect-ratio: 2/1;
-  }
-  .ourWorks-slide .compare-handler {
-    width: 37px;
-    height: 37px;
-  }
-  .ourWorks-slide .compare-handler img {
-    width: 24px;
-    height: 24px;
-  }
-  .ourWorks-slide .compareWrap {
-    row-gap: 20px;
-  }
-  .ourWorks-slide .textWrap {
-    row-gap: 16px;
-  }
-  .ourWorks-slide .description {
-    row-gap: 16px;
-    max-width: unset;
-  }
-  .ourWorks-slide .description-header p {
-    font-size: 18px;
-    letter-spacing: -0.36px;
-  }
-  .ourWorks-slide .description-text p {
-    font-size: 14px;
-  }
-  .ourWorks-slide .description-content {
-    row-gap: 10px;
-  }
-  .ourWorks-slide .person-avatar {
-    width: 55px;
-    height: 55px;
-  }
-  .ourWorks-slide .person-text-position {
-    font-size: 14px;
-  }
-  .ourWorks-slide .person-text-name {
-    font-size: 16px;
   }
   .contactsBlock {
     padding: 40px 0 80px;

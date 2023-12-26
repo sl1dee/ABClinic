@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Blog from '@components/blog/index.js'
+import Blog from '@components/blog'
 
-import MainLayout from '../../layout/main/main-layout.jsx'
+import MainLayout from '../../layout/main/index.js'
 
 const BlogPage = () => {
 	return (

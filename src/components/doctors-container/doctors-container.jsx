@@ -93,7 +93,7 @@ const DoctorsContainer = () => {
 	return (
 		<div className={cl.doctorsContainer}>
 			<div className="container">
-				<h1>Врачи</h1>
+				<h1 className={cl.title}>Врачи</h1>
 				<div>фильтры</div>
 				<div className={cl.doctorsCards}>
 					{doctorsList.map(({ id, img, name, qualification, price, information }) => (

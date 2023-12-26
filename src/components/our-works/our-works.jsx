@@ -1,8 +1,13 @@
 import after from '@media/ourWorks/after-1.jpg'
 import before from '@media/ourWorks/before-1.jpg'
+import chevronsLeftRight from '@assets/img/ourWorks/chevrons-left-right.svg'
+import arrowRight from '@assets/img/ourWorks/arrow-right.svg'
+import arrowLeft from '@assets/img/ourWorks/arrow-left.svg'
+import { setSignUpIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
 import React, { useState } from 'react'
 import ReactCompareImage from 'react-compare-image'
+import { useDispatch } from 'react-redux'
 import { Navigation, Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -16,6 +21,12 @@ export default function OurWorks() {
 	const [activeSlide, setActiveSlide] = useState(0)
 	const [slidesCount, setSlidesCount] = useState(0)
 	const [swiper, setSwiper] = useState(null)
+	const dispatch = useDispatch()
+
+	const openModalHandler = () => {
+		dispatch(setSignUpIsOpen(true))
+	}
+
 	const prevSwipeHandler = () => {
 		swiper?.slidePrev()
 	}
@@ -48,22 +59,22 @@ export default function OurWorks() {
 						</div>
 						<div className={cn([cl.arrows, 'd-flex', 'align-items-center'])}>
 							<div onClick={prevSwipeHandler} className={cl.swiperButtonPrev}>
-								<img  src="/assets/img/ourWorks/arrow-left.svg" alt="" />
+								<img  src={arrowLeft} alt="" />
 							</div>
 							<span>
 								{activeSlide} / {slidesCount}
 							</span>
 							<div  onClick={nextSwipeHandler} className={cl.swiperButtonNext}>
-								<img  src="/assets/img/ourWorks/arrow-right.svg" alt="" />
+								<img  src={arrowRight} alt="" />
 							</div>
 						</div>
 					</div>
 
 					<Swiper
-						slidesPerView="auto"
+						slidesPerView='auto'
 						spaceBetween={20}
 						modules={[Navigation, Pagination]}
-						navigation={{ nextEl: '.ourWorks .swiper-button-next', prevEl: '.ourWorks .swiper-button-prev' }}
+						navigation={{ nextEl: `${cl.ourWorks} ${cl.swiperButtonNext}`, prevEl: `${cl.ourWorks} ${cl.swiperButtonPrev}` }}
 						allowTouchMove={false}
 						onSwiper={(swiper) => setSwiper(swiper)}
 						loop={false}
@@ -73,6 +84,7 @@ export default function OurWorks() {
 						onInit={({ activeIndex, slides }) => {
 							updateCounts(activeIndex, slides.length)
 						}}
+						className={cl.swiperWrapper}
 					>
 						<SwiperSlide
 							className={cn([cl.ourWorksSlide, 'd-flex', 'flex-column', 'flex-lg-row-reverse', 'flex-xl-row'])}
@@ -82,14 +94,13 @@ export default function OurWorks() {
 									<ReactCompareImage
 										leftImage={after}
 										rightImage={before}
-										aspectRatio="taller"
 										sliderLineWidth={6}
 										sliderLineColor="#F1F3FF"
 										handle={
 											<div
 												className={cn([cl.compareHandler, 'd-flex', 'justify-content-center', 'align-items-center'])}
 											>
-												<img src="/assets/img/ourWorks/chevrons-left-right.svg" alt="" />
+												<img src={chevronsLeftRight} alt="" />
 											</div>
 										}
 									/>
@@ -136,14 +147,14 @@ export default function OurWorks() {
 										<div className={cn([cl.person, 'd-flex', 'align-items-center'])}>
 											<div
 												className={cl.personAvatar}
-												style={{ backgroundImage: 'url(/media/employeesSlider/two.jpg)' }}
+												style={{ backgroundImage: 'url(/media/employeesSlider/aliya.jpg)' }}
 											/>
 											<div className={cn([cl.personText, 'd-flex', 'flex-column'])}>
 												<p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>
 												<p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>
 											</div>
 										</div>
-										<Button className="btn" colorStyle="primary">
+										<Button onClick={openModalHandler} className="btn" colorStyle="primary">
 											Записаться
 										</Button>
 									</div>
@@ -185,14 +196,14 @@ export default function OurWorks() {
 										<div className={cn([cl.person, 'd-flex', 'align-items'])}>
 											<div
 												className={cl.personAvatar}
-												style={{ backgroundImage: 'url(/media/employeesSlider/two.jpg)' }}
+												style={{ backgroundImage: 'url(/media/employeesSlider/aliya.jpg)' }}
 											/>
 											<div className={cn([cl.personText, 'd-flex', 'flex-column'])}>
 												<p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>
 												<p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>
 											</div>
 										</div>
-										<Button className="btn" colorStyle="primary">
+										<Button onClick={openModalHandler} className="btn" colorStyle="primary">
 											Записаться
 										</Button>
 									</div>
@@ -216,13 +227,13 @@ export default function OurWorks() {
 											<div
 												className={cn([cl.compareHandler, 'd-flex', 'justify-content-center', 'align-items-center'])}
 											>
-												<img src="/assets/img/ourWorks/chevrons-left-right.svg" alt="" />
+												<img src={chevronsLeftRight} alt="" />
 											</div>
 										}
 									/>
 								</div>
 								<div className={cn([cl.person, 'align-items-center', 'd-none', 'd-lg-flex', 'd-xl-none'])}>
-									<div className={cl.personAvatar} style={{ backgroundImage: 'url(/media/employeesSlider/two.jpg)' }} />
+									<div className={cl.personAvatar} style={{ backgroundImage: 'url(/media/employeesSlider/aliya.jpg)' }} />
 									<div className={cn([cl.personText, 'd-flex', 'flex-column'])}>
 										<p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>
 										<p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>
@@ -260,14 +271,14 @@ export default function OurWorks() {
 										<div className={cn([cl.person, 'd-flex', 'align-items-center'])}>
 											<div
 												className={cl.personAvatar}
-												style={{ backgroundImage: 'url(/media/employeesSlider/two.jpg)' }}
+												style={{ backgroundImage: 'url(/media/employeesSlider/aliya.jpg)' }}
 											/>
 											<div className={cn([cl.personText, 'd-flex', 'flex-column'])}>
 												<p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>
 												<p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>
 											</div>
 										</div>
-										<Button className="btn" colorStyle="primary">
+										<Button onClick={openModalHandler} className="btn" colorStyle="primary">
 											Записаться
 										</Button>
 									</div>
@@ -309,14 +320,14 @@ export default function OurWorks() {
 										<div className={cn([cl.person, 'd-flex', 'align-items'])}>
 											<div
 												className={cl.personAvatar}
-												style={{ backgroundImage: 'url(/media/employeesSlider/two.jpg)' }}
+												style={{ backgroundImage: 'url(/media/employeesSlider/aliya.jpg)' }}
 											/>
 											<div className={cn([cl.personText, 'd-flex', 'flex-column'])}>
 												<p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>
 												<p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>
 											</div>
 										</div>
-										<Button className="btn" colorStyle="primary">
+										<Button onClick={openModalHandler} className="btn" colorStyle="primary">
 											Записаться
 										</Button>
 									</div>
