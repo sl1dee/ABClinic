@@ -33,6 +33,10 @@ const Routes = () => {
 		{
 			path: `/blog`,
 			element: <Blog />
+		},
+		{
+			path: `/doctorsdetail`,
+			element: <DoctorsPage />
 		}
 	])
 

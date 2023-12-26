@@ -1,8 +1,10 @@
 import React from 'react'
 
 import Education from '@components/Doctors-detail-container/education/index.js'
+import HeroScreen from '@components/Doctors-detail-container/hero-screen/index.js'
 import About from '@components/about/about.jsx'
 import Map from '@components/yandex-map/yandex-map.jsx'
+import YandexMap from '@components/yandex-map/yandex-map.jsx'
 
 import Articles from '../../Components/Articles/Articles'
 import EmployeesSlider from '../../Components/EmployeesSlider/EmployeesSlider'
@@ -126,8 +128,10 @@ const MainPage = () => {
 			{/* <OurWorks /> */}
 			{/* <ReviewsSlider /> */}
 			{/* <Articles /> */}
+			<HeroScreen />
 			<Education />
 			<About />
+			<YandexMap />
 			{/* <yandex-map /> */}
 		</MainLayout>
 	)
