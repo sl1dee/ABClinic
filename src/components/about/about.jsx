@@ -12,7 +12,7 @@ import cl from './about.module.scss'
 
 export default function About() {
 	return (
-		<section className="about">
+		<section className={cl.about}>
 			<div className="container d-flex flex-column">
 				<div className={cn([cl.aboutHeaderWrap, 'd-flex', 'flex-column', 'flex-lg-row', 'align-items-start'])}>
 					<div className="flex-grow-1">
@@ -26,7 +26,7 @@ export default function About() {
 						</p>
 					</div>
 				</div>
-				<Swiper slidesPerView="auto" spaceBetween={20} allowTouchMove loop={false}>
+				<Swiper slidesPerView="3.2" spaceBetween={20} allowTouchMove loop={false}>
 					<SwiperSlide className={cl.aboutSlide}>
 						<img src={one} alt="" />
 					</SwiperSlide>

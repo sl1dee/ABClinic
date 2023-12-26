@@ -60,3 +60,53 @@
     }
   }
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .info {
+    &Text {
+      &Name {
+        font-size: 22px;
+        letter-spacing: -0.44px;
+      }
+
+      &Position {
+        font-size: 16px;
+      }
+    }
+
+    &Badge {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+
+  .info {
+    border-radius: 20px 20px 0 0;
+    padding: 24px;
+    min-height: 145px;
+
+    &Text {
+      row-gap: 5px;
+
+      &Name {
+        font-size: 18px;
+        letter-spacing: -0.36px;
+      }
+
+      &Position {
+        font-size: 14px;
+      }
+    }
+
+    &Badge {
+      border-radius: 82px;
+      padding: 3px 10px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

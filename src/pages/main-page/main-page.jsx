@@ -1,16 +1,15 @@
 import React from 'react'
 
-import Education from '@components/Doctors-detail-container/education/index.js'
-import About from '@components/about/about.jsx'
+import About from '@components/about'
+import Articles from '@components/articles'
+import EmployeesSlider from '@components/employees-slider'
 import Favorites from '@components/favorites/index.js'
+import MainSlider from '@components/main-slider'
+import OurWorks from '@components/our-works'
+import ReviewsSlider from '@components/reviews-slider'
 import Services from '@components/services'
-import Map from '@components/yandex-map/yandex-map.jsx'
+import YandexMap from '@components/yandex-map'
 
-import Articles from '../../Components/Articles/Articles'
-import OurWorks from '../../Components/OurWorks/OurWorks'
-import ReviewsSlider from '../../Components/ReviewsSlider/ReviewsSlider'
-import EmployeesSlider from '../../components/employees-slider/employees-slider'
-import MainSlider from '../../components/main-slider/main-slider'
 import MainLayout from '../../layout/main'
 
 const MainPage = () => {
@@ -120,14 +119,14 @@ const MainPage = () => {
 	return (
 		<MainLayout>
 			<MainSlider />
-			{/* <Services preHeader="Выберите направление услуг" services={services} /> */}
-			{/* <Favorites favorites={favorites} /> */}
+			<Services preHeader="Выберите направление услуг" services={services} />
+			<Favorites favorites={favorites} />
 			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" />
-			{/* <OurWorks /> */}
-			{/* <ReviewsSlider /> */}
-			{/* <Articles /> */}
-			{/* <About /> */}
-			{/* <yandex-map /> */}
+			<OurWorks />
+			<ReviewsSlider />
+			<Articles />
+			<About />
+			<YandexMap />
 		</MainLayout>
 	)
 }

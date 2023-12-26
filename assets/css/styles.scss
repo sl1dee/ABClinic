@@ -15,14 +15,6 @@ $additionalTextColor: #000;
 
 $whiteColor: #fff;
 
-
-
-
-
-
-
-
-
 .services {
   padding: 75px 0;
   background-color: $additionalColor;
@@ -167,7 +159,7 @@ $whiteColor: #fff;
   }
 }
 
-.favorites, .ourWorks, .reviewsSlider, .articles {
+.favorites {
   &-header {
     color: $mainTextColor;
     font-size: 38px;
@@ -250,389 +242,6 @@ $whiteColor: #fff;
     }
   }
 }
-
-
-
-.ourWorks {
-  padding: 75px 0;
-  background-color: $additionalColor;
-  overflow: hidden;
-
-  &-headerWrap {
-    column-gap: 20px;
-  }
-
-  .arrows {
-    column-gap: 16px;
-
-    .swiper-button-next, .swiper-button-prev {
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      position: unset;
-      margin-top: 0;
-      user-select: none;
-
-      &::after {
-        content: unset;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    span {
-      color: $mainColor;
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 120%;
-      letter-spacing: -0.36px;
-    }
-  }
-
-  &-content {
-    row-gap: 40px;
-    padding: 50px;
-    background-color: $whiteColor;
-    border-radius: 30px;
-  }
-
-  .swiper {
-    width: 100%;
-  }
-
-  &-slide {
-    width: 100%;
-    column-gap: 40px;
-
-    .compare {
-      position: relative;
-      min-height: 215px;
-      min-width: 350px;
-      width: 100%;
-      border-radius: 30px;
-      overflow: hidden;
-
-      > div {
-        height: 100% !important;
-      }
-
-      &-handler {
-        width: 70px;
-        height: 70px;
-        border-radius: 100px;
-        background-color: #F1F3FF;
-
-        img {
-          width: 44px;
-          height: 44px;
-        }
-      }
-    }
-
-    .compareWrap {
-      row-gap: 20px;
-
-      .compare {
-        height: 100%;
-      }
-    }
-
-    .textWrap {
-      column-gap: 40px;
-    }
-
-    .description {
-      row-gap: 20px;
-      max-width: 300px;
-
-      &-header {
-        p {
-          color: $additionalTextColor;
-          font-size: 20px;
-          font-weight: 600;
-          line-height: 140%;
-          letter-spacing: -0.4px;
-        }
-      }
-
-      &-text {
-        p {
-          color: $mainColor;
-          font-size: 16px;
-          font-weight: 500;
-          line-height: 150%;
-        }
-      }
-
-      &-content {
-        row-gap: 10px;
-      }
-    }
-
-    .person {
-      column-gap: 12px;
-
-      &-avatar {
-        width: 63px;
-        height: 63px;
-        border-radius: 100px;
-        background-size: 125%;
-        background-position: center 20%;
-      }
-
-      &-text {
-        row-gap: 2px;
-
-        &-position {
-          color: $mainColor;
-          font-size: 16px;
-          font-weight: 600;
-          line-height: 150%;
-        }
-
-        &-name {
-          color: $additionalTextColor;
-          font-size: 18px;
-          font-weight: 600;
-          line-height: 110%;
-        }
-      }
-    }
-  }
-}
-
-.reviewsSlider {
-  padding: 75px 0;
-  background-color: $additionalColor;
-  overflow: hidden;
-
-  > div {
-    row-gap: 40px;
-  }
-
-  .swiper {
-    overflow: visible;
-  }
-
-  .arrows {
-    column-gap: 16px;
-
-    .swiper-button-next, .swiper-button-prev {
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      position: unset;
-      margin-top: 0;
-      user-select: none;
-
-      &::after {
-        content: unset;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-
-  &-slide {
-    border-radius: 30px;
-    overflow: hidden;
-    position: relative;
-    max-height: 490px;
-    max-width: 320px;
-
-    .photo {
-      width: 100%;
-      height: 100%;
-      user-select: none;
-      border-radius: 0 0 35px 35px;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top;
-      }
-    }
-
-    .icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-}
-
-.articles {
-  padding: 75px 0;
-  background-color: $additionalColor;
-
-  > div {
-    row-gap: 40px;
-  }
-
-  .btn.btn-trnsp-dark {
-    padding: 16px 26px;
-  }
-
-  &-content {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-
-    &-el {
-      border-radius: 30px;
-      overflow: hidden;
-      position: relative;
-      max-height: 490px;
-
-      .photo {
-        width: 100%;
-        height: 100%;
-        user-select: none;
-        border-radius: 0 0 35px 35px;
-        overflow: hidden;
-
-        img {
-          width: 100%;
-          height: 80%;
-          object-fit: cover;
-          object-position: top center;
-        }
-      }
-
-      .text {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        border-radius: 30px 30px 0 0;
-        padding: 30px;
-        background-color: $whiteColor;
-        min-height: 160px;
-        row-gap: 8px;
-
-        &-header {
-          color: $mainTextColor;
-          font-size: 24px;
-          font-weight: 600;
-          line-height: 120%;
-          letter-spacing: -0.48px;
-        }
-
-        &-date {
-          color: $mainColor;
-          font-size: 18px;
-          font-weight: 500;
-          line-height: 130%;
-        }
-      }
-    }
-  }
-}
-
-//.about {
-//  padding: 75px 0;
-//  background-color: $additionalColor;
-//  overflow: hidden;
-//
-//  > div {
-//    row-gap: 50px;
-//  }
-//
-//  .swiper {
-//    overflow: visible;
-//    width: 100%;
-//  }
-//
-//  &-headerWrap {
-//    column-gap: 40px;
-//  }
-//
-//  &-description {
-//    color: #484D72;
-//    font-size: 18px;
-//    font-weight: 500;
-//    line-height: 150%;
-//    max-width: 710px;
-//    width: 80%;
-//  }
-//
-//  &-slide {
-//    border-radius: 40px;
-//    overflow: hidden;
-//    position: relative;
-//    width: auto !important;
-//
-//    img {
-//      max-height: 360px;
-//      max-width: 600px;
-//      object-fit: cover;
-//      object-position: center;
-//    }
-//  }
-//}
-
-.contactsBlock {
-  padding: 75px 0 150px;
-  background-color: $additionalColor;
-
-  &-mapWrap {
-    position: relative;
-    z-index: 0;
-  }
-
-  &-map {
-    width: 100%;
-    min-height: 650px;
-    border-radius: 30px;
-    overflow: hidden;
-    z-index: -1;
-  }
-
-  &-info {
-    row-gap: 8px;
-    padding: 40px;
-    border-radius: 30px;
-    overflow: hidden;
-    background-color: $whiteColor;
-    position: absolute;
-    top: 40px;
-    left: 40px;
-
-    &-header {
-      color: $mainTextColor;
-      font-size: 30px;
-      font-weight: 700;
-      line-height: 140%;
-      letter-spacing: -0.6px;
-    }
-
-    &-contact {
-      color: $mainTextColor;
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 150%;
-    }
-
-    &-time {
-      color: $mainColor;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 150%;
-    }
-  }
-}
-
-
 
 .ask {
   display: none;
@@ -765,7 +374,56 @@ $whiteColor: #fff;
   }
 }
 
+.contactsBlock {
+  padding: 75px 0 150px;
+  background-color: $additionalColor;
 
+  &-mapWrap {
+    position: relative;
+    z-index: 0;
+  }
+
+  &-map {
+    width: 100%;
+    min-height: 650px;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  &-info {
+    row-gap: 8px;
+    padding: 40px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: $whiteColor;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+
+    &-header {
+      color: $mainTextColor;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 140%;
+      letter-spacing: -0.6px;
+    }
+
+    &-contact {
+      color: $mainTextColor;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 150%;
+    }
+
+    &-time {
+      color: $mainColor;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
+}
 
 
 
@@ -789,8 +447,6 @@ $whiteColor: #fff;
       }
     }
   }
-
-
 
   .services {
     &-tabsContent {
@@ -846,6 +502,20 @@ $whiteColor: #fff;
       .description {
         row-gap: 40px;
         max-width: unset;
+      }
+    }
+  }
+  .contactsBlock {
+    padding: 55px 0 110px;
+
+    &-map {
+      min-height: 440px;
+    }
+
+    &-info {
+      &-header {
+        font-size: 28px;
+        letter-spacing: -0.56px;
       }
     }
   }
@@ -909,7 +579,7 @@ $whiteColor: #fff;
     }
   }
 
-  .favorites, .employeesSlider, .ourWorks, .reviewsSlider, .articles, .about {
+  .favorites, .ourWorks {
     &-header {
       font-size: 28px;
       letter-spacing: -0.56px;
@@ -954,8 +624,6 @@ $whiteColor: #fff;
       }
     }
   }
-
-
 
   .services {
     padding: 55px 0;
@@ -1030,39 +698,6 @@ $whiteColor: #fff;
     }
   }
 
-  .employeesSlider {
-    padding: 55px 0;
-
-    > div {
-      row-gap: 40px;
-    }
-
-    .swiper {
-      overflow: visible;
-    }
-
-    &-slide {
-      .info {
-        &-text {
-          &-name {
-            font-size: 22px;
-            letter-spacing: -0.44px;
-          }
-
-          &-position {
-            font-size: 16px;
-          }
-        }
-
-        &-badge {
-          p {
-            font-size: 16px;
-          }
-        }
-      }
-    }
-  }
-
   .ourWorks {
     padding: 55px 0;
 
@@ -1093,65 +728,6 @@ $whiteColor: #fff;
         row-gap: 20px;
         max-width: unset;
         width: 50%;
-      }
-    }
-  }
-
-  .reviewsSlider {
-    padding: 55px 0;
-
-    > div {
-      row-gap: 40px;
-    }
-
-    .swiper {
-      overflow: visible;
-    }
-  }
-
-  .articles {
-    padding: 55px 0;
-
-    > div {
-      row-gap: 50px;
-    }
-
-    &-content {
-      display: grid;
-      grid-template-rows: 1fr;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-
-      &-el {
-        .text {
-          min-height: 165px;
-
-          &-header {
-            font-size: 22px;
-            letter-spacing: -0.44px;
-          }
-
-          &-date {
-            font-size: 18px;
-          }
-        }
-      }
-    }
-  }
-
-
-
-  .contactsBlock {
-    padding: 55px 0 110px;
-
-    &-map {
-      min-height: 440px;
-    }
-
-    &-info {
-      &-header {
-        font-size: 28px;
-        letter-spacing: -0.56px;
       }
     }
   }
@@ -1207,12 +783,6 @@ $whiteColor: #fff;
       }
     }
   }
-
-
-
-
-
-
 
   .services {
     padding: 40px 0;
@@ -1286,7 +856,7 @@ $whiteColor: #fff;
     }
   }
 
-  .favorites, .employeesSlider, .ourWorks, .reviewsSlider, .articles, .about {
+  .favorites, .ourWorks {
     &-header {
       font-size: 20px;
       letter-spacing: -0.4px;
@@ -1338,48 +908,6 @@ $whiteColor: #fff;
 
         &.dark {
           grid-column: unset;
-        }
-      }
-    }
-  }
-
-  .employeesSlider {
-    padding: 40px 0;
-
-    > div {
-      row-gap: 20px;
-    }
-
-    &-slide {
-      border-radius: 20px;
-      max-height: 395px;
-      max-width: 260px;
-
-      .info {
-        border-radius: 20px 20px 0 0;
-        padding: 24px;
-        min-height: 145px;
-
-        &-text {
-          row-gap: 5px;
-
-          &-name {
-            font-size: 18px;
-            letter-spacing: -0.36px;
-          }
-
-          &-position {
-            font-size: 14px;
-          }
-        }
-
-        &-badge {
-          border-radius: 82px;
-          padding: 3px 10px;
-
-          p {
-            font-size: 14px;
-          }
         }
       }
     }
@@ -1484,90 +1012,6 @@ $whiteColor: #fff;
       }
     }
   }
-
-  .reviewsSlider {
-    padding: 40px 0;
-
-    > div {
-      row-gap: 20px;
-    }
-
-    &-slide {
-      border-radius: 20px;
-      max-height: 395px;
-      max-width: 260px;
-    }
-  }
-
-  .articles {
-    padding: 40px 0;
-
-    > div {
-      row-gap: 20px;
-    }
-
-    .btn.btn-trnsp-dark {
-      padding: 12px 26px;
-    }
-
-    &-content {
-      display: grid;
-      grid-template-rows: 1fr;
-      grid-template-columns: 1fr;
-      gap: 16px;
-
-      &-el {
-        border-radius: 20px;
-        min-height: 260px;
-
-        .text {
-          border-radius: 20px 20px 0 0;
-          padding: 20px;
-          min-height: 120px;
-
-          &-header {
-            font-size: 18px;
-            letter-spacing: -0.36px;
-          }
-
-          &-date {
-            font-size: 14px;
-          }
-        }
-      }
-    }
-  }
-  //.about {
-  //  padding: 40px 0;
-  //
-  //  > div {
-  //    row-gap: 30px;
-  //  }
-  //
-  //  &-headerWrap {
-  //    row-gap: 10px;
-  //  }
-  //
-  //  &-description {
-  //    max-width: unset;
-  //    width: 100%;
-  //
-  //    p {
-  //      font-size: 14px;
-  //    }
-  //  }
-  //
-  //  &-slide {
-  //    border-radius: 20px;
-  //
-
-  //    img {
-  //      max-width: 100%;
-  //      max-height: 170px;
-  //    }
-  //  }
-  //}
-
   .contactsBlock {
     padding: 40px 0 80px;
 
@@ -1602,7 +1046,4 @@ $whiteColor: #fff;
       }
     }
   }
-
-
-
 }

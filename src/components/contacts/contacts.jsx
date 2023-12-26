@@ -1,15 +1,13 @@
 import React from 'react'
 
-import About from '@components/about/about.jsx'
-import Map from '@components/yandex-map/yandex-map.jsx'
-
-import cl from './contacts.module.scss'
+import About from '@components/about'
+import YandexMap from '@components/yandex-map/index.js'
 
 const Contacts = () => {
 	return (
 		<div>
 			<h1>Контакты</h1>
-			<Map />
+			<YandexMap />
 			<About />
 		</div>
 	)

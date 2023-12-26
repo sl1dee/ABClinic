@@ -37,7 +37,7 @@ export default function EmployeesSlider({ sliderHeaderText }) {
 					</div>
 				</div>
 				<Swiper
-					slidesPerView="auto"
+					slidesPerView="4.7"
 					spaceBetween={20}
 					modules={[Navigation]}
 					onSwiper={(swiper) => setSwiper(swiper)}
