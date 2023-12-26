@@ -1,6 +1,6 @@
 import React from 'react'
-import DoctorCard from './doctor-card/doctor-card.jsx'
 
+import DoctorCard from './doctor-card/doctor-card.jsx'
 
 const DoctorsDetailContainer = () => {
 	return (
