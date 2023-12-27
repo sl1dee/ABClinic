@@ -4,6 +4,7 @@ import Education from '@components/doctors-detail-container/education'
 import HeroScreen from '@components/doctors-detail-container/hero-screen'
 import EmployeesSlider from '@components/employees-slider/index.js'
 import OurWorks from '@components/our-works'
+import SignUp from '@components/sign-up/index.js'
 
 const DoctorsDetailContainer = () => {
 	return (
@@ -11,6 +12,7 @@ const DoctorsDetailContainer = () => {
 			<HeroScreen />
 			<Education />
 			<OurWorks />
+			<SignUp />
 			<EmployeesSlider sliderHeaderText="Врачи по направлению" />
 		</>
 	)
