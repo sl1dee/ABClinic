@@ -62,7 +62,7 @@ const Filters = () => {
 
 	return (
 		<div className={cl.filtersWrapper}>
-			<div>
+			<div className={cl.selectorWrapper}>
 				<div className={cl.selector}>Детские и взрослые</div>
 			</div>
 			<div className={cl.filtersList}>
