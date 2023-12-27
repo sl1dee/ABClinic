@@ -4,6 +4,11 @@
   padding-top: 70px;
   background-color: colors.$additionalColor;
 
+  .titleWrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+
   .title{
     color: colors.$mainTextColor;
     font-size: 48px;
@@ -11,6 +16,40 @@
     line-height: 120%;
     letter-spacing: -0.2px;
   }
+  .inputWrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 36%;
+
+
+    &::before{
+      position: absolute;
+      left: 12px;
+      content: url("@assets/img/doctors/serch.svg");
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .input{
+    padding-top: 12px;
+    padding-bottom: 14px;
+    padding-left: 52px;
+    background: colors.$whiteColor;
+    border-radius: 60px;
+    border: 1px solid colors.$whiteColor;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: colors.$mainColor;
+    width: 100%;
+
+    &::placeholder {
+      color: colors.$mainColor;
+      opacity: .6;
+    }
+  }
+
 
   .doctorsCards {
     display: grid;
@@ -269,9 +308,29 @@
 
 @media (max-width: 768px) {
   .doctorsContainer{
+    padding-top: 30px;
 
-    .title {
+    .titleWrapper{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .title{
       font-size: 24px;
+    }
+    .inputWrapper{
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 36%;
+
+
+      &::before{
+      }
+    }
+    .input{
+      &::placeholder {
+      }
     }
 
     .doctorsCards {

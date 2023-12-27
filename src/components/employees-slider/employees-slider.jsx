@@ -1,7 +1,7 @@
 import arrowLeft from '@assets/img/employeesSlider/arrow-left.svg'
 import arrowRight from '@assets/img/employeesSlider/arrow-right.svg'
 import cn from 'classnames'
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import { Navigation } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -19,6 +19,82 @@ export default function EmployeesSlider({ sliderHeaderText }) {
 	const nextSwipeHandler = () => {
 		swiper?.slideNext()
 	}
+	const doctorsList = useMemo(
+		() => [
+			{
+				id: 0,
+				img: '/media/employeesSlider/aliya.jpg',
+				name: 'Алия Беглова',
+				qualification: 'Врач-ортодонт',
+				information: 'Взрослый врач'
+			},
+			{
+				id: 1,
+				img: '/media/employeesSlider/nasima.jpg',
+				name: 'Насима Шагаева',
+				qualification: 'Врач-стоматолог-ортопед',
+				information: 'Взрослый врач'
+			},
+			{
+				id: 2,
+				img: '/media/employeesSlider/eliza.jpg',
+				name: 'Элиза Мигранова',
+				qualification: 'Врач-стоматолог-терапевт',
+				information: 'Взрослый врач'
+			},
+			{
+				id: 3,
+				img: '/media/employeesSlider/almaz.jpg',
+				name: 'Алмаз Гафурьянов',
+				qualification: 'Врач-гигиенист',
+				information: 'Взрослый врач'
+			},
+			{
+				id: 4,
+				img: '/media/employeesSlider/adel.jpg',
+				name: 'Адель Ахметова',
+				qualification: 'Врач-стоматолог-ортодонт',
+				information: 'Взрослый и детский врач'
+			},
+			{
+				id: 5,
+				img: '/media/employeesSlider/timur.jpg',
+				name: 'Тимур Ишмухаметов',
+				qualification: 'Стоматолог общей практики',
+				information: 'Взрослый врач'
+			},
+			{
+				id: 6,
+				img: '/media/employeesSlider/ilgiz.jpg',
+				name: 'Ильгиз Каримов',
+				qualification: 'Врач-стоматолог-терапевт',
+				information: 'Взрослый врач'
+			},
+			{
+				id: 7,
+				img: '/media/employeesSlider/aliya.jpg',
+				name: 'Сединкин Евгений',
+				qualification: 'Врач-стоматолог-ортопед',
+				information: 'Взрослый врач'
+			},
+			{
+				id: 8,
+				img: '/media/employeesSlider/alena.jpg',
+				name: 'Алена Исламгалеева',
+				qualification: 'Главная медсестра',
+				information: 'Главная медсестра'
+			},
+			{
+				id: 9,
+				img: '/media/employeesSlider/elvira.jpg',
+				name: 'Эльвира Яхина',
+				qualification: 'Администратор',
+				information: 'Администратор'
+			}
+		],
+		[]
+	)
+
 
 	return (
 		<section className={cl.employeesSlider}>
@@ -47,27 +123,11 @@ export default function EmployeesSlider({ sliderHeaderText }) {
 					}}
 					loop={false}
 				>
-					<SwiperSlide className={cn([cl.employeesSliderSlide, 'd-flex', 'flex-column'])}>
-						<EmployeesSliderCard />
-					</SwiperSlide>
-					<SwiperSlide className={cn([cl.employeesSliderSlide, 'd-flex', 'flex-column'])}>
-						<EmployeesSliderCard />
-					</SwiperSlide>
-					<SwiperSlide className={cn([cl.employeesSliderSlide, 'd-flex', 'flex-column'])}>
-						<EmployeesSliderCard />
-					</SwiperSlide>
-					<SwiperSlide className={cn([cl.employeesSliderSlide, 'd-flex', 'flex-column'])}>
-						<EmployeesSliderCard />
-					</SwiperSlide>
-					<SwiperSlide className={cn([cl.employeesSliderSlide, 'd-flex', 'flex-column'])}>
-						<EmployeesSliderCard />
-					</SwiperSlide>
-					<SwiperSlide className={cn([cl.employeesSliderSlide, 'd-flex', 'flex-column'])}>
-						<EmployeesSliderCard />
-					</SwiperSlide>
-					<SwiperSlide className={cn([cl.employeesSliderSlide, 'd-flex', 'flex-column'])}>
-						<EmployeesSliderCard />
-					</SwiperSlide>
+					{doctorsList.map(({id, img, name, qualification, information}) => (
+						<SwiperSlide key={id} className={cn([cl.employeesSliderSlide, 'd-flex', 'flex-column'])}>
+							<EmployeesSliderCard img={img} information={information} name={name} qualification={qualification} />
+						</SwiperSlide>
+					))}
 				</Swiper>
 			</div>
 		</section>

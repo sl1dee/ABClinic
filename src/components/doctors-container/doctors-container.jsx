@@ -1,5 +1,7 @@
+import Filters from '@components/doctors-container/filters/filters.jsx'
 import cn from 'classnames'
 import React, { useMemo } from 'react'
+import { Link } from 'react-router-dom'
 
 import cl from './doctors-container.module.scss'
 
@@ -10,6 +12,7 @@ const DoctorsContainer = () => {
 				id: 0,
 				img: '/media/employeesSlider/aliya.jpg',
 				name: 'Алия Беглова',
+				href: '/doctor/12',
 				qualification: 'Врач-ортодонт',
 				price: 'от 2500',
 				information: 'Взрослый врач'
@@ -73,7 +76,7 @@ const DoctorsContainer = () => {
 			{
 				id: 8,
 				img: '/media/employeesSlider/alena.jpg',
-				name: 'Взрослый врач',
+				name: 'Алена Исламгалеева',
 				qualification: 'Главная медсестра',
 				price: 'от 2500',
 				information: 'Главная медсестра'
@@ -93,14 +96,21 @@ const DoctorsContainer = () => {
 	return (
 		<div className={cl.doctorsContainer}>
 			<div className="container">
-				<h1 className={cl.title}>Врачи</h1>
-				<div>фильтры</div>
+				<div className={cl.titleWrapper}>
+					<h1 className={cl.title}>Врачи</h1>
+					<div className={cl.inputWrapper}>
+						<input className={cl.input} placeholder='Поиск по врачам'/>
+					</div>
+				</div>
+				<Filters/>
 				<div className={cl.doctorsCards}>
-					{doctorsList.map(({ id, img, name, qualification, price, information }) => (
+					{doctorsList?.map(({ id, href, img, name, qualification, price, information }) => (
 						<div key={id} className={cn([cl.employeesSlider, cl.employeesSliderSlide])}>
-							<div className={cl.photo}>
-								<img src={img} alt="" />
-							</div>
+							<Link to={href}>
+								<div className={cl.photo}>
+									<img src={img} alt="" />
+								</div>
+							</Link>
 							<div className={cn([cl.info, 'd-flex', 'flex-column', 'justify-content-between'])}>
 								<div className={cn([cl.infoText, 'd-flex', 'flex-column'])}>
 									<p className={cn([cl.infoTextName, 'mb-0'])}>{name}</p>

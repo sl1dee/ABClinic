@@ -2,9 +2,9 @@ import React from 'react'
 
 import Education from '@components/doctors-detail-container/education'
 import HeroScreen from '@components/doctors-detail-container/hero-screen'
-import EmployeesSlider from '@components/employees-slider/index.js'
+import EmployeesSlider from '@components/employees-slider'
 import OurWorks from '@components/our-works'
-import SignUp from '@components/sign-up/index.js'
+import SignUp from '@components/sign-up'
 
 const DoctorsDetailContainer = () => {
 	return (

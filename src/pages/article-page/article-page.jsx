@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Article from '@components/article'
+import ArticleContainer from '@components/article-container'
 
 import MainLayout from '../../layout/main'
 
 const ArticlePage = () => {
 	return (
 		<MainLayout>
-			<Article />
+			<ArticleContainer />
 		</MainLayout>
 	)
 }
