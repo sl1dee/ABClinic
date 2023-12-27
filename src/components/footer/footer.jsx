@@ -64,12 +64,12 @@ const Footer = () => {
 							</Link>
 						</div>
 						<div>
-							<Link to="/">
+							<Link to="/adult-referral">
 								<p className="mb-0">Взрослое направление</p>
 							</Link>
 						</div>
 						<div>
-							<Link to="/">
+							<Link to="/children-referral">
 								<p className="mb-0">Детское направление</p>
 							</Link>
 						</div>

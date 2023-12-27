@@ -75,10 +75,14 @@ const Header = () => {
 								</div>
 								<div className={cn([cl.contentAdditionalLinks, 'd-flex', 'flex-column'])}>
 									<div>
-										<span>Взрослое</span>
+										<Link to="/adult-referral">
+											<span>Взрослое</span>
+										</Link>
 									</div>
 									<div>
-										<span>Детское</span>
+										<Link to="/children-referral">
+											<span>Детское</span>
+										</Link>
 									</div>
 								</div>
 							</div>
