@@ -19,7 +19,7 @@ const Routes = () => {
 			element: <DoctorsPage />
 		},
 		{
-			path: `/doctor/:id`,
+			path: `/doctor/12`,
 			element: <DoctorsDetailPage />
 		},
 		{

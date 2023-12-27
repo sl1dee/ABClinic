@@ -43,7 +43,9 @@ const HeroScreen = () => {
 							</div>
 							<div className={cl.bckgIcon} />
 							<div className={cn([cl.appointment, 'd-flex', 'flex-column'])}>
-								<Button onClick={openModalHandler}>Записаться</Button>
+								<Button onClick={openModalHandler} className={cl.btn}>
+									Записаться
+								</Button>
 								<div className={cl.appointmentText}>Ближайшая запись врача: с 1 декабря в 09:00</div>
 							</div>
 						</div>
