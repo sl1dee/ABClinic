@@ -1,12 +1,19 @@
+import { setSignUpIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
-import { isFunctionLikeExpression } from 'eslint-plugin-react/lib/util/ast.js'
 import React, { useMemo } from 'react'
+import { useDispatch } from 'react-redux'
 
 import Button from '@ui/button/index.js'
 
 import cl from '@components/doctors-detail-container/hero-screen/hero-screen.module.scss'
 
 const HeroScreen = () => {
+	const dispatch = useDispatch()
+
+	const openModalHandler = () => {
+		dispatch(setSignUpIsOpen(true))
+	}
+
 	const doctorsList = useMemo(
 		() => [
 			{
@@ -36,7 +43,7 @@ const HeroScreen = () => {
 							</div>
 							<div className={cl.bckgIcon} />
 							<div className={cn([cl.appointment, 'd-flex', 'flex-column'])}>
-								<Button>Записаться</Button>
+								<Button onClick={openModalHandler}>Записаться</Button>
 								<div className={cl.appointmentText}>Ближайшая запись врача: с 1 декабря в 09:00</div>
 							</div>
 						</div>

@@ -99,12 +99,9 @@ const DoctorsContainer = () => {
 					{doctorsList.map(({ id, img, name, qualification, price, information }) => (
 						<div key={id} className={cn([cl.employeesSlider, cl.employeesSliderSlide])}>
 							<div className={cl.photo}>
-								{/* <img src="/media/employeesSlider/aliya-beglova.jpg" alt="" /> */}
 								<img src={img} alt="" />
 							</div>
-							{/* <div className="info d-flex flex-column justify-content-between"> */}
 							<div className={cn([cl.info, 'd-flex', 'flex-column', 'justify-content-between'])}>
-								{/* <div className="info-text d-flex flex-column"> */}
 								<div className={cn([cl.infoText, 'd-flex', 'flex-column'])}>
 									<p className={cn([cl.infoTextName, 'mb-0'])}>{name}</p>
 									<p className={cn([cl.infoTextPosition, 'mb-0'])}>{qualification}</p>
