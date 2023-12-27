@@ -6,7 +6,7 @@
   background-color: colors.$additionalColor;
 
   .articleContent {
-    padding: 70px 143px 150px 143px;
+    padding: 70px 143px 110px 143px;
     gap: 40px;
 
     .articlesRoute {
@@ -95,6 +95,76 @@
     }
 
   }
+  .signUpContainer {
+    background-color: colors.$additionalColor;
+    padding: 0 143px 150px 143px;
+
+    .signUpBlock {
+      gap: 18px;
+
+      .signUpInformation {
+        padding: 40px;
+        border-radius: 30px;
+        background-color: colors.$whiteColor;
+        width: 100%;
+
+        .signUpTitle {
+          font-size: 34px;
+          font-weight: 700;
+          color: colors.$mainTextColor;
+          padding-bottom: 20px;
+        }
+
+        .signUpText {
+          font-size: 16px;
+          font-weight: 500;
+          color: colors.$mainColor;
+          padding-bottom: 30px;
+        }
+
+        .askBlockFields {
+          row-gap: 20px;
+
+          input {
+            padding: 14px 15px 14px 30px;
+            background: colors.$whiteColor;
+            border-radius: 60px;
+            border: 1px solid colors.$mainColor;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            width: 100%;
+            color: colors.$mainColor;
+
+            &::placeholder {
+              color: colors.$mainColor;
+              opacity: .6;
+            }
+          }
+
+          #ask {
+            padding: 12px 13px;
+          }
+
+          > div {
+            width: 100%;
+            position: relative;
+          }
+
+          .btn {
+            padding: 10px 15px;
+            text-align: center;
+            line-height: 23px;
+          }
+        }
+      }
+
+      .signUpImage {
+        content: url("/media/articles/tools1920.svg");
+        border-radius: 30px;
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -107,6 +177,9 @@
       .advices {
         padding: 60px;
       }
+    }
+    .signUpContainer {
+      padding: 0 0 150px 0;
     }
   }
 }
@@ -160,14 +233,10 @@
 
         .doctorProfession {
           font-size: 14px;
-          font-weight: 600;
-          color: colors.$whiteColor;
         }
 
         .doctorName {
           font-size: 16px;
-          font-weight: 600;
-          color: colors.$whiteColor;
         }
       }
 
@@ -175,12 +244,59 @@
 
         .questionList {
           font-size: 16px;
-          font-weight: 500;
-          color: colors.$whiteColor;
         }
       }
     }
+    .signUpContainer {
+      padding: 70px 0 150px 0;
 
+      .signUpBlock {
+        gap: 18px;
+
+        .signUpInformation {
+          padding: 40px;
+          border-radius: 30px;
+
+          .signUpTitle {
+            font-size: 24px;
+            padding-bottom: 20px;
+          }
+
+          .signUpText {
+            font-size: 14px;
+            padding-bottom: 30px;
+          }
+
+          .askBlockFields {
+            row-gap: 20px;
+
+            input {
+              padding: 14px 15px 14px 30px;
+            }
+
+            #ask {
+              padding: 12px 13px;
+            }
+
+            > div {
+              width: 100%;
+              position: relative;
+            }
+
+            .btn {
+              padding: 10px 15px;
+              text-align: center;
+              line-height: 23px;
+            }
+          }
+        }
+
+        .signUpImage {
+          content: url("/media/articles/tools768.svg");
+          border-radius: 30px;
+        }
+      }
+    }
   }
 }
 
@@ -238,13 +354,11 @@
         .doctorProfession {
           font-size: 12px;
           font-weight: 600;
-          color: colors.$whiteColor;
         }
 
         .doctorName {
           font-size: 14px;
           font-weight: 600;
-          color: colors.$whiteColor;
         }
       }
 
@@ -253,7 +367,59 @@
         .questionList {
           font-size: 14px;
           font-weight: 500;
-          color: colors.$whiteColor;
+        }
+      }
+    }
+    .signUpContainer {
+      padding: 40px 0 110px 0;
+
+      .signUpBlock {
+        gap: 18px;
+
+        .signUpInformation {
+          padding: 30px 20px 30px 20px;
+          border-radius: 20px;
+
+          .signUpTitle {
+            font-size: 18px;
+            padding-bottom: 20px;
+          }
+
+          .signUpText {
+            font-size: 14px;
+            padding-bottom: 30px;
+          }
+
+          .askBlockFields {
+            row-gap: 20px;
+
+            input {
+              padding: 12px 12px 12px 30px;
+
+              &::placeholder {
+                opacity: .6;
+              }
+            }
+
+            #ask {
+              padding: 12px 13px;
+            }
+
+            > div {
+              width: 100%;
+              position: relative;
+            }
+
+            .btn {
+              padding: 10px 15px;
+              text-align: center;
+              line-height: 23px;
+            }
+          }
+        }
+
+        .signUpImage {
+          content: none;
         }
       }
     }

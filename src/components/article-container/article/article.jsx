@@ -2,6 +2,9 @@ import doctorPortraitM from '@assets/img/article/doctor-portrait-M.svg'
 import toothbrushesXL from '@assets/img/article/toothbrushes-XL.svg'
 import cn from 'classnames'
 import React, { useMemo } from 'react'
+import InputMask from 'react-input-mask'
+
+import Button from '@ui/button/button.jsx'
 
 import cl from './article.module.scss'
 
@@ -103,6 +106,27 @@ const Article = () => {
 					<div className={cn([cl.appointment, 'd-flex'])}>
 						{/* <sign-up-modal /> */}
 						{/* <img src="/media/makeRecord/one.jpg" className={cl.tools} alt="" /> */}
+					</div>
+				</div>
+				<div className={cl.signUpContainer}>
+					<div className={cn([cl.signUpBlock, 'd-flex', 'flex-column', 'flex-sm-row'])}>
+						<div className={cl.signUpInformation}>
+							<h1 className={cn([cl.signUpTitle, 'mb-0'])}>Остались вопросы или хотите записаться?</h1>
+							<div className={cn([cl.signUpText, 'mb-0'])}>
+								Мы рады предложить вам нашу помощь в решении любых вопросов и проблем. Заполните форму обратного звонка,
+								и наши специалисты свяжутся с вами.
+							</div>
+							<div className={cn([cl.askBlockFields, 'd-flex', 'flex-column'])}>
+								<div className="d-flex flex-column">
+									<InputMask name="name" size="16" placeholder="Ваше имя" required />
+								</div>
+								<div className="d-flex flex-column">
+									<InputMask mask="+7 999 999-99-99" name="phone" size="16" placeholder="Номер телефона" required />
+								</div>
+								<Button className={cl.btn}>Записаться</Button>
+							</div>
+						</div>
+						<div className={cl.signUpImage} />
 					</div>
 				</div>
 			</div>
