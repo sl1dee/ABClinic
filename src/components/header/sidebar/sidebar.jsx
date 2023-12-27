@@ -71,12 +71,12 @@ const Sidebar = () => {
 				links: [
 					{
 						id: 0,
-						href: '/',
+						href: '/adult-referral',
 						text: 'Взрослое'
 					},
 					{
 						id: 1,
-						href: '/',
+						href: '/children-referral',
 						text: 'Детское'
 					}
 				]
