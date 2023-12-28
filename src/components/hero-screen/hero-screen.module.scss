@@ -18,6 +18,7 @@
       row-gap: 10px;
 
       &Name{
+        max-width: 450px;
         font-size: 48px;
         font-weight: 700;
         color: colors.$mainTextColor;
