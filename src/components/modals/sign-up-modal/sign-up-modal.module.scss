@@ -1,5 +1,27 @@
 @use '@assets/styles/vars/colors';
 
+@keyframes open {
+  0% {
+    opacity: 0;
+    transform: translateY(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-300px);
+  }
+}
+
 .ask {
   display: flex;
   position: fixed;
@@ -47,8 +69,12 @@
     background-color: colors.$whiteColor;
     border-radius: 30px;
     column-gap: 55px;
-    //transform: translate(0, -100px);
-    transition: transform .3s ease, opacity .3s ease;
+
+    animation: open .3s ease;
+
+    &Closed {
+      animation: close .3s ease;
+    }
 
     &Text {
       position: relative;

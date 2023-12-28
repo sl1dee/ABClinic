@@ -12,8 +12,13 @@ import cl from './sign-up-modal.module.scss'
 const SignUpModal = () => {
 	const dispatch = useDispatch()
 	useDisableScroll()
+
+	const [isWasClosed, setIsWasClosed] = useState(false)
+
 	const closeHandler = () => {
-		dispatch(setSignUpIsOpen(false))
+		setIsWasClosed(true)
+
+		setTimeout(() => dispatch(setSignUpIsOpen(false)), 300)
 	}
 
 	const form = createRef()
@@ -40,7 +45,7 @@ const SignUpModal = () => {
 	return (
 		<div className={cn([cl.ask, 'justify-content-center', 'align-items-center'])}>
 			<div className={cl.askOverlay} onClick={closeHandler} title="Закрыть" />
-			<div className={cn([cl.askBlock, 'd-flex'])}>
+			<div className={cn([cl.askBlock, { [cl.askBlockClosed]: isWasClosed }, 'd-flex'])}>
 				<div className={cn([cl.askBlockText, 'd-flex', 'flex-column'])}>
 					<div className={cl.askBlockClose} onClick={closeHandler} />
 					{isOk === 1 ? (

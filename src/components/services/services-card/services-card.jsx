@@ -38,9 +38,7 @@ const ServicesCard = ({ title }) => {
 			},
 			{
 				id: 5,
-				title: 'Профессиональная гигиена',
-				information: 'Профессиональная чистка, отбеливание, профилактика',
-				type: 'Эстетика'
+				imgSrc: '/media/services/chair.jpg'
 			}
 		],
 		[]
@@ -50,15 +48,21 @@ const ServicesCard = ({ title }) => {
 		<div className={cl.wrapper}>
 			{title && <h2 className={cl.title}>{title}</h2>}
 			<div className="services-tabsContent d-grid">
-				{cardInfoList.map(({ id, title, information, type }) => (
-					<div key={id} className={cl.card}>
-						<div className={cl.cardTextWrapper}>
-							<div className={cl.cardTitle}>{title}</div>
-							<div className={cl.cardInformation}>{information}</div>
+				{cardInfoList.map(({ id, title, information, type, imgSrc }) =>
+					imgSrc ? (
+						<div className={cl.card}>
+							<img className={cl.cardImg} src={imgSrc} alt="asd" />
 						</div>
-						<div className={cl.cardType}>{type}</div>
-					</div>
-				))}
+					) : (
+						<div key={id} className={cl.card}>
+							<div className={cl.cardTextWrapper}>
+								<div className={cl.cardTitle}>{title}</div>
+								<div className={cl.cardInformation}>{information}</div>
+							</div>
+							<div className={cl.cardType}>{type}</div>
+						</div>
+					)
+				)}
 			</div>
 		</div>
 	)

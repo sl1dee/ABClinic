@@ -19,16 +19,16 @@ const HeroScreen = ({ title, text, img }) => {
 			<div className="container">
 				<div className={cn([cl.detailInformation, 'd-flex', 'flex-column-reverse', 'flex-md-row'])}>
 					<div className={cn([cl.detailInformationBlock, 'd-flex', 'flex-column'])}>
-						<div className={cl.detailInformationBlockName}>{title}</div>
-						<div className="d-flex">
-							<div className={cl.detailInformationBlockInformation}>{text}</div>
+						<div className={cl.wrapper}>
+							<div className={cl.detailInformationBlockName}>{title}</div>
+							<div className="d-flex">
+								<div className={cl.detailInformationBlockInformation}>{text}</div>
+							</div>
+							<div className={cl.bckgIcon} />
 						</div>
-						<div className={cl.bckgIcon} />
-						<div className={cn([cl.appointment, 'd-flex', 'flex-column'])}>
-							<Button onClick={openModalHandler} className={cl.btn}>
-								Записаться
-							</Button>
-						</div>
+						<Button onClick={openModalHandler} className={cl.btn}>
+							Записаться
+						</Button>
 					</div>
 					<img src={img} className={cl.detailInformationPortrait} alt="doctorImage" />
 					{/* <div className={cl.detailInformationPortrait} /> */}

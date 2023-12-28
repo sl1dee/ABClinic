@@ -38,8 +38,8 @@ const Sidebar = () => {
 					},
 					{
 						id: 1,
-						href: '/',
-						text: 'Имплантация'
+						href: '/orthopedics-services',
+						text: 'Ортопедия'
 					},
 					{
 						id: 2,
@@ -55,11 +55,6 @@ const Sidebar = () => {
 						id: 4,
 						href: '/',
 						text: 'Лечение дёсен'
-					},
-					{
-						id: 4,
-						href: '/',
-						text: 'Профессиональная гигиена'
 					}
 				]
 			},
