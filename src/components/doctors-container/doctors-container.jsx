@@ -98,7 +98,7 @@ const DoctorsContainer = () => {
 			<div className="container">
 				<div className={cl.titleWrapper}>
 					<h1 className={cl.title}>Врачи</h1>
-					<div className={cl.inputWrapper}>
+					<div className={cn([cl.inputWrapper])}>
 						<input className={cl.input} placeholder='Поиск по врачам'/>
 					</div>
 				</div>
