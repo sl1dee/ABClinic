@@ -48,9 +48,11 @@ const Header = () => {
 											<span>Лечение зубов</span>
 										</Link>
 									</div>
-									<div>
-										<span>Имплантация</span>
-									</div>
+									<Link to="/orthopedics-services">
+										<div>
+											<span>Ортопедия</span>
+										</div>
+									</Link>
 									<div>
 										<span>Хирургия</span>
 									</div>
@@ -59,9 +61,6 @@ const Header = () => {
 									</div>
 									<div>
 										<span>Лечение десен</span>
-									</div>
-									<div>
-										<span>Профессиональная гигиена</span>
 									</div>
 								</div>
 							</div>

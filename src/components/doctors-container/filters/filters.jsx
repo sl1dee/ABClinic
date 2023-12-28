@@ -80,7 +80,9 @@ const Filters = () => {
 			{/* /!*		Взрослые *!/ */}
 			{/* /!*	</option> *!/ */}
 			{/* /!* </select> *!/ */}
-			<Dropdown />
+			<div>
+				<Dropdown />
+			</div>
 			{/* </div> */}
 			<div className={cl.filtersList}>
 				{filtersList.slice(0, isFull ? undefined : START_FILTERS_LENGTH).map(({ id, text }) => (

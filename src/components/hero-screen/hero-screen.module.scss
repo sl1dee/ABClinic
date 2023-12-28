@@ -3,69 +3,78 @@
 .detailHeroScreen {
   background-color: colors.$additionalColor;
   padding: 68px 0 150px 0;
-
-  .detailInformation {
+  .wrapper{
+    display: flex;
+    flex-direction: column;
     gap: 20px;
+    width: 80%;
 
-    &Block {
-      max-height: 450px;
-      background-color: colors.$whiteColor;
-      border-radius: 30px;
-      padding: 60px 40px 60px 40px;
-      width: 100%;
-      position: relative;
-      z-index: 0;
-      row-gap: 10px;
-
-      &Name{
-        max-width: 450px;
-        font-size: 48px;
-        font-weight: 700;
-        color: colors.$mainTextColor;
-      }
-
-      &Information {
-        font-size: 18px;
-        font-weight: 500;
-        color: colors.$additionalTextColor;
-      }
-
-      .bckgIcon {
-        position: absolute;
-        z-index: -1;
-        bottom: 18px;
-        right: 83px;
-        content: url("/assets/img/mainSlider/union.svg");
-      }
-
-      .appointment {
-        padding-top: 55px;
-        gap: 13px;
-        max-width: 325px;
-
-        .appointmentText {
-          font-size: 14px;
-          font-weight: 500;
-          color: colors.$mainColor;
-        }
-      }
-    }
-
-    &Portrait {
-      width: 60%;
-
-      border-radius: 30px;
-    }
   }
-}
-.btn{
-  text-align: center;
-}
+
+   .detailInformation {
+     gap: 20px;
+
+     &Block {
+       max-height: 450px;
+       background-color: colors.$whiteColor;
+       border-radius: 30px;
+       padding: 60px 40px 60px 40px;
+       width: 100%;
+       position: relative;
+       z-index: 0;
+       justify-content: space-between;
+       gap: 20px;
+
+
+       &Name{
+         max-width: 450px;
+         font-size: 48px;
+         line-height: 57.6px;
+         letter-spacing: -2%;
+         font-weight: 700;
+         color: colors.$mainTextColor;
+       }
+
+       &Information {
+         font-size: 18px;
+         font-weight: 500;
+         color: colors.$additionalTextColor;
+       }
+
+       .bckgIcon {
+         position: absolute;
+         z-index: -1;
+         bottom: 18px;
+         right: 83px;
+         content: url("/assets/img/mainSlider/union.svg");
+       }
+     }
+
+     &Portrait {
+       width: 54%;
+       border-radius: 30px;
+     }
+   }
+ }
+  .btn{
+    align-self: start;
+    text-align: center;
+    padding: 16px 26px;
+   }
+
+
 
 @media (min-width: 992px) and (max-width: 1200px) {
   .detailHeroScreen {
     background-color: colors.$additionalColor;
-    padding: 60px 0 160px 0;
+    padding: 60px 0 150px 0;
+    .wrapper{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+
+    }
 
     .detailInformation {
       gap: 20px;
@@ -81,6 +90,14 @@
         position: relative;
         z-index: 0;
         row-gap: 10px;
+
+        &Name{
+          font-size: 48px;
+          line-height: 57.6px;
+          letter-spacing: -2%;
+          font-weight: 700;
+          color: colors.$mainTextColor;
+        }
 
         .bckgIcon {
           content: none;
@@ -111,11 +128,11 @@
         width: 100%;
         position: relative;
         z-index: 0;
-        row-gap: 10px;
+        row-gap: 20px;
 
         &Name{
           font-size: 32px;
-          font-weight: 700;
+          line-height: 40px;
           color: colors.$mainTextColor;
         }
 
@@ -165,29 +182,17 @@
         border-radius: 30px;
         padding: 40px;
         //max-width: 280px;
-        row-gap: 10px;
+        row-gap: 16px;
 
         &Name{
           font-size: 24px;
+          line-height: 35px;
           font-weight: 700;
           color: colors.$mainTextColor;
         }
 
         &Information {
           font-size: 16px;
-        }
-
-        .appointment {
-          padding-top: 6px;
-          gap: 8px;
-          //max-width: 240px;
-          width: 100%;
-
-          .appointmentText {
-            font-size: 14px;
-            font-weight: 500;
-            color: colors.$mainColor;
-          }
         }
 
         .bckgIcon {
@@ -202,7 +207,6 @@
     }
   }
   .btn{
-    //display: block;
-    //align-items: center;
+  align-self: auto;
   }
 }

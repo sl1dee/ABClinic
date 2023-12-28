@@ -1,3 +1,6 @@
 export { default as CariesTreatmentCard } from './caries-treatment-card.jsx'
 export { default as PeriodontitisTreatmentCard } from './periodontitis-treatment-card.jsx'
 export { default as PulpitisTreatmentCard } from './pulpitis-treatment-card.jsx'
+export { default as VeneersTreatmentCard } from './veneers-treatment-card.jsx'
+export { default as CrownsTreatmentCard } from './crowns-treatment-card.jsx'
+export { default as ProstheticsTreatmentCard } from './prosthetics-treatment-card.jsx'

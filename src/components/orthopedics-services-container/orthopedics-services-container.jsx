@@ -4,9 +4,9 @@ import Favorites from '@components/favorites'
 import HeroScreen from '@components/hero-screen'
 import OurWorks from '@components/our-works'
 import SignUp from '@components/sign-up'
-import { TreatmentTypes } from '@components/treatment-types/index.js'
+import { OrthopedicsTypes } from '@components/treatment-types/index.js'
 
-const TherapyServicesContainer = () => {
+const OrthopedicsServicesContainer = () => {
 	const favorites = {
 		header: 'Ваша улыбка в надежных руках',
 		items: [
@@ -40,11 +40,11 @@ const TherapyServicesContainer = () => {
 	return (
 		<>
 			<HeroScreen
-				title="Лечение зубов"
-				text="Ваша улыбка — наша забота, профессиональное и комфортное лечение зубов"
-				img="/media/therapyService/dental-treatment.jpg"
+				title="Ортопедия: импланты, коронки, виниры"
+				text="Искусство восстановления функциональности и эстетики зубов"
+				img="/media/orthopedics-services/orthopedics-services.jpg"
 			/>
-			<TreatmentTypes preHeader />
+			<OrthopedicsTypes preHeader />
 			<OurWorks />
 			<Diagnostics />
 			<Favorites favorites={favorites} />
@@ -54,4 +54,4 @@ const TherapyServicesContainer = () => {
 	)
 }
 
-export default TherapyServicesContainer
+export default OrthopedicsServicesContainer
