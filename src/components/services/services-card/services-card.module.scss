@@ -1,37 +1,80 @@
 @use '@assets/styles/vars/colors';
+@use '@assets/styles/mixins/helpers';
 
-.servicesCardContainer {
-  background-color: colors.$additionalColor;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
 
+.title {
+  color: colors.$mainTextColor;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.76px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: colors.$whiteColor;
+  border-radius: 30px;
+  padding: 40px;
+  max-width: 392px;
+  position: relative;
+
+  &Img {
+    @include helpers.contain;
+  }
+
+  &TextWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &Title {
+    font-size: 24px;
+    font-weight: 600;
+    color: colors.$mainTextColor;
+  }
+
+  &Information {
+    font-size: 18px;
+    font-weight: 500;
+    color: colors.$mainColor;
+  }
+
+  &Type {
+    font-size: 18px;
+    font-weight: 500;
+    color: colors.$mainColor;
+    padding: 4px 20px 4px 20px;
+    background-color: colors.$additionalColor;
+    border-radius: 82px;
+    align-self: start;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .title {
+    font-size: 28px;
+    letter-spacing: -0.56px;
+  }
+}
+
+@media (max-width: 768px) {
   .card {
-    background-color: colors.$whiteColor;
-    border-radius: 30px;
-    padding: 40px;
-    max-width: 392px;
-
-    &Title {
-      font-size: 24px;
-      font-weight: 600;
-      color: colors.$mainTextColor;
-      padding-bottom: 12px;
-    }
-
-    &Information {
-      font-size: 18px;
-      font-weight: 500;
-      color: colors.$mainColor;
-      height: 81px;
-      padding-bottom: 48px;
-    }
-
-    &Type {
-      font-size: 18px;
-      font-weight: 500;
-      color: colors.$mainColor;
-      padding: 4px 20px 4px 20px;
-      background-color: colors.$additionalColor;
-      border-radius: 82px;
-      display: inline-block;
-    }
+    max-width: 100%;
+  }
+  .wrapper {
+    gap: 20px;
+  }
+  .title {
+    font-size: 20px;
+    letter-spacing: -0.4px;
   }
 }

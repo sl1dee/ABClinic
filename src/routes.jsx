@@ -6,6 +6,7 @@ import ContactsPage from '@pages/contacts-page'
 import DoctorsDetailPage from '@pages/doctors-detail-page'
 import DoctorsPage from '@pages/doctors-page'
 import StockPage from '@pages/stock-page'
+import TherapyServicesPage from '@pages/therapy-services-page/index.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import MainPage from './pages/main-page'
@@ -47,6 +48,10 @@ const Routes = () => {
 		{
 			path: `/children-referral`,
 			element: <ChildrenReferralPage />
+		},
+		{
+			path: `/therapy-service`,
+			element: <TherapyServicesPage />
 		}
 	])
 
