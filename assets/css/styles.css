@@ -7,6 +7,10 @@ a {
   text-decoration: none;
 }
 
+.bg-abclinic {
+  background-color: #F1F3FF;
+}
+
 .services {
   padding: 75px 0;
   background-color: #F1F3FF;

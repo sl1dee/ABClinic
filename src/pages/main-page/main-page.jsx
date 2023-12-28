@@ -13,78 +13,6 @@ import YandexMap from '@components/yandex-map'
 import MainLayout from '../../layout/main'
 
 const MainPage = () => {
-	const services = [
-		{
-			header: 'Для взрослых',
-			items: [
-				{
-					header: 'Лечение зубов',
-					description: 'Боль в зубах, кариес, пульпит, переодонтит',
-					badge: 'Терапия'
-				},
-				{
-					header: 'Имплантация',
-					description: 'Протезирование на имплантатах, коронки, виниры, керамические накладки',
-					badge: 'Ортопедия'
-				},
-				{
-					header: 'Удаление зубов',
-					description: 'Удаление зубов мудрости, кисты зуба, ретинированного зуба ',
-					badge: 'Хирургия'
-				},
-				{
-					header: 'Брекеты, элайнеры',
-					description: 'Диагностика, 3D план лечения, установка, наблюдение',
-					badge: 'Ортодонтия'
-				},
-				{
-					header: 'Лечение десен',
-					description: 'Боль, кровоточивость в деснах, запах изо рта, пародонтит, гингивит, налет и зубной кариес',
-					badge: 'Пародонтология'
-				},
-				{
-					header: 'Профессиональная гигиена',
-					description: 'Профессиональная чистка, отбеливание, профилактика',
-					badge: 'Эстетика'
-				}
-			]
-		},
-		{
-			header: 'Для детей',
-			additionalImage: '/media/services/childs.svg',
-			items: [
-				{
-					header: 'Болит зуб',
-					description: 'Боль в зубах, кариес, пульпит, переодонтит',
-					badge: 'Терапия'
-				},
-				{
-					header: 'Зубной налет',
-					description: 'Профессиональная гигиена и обучение правильному уходу за полостью рта в домашних условиях',
-					badge: 'Профгигиена'
-				},
-				{
-					header: 'Протезирование зубов',
-					description: 'Коронки на временные зубы, восстановление молочных зубов',
-					badge: 'Ортопедия'
-				},
-				{
-					header: 'Исправление прикуса',
-					description: 'Правильный прикус с помощью брекетов, элайнеров',
-					badge: 'Ортодонтия'
-				},
-				{
-					header: 'Удаление зубов, пластика уздечки',
-					description: 'Бережное удаление молочных зубов, пластика уздечки языка и лечение на костной опоре',
-					badge: 'Детская хирургия'
-				},
-				{
-					image: '/media/services/one.jpeg'
-				}
-			]
-		}
-	]
-
 	const favorites = {
 		header: 'Ваша улыбка в надежных руках',
 		items: [
@@ -119,7 +47,7 @@ const MainPage = () => {
 	return (
 		<MainLayout>
 			<MainSlider />
-			<Services preHeader="Выберите направление услуг" services={services} />
+			<Services preHeader />
 			<Favorites favorites={favorites} />
 			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" />
 			<OurWorks />

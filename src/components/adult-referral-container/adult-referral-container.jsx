@@ -4,6 +4,7 @@ import Articles from '@components/articles'
 import EmployeesSlider from '@components/employees-slider'
 import Favorites from '@components/favorites'
 import HeroScreen from '@components/hero-screen'
+import { ServicesCard } from '@components/services/services-card/index.js'
 import SignUp from '@components/sign-up'
 
 const favorites = {
@@ -46,6 +47,11 @@ const AdultReferralContainer = () => {
 				img="/media/adultReferral/dentistry-for-adults.jpg"
 			/>
 			<Favorites favorites={favorites} />
+			<div className="bg-abclinic">
+				<div className="container">
+					<ServicesCard title="Что вас беспокоит?" />
+				</div>
+			</div>
 			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" />
 			<Articles />
 			<SignUp />

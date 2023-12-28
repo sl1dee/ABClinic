@@ -33,7 +33,7 @@ const Sidebar = () => {
 				links: [
 					{
 						id: 0,
-						href: '/',
+						href: '/therapy-service',
 						text: 'Лечение зубов'
 					},
 					{

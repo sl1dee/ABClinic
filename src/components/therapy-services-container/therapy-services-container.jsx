@@ -1,14 +1,12 @@
-import React from 'react'
+import Diagnostics from '@components/diagnostics'
+import EmployeesSlider from '@components/employees-slider'
+import Favorites from '@components/favorites'
+import HeroScreen from '@components/hero-screen'
+import OurWorks from '@components/our-works'
+import SignUp from '@components/sign-up'
+import TreatmentTypes from '@components/treatment-types/index.js'
 
-import Articles from '@components/articles/index.js'
-import EmployeesSlider from '@components/employees-slider/index.js'
-import Favorites from '@components/favorites/index.js'
-import HeroScreen from '@components/hero-screen/index.js'
-import SignUp from '@components/sign-up/index.js'
-
-import ChildServicesCard from '../services/services-card/child-services-card.jsx'
-
-const ChildrenReferralContainer = () => {
+const TherapyServicesContainer = () => {
 	const favorites = {
 		header: 'Ваша улыбка в надежных руках',
 		items: [
@@ -36,27 +34,24 @@ const ChildrenReferralContainer = () => {
 				dark: true
 			}
 		],
-		image1: '/media/favorites/three.jpg',
-		image2: '/media/favorites/four.jpg'
+		image1: '/media/favorites/two.jpg',
+		image2: '/media/favorites/one.jpg'
 	}
 	return (
-		<>
+		<div>
 			<HeroScreen
-				title="Детская стоматология"
-				text="В нашей стоматологии дети улыбаются без боли и страха"
-				img="/media/childrenReferral/children.jpg"
+				title="Лечение зубов"
+				text="Ваша улыбка — наша забота, профессиональное и комфортное лечение зубов"
+				img="/media/therapyService/dental-treatment.jpg"
 			/>
+			<TreatmentTypes preHeader />
+			<OurWorks />
+			<Diagnostics />
 			<Favorites favorites={favorites} />
-			<div className="bg-abclinic">
-				<div className="container">
-					<ChildServicesCard title="Что вас беспокоит?" />
-				</div>
-			</div>
-			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" />
-			<Articles />
+			<EmployeesSlider sliderHeaderText="Врачи по направлению" />
 			<SignUp />
-		</>
+		</div>
 	)
 }
 
-export default ChildrenReferralContainer
+export default TherapyServicesContainer

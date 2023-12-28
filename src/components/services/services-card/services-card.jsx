@@ -3,7 +3,7 @@ import React, { useMemo } from 'react'
 
 import cl from './services-card.module.scss'
 
-const ServicesCard = () => {
+const ServicesCard = ({ title }) => {
 	const cardInfoList = useMemo(
 		() => [
 			{
@@ -47,12 +47,15 @@ const ServicesCard = () => {
 	)
 
 	return (
-		<div className={cl.servicesCardContainer}>
-			<div className="container">
+		<div className={cl.wrapper}>
+			{title && <h2 className={cl.title}>{title}</h2>}
+			<div className="services-tabsContent d-grid">
 				{cardInfoList.map(({ id, title, information, type }) => (
 					<div key={id} className={cl.card}>
-						<div className={cl.cardTitle}>{title}</div>
-						<div className={cl.cardInformation}>{information}</div>
+						<div className={cl.cardTextWrapper}>
+							<div className={cl.cardTitle}>{title}</div>
+							<div className={cl.cardInformation}>{information}</div>
+						</div>
 						<div className={cl.cardType}>{type}</div>
 					</div>
 				))}
