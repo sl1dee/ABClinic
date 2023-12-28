@@ -4,6 +4,8 @@ import cn from 'classnames'
 import React, { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import Dropdown from '@components/doctors-container/dropdown/index.js'
+
 import cl from './filters.module.scss'
 
 const Filters = () => {
@@ -65,48 +67,21 @@ const Filters = () => {
 
 	return (
 		<div className={cl.filtersWrapper}>
-			<div className={cl.selectorWrapper}>
-				{/* <div className={cl.selector}>Детские и взрослые</div> */}
-				<select className={cl.selector} name="" id="" aria-placeholder="Детские и взрослые">
-					<option className={cl.selectorOption} value="">
-						Детские и взрослые
-					</option>
-					<option className={cl.selectorOption} value="">
-						Дети
-					</option>
-					<option className={cl.selectorOption} value="">
-						Взрослые
-					</option>
-				</select>
-				{/* <div className={cn([cl.link, 'd-flex', 'align-items-center'])}> */}
-				{/*	<div className={cn([cl.linkTitle, 'mb-0'])}>Детские и взрослые</div> */}
-				{/*	/!* <img src={arrDown} alt="" /> *!/ */}
-				{/*	<div className={cn([cl.linkMenu, 'd-flex', 'flex-column'])}> */}
-				{/*		<div className={cn([cl.content, 'd-flex', 'flex-column'])}> */}
-				{/*			/!* <div className={cl.contentBigLink}> *!/ */}
-				{/*			/!*	<span>Направления</span> *!/ */}
-				{/*			/!* </div> *!/ */}
-				{/*			<div className={cn([cl.contentAdditionalLinks, 'd-flex', 'flex-column'])}> */}
-				{/*				<div> */}
-				{/*					<Link to="/doctors"> */}
-				{/*						<span>Детские и взрослые</span> */}
-				{/*					</Link> */}
-				{/*				</div> */}
-				{/*				<div> */}
-				{/*					<Link to="/doctors"> */}
-				{/*						<span>Дети</span> */}
-				{/*					</Link> */}
-				{/*				</div> */}
-				{/*				<div> */}
-				{/*					<Link to="/doctors"> */}
-				{/*						<span>Взрослые</span> */}
-				{/*					</Link> */}
-				{/*				</div> */}
-				{/*			</div> */}
-				{/*		</div> */}
-				{/*	</div> */}
-				{/* </div> */}
-			</div>
+			{/* <div className={cl.selectorWrapper}> */}
+			{/* /!* <div className={cl.selector}>Детские и взрослые</div> *!/ */}
+			{/* /!* <select className={cl.selector} name="" id="" aria-placeholder="Детские и взрослые"> *!/ */}
+			{/* /!*	<option className={cl.selectorOption} value=""> *!/ */}
+			{/* /!*		Детские и взрослые *!/ */}
+			{/* /!*	</option> *!/ */}
+			{/* /!*	<option className={cl.selectorOption} value=""> *!/ */}
+			{/* /!*		Дети *!/ */}
+			{/* /!*	</option> *!/ */}
+			{/* /!*	<option className={cl.selectorOption} value=""> *!/ */}
+			{/* /!*		Взрослые *!/ */}
+			{/* /!*	</option> *!/ */}
+			{/* /!* </select> *!/ */}
+			<Dropdown />
+			{/* </div> */}
 			<div className={cl.filtersList}>
 				{filtersList.slice(0, isFull ? undefined : START_FILTERS_LENGTH).map(({ id, text }) => (
 					<div key={id} className={cl.filtersItem}>
