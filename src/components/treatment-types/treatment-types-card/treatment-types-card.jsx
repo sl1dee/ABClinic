@@ -1,20 +1,22 @@
+import cn from 'classnames'
+
 import cl from './treatment-types-card.module.scss'
 
 const TreatmentTypesCard = ({ title, description, cards }) => {
 	return (
 		<div className={cl.wrapper}>
-			<div className={cl.titleWrapper}>
+			<div className={cn([cl.titleWrapper, 'd-flex', 'flex-column', 'flex-lg-row'])}>
 				<h2 className={cl.title}>{title}</h2>
 				<p className={cl.description}>{description}</p>
 			</div>
-			<ul className={cl.cardsWrapper}>
+			<div className={cn([cl.cardsWrapper, 'd-flex', 'flex-column', 'flex-lg-row'])}>
 				{cards.map(({ id, title: cardTitle, text }) => (
-					<li key={id} className={cl.card}>
+					<div key={id} className={cl.card}>
 						<h3 className={cl.cardTitle}>{cardTitle}</h3>
 						<p className={cl.cardText}>{text}</p>
-					</li>
+					</div>
 				))}
-			</ul>
+			</div>
 		</div>
 	)
 }

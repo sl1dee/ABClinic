@@ -419,6 +419,7 @@ $whiteColor: #fff;
     }
 
     &-tabs {
+
       &-el {
         font-size: 28px;
         letter-spacing: -0.56px;
@@ -500,6 +501,7 @@ $whiteColor: #fff;
 
     &-tabs {
       column-gap: 20px;
+      overflow-x: auto;
 
       &-el {
         font-size: 20px;
@@ -510,6 +512,10 @@ $whiteColor: #fff;
           bottom: -8px;
         }
       }
+
+        //&-tabs::-webkit-scrollbar {
+        //  background: transparent;
+        //}
     }
 
     &-tabsContent {

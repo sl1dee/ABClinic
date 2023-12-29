@@ -67,19 +67,6 @@ const Filters = () => {
 
 	return (
 		<div className={cl.filtersWrapper}>
-			{/* <div className={cl.selectorWrapper}> */}
-			{/* /!* <div className={cl.selector}>Детские и взрослые</div> *!/ */}
-			{/* /!* <select className={cl.selector} name="" id="" aria-placeholder="Детские и взрослые"> *!/ */}
-			{/* /!*	<option className={cl.selectorOption} value=""> *!/ */}
-			{/* /!*		Детские и взрослые *!/ */}
-			{/* /!*	</option> *!/ */}
-			{/* /!*	<option className={cl.selectorOption} value=""> *!/ */}
-			{/* /!*		Дети *!/ */}
-			{/* /!*	</option> *!/ */}
-			{/* /!*	<option className={cl.selectorOption} value=""> *!/ */}
-			{/* /!*		Взрослые *!/ */}
-			{/* /!*	</option> *!/ */}
-			{/* /!* </select> *!/ */}
 			<div>
 				<Dropdown />
 			</div>
