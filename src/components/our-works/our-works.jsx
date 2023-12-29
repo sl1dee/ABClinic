@@ -108,7 +108,7 @@ export default function OurWorks() {
 								<div className={cn([cl.person, 'align-items-center', 'd-none', 'd-lg-flex', 'd-xl-none'])}>
 									<div
 										className={cl.personAvatar}
-										style={{ backgroundImage: 'url(/media/employeesSlider/aliya.jpg)' }}
+										style={{ backgroundImage: 'url(/media/employeesSlider/nasima.jpg)' }}
 									/>
 									<div className={cn([cl.personText, 'd-flex', 'flex-column'])}>
 										<p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>
@@ -147,7 +147,7 @@ export default function OurWorks() {
 										<div className={cn([cl.person, 'd-flex', 'align-items-center'])}>
 											<div
 												className={cl.personAvatar}
-												style={{ backgroundImage: 'url(/media/employeesSlider/aliya.jpg)' }}
+												style={{ backgroundImage: 'url(/media/employeesSlider/nasima.jpg)' }}
 											/>
 											<div className={cn([cl.personText, 'd-flex', 'flex-column'])}>
 												<p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>
@@ -196,7 +196,7 @@ export default function OurWorks() {
 										<div className={cn([cl.person, 'd-flex', 'align-items'])}>
 											<div
 												className={cl.personAvatar}
-												style={{ backgroundImage: 'url(/media/employeesSlider/aliya.jpg)' }}
+												style={{ backgroundImage: 'url(/media/employeesSlider/nasima.jpg)' }}
 											/>
 											<div className={cn([cl.personText, 'd-flex', 'flex-column'])}>
 												<p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>
@@ -233,7 +233,7 @@ export default function OurWorks() {
 									/>
 								</div>
 								<div className={cn([cl.person, 'align-items-center', 'd-none', 'd-lg-flex', 'd-xl-none'])}>
-									<div className={cl.personAvatar} style={{ backgroundImage: 'url(/media/employeesSlider/aliya.jpg)' }} />
+									<div className={cl.personAvatar} style={{ backgroundImage: 'url(/media/employeesSlider/nasima.jpg)' }} />
 									<div className={cn([cl.personText, 'd-flex', 'flex-column'])}>
 										<p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>
 										<p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>
@@ -271,7 +271,7 @@ export default function OurWorks() {
 										<div className={cn([cl.person, 'd-flex', 'align-items-center'])}>
 											<div
 												className={cl.personAvatar}
-												style={{ backgroundImage: 'url(/media/employeesSlider/aliya.jpg)' }}
+												style={{ backgroundImage: 'url(/media/employeesSlider/nasima.jpg)' }}
 											/>
 											<div className={cn([cl.personText, 'd-flex', 'flex-column'])}>
 												<p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>
@@ -320,7 +320,7 @@ export default function OurWorks() {
 										<div className={cn([cl.person, 'd-flex', 'align-items'])}>
 											<div
 												className={cl.personAvatar}
-												style={{ backgroundImage: 'url(/media/employeesSlider/aliya.jpg)' }}
+												style={{ backgroundImage: 'url(/media/employeesSlider/nasima.jpg)' }}
 											/>
 											<div className={cn([cl.personText, 'd-flex', 'flex-column'])}>
 												<p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>

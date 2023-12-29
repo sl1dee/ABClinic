@@ -26,7 +26,7 @@ export default function About() {
 						</p>
 					</div>
 				</div>
-				<Swiper slidesPerView="3.2" spaceBetween={20} allowTouchMove loop={false}>
+				<Swiper slidesPerView="3" spaceBetween={20} allowTouchMove loop={false}>
 					<SwiperSlide className={cl.aboutSlide}>
 						<img src={one} alt="" />
 					</SwiperSlide>
