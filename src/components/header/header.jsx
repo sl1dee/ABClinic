@@ -54,13 +54,19 @@ const Header = () => {
 										</div>
 									</Link>
 									<div>
-										<span>Хирургия</span>
+										<Link to="/surgery-services">
+											<span>Хирургия</span>
+										</Link>
 									</div>
 									<div>
-										<span>Брекеты, элайнеры</span>
+										<Link to="/orthodontics-services">
+											<span>Брекеты, элайнеры</span>
+										</Link>
 									</div>
 									<div>
-										<span>Лечение десен</span>
+										<Link to="/periodontics-services">
+											<span>Лечение десен</span>
+										</Link>
 									</div>
 								</div>
 							</div>

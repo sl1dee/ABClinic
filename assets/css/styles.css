@@ -41,6 +41,7 @@ a {
   transition: opacity 0.3s ease, color 0.3s ease;
   position: relative;
   cursor: pointer;
+  text-wrap: none;
 }
 .services-tabs-el::after {
   height: 3px;
@@ -170,6 +171,7 @@ a {
   border-radius: 30px;
   background-color: #fff;
   row-gap: 40px;
+  text-wrap: none;
 }
 .favorites-content-el .text {
   row-gap: 14px;
@@ -298,6 +300,7 @@ a {
     padding: 30px;
     column-gap: 30px;
     grid-column: span 2;
+    text-wrap: none;
   }
   .favorites-content-el .text {
     row-gap: 8px;
@@ -330,6 +333,7 @@ a {
   .services-tabs-el {
     font-size: 28px;
     letter-spacing: -0.56px;
+    text-wrap: none;
   }
   .services-tabs-el::after {
     height: 2.5px;
@@ -389,14 +393,20 @@ a {
   }
   .services-tabs {
     column-gap: 20px;
+    overflow-x: auto;
+    min-height: 60px;
   }
   .services-tabs-el {
     font-size: 20px;
     letter-spacing: -0.4px;
+    text-wrap: nowrap;
   }
   .services-tabs-el::after {
     height: 2px;
     bottom: -8px;
+  }
+  .services-tabs::-webkit-scrollbar {
+    background: transparent;
   }
   .services-tabsContent {
     grid-template-rows: 1fr;

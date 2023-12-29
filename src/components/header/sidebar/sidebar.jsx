@@ -43,17 +43,17 @@ const Sidebar = () => {
 					},
 					{
 						id: 2,
-						href: '/',
+						href: '/surgery-services',
 						text: 'Хирургия'
 					},
 					{
 						id: 3,
-						href: '/',
+						href: '/orthodontics-services',
 						text: 'Брекеты, элайнеры'
 					},
 					{
 						id: 4,
-						href: '/',
+						href: '/periodontics-services',
 						text: 'Лечение дёсен'
 					}
 				]
