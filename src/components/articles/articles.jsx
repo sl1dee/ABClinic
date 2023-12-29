@@ -31,7 +31,7 @@ export default function Articles() {
 					>
 						<Link to="/article">
 							<div className={cl.photo}>
-								<img src="/media/articles/1.jpg" alt="" />
+								<img src="/media/articles/3.jpg" alt="" />
 							</div>
 						</Link>
 						<div className={cn([cl.text, 'd-flex', 'flex-column'])}>

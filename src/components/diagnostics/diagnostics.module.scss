@@ -2,7 +2,7 @@
 
 .diagnosticsContainer {
   background-color: colors.$additionalColor;
-  padding: 150px 0;
+  padding: 75px 0;
 
   .diagnosticsBlock {
     background-color: colors.$whiteColor;
@@ -50,7 +50,7 @@
 
 @media (min-width: 992px) and (max-width: 1200px) {
   .diagnosticsContainer {
-    padding: 150px 0;
+    padding: 75px 0;
 
     .diagnosticsBlock {
       padding: 40px;
@@ -70,7 +70,7 @@
 
 @media (min-width: 768px) and (max-width: 992px) {
   .diagnosticsContainer {
-    padding: 110px 0;
+    padding: 55px 0;
 
     .diagnosticsBlock {
       padding: 40px;
@@ -116,7 +116,7 @@
 @media (max-width: 768px) {
   .diagnosticsContainer {
     background-color: colors.$additionalColor;
-    padding: 80px 0;
+    padding: 40px 0;
 
     .diagnosticsBlock {
       background-color: colors.$whiteColor;

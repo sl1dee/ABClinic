@@ -2,7 +2,7 @@
 
 .detailHeroScreen {
   background-color: colors.$additionalColor;
-  padding: 68px 0 150px 0;
+  padding: 68px 0 75px 0;
   .wrapper{
     display: flex;
     flex-direction: column;
@@ -67,7 +67,7 @@
 @media (min-width: 992px) and (max-width: 1200px) {
   .detailHeroScreen {
     background-color: colors.$additionalColor;
-    padding: 60px 0 150px 0;
+    padding: 60px 0 75px 0;
     .wrapper{
       display: flex;
       flex-direction: column;
@@ -115,7 +115,7 @@
 @media (min-width: 768px) and (max-width: 992px) {
   .detailHeroScreen {
     background-color: colors.$additionalColor;
-    padding: 50px 0 150px 0;
+    padding: 50px 0 55px 0;
 
     .detailInformation {
       gap: 20px;
@@ -170,7 +170,7 @@
 @media (max-width: 768px) {
   .detailHeroScreen {
     background-color: colors.$additionalColor;
-    padding: 50px 0 60px 0;
+    padding: 50px 0 40px 0;
 
     .detailInformation {
       gap: 20px;
