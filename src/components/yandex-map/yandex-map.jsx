@@ -1,6 +1,10 @@
 import { debounce } from '@hooks/debounce.js'
 import { Map, Placemark, YMaps } from '@pbe/react-yandex-maps'
+import { setSignUpIsOpen } from '@store/modules/modals.js'
 import React, { useEffect, useRef, useState } from 'react'
+import { useDispatch } from 'react-redux'
+
+import Button from '@ui/button/index.js'
 
 export default function YandexMap() {
 	const debounceMapChangeRef = useRef()
@@ -52,6 +56,12 @@ export default function YandexMap() {
 		}
 	}, [])
 
+	const dispatch = useDispatch()
+
+	const openModalHandler = () => {
+		dispatch(setSignUpIsOpen(true))
+	}
+
 	return (
 		<section className="contactsBlock">
 			<div className="container">
@@ -94,6 +104,9 @@ export default function YandexMap() {
 						</div>
 						<div>
 							<p className="contactsBlock-info-time mb-0">Открыто с 10:00 до 21:00</p>
+						</div>
+						<div className="d-flex">
+							<Button onClick={openModalHandler}>Записаться</Button>
 						</div>
 					</div>
 				</div>
