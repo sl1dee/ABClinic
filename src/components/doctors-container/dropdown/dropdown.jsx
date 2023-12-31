@@ -32,9 +32,9 @@ const Dropdown = () => {
 	}
 
 	return (
-		<div className={cn([cl.link, 'd-flex', 'align-items-center'])}>
-			<div className={cn([cl.linkTitle, 'mb-0'])}>{selectedOption?.text}</div>
-			{/* <img src={arrDown} alt="" /> */}
+		<div className={cn([cl.link, 'd-flex', 'align-items-center', ])}>
+			<div className={cn([cl.linkTitle, 'd-flex', 'justify-content-space-between','mb-0'])}>{selectedOption?.text}</div>
+			 <img src='/assets/img/doctors/arrow-down.svg' alt="" />
 			<div className={cn([cl.linkMenu, 'd-flex', 'flex-column'])}>
 				<div className={cn([cl.content, 'd-flex', 'flex-column'])}>
 					<div className={cn([cl.contentAdditionalLinks, 'd-flex', 'flex-column'])}>

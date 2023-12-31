@@ -16,6 +16,9 @@
     color: colors.$mainColor;
     transition: color .3s ease, background-color .3s ease;
 
+    font-size: 18px;
+    font-weight: 600;
+
     &:hover {
       color: colors.$whiteColor;
       background-color: colors.$mainColor;
