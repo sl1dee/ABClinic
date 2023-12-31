@@ -5,6 +5,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 12px 20px;
   font-size: 18px;
   font-weight: 600;
@@ -16,13 +17,6 @@
   border: 2px solid colors.$whiteColor;
   gap: 5px;
   min-width: 256px;
-
-  &::after {
-    content: url("@assets/img/doctors/arrow-down.svg");
-    width: 24px;
-    height: 24px;
-    color: colors.$mainColor;
-  }
 
   &Title {
     color: colors.$mainColor;
@@ -104,13 +98,6 @@
     border: 2px solid colors.$whiteColor;
     gap: 5px;
     max-width: 260px;
-
-    &::after {
-      content: url("@assets/img/doctors/arrow-down.svg");
-      width: 24px;
-      height: 24px;
-      color: colors.$mainColor;
-    }
 
     &Title {
       color: colors.$mainColor;
@@ -194,13 +181,6 @@
     gap: 5px;
     max-width: 260px;
 
-    &::after {
-      content: url("@assets/img/doctors/arrow-down.svg");
-      width: 24px;
-      height: 24px;
-      color: colors.$mainColor;
-    }
-
     &Title {
       color: colors.$mainColor;
       font-size: 16px;
@@ -281,13 +261,6 @@
     border: 2px solid colors.$whiteColor;
     gap: 5px;
     max-width: 260px;
-
-    &::after {
-      content: url("@assets/img/doctors/arrow-down.svg");
-      width: 24px;
-      height: 24px;
-      color: colors.$mainColor;
-    }
 
     &Title {
       color: colors.$mainColor;

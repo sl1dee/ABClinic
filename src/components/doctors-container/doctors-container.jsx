@@ -116,9 +116,7 @@ const DoctorsContainer = () => {
 									<p className={cn([cl.infoTextName, 'mb-0'])}>{name}</p>
 									<p className={cn([cl.infoTextPosition, 'mb-0'])}>{qualification}</p>
 									<p className={cn([cl.infoTextPrice, 'mb-0'])}>{price}</p>
-									<div className="d-flex">
-										<p className={cn([cl.infoTextBadge, 'mb-0'])}>{information}</p>
-									</div>
+									<p className={cn([cl.infoTextBadge, 'mb-0'])}>{information}</p>
 								</div>
 							</div>
 						</div>

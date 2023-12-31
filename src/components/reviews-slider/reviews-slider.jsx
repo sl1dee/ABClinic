@@ -43,7 +43,7 @@ export default function ReviewsSlider() {
 						<SwiperSlide className={cl.reviewsSliderSlide}>
 							<div className="d-flex flex-column">
 								<div className={cl.photo}>
-									<img src="/media/reviewsSlider/1.jpeg" alt="" />
+									<img src="/media/reviewsSlider/1.jpg" alt="" />
 								</div>
 								<div className={cl.icon}>
 									<img src="/assets/img/reviewsSlider/play.svg" alt="" />
@@ -53,7 +53,7 @@ export default function ReviewsSlider() {
 						<SwiperSlide className={cl.reviewsSliderSlide}>
 							<div className="d-flex flex-column">
 								<div className={cl.photo}>
-									<img src="/media/reviewsSlider/2.jpeg" alt="" />
+									<img src="/media/reviewsSlider/2.jpg" alt="" />
 								</div>
 								<div className={cl.icon}>
 									<img src="/assets/img/reviewsSlider/play.svg" alt="" />
@@ -63,7 +63,7 @@ export default function ReviewsSlider() {
 						<SwiperSlide className={cl.reviewsSliderSlide}>
 							<div className="d-flex flex-column">
 								<div className={cl.photo}>
-									<img src="/media/reviewsSlider/2.jpeg" alt="" />
+									<img src="/media/reviewsSlider/3.jpg" alt="" />
 								</div>
 								<div className={cl.icon}>
 									<img src="/assets/img/reviewsSlider/play.svg" alt="" />
@@ -73,7 +73,7 @@ export default function ReviewsSlider() {
 						<SwiperSlide className={cl.reviewsSliderSlide}>
 							<div className="d-flex flex-column">
 								<div className={cl.photo}>
-									<img src="/media/reviewsSlider/2.jpeg" alt="" />
+									<img src="/media/reviewsSlider/1.jpg" alt="" />
 								</div>
 								<div className={cl.icon}>
 									<img src="/assets/img/reviewsSlider/play.svg" alt="" />
@@ -83,7 +83,7 @@ export default function ReviewsSlider() {
 						<SwiperSlide className={cl.reviewsSliderSlide}>
 							<div className="d-flex flex-column">
 								<div className={cl.photo}>
-									<img src="/media/reviewsSlider/2.jpeg" alt="" />
+									<img src="/media/reviewsSlider/2.jpg" alt="" />
 								</div>
 								<div className={cl.icon}>
 									<img src="/assets/img/reviewsSlider/play.svg" alt="" />
@@ -93,7 +93,7 @@ export default function ReviewsSlider() {
 						<SwiperSlide className={cl.reviewsSliderSlide}>
 							<div className="d-flex flex-column">
 								<div className={cl.photo}>
-									<img src="/media/reviewsSlider/2.jpeg" alt="" />
+									<img src="/media/reviewsSlider/3.jpg" alt="" />
 								</div>
 								<div className={cl.icon}>
 									<img src="/assets/img/reviewsSlider/play.svg" alt="" />
