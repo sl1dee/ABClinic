@@ -39,6 +39,7 @@
          font-size: 18px;
          font-weight: 500;
          color: colors.$additionalTextColor;
+         width: fit-content;
        }
 
        .bckgIcon {
@@ -139,7 +140,6 @@
 
         &Information {
           font-size: 16px;
-
         }
 
         .appointment {

@@ -43,13 +43,15 @@
         background: colors.$additionalColor;
         padding: 4px 15px;
         margin-top: 10px;
+        width: fit-content;
       }
 
       .bckgIcon {
         position: absolute;
         z-index: -1;
-        bottom: 18px;
-        right: 83px;
+        bottom: 50px;
+        right: 60px;
+        align-self: end;
         content: url("/assets/img/mainSlider/union.svg");
       }
 
@@ -62,15 +64,16 @@
           font-size: 14px;
           font-weight: 500;
           color: colors.$mainColor;
+          text-align: center;
         }
       }
     }
 
     &Portrait {
-      content: url("/media/heroScreen/aliya1920.jpg");
       //max-width: 495px;
       //max-height: 450px;
       border-radius: 30px;
+      width: 65%;
     }
   }
 }
@@ -104,9 +107,7 @@
       }
 
       &Portrait {
-        content: url("/media/heroScreen/aliya1000.jpg");
-        //max-width:  450px;
-        border-radius: 30px;
+        max-height: 410px;
       }
     }
   }
@@ -125,10 +126,10 @@
         background-color: colors.$whiteColor;
         border-radius: 30px;
         padding: 40px;
-        width: 100%;
         position: relative;
         z-index: 0;
         row-gap: 10px;
+        width: 100%;
 
         &Name{
           font-size: 32px;
@@ -176,10 +177,7 @@
       }
 
       &Portrait {
-        content: url("/media/heroScreen/aliya768.jpg");
-        //max-width: 495px;
-        //max-height: 450px;
-        border-radius: 30px;
+        width: 48%;
       }
     }
   }
@@ -198,8 +196,8 @@
         max-height: 410px;
         background-color: colors.$whiteColor;
         border-radius: 30px;
-        padding: 40px;
-        max-width: 280px;
+        padding: 30px 20px;
+        //max-width: 280px;
         row-gap: 10px;
 
         &Name{
@@ -221,6 +219,7 @@
         }
 
         &Information {
+          text-align: center;
           font-size: 16px;
           font-weight: 500;
           color: colors.$mainColor;
@@ -228,15 +227,17 @@
           background: colors.$additionalColor;
           padding: 4px 15px;
           margin-top: 10px;
+          align-self: start;
         }
 
         .appointment {
           padding-top: 6px;
           gap: 8px;
-          //max-width: 240px;
+          max-width: 768px;
           width: 100%;
 
           .appointmentText {
+            text-align: center;
             font-size: 14px;
             font-weight: 500;
             color: colors.$mainColor;
@@ -249,8 +250,9 @@
       }
 
       &Portrait {
-        content: url("/media/heroScreen/aliya320.jpg");
         border-radius: 20px;
+        width: 100%;
+        max-height: 1000px;
       }
     }
   }

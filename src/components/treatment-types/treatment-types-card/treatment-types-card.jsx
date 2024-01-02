@@ -9,7 +9,8 @@ const TreatmentTypesCard = ({ title, description, cards }) => {
 				<h2 className={cl.title}>{title}</h2>
 				<p className={cl.description}>{description}</p>
 			</div>
-			<div className={cn([cl.cardsWrapper, 'd-flex', 'flex-column', 'flex-lg-row'])}>
+			{/* <div className={cn([cl.cardsWrapper, 'd-flex', 'flex-column', 'flex-lg-row'])}> */}
+			<div className={cn([cl.cardsWrapper, 'd-grid'])}>
 				{cards.map(({ id, title: cardTitle, text }) => (
 					<div key={id} className={cl.card}>
 						<h3 className={cl.cardTitle}>{cardTitle}</h3>

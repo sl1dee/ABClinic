@@ -1,3 +1,4 @@
+import portrait from '@media/heroScreen/aliya1920.jpg'
 import { setSignUpIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
 import React, { useMemo } from 'react'
@@ -38,9 +39,7 @@ const HeroScreen = () => {
 							<div className={cl.detailInformationBlockName}>{name}</div>
 							<div className={cl.detailInformationBlockQualification}>{qualification}</div>
 							<div className={cl.detailInformationBlockPrice}>{price}</div>
-							<div className="d-flex">
-								<div className={cl.detailInformationBlockInformation}>{information}</div>
-							</div>
+							<div className={cn(cl.detailInformationBlockInformation, 'd-flex')}>{information}</div>
 							<div className={cl.bckgIcon} />
 							<div className={cn([cl.appointment, 'd-flex', 'flex-column'])}>
 								<Button onClick={openModalHandler} className={cl.btn}>
@@ -49,8 +48,9 @@ const HeroScreen = () => {
 								<div className={cl.appointmentText}>Ближайшая запись врача: с 1 декабря в 09:00</div>
 							</div>
 						</div>
+						<img src={portrait} className={cl.detailInformationPortrait} alt="" />
 						{/* <img src={img} className={cl.detailInformationPortrait} alt="doctorImage" /> */}
-						<div className={cl.detailInformationPortrait} />
+						{/* <div className={cl.detailInformationPortrait} /> */}
 					</div>
 				))}
 			</div>

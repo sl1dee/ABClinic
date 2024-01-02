@@ -28,12 +28,12 @@
 
   .cardsWrapper {
     gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
 
     .card {
       padding: 40px;
       border-radius: 30px;
       background-color: colors.$whiteColor;
-      width: 33%;
 
       &Title {
         font-size: 24px;
@@ -138,6 +138,7 @@
 
     .cardsWrapper {
       gap: 20px;
+      grid-template-columns: 1fr;
 
       .card {
         padding: 30px;
@@ -194,6 +195,7 @@
 
     .cardsWrapper {
       gap: 16px;
+      grid-template-columns: 1fr;
 
       .card {
         padding: 20px;

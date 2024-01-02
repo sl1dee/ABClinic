@@ -96,6 +96,8 @@ export default function OurWorks() {
 										rightImage={before}
 										sliderLineWidth={6}
 										sliderLineColor="#F1F3FF"
+										leftImageLabel="До"
+										rightImageLabel="После"
 										handle={
 											<div
 												className={cn([cl.compareHandler, 'd-flex', 'justify-content-center', 'align-items-center'])}

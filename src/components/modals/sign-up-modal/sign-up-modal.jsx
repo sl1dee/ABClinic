@@ -81,7 +81,7 @@ const SignUpModal = () => {
 								<div className="d-flex flex-column">
 									<Button className={cl.btn}>Отправить</Button>
 									<p className={cl.textCenter}>
-										Нажимая на кнопку, вы соглашаетесь с{' '}
+										Нажимая на кнопку, вы соглашаетесь <br /> с{' '}
 										<a href="/policy" target="_blank">
 											Политикой конфиденциальности
 										</a>

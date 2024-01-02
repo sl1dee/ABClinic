@@ -2,7 +2,7 @@ import arrDown from '@assets/img/header/arr_down.svg'
 import logo from '@assets/img/logos/logo_b_hor.svg'
 import { setBurgerIsOpen, setSignUpIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
-import React, { memo, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
@@ -12,6 +12,7 @@ import cl from './header.module.scss'
 
 const Header = () => {
 	const dispatch = useDispatch()
+	const [isScrolled, setIsScrolled] = useState(false)
 
 	const openModalHandler = () => {
 		dispatch(setSignUpIsOpen(true))
@@ -20,8 +21,20 @@ const Header = () => {
 		dispatch(setBurgerIsOpen(true))
 	}
 
+	const handleScroll = () => {
+		const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+		setIsScrolled(scrollTop > 0)
+	}
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll)
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [])
+
 	return (
-		<header className={cl.header}>
+		<header className={`${cl.header} ${isScrolled ? cl.scrolled : ''}`}>
 			<div className="container d-flex align-items-center justify-content-between">
 				<div className={cl.headerLogo}>
 					<Link to="/">

@@ -1,3 +1,4 @@
+import point from '@assets/img/contactsBlock/placemark.svg'
 import { debounce } from '@hooks/debounce.js'
 import { Map, Placemark, YMaps } from '@pbe/react-yandex-maps'
 import { setSignUpIsOpen } from '@store/modules/modals.js'
@@ -80,7 +81,7 @@ export default function YandexMap() {
 									geometry={[54.773893, 56.082325]}
 									options={{
 										iconLayout: 'default#image',
-										iconImageHref: '/assets/img/contactsBlock/placemark.svg',
+										iconImageHref: point,
 										iconImageSize: [94, 94],
 										iconImageOffset: [-47, -97]
 									}}
