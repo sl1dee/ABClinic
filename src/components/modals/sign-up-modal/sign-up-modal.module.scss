@@ -153,10 +153,11 @@
 
       p.textCenter {
         font-weight: 500;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 15px;
         color: #999999;
         margin: 0;
+        text-align: center;
 
         a {
           color: #999999;
@@ -266,6 +267,20 @@
 
         .btn {
           padding: 10px 13px;
+        }
+
+        p.textCenter {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px;
+          color: #999999;
+          margin: 0;
+          text-align: center;
+
+          a {
+            color: #999999;
+            text-decoration: underline;
+          }
         }
       }
     }

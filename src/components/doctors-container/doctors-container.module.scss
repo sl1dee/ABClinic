@@ -426,14 +426,14 @@
               }
 
               &Badge {
+                width: 100%;
+                text-align: center;
                 border-radius: 82px;
                 background: colors.$additionalColor;
                 padding: 4px 15px;
                 font-size: 14px;
                 font-weight: 500;
                 color: colors.$mainColor;
-                display: flex;
-                justify-content: center;
               }
             }
           }

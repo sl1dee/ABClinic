@@ -8,6 +8,8 @@ import cn from 'classnames'
 import arrowLeft from '@assets/img/reviewsSlider/arrow-left.svg'
 import arrowRight from '@assets/img/reviewsSlider/arrow-right.svg'
 
+import play from '@assets/img/reviewsSlider/play.svg'
+
 export default function ReviewsSlider() {
 	const [swiper, setSwiper] = useState(null)
 	const prevSwipeHandler = () => {
@@ -46,7 +48,7 @@ export default function ReviewsSlider() {
 									<img src="/media/reviewsSlider/1.jpg" alt="" />
 								</div>
 								<div className={cl.icon}>
-									<img src="/assets/img/reviewsSlider/play.svg" alt="" />
+									<img src={play} alt="" />
 								</div>
 							</div>
 						</SwiperSlide>
@@ -56,7 +58,7 @@ export default function ReviewsSlider() {
 									<img src="/media/reviewsSlider/2.jpg" alt="" />
 								</div>
 								<div className={cl.icon}>
-									<img src="/assets/img/reviewsSlider/play.svg" alt="" />
+									<img src={play} alt="" />
 								</div>
 							</div>
 						</SwiperSlide>
@@ -66,7 +68,7 @@ export default function ReviewsSlider() {
 									<img src="/media/reviewsSlider/3.jpg" alt="" />
 								</div>
 								<div className={cl.icon}>
-									<img src="/assets/img/reviewsSlider/play.svg" alt="" />
+									<img src={play} alt="" />
 								</div>
 							</div>
 						</SwiperSlide>
@@ -76,7 +78,7 @@ export default function ReviewsSlider() {
 									<img src="/media/reviewsSlider/1.jpg" alt="" />
 								</div>
 								<div className={cl.icon}>
-									<img src="/assets/img/reviewsSlider/play.svg" alt="" />
+									<img src={play} alt="" />
 								</div>
 							</div>
 						</SwiperSlide>
@@ -86,7 +88,7 @@ export default function ReviewsSlider() {
 									<img src="/media/reviewsSlider/2.jpg" alt="" />
 								</div>
 								<div className={cl.icon}>
-									<img src="/assets/img/reviewsSlider/play.svg" alt="" />
+									<img src={play} alt="" />
 								</div>
 							</div>
 						</SwiperSlide>
@@ -96,7 +98,7 @@ export default function ReviewsSlider() {
 									<img src="/media/reviewsSlider/3.jpg" alt="" />
 								</div>
 								<div className={cl.icon}>
-									<img src="/assets/img/reviewsSlider/play.svg" alt="" />
+									<img src={play} alt="" />
 								</div>
 							</div>
 						</SwiperSlide>

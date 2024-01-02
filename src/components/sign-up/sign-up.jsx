@@ -18,9 +18,6 @@ const SignUp = () => {
 							<div className="d-flex flex-column">
 								<InputMask name="name" size="16" placeholder="Ваше имя" required />
 							</div>
-							<div className="d-block d-xs-block d-sm-block d-md-none">
-								<InputMask name="phone" size="16" placeholder="Email" required />
-							</div>
 							<div className="d-flex flex-column">
 								<InputMask mask="+7 999 999-99-99" name="phone" size="16" placeholder="Номер телефона" required />
 							</div>
