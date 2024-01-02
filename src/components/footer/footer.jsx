@@ -150,7 +150,7 @@ const Footer = () => {
 					])}
 				>
 					<div>
-						<Link to="/">
+						<Link to="/privacy-policy">
 							<div>
 								<p className={cn([cl.footerBottomLink, 'mb-0'])}>Правовая информация</p>
 							</div>

@@ -8,6 +8,7 @@ import DoctorsPage from '@pages/doctors-page'
 import OrthodonticsServicesPage from '@pages/orthodontics-services-page/index.js'
 import OrthopedicsServicesPage from '@pages/orthopedics-services-page/index.js'
 import PeriodonticsServicesPage from '@pages/periodontics-services-page/index.js'
+import PrivacyPolicyPage from '@pages/privacy-policy-page/index.js'
 import StockPage from '@pages/stock-page'
 import SurgeryServicesPage from '@pages/surgery-services-page/index.js'
 import TherapyServicesPage from '@pages/therapy-services-page/index.js'
@@ -72,6 +73,10 @@ const Routes = () => {
 		{
 			path: `/periodontics-services`,
 			element: <PeriodonticsServicesPage />
+		},
+		{
+			path: `/privacy-policy`,
+			element: <PrivacyPolicyPage />
 		}
 	])
 

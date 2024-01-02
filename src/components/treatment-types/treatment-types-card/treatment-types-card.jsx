@@ -5,7 +5,7 @@ import cl from './treatment-types-card.module.scss'
 const TreatmentTypesCard = ({ title, description, cards }) => {
 	return (
 		<div className={cl.wrapper}>
-			<div className={cn([cl.titleWrapper, 'd-flex', 'flex-column', 'flex-lg-row'])}>
+			<div className={cn([cl.titleWrapper, 'd-grid', 'flex-column', 'flex-lg-row'])}>
 				<h2 className={cl.title}>{title}</h2>
 				<p className={cl.description}>{description}</p>
 			</div>
