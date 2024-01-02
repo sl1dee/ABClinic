@@ -1,6 +1,7 @@
 import cn from 'classnames'
 import React, { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
+import dropDown from '@assets/img/doctors/arrow-down.svg'
 
 import cl from '@components/doctors-container/dropdown/dropdown.module.scss'
 
@@ -34,7 +35,7 @@ const Dropdown = () => {
 	return (
 		<div className={cn([cl.link, 'd-flex', 'align-items-center', ])}>
 			<div className={cn([cl.linkTitle, 'd-flex', 'justify-content-space-between','mb-0'])}>{selectedOption?.text}</div>
-			 <img src='/assets/img/doctors/arrow-down.svg' alt="" />
+			 <img src={dropDown} alt="" />
 			<div className={cn([cl.linkMenu, 'd-flex', 'flex-column'])}>
 				<div className={cn([cl.content, 'd-flex', 'flex-column'])}>
 					<div className={cn([cl.contentAdditionalLinks, 'd-flex', 'flex-column'])}>
