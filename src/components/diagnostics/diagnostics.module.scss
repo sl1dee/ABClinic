@@ -39,9 +39,13 @@
         color: colors.$whiteColor;
         border-radius: 20px;
         gap: 20px;
+        align-items: center;
 
         .tablePoint {
             content: url("/media/services/point.svg");
+          width: 10px;
+          height: 10px;
+          align-self: center;
         }
       }
     }
