@@ -18,7 +18,7 @@ const SignUpModal = () => {
 	const closeHandler = () => {
 		setIsWasClosed(true)
 
-		setTimeout(() => dispatch(setSignUpIsOpen(false)), 300)
+		setTimeout(() => dispatch(setSignUpIsOpen(false)), 200)
 	}
 
 	const form = createRef()

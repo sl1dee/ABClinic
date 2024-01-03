@@ -1,10 +1,11 @@
 import logo from '@assets/img/logos/logo_b_hor.svg'
 import loc from '@assets/img/sidebar/loc.svg'
 import phone from '@assets/img/sidebar/phone.svg'
+import useDisableScroll from '@hooks/use-disable-scroll.js'
 import { setBurgerIsOpen, setSignUpIsOpen } from '@store/modules/modals.js'
 import Button from '@ui/button/index.js'
 import cn from 'classnames'
-import React, { memo, useEffect, useMemo } from 'react'
+import React, { memo, useEffect, useMemo, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
@@ -12,16 +13,24 @@ import cl from './sidebar.module.scss'
 
 const Sidebar = () => {
 	const dispatch = useDispatch()
+	useDisableScroll()
 	useEffect(()=> {
 		return () => {
 			dispatch(setBurgerIsOpen(false))
 		}
 	},[])
-	const closeHandler = () => {
-		dispatch(setBurgerIsOpen(false))
-	}
+	// const closeHandler = () => {
+	// 	dispatch(setBurgerIsOpen(false))
+	// }
 	const openModalHandler = () => {
 		dispatch(setSignUpIsOpen(true))
+	}
+	const [isWasClosed, setIsWasClosed] = useState(false)
+
+	const closeHandler = () => {
+		setIsWasClosed(true)
+
+		setTimeout(() => dispatch(setBurgerIsOpen(false)), 300)
 	}
 
 	const navigationList = useMemo(
@@ -108,10 +117,11 @@ const Sidebar = () => {
 		[]
 	)
 
+
 	return (
 		<div className={cl.sidebar}>
 			<div className={cl.sidebarBckg} onClick={closeHandler} title="Закрыть" />
-			<div className={cn([cl.sidebarContent, 'd-flex', 'flex-column', 'justify-content-md-between', 'h-100'])}>
+			<div className={cn([cl.sidebarContent,{ [cl.sidebarContentClosed]: isWasClosed },'d-flex', 'flex-column', 'justify-content-md-between', 'h-100'])}>
 				<div
 					className={cn([cl.closer, 'd-flex', 'align-items-center', 'justify-content-center'])}
 					onClick={closeHandler}
