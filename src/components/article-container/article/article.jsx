@@ -1,5 +1,5 @@
-import doctorPortraitM from '@assets/img/article/doctor-portrait-M.svg'
-import toothbrushesXL from '@assets/img/article/toothbrushes-XL.svg'
+import doctorPortrait from '@assets/img/article/doctorPortrait.jpg'
+import toothbrushes from '@assets/img/article/toothbrushes.jpg'
 import cn from 'classnames'
 import React, { useMemo } from 'react'
 import InputMask from 'react-input-mask'
@@ -75,10 +75,10 @@ const Article = () => {
 				<div className={cn([cl.articleContent, 'd-flex', 'flex-column'])}>
 					<div className={cl.articlesRoute}>Блог / Как выбрать зубную щетку и пасту?</div>
 					<div className={cl.articleTitle}>Как выбрать зубную щётку и пасту?</div>
-					<img src={toothbrushesXL} alt="" />
+					<img src={toothbrushes} alt="" className={cl.toothbrushes} />
 					<div className={cn([cl.doctor, 'd-flex', 'flex-column', 'flex-sm-row'])}>
 						<div className={cn([cl.doctorProfile, 'd-flex'])}>
-							<img src={doctorPortraitM} className={cl.doctorPortrait} alt="doctorPortrait" />
+							<img src={doctorPortrait} className={cl.doctorPortrait} alt="doctorPortrait" />
 							<div className={cn([cl.doctorInformation, 'd-flex', 'flex-column'])}>
 								<div className={cl.doctorProfession}>Врач-ортодонт</div>
 								<div className={cl.doctorName}>Иванова Александра</div>
