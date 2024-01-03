@@ -113,7 +113,7 @@ export default function EmployeesSlider({ sliderHeaderText }) {
 					</div>
 				</div>
 				<Swiper
-					slidesPerView="4.7"
+					slidesPerView={ 'auto' }
 					spaceBetween={20}
 					modules={[Navigation]}
 					onSwiper={(swiper) => setSwiper(swiper)}
@@ -122,6 +122,7 @@ export default function EmployeesSlider({ sliderHeaderText }) {
 						prevEl: '.employeesSlider .swiper-button-prev'
 					}}
 					loop={false}
+					className={cl.slider}
 				>
 					{doctorsList.map(({id, img, name, qualification, information}) => (
 						<SwiperSlide key={id} className={cn([cl.employeesSliderSlide, 'd-flex', 'flex-column'])}>

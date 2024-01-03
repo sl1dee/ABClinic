@@ -1,20 +1,25 @@
 @use '@assets/styles/vars/colors';
 
-@keyframes wrapper {
+@keyframes open {
   0% {
+    //opacity: 0;
     opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes content {
-  0% {
     transform: translateX(500px);
   }
   100% {
+    opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(500px);
   }
 }
 
@@ -26,13 +31,13 @@
   left: 0;
   z-index: 1000;
 
-  animation: wrapper .3s ease;
+  animation: open .3s ease;
 
   &Bckg {
     position: absolute;
     top: 0;
     right: 0;
-    left: 0;
+    left: -500px;
     bottom: 0;
     z-index: -1;
     background-color: #00000070;
@@ -81,7 +86,10 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    animation: content .3s ease;
+    animation: open .3s ease;
+    &Closed {
+      animation: close .3s ease;
+    }
 
     &::-webkit-scrollbar {
       width: 0;

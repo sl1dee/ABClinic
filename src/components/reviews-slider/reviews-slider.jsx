@@ -35,7 +35,7 @@ export default function ReviewsSlider() {
 						</div>
 					</div>
 					<Swiper
-						slidesPerView="4.5"
+						slidesPerView="auto"
 						spaceBetween={20}
 						modules={[Navigation, Pagination]}
 						onSwiper={(swiper) => setSwiper(swiper)}
