@@ -8,7 +8,6 @@
   right: 0;
   padding: 24px 0;
   z-index: 100;
-  //box-shadow: 0 1px 40px colors.$mainColor;
 
   &Logo {
     img {
@@ -123,7 +122,9 @@
 }
 
 .scrolled {
-  box-shadow: 0 1px 32px colors.$mainColor;
+  //box-shadow: 0 1px 32px colors.$mainColor;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+  transition: ease .3s;
 }
 
 @media (max-width: 768px) {

@@ -41,10 +41,10 @@ const Dropdown = () => {
 					<div className={cn([cl.contentAdditionalLinks, 'd-flex', 'flex-column'])}>
 						{optionsList.map(({ id, text }) => (
 							<div onClick={() => selectHandler(id)} key={id}>
-								<label className={cl.label}>
-								<input type="radio" className={cl.radio} name='name' />
-								<span className={cl.text}>{text}</span>
-								</label>
+								<div className={cn([cl.line, 'd-flex'])}>
+									<div className={cl.point}></div>
+									<div className={cl.text}>{text}</div>
+								</div>
 							</div>
 						))}
 					</div>

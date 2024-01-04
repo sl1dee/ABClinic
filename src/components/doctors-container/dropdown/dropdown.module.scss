@@ -30,12 +30,13 @@
 
   &Menu {
     position: absolute;
-    top: -100px;
+    top: -15px;
     left: 59%;
-    min-width: 304px;
+    min-width: 330px;
     padding-top: 10px;
-    transform: translate(-50%, -200%);
+    transform: translate(-50%, 0);
     transition: top .3s ease, transform .3s ease;
+    opacity: 0;
     pointer-events: none;
     z-index: 1;
     font-size: 20px;
@@ -62,46 +63,56 @@
 
         gap: 20px;
 
-        .label {}
+        .line {
+          gap: 10px;
 
-        .radio {
-          display: none;
-        }
-
-        .text {
-          position: relative;
-          padding-left: 30px;
-          display: inline-block;
-
-
-          &::before {
-            content: '';
-            display: block;
-            width: 20px;
-            height: 20px;
-            border: 1.5px solid #EAEDF0;
-            position: absolute;
-            border-radius: 50%;
-            top: 0;
-            left: 0;
+          .point {
+            content: url("/assets/img/doctors/RadiobuttonWhite.svg");
           }
 
-          &::after {
-            content: '';
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            transform: translate(-50%, -50%);
-            border: 7px solid colors.$mainColor;
-            display: block;
-            width: 20px;
-            height: 20px;
-            background-color: transparent;
-            opacity: 0;
-            transition: .2s;
-            border-radius: 50%;
+          .text {
+            color: colors.$mainColor;
+            position: relative;
+            //padding-left: 30px;
+            display: inline-block;
           }
         }
+        .line:current {
+          gap: 10px;
+
+          .point {
+            content: url("/assets/img/doctors/RadiobuttonBlue.svg");
+          }
+          .text {
+            position: relative;
+            //padding-left: 30px;
+            display: inline-block;
+          }
+        }
+
+
+        //.text {
+        //  position: relative;
+        //  padding-left: 30px;
+        //  display: inline-block;
+        //
+        //
+        //  &::before {
+        //    content: url("/assets/img/doctors/RadiobuttonWhite.svg");
+        //    display: block;
+        //    width: 20px;
+        //    height: 20px;
+        //    border: 1.5px solid #EAEDF0;
+        //    position: absolute;
+        //    border-radius: 50%;
+        //    top: 0;
+        //    left: 0;
+        //  }
+        //  &::before:active {
+        //    content: url("/assets/img/doctors/RadiobuttonBlue.svg");
+        //  }
+        //}
+
 
         .radio:checked + .text::after {
           opacity: 1;
@@ -124,6 +135,7 @@
     .linkMenu {
       top: 100%;
       transform: translate(-50%, 0);
+      opacity: 1;
       pointer-events: auto;
     }
   }
@@ -159,12 +171,13 @@
 
     &Menu {
       position: absolute;
-      top: -100px;
+      top: -15px;
       left: 59%;
-      min-width: 304px;
+      min-width: 330px;
       padding-top: 10px;
-      transform: translate(-50%, -200%);
+      transform: translate(-50%, 0);
       transition: top .3s ease, transform .3s ease;
+      opacity: 0;
       pointer-events: none;
       z-index: 1;
       font-size: 20px;
@@ -205,6 +218,7 @@
       .linkMenu {
         top: 100%;
         transform: translate(-50%, 0);
+        opacity: 1;
         pointer-events: auto;
       }
     }
@@ -242,14 +256,17 @@
 
     &Menu {
       position: absolute;
-      top: -100px;
-      left: 58%;
-      max-width: 304px;
+      top: -15px;
+      left: 59%;
+      min-width: 330px;
       padding-top: 10px;
-      transform: translate(-50%, -200%);
+      transform: translate(-50%, 0);
       transition: top .3s ease, transform .3s ease;
+      opacity: 0;
       pointer-events: none;
       z-index: 1;
+      font-size: 20px;
+      font-weight: 700;
 
       .content {
         row-gap: 20px;
@@ -286,6 +303,7 @@
       .linkMenu {
         top: 100%;
         transform: translate(-50%, 0);
+        opacity: 1;
         pointer-events: auto;
       }
     }
@@ -323,14 +341,17 @@
 
     &Menu {
       position: absolute;
-      top: -100px;
-      left: 58%;
-      max-width: 304px;
+      top: -15px;
+      left: 59%;
+      min-width: 330px;
       padding-top: 10px;
-      transform: translate(-50%, -200%);
+      transform: translate(-50%, 0);
       transition: top .3s ease, transform .3s ease;
+      opacity: 0;
       pointer-events: none;
       z-index: 1;
+      font-size: 20px;
+      font-weight: 700;
 
       .content {
         row-gap: 20px;
@@ -367,6 +388,7 @@
       .linkMenu {
         top: 100%;
         transform: translate(-50%, 0);
+        opacity: 1;
         pointer-events: auto;
       }
     }
