@@ -55,7 +55,7 @@ a {
   right: 0;
 }
 .services-tabs-el.active, .services-tabs-el.single {
-  color: #000;
+  color: #16171B;
   opacity: 1;
 }
 .services-tabs-el.active::after, .services-tabs-el.single::after {

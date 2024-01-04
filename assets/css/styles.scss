@@ -71,7 +71,7 @@ $whiteColor: #fff;
       }
 
       &.active, &.single {
-        color: $additionalTextColor;
+        color: $mainTextColor;
         opacity: 1;
 
         &::after {
