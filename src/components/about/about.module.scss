@@ -1,5 +1,9 @@
 @use '@assets/styles/vars/colors';
 
+.slider{
+  overflow: visible;
+}
+
 .about {
   padding: 75px 0;
   background-color: colors.$additionalColor;

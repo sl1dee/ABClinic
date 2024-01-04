@@ -60,7 +60,7 @@ export default function EmployeesSlider({ sliderHeaderText }) {
 				id: 5,
 				img: '/media/employeesSlider/timur.jpg',
 				name: 'Тимур Ишмухаметов',
-				qualification: 'Стоматолог общей практики',
+				qualification: 'Стоматолог',
 				information: 'Взрослый врач'
 			},
 			{
