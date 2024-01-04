@@ -1,9 +1,7 @@
 @use '@assets/styles/vars/colors';
 
 .slider{
-//width: 80%;
-  //width: 90%;
-  //padding-left: 300px;
+  overflow: visible;
 }
 
 
@@ -16,6 +14,32 @@
     row-gap: 40px;
   }
 
+  .swiper {
+    overflow: visible;
+  }
+
+  .arrows {
+    column-gap: 16px;
+
+    .swiperButtonNex, .swiperButtonPrev {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      position: unset;
+      margin-top: 0;
+      user-select: none;
+
+      &::after {
+        content: unset;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
 
   &Header {
     color: colors.$mainTextColor;
@@ -25,40 +49,14 @@
     letter-spacing: -0.76px;
   }
 
-    .swiper {
-      overflow: visible;
-    }
+  &Slide {
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    max-height: 490px;
+    max-width: 320px;
 
-    .arrows {
-      column-gap: 16px;
-
-      .swiperButtonNex, .swiperButtonPrev {
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        position: unset;
-        margin-top: 0;
-        user-select: none;
-
-        &::after {
-          content: unset;
-        }
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-
-    &Slide {
-      border-radius: 30px;
-      overflow: hidden;
-      position: relative;
-      max-height: 490px;
-      max-width: 320px;
-
-    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {

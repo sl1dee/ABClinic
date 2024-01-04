@@ -41,6 +41,7 @@ export default function ReviewsSlider() {
 						onSwiper={(swiper) => setSwiper(swiper)}
 						navigation={{ nextEl: '.reviewsSlider .swiper-button-next', prevEl: '.reviewsSlider .swiper-button-prev' }}
 						loop={false}
+						className={cl.slider}
 					>
 						<SwiperSlide className={cl.reviewsSliderSlide}>
 							<div className="d-flex flex-column">
