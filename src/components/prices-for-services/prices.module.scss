@@ -1,0 +1,329 @@
+@use '@assets/styles/vars/colors';
+
+.prices {
+  background-color: colors.$additionalColor;
+  padding: 75px 0 30px 0;
+
+  &Title {
+    font-size: 38px;
+    font-weight: 700;
+    color: colors.$mainTextColor;
+    padding-bottom: 40px;
+  }
+
+  .filter {
+    padding-bottom: 20px;
+  }
+
+  .inputWrapper{
+    padding: 20px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+
+    &::before{
+      position: absolute;
+      left: 12px;
+      content: url("@assets/img/doctors/search.svg");
+      width: 24px;
+      height: 24px;
+      opacity: 0.7;
+    }
+  }
+  .input{
+    padding-top: 12px;
+    padding-bottom: 14px;
+    padding-left: 52px;
+    background: colors.$whiteColor;
+    border-radius: 60px;
+    border: 1px solid colors.$whiteColor;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: colors.$mainColor;
+    width: 100%;
+
+    &::placeholder {
+      color: colors.$mainColor;
+      opacity: .6;
+    }
+  }
+
+  &List {
+    padding: 50px 40px 20px 40px;
+    background-color: colors.$whiteColor;
+    border-radius: 30px;
+    gap: 60px;
+
+    .title {
+      font-size: 32px;
+      font-weight: 600;
+      color: colors.$mainTextColor;
+      padding-bottom: 30px;
+    }
+
+    .informationLines {
+      row-gap: 20px;
+
+      .information {
+        justify-content: space-between;
+
+        .service {
+          font-size: 24px;
+          font-weight: 500;
+          color: colors.$mainColor;
+          row-gap: 20px;
+        }
+
+        .cost {
+          font-size: 24px;
+          font-weight: 700;
+          color: colors.$mainColor;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .prices {
+    background-color: colors.$additionalColor;
+    padding: 75px 0 75px 0;
+
+    &Title {
+      font-size: 38px;
+    }
+
+    .filter {
+      padding-bottom: 20px;
+    }
+
+    .inputWrapper{
+      padding: 20px 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+
+      &::before{
+        position: absolute;
+        left: 12px;
+        content: url("@assets/img/doctors/search.svg");
+        width: 24px;
+        height: 24px;
+        opacity: 0.7;
+      }
+    }
+    .input{
+      padding-top: 12px;
+      padding-bottom: 14px;
+      padding-left: 52px;
+      background: colors.$whiteColor;
+      border-radius: 60px;
+      border: 1px solid colors.$whiteColor;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      color: colors.$mainColor;
+      width: 100%;
+
+      &::placeholder {
+        color: colors.$mainColor;
+        opacity: .6;
+      }
+    }
+
+    &List {
+      padding: 50px 40px 20px 40px;
+      background-color: colors.$whiteColor;
+      border-radius: 30px;
+      gap: 60px;
+
+      .title {
+        font-size: 32px;
+      }
+
+      .informationLines {
+        row-gap: 20px;
+
+        .information {
+          justify-content: space-between;
+
+          .service {
+            font-size: 24px;
+            font-weight: 500;
+            color: colors.$mainColor;
+            row-gap: 20px;
+          }
+
+          .cost {
+            font-size: 24px;
+            font-weight: 700;
+            color: colors.$mainColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .prices {
+    background-color: colors.$additionalColor;
+    padding: 55px 0 55px 0;
+
+    &Title {
+      font-size: 28px;
+    }
+
+    .filter {
+      padding-bottom: 20px;
+    }
+
+    .inputWrapper{
+      padding: 0 0 20px 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+
+      &::before{
+        position: absolute;
+        left: 12px;
+        content: url("@assets/img/doctors/search.svg");
+        width: 24px;
+        height: 24px;
+        opacity: 0.7;
+      }
+    }
+    .input{
+      padding-top: 12px;
+      padding-bottom: 14px;
+      padding-left: 52px;
+      background: colors.$whiteColor;
+      border-radius: 60px;
+      border: 1px solid colors.$whiteColor;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      color: colors.$mainColor;
+      width: 100%;
+
+      &::placeholder {
+        color: colors.$mainColor;
+        opacity: .6;
+      }
+    }
+
+    &List {
+      padding: 40px 40px 20px 30px;
+      background-color: colors.$whiteColor;
+      border-radius: 30px;
+      gap: 60px;
+
+      .title {
+        font-size: 24px;
+      }
+
+      .informationLines {
+        row-gap: 10px;
+
+        .information {
+          justify-content: space-between;
+
+          .service {
+            font-size: 16px;
+          }
+
+          .cost {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .prices {
+    background-color: colors.$additionalColor;
+    padding: 40px 0 40px 0;
+
+    &Title {
+      font-size: 20px;
+      padding-bottom: 20px;
+    }
+
+    .filter {
+      padding-bottom: 12px;
+    }
+
+    .inputWrapper{
+      padding: 0 0 12px 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+
+      &::before{
+        position: absolute;
+        left: 12px;
+        content: url("@assets/img/doctors/search.svg");
+        width: 24px;
+        height: 24px;
+        opacity: 0.7;
+      }
+    }
+    .input{
+      padding-top: 12px;
+      padding-bottom: 14px;
+      padding-left: 52px;
+      background: colors.$whiteColor;
+      border-radius: 60px;
+      border: 1px solid colors.$whiteColor;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      color: colors.$mainColor;
+      width: 100%;
+
+      &::placeholder {
+        color: colors.$mainColor;
+        opacity: .6;
+      }
+    }
+
+    &List {
+      padding: 25px 20px 25px 20px;
+      background-color: colors.$whiteColor;
+      border-radius: 30px;
+      gap: 40px;
+
+      .title {
+        font-size: 18px;
+        padding-bottom: 16px;
+      }
+
+      .informationLines {
+        row-gap: 10px;
+
+        .information {
+          justify-content: space-between;
+
+          .service {
+            font-size: 14px;
+          }
+
+          .cost {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

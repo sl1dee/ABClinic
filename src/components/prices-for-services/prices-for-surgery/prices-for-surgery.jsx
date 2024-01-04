@@ -1,9 +1,11 @@
 import cn from 'classnames'
 import React from 'react'
 
+import Filters from '@components/doctors-container/filters/filters.jsx'
+
 import cl from '../prices.module.scss'
 
-const PricesForTherapy = () => {
+const PricesForSurgery = () => {
 	const pricesList = [
 		{
 			id: 0,
@@ -65,4 +67,4 @@ const PricesForTherapy = () => {
 	)
 }
 
-export default PricesForTherapy
+export default PricesForSurgery

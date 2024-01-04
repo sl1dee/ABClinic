@@ -3,7 +3,7 @@ import React from 'react'
 
 import cl from '../prices.module.scss'
 
-const PricesForTherapy = () => {
+const PricesForOrthodontics = () => {
 	const pricesList = [
 		{
 			id: 0,
@@ -65,4 +65,4 @@ const PricesForTherapy = () => {
 	)
 }
 
-export default PricesForTherapy
+export default PricesForOrthodontics
