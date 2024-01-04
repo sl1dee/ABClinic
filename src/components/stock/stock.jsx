@@ -1,3 +1,6 @@
+import firstBanner from '@assets/img/stock/firstBanner.jpg'
+import secondBanner from '@assets/img/stock/secondBanner.jpg'
+import thirdBanner from '@assets/img/stock/thirdBanner.jpg'
 import { setSignUpIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
 import React, { useMemo } from 'react'
@@ -20,21 +23,21 @@ const Stock = () => {
 				id: 0,
 				title: 'Бесплатное обследование ',
 				text: 'Бесплатное обследование для всех новых пациентов',
-				img: '/assets/img/stock/firstBanner.jpg'
+				img: firstBanner
 				// stockImg: cl.firstBanner
 			},
 			{
 				id: 1,
 				title: 'Выгоднее вместе',
 				text: 'Скидка 10% на семейные пакеты услуг',
-				img: '/assets/img/stock/secondBanner.jpg'
+				img: secondBanner
 				// stockImg: cl.secondBanner
 			},
 			{
 				id: 2,
 				title: 'Улучши свою улыбку с нами',
 				text: 'Бесплатный осмотр и консультация ортодонта для новых пациентов',
-				img: '/assets/img/stock/thirdBanner.jpg'
+				img: thirdBanner
 				// stockImg: cl.thirdBanner
 			}
 		],
