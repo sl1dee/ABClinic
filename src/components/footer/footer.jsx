@@ -157,7 +157,7 @@ const Footer = () => {
 						</Link>
 					</div>
 					<div>
-						<a href="https://ambity.ru">
+						<a href="https://ambity.ru" target="_blank" rel="noreferrer">
 							<div>
 								<p className={cn([cl.footerBottomLink, 'mb-0'])}>Дизайн и разработка сайта: Амбити</p>
 							</div>
