@@ -1,14 +1,16 @@
 @use '@assets/styles/vars/colors';
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
   padding: 40px;
   border-radius: 30px;
   background-color: colors.$mainColor;
+  row-gap: 40px;
 
   .titleWrapper {
 
     justify-content: space-between;
-    padding-bottom: 40px;
 
     .title {
       font-size: 32px;
@@ -62,7 +64,6 @@
     .titleWrapper {
 
       justify-content: space-between;
-      padding-bottom: 40px;
 
       .title {
         font-size: 30px;
@@ -113,11 +114,11 @@
     padding: 40px;
     border-radius: 30px;
     background-color: colors.$mainColor;
+    row-gap: 30px;
 
     .titleWrapper {
 
       justify-content: space-between;
-      padding-bottom: 30px;
       gap: 20px;
 
       .title {
@@ -170,11 +171,12 @@
     padding: 20px;
     border-radius: 20px;
     background-color: colors.$mainColor;
+    row-gap: 16px;
+
 
     .titleWrapper {
 
       justify-content: space-between;
-      padding-bottom: 16px;
       gap: 8px;
 
       .title {
