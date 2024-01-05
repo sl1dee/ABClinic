@@ -17,7 +17,7 @@
       z-index: 0;
       row-gap: 10px;
 
-      &Name{
+      &Name {
         font-size: 48px;
         font-weight: 700;
         color: colors.$mainTextColor;
@@ -77,8 +77,15 @@
     }
   }
 }
-.btn{
+
+.btn {
   text-align: center;
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .bckgIcon {
+    display: none;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -131,7 +138,7 @@
         row-gap: 10px;
         width: 100%;
 
-        &Name{
+        &Name {
           font-size: 32px;
           font-weight: 700;
           color: colors.$mainTextColor;
@@ -200,7 +207,7 @@
         //max-width: 280px;
         row-gap: 10px;
 
-        &Name{
+        &Name {
           font-size: 24px;
           font-weight: 700;
           color: colors.$mainTextColor;

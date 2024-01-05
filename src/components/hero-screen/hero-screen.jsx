@@ -1,6 +1,6 @@
 import { setSignUpIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
-import React, { useMemo } from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux'
 
 import Button from '@ui/button/index.js'
@@ -17,7 +17,8 @@ const HeroScreen = ({ title, text, img }) => {
 	return (
 		<div className={cl.detailHeroScreen}>
 			<div className="container">
-				<div className={cn([cl.detailInformation, 'd-flex', 'flex-column-reverse', 'flex-md-row'])}>
+				{/* <div className={cn([cl.detailInformation, 'd-flex', 'flex-column-reverse', 'flex-md-row'])}> */}
+				<div className={cn([cl.detailInformation, 'd-flex', 'flex-column', 'flex-md-row'])}>
 					<div className={cn([cl.detailInformationBlock, 'd-flex', 'flex-column'])}>
 						<div className={cl.wrapper}>
 							<div className={cl.detailInformationBlockName}>{title}</div>
