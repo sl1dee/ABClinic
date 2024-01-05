@@ -31,8 +31,8 @@
   &Menu {
     position: absolute;
     top: -15px;
-    left: 59%;
-    min-width: 330px;
+    left: 62.7%;
+    min-width: 320px;
     padding-top: 10px;
     transform: translate(-50%, 0);
     transition: top .3s ease, transform .3s ease;
@@ -60,7 +60,6 @@
 
       &AdditionalLinks {
         row-gap: 5px;
-
         gap: 20px;
 
         .line {
@@ -73,19 +72,19 @@
           .text {
             color: colors.$mainColor;
             position: relative;
-            //padding-left: 30px;
             display: inline-block;
           }
         }
-        .line:current {
+
+        .line:active {
           gap: 10px;
 
           .point {
             content: url("/assets/img/doctors/RadiobuttonBlue.svg");
           }
+
           .text {
             position: relative;
-            //padding-left: 30px;
             display: inline-block;
           }
         }
@@ -172,7 +171,7 @@
     &Menu {
       position: absolute;
       top: -15px;
-      left: 59%;
+      left: 64%;
       min-width: 330px;
       padding-top: 10px;
       transform: translate(-50%, 0);
@@ -225,7 +224,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 992px){
+@media (min-width: 768px) and (max-width: 992px) {
   .link {
     column-gap: 5px;
     position: relative;
@@ -257,7 +256,7 @@
     &Menu {
       position: absolute;
       top: -15px;
-      left: 59%;
+      left: 64%;
       min-width: 330px;
       padding-top: 10px;
       transform: translate(-50%, 0);
@@ -342,7 +341,7 @@
     &Menu {
       position: absolute;
       top: -15px;
-      left: 59%;
+      left: 64%;
       min-width: 330px;
       padding-top: 10px;
       transform: translate(-50%, 0);

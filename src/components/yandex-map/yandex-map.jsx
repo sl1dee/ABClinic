@@ -83,7 +83,7 @@ export default function YandexMap() {
 										iconLayout: 'default#image',
 										iconImageHref: point,
 										iconImageSize: [94, 94],
-										iconImageOffset: [-47, -97]
+										iconImageOffset: [-47, -80]
 									}}
 								/>
 							</Map>

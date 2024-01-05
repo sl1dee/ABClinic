@@ -29,7 +29,7 @@ const Diagnostics = () => {
 	return (
 		<div className={cl.diagnosticsContainer}>
 			<div className="container">
-				<div className={cl.diagnosticsBlock}>
+				<div className={cn([cl.diagnosticsBlock, 'd-flex', 'flex-column'])}>
 					<div className={cn([cl.diagnosticsInformation, 'd-flex', 'flex-column', 'flex-xl-row'])}>
 						<h1 className={cl.diagnosticsTitle}>Диагностика</h1>
 						<div className={cl.diagnosticsText}>
@@ -44,13 +44,6 @@ const Diagnostics = () => {
 								{text}
 							</div>
 						))}
-						{/* {diagnosticsList.map(({ id, text }) => ( */}
-						{/*	<ul className={cn([cl.diagnosticsUl, 'mb-0', 'd-flex'])}> */}
-						{/*		<li key={id} className={cn([cl.tableContent])}> */}
-						{/*			{text} */}
-						{/*		</li> */}
-						{/*	</ul> */}
-						{/* ))} */}
 					</div>
 				</div>
 			</div>

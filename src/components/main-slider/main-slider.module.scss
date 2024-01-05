@@ -44,6 +44,7 @@
             line-height: 150%;
             max-width: 510px;
           }
+
           .btnWrapper {
             padding-top: 12px;
           }
@@ -97,6 +98,7 @@
     }
   }
 }
+
 @media (min-width: 992px) and (max-width: 1200px) {
   .mainSlider {
     padding: 35px 0 75px;
@@ -121,7 +123,8 @@
     }
   }
 }
-@media (min-width: 768px) and (max-width: 992px){
+
+@media (min-width: 768px) and (max-width: 992px) {
   .mainSlider {
     padding: 25px 0 55px;
 
@@ -161,6 +164,7 @@
     }
   }
 }
+
 @media (max-width: 768px) {
   .mainSlider {
     padding: 50px 0 40px;

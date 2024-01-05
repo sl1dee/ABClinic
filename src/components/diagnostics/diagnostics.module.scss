@@ -8,10 +8,10 @@
     background-color: colors.$whiteColor;
     padding: 50px 40px 50px 40px;
     border-radius: 30px;
+    row-gap: 30px;
 
     .diagnosticsInformation {
       gap: 266px;
-      padding-bottom: 30px;
 
       .diagnosticsTitle {
         font-size: 38px;
@@ -42,7 +42,7 @@
         align-items: center;
 
         .tablePoint {
-            content: url("/media/services/point.svg");
+          content: url("/media/services/point.svg");
           width: 10px;
           height: 10px;
           align-self: center;
@@ -58,10 +58,10 @@
 
     .diagnosticsBlock {
       padding: 40px;
+      row-gap: 30px;
 
       .diagnosticsInformation {
         gap: 20px;
-        padding-bottom: 30px;
       }
 
       .diagnosticsTable {
@@ -79,10 +79,10 @@
     .diagnosticsBlock {
       padding: 40px;
       border-radius: 30px;
+      padding-bottom: 30px;
 
       .diagnosticsInformation {
         gap: 16px;
-        padding-bottom: 30px;
 
         .diagnosticsTitle {
           font-size: 28px;
@@ -126,10 +126,10 @@
       background-color: colors.$whiteColor;
       padding: 30px 20px 30px 20px;
       border-radius: 30px;
+      row-gap: 16px;
 
       .diagnosticsInformation {
         gap: 8px;
-        padding-bottom: 16px;
 
         .diagnosticsTitle {
           font-size: 20px;
