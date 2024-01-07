@@ -31,7 +31,7 @@ const SignUpModal = () => {
 		fd.append('type', `Задать вопрос`)
 		fd.append('url', `${document.location.pathname}`)
 
-		fetch('/api/zayavka', { method: 'post', body: fd })
+		fetch('/api/handler_request', { method: 'post', body: fd })
 			.then((resp) => resp.json())
 			.then((res) => {
 				if (res.status === 'ok') {

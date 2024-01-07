@@ -1,5 +1,5 @@
-import cn from 'classnames'
 import React, { useMemo } from 'react'
+import { Link } from 'react-router-dom'
 
 import cl from './services-card.module.scss'
 
@@ -10,31 +10,36 @@ const ServicesCard = ({ title }) => {
 				id: 0,
 				title: 'Лечение зубов',
 				information: 'Боль в зубах, кариес, пульпит, переодонтит',
-				type: 'Терапия'
+				type: 'Терапия',
+				href: '/therapy-service'
 			},
 			{
 				id: 1,
 				title: 'Имплантация',
 				information: 'Протезирование на имплантатах, коронки, виниры, керамические накладки',
-				type: 'Ортопедия'
+				type: 'Ортопедия',
+				href: '/orthopedics-services'
 			},
 			{
 				id: 2,
 				title: 'Удаление зубов',
 				information: 'Удаление зубов мудрости, кисты зуба, ретинированного зуба',
-				type: 'Хирургия'
+				type: 'Хирургия',
+				href: '/surgery-services'
 			},
 			{
 				id: 3,
 				title: 'Брекеты, элайнеры',
 				information: 'Диагностика, 3D план лечения, установка, наблюдение',
-				type: 'Ортодонтия'
+				type: 'Ортодонтия',
+				href: '/orthodontics-services'
 			},
 			{
 				id: 4,
 				title: 'Лечение дёсен',
 				information: 'Боль, кровоточивость в дёснах, запах изо рта, пародонтит, гингивит, налёт и зубной кариес',
-				type: 'Пародонтология'
+				type: 'Пародонтология',
+				href: '/periodontics-services'
 			},
 			{
 				id: 5,
@@ -48,7 +53,7 @@ const ServicesCard = ({ title }) => {
 		<div className={cl.wrapper}>
 			{title && <h2 className={cl.title}>{title}</h2>}
 			<div className="services-tabsContent d-grid">
-				{cardInfoList.map(({ id, title, information, type, imgSrc }) =>
+				{cardInfoList.map(({ id, title, information, type, href, imgSrc }) =>
 					imgSrc ? (
 						<div className={cl.card}>
 							<img className={cl.cardImg} src={imgSrc} alt="asd" />
@@ -59,7 +64,9 @@ const ServicesCard = ({ title }) => {
 								<div className={cl.cardTitle}>{title}</div>
 								<div className={cl.cardInformation}>{information}</div>
 							</div>
-							<div className={cl.cardType}>{type}</div>
+							<Link to={href}>
+								<div className={cl.cardType}>{type}</div>
+							</Link>
 						</div>
 					)
 				)}

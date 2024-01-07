@@ -1,8 +1,5 @@
-import arrDown from '@assets/img/header/arr_down.svg'
 import useMatchMedia from '@hooks/use-match-media.js'
-import cn from 'classnames'
 import React, { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
 
 import Dropdown from '@components/doctors-container/dropdown/index.js'
 
