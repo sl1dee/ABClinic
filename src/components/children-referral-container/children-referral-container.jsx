@@ -53,7 +53,7 @@ const ChildrenReferralContainer = () => {
 				</div>
 			</div>
 			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" />
-			<Articles />
+			{/* <Articles /> */}
 			<SignUp />
 		</>
 	)

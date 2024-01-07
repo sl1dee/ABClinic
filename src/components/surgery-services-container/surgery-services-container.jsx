@@ -45,10 +45,10 @@ const SurgeryServicesContainer = () => {
 				img="/media/surgeryService/surgery.jpg"
 			/>
 			<SurgeryTypes preHeader />
-			<OurWorks />
+			{/* <OurWorks /> */}
 			<Diagnostics />
 			<Favorites favorites={favorites} />
-			<PricesForSurgery />
+			{/* <PricesForSurgery /> */}
 			<SignUp />
 		</>
 	)

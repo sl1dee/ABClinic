@@ -50,9 +50,9 @@ const MainPage = () => {
 			<Services preHeader />
 			<Favorites favorites={favorites} />
 			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" />
-			<OurWorks />
-			<ReviewsSlider />
-			<Articles />
+			{/* <OurWorks /> */}
+			{/* <ReviewsSlider /> */}
+			{/* <Articles /> */}
 			<About />
 			<YandexMap />
 		</MainLayout>

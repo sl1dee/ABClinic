@@ -51,7 +51,7 @@ const DoctorsContainer = () => {
                 name: 'Адель Ахметова',
                 qualification: 'Врач-стоматолог-ортодонт',
                 price: 'от 2500',
-                information: 'Взрослый и детский врач',
+                information: 'Детский врач',
                 category: 'Стоматолог-ортодонт'
             },
             {
@@ -109,11 +109,11 @@ const DoctorsContainer = () => {
             <div className="container">
                 <div className={cl.titleWrapper}>
                     <h1 className={cl.title}>Врачи</h1>
-                    <div className={cn([cl.inputWrapper])}>
-                        <input className={cl.input} placeholder='Поиск по врачам'/>
-                    </div>
+                    {/*<div className={cn([cl.inputWrapper])}>*/}
+                    {/*    <input className={cl.input} placeholder='Поиск по врачам'/>*/}
+                    {/*</div>*/}
                 </div>
-                <Filters/>
+                {/*<Filters/>*/}
                 <div className={cl.doctorsCards}>
                     {doctorsList?.map(({id, href, img, name, qualification, price, information}) => (
                         <div key={id} className={cn([cl.employeesSlider, cl.employeesSliderSlide])}>

@@ -46,11 +46,11 @@ const PeriodonticsServicesContainer = () => {
 				img="/media/periodonticsServices/periodontics.jpg"
 			/>
 			<PeriodonticsTypes preHeader />
-			<OurWorks />
+			{/* <OurWorks /> */}
 			<Diagnostics />
 			<Favorites favorites={favorites} />
 			<EmployeesSlider sliderHeaderText="Врачи по направлению" />
-			<PricesForPeriodontics />
+			{/* <PricesForPeriodontics /> */}
 			<SignUp />
 		</>
 	)

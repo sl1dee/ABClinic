@@ -127,11 +127,11 @@ const Header = () => {
 											<span>Акции</span>
 										</Link>
 									</div>
-									<div>
-										<Link to="/blog">
-											<span>Блог</span>
-										</Link>
-									</div>
+									{/* <div> */}
+									{/*	<Link to="/blog"> */}
+									{/*		<span>Блог</span> */}
+									{/*	</Link> */}
+									{/* </div> */}
 								</div>
 							</div>
 						</div>
