@@ -42,10 +42,10 @@ const Routes = () => {
 			path: `/contacts`,
 			element: <ContactsPage />
 		},
-		{
-			path: `/blog`,
-			element: <BlogPage />
-		},
+		// {
+		// 	path: `/blog`,
+		// 	element: <BlogPage />
+		// },
 		{
 			path: `/adult-referral`,
 			element: <AdultReferralPage />

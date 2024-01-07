@@ -222,138 +222,138 @@ export default function OurWorks() {
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide
-                            className={cn([cl.ourWorksSlide, 'd-flex', 'flex-column', 'flex-lg-row-reverse', 'flex-xl-row'])}
-                        >
-                            <div className={cn([cl.compareWrap, 'flex-grow-1', 'd-flex', 'flex-column'])}>
-                                <div className={cl.compare}>
-                                    <ReactCompareImage
-                                        leftImage={before}
-                                        rightImage={after}
-                                        aspectRatio="taller"
-                                        sliderLineWidth={6}
-                                        sliderLineColor="#F1F3FF"
-                                        leftImageLabel="До"
-                                        rightImageLabel="После"
-                                        handle={
-                                            <div
-                                                className={cn([cl.compareHandler, 'd-flex', 'justify-content-center', 'align-items-center'])}
-                                            >
-                                                <img src={chevronsLeftRight} alt=""/>
-                                            </div>
-                                        }
-                                    />
-                                </div>
-                                <div
-                                    className={cn([cl.person, 'align-items-center', 'd-none', 'd-lg-flex', 'd-xl-none'])}>
-                                    <div className={cl.personAvatar}
-                                         style={{backgroundImage: 'url(/media/employeesSlider/nasima.jpg)'}}/>
-                                    <div className={cn([cl.personText, 'd-flex', 'flex-column'])}>
-                                        <p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>
-                                        <p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                className={cn([cl.textWrap, 'd-flex', 'justify-content-lg-between', 'flex-column', 'flex-md-row'])}>
-                                <div
-                                    className={cn([
-                                        cl.description,
-                                        'flex-grow-1',
-                                        'd-flex',
-                                        'flex-column',
-                                        'd-lg-none',
-                                        'd-xl-flex',
-                                        'flex-column',
-                                        'justify-content-between'
-                                    ])}
-                                >
-                                    <div className={cn([cl.descriptionContent, 'd-flex', 'flex-column'])}>
-                                        <div className={cl.descriptionHeader}>
-                                            <p className="mb-0">Жалобы пациента</p>
-                                        </div>
-                                        <div className={cl.descriptionText}>
-                                            <p className="mb-0">
-                                                Пациентка обратилась с жалобами на изменение цвета центрального резца на
-                                                верхней челюсти.
-                                            </p>
-                                        </div>
-                                    </div>
+                        {/*<SwiperSlide*/}
+                        {/*    className={cn([cl.ourWorksSlide, 'd-flex', 'flex-column', 'flex-lg-row-reverse', 'flex-xl-row'])}*/}
+                        {/*>*/}
+                        {/*    <div className={cn([cl.compareWrap, 'flex-grow-1', 'd-flex', 'flex-column'])}>*/}
+                        {/*        <div className={cl.compare}>*/}
+                        {/*            <ReactCompareImage*/}
+                        {/*                leftImage={before}*/}
+                        {/*                rightImage={after}*/}
+                        {/*                aspectRatio="taller"*/}
+                        {/*                sliderLineWidth={6}*/}
+                        {/*                sliderLineColor="#F1F3FF"*/}
+                        {/*                leftImageLabel="До"*/}
+                        {/*                rightImageLabel="После"*/}
+                        {/*                handle={*/}
+                        {/*                    <div*/}
+                        {/*                        className={cn([cl.compareHandler, 'd-flex', 'justify-content-center', 'align-items-center'])}*/}
+                        {/*                    >*/}
+                        {/*                        <img src={chevronsLeftRight} alt=""/>*/}
+                        {/*                    </div>*/}
+                        {/*                }*/}
+                        {/*            />*/}
+                        {/*        </div>*/}
+                        {/*        <div*/}
+                        {/*            className={cn([cl.person, 'align-items-center', 'd-none', 'd-lg-flex', 'd-xl-none'])}>*/}
+                        {/*            <div className={cl.personAvatar}*/}
+                        {/*                 style={{backgroundImage: 'url(/media/employeesSlider/nasima.jpg)'}}/>*/}
+                        {/*            <div className={cn([cl.personText, 'd-flex', 'flex-column'])}>*/}
+                        {/*                <p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>*/}
+                        {/*                <p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>*/}
+                        {/*            </div>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*    <div*/}
+                        {/*        className={cn([cl.textWrap, 'd-flex', 'justify-content-lg-between', 'flex-column', 'flex-md-row'])}>*/}
+                        {/*        <div*/}
+                        {/*            className={cn([*/}
+                        {/*                cl.description,*/}
+                        {/*                'flex-grow-1',*/}
+                        {/*                'd-flex',*/}
+                        {/*                'flex-column',*/}
+                        {/*                'd-lg-none',*/}
+                        {/*                'd-xl-flex',*/}
+                        {/*                'flex-column',*/}
+                        {/*                'justify-content-between'*/}
+                        {/*            ])}*/}
+                        {/*        >*/}
+                        {/*            <div className={cn([cl.descriptionContent, 'd-flex', 'flex-column'])}>*/}
+                        {/*                <div className={cl.descriptionHeader}>*/}
+                        {/*                    <p className="mb-0">Жалобы пациента</p>*/}
+                        {/*                </div>*/}
+                        {/*                <div className={cl.descriptionText}>*/}
+                        {/*                    <p className="mb-0">*/}
+                        {/*                        Пациентка обратилась с жалобами на изменение цвета центрального резца на*/}
+                        {/*                        верхней челюсти.*/}
+                        {/*                    </p>*/}
+                        {/*                </div>*/}
+                        {/*            </div>*/}
 
-                                    <div className={cn([cl.descriptionContent, 'd-none', 'd-md-flex', 'flex-column'])}>
-                                        <div className={cl.descriptionHeader}>
-                                            <p className="mb-0">Врач</p>
-                                        </div>
-                                        <div className={cn([cl.person, 'd-flex', 'align-items-center'])}>
-                                            <div
-                                                className={cl.personAvatar}
-                                                style={{backgroundImage: 'url(/media/employeesSlider/nasima.jpg)'}}
-                                            />
-                                            <div className={cn([cl.personText, 'd-flex', 'flex-column'])}>
-                                                <p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>
-                                                <p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>
-                                            </div>
-                                        </div>
-                                        <Button onClick={openModalHandler} className="btn" colorStyle="outlined">
-                                            Записаться
-                                        </Button>
-                                    </div>
-                                </div>
-                                <div
-                                    className={cn([cl.description, 'flex-grow-1', 'd-flex', 'flex-column', 'justify-content-between'])}
-                                >
-                                    <div
-                                        className={cn([cl.descriptionContent, 'd-none', 'd-lg-flex', 'd-xl-none', 'flex-column'])}>
-                                        <div className={cl.descriptionHeader}>
-                                            <p className="mb-0">Жалобы пациента</p>
-                                        </div>
-                                        <div className={cl.descriptionText}>
-                                            <p className="mb-0">
-                                                Пациентка обратилась с жалобами на изменение цвета центрального резца на
-                                                верхней челюсти.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className={cn([cl.descriptionContent, 'd-flex', 'flex-column'])}>
-                                        <div className={cl.descriptionHeader}>
-                                            <p className="mb-0">Процесс лечения</p>
-                                        </div>
-                                        <div className={cl.descriptionText}>
-                                            <p className="mb-0">
-                                                При осмотре полости рта, выявили небольшую пломбу с небной поверхности
-                                                центрального резца.
-                                                Приняли решение провести внутрикоронковое отбеливание.
-                                            </p>
-                                        </div>
-                                        <div className={cl.descriptionText}>
-                                            <p className="mb-0">
-                                                Определили исходный цвет депульпированного зуба. Провели
-                                                внутрикоронковое отбеливание
-                                                центрального резца препаратом Opalescence Endo Relif
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className={cn([cl.descriptionContent, 'd-flex', 'd-md-none', 'flex-column'])}>
-                                        <div className={cl.descriptionHeader}>
-                                            <p className="mb-0">Врач</p>
-                                        </div>
-                                        <div className={cn([cl.person, 'd-flex', 'align-items'])}>
-                                            <div
-                                                className={cl.personAvatar}
-                                                style={{backgroundImage: 'url(/media/employeesSlider/nasima.jpg)'}}
-                                            />
-                                            <div className={cn([cl.personText, 'd-flex', 'flex-column'])}>
-                                                <p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>
-                                                <p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>
-                                            </div>
-                                        </div>
-                                        <Button onClick={openModalHandler} className="btn" colorStyle="outlined">
-                                            Записаться
-                                        </Button>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
+                        {/*            <div className={cn([cl.descriptionContent, 'd-none', 'd-md-flex', 'flex-column'])}>*/}
+                        {/*                <div className={cl.descriptionHeader}>*/}
+                        {/*                    <p className="mb-0">Врач</p>*/}
+                        {/*                </div>*/}
+                        {/*                <div className={cn([cl.person, 'd-flex', 'align-items-center'])}>*/}
+                        {/*                    <div*/}
+                        {/*                        className={cl.personAvatar}*/}
+                        {/*                        style={{backgroundImage: 'url(/media/employeesSlider/nasima.jpg)'}}*/}
+                        {/*                    />*/}
+                        {/*                    <div className={cn([cl.personText, 'd-flex', 'flex-column'])}>*/}
+                        {/*                        <p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>*/}
+                        {/*                        <p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>*/}
+                        {/*                    </div>*/}
+                        {/*                </div>*/}
+                        {/*                <Button onClick={openModalHandler} className="btn" colorStyle="outlined">*/}
+                        {/*                    Записаться*/}
+                        {/*                </Button>*/}
+                        {/*            </div>*/}
+                        {/*        </div>*/}
+                        {/*        <div*/}
+                        {/*            className={cn([cl.description, 'flex-grow-1', 'd-flex', 'flex-column', 'justify-content-between'])}*/}
+                        {/*        >*/}
+                        {/*            <div*/}
+                        {/*                className={cn([cl.descriptionContent, 'd-none', 'd-lg-flex', 'd-xl-none', 'flex-column'])}>*/}
+                        {/*                <div className={cl.descriptionHeader}>*/}
+                        {/*                    <p className="mb-0">Жалобы пациента</p>*/}
+                        {/*                </div>*/}
+                        {/*                <div className={cl.descriptionText}>*/}
+                        {/*                    <p className="mb-0">*/}
+                        {/*                        Пациентка обратилась с жалобами на изменение цвета центрального резца на*/}
+                        {/*                        верхней челюсти.*/}
+                        {/*                    </p>*/}
+                        {/*                </div>*/}
+                        {/*            </div>*/}
+                        {/*            <div className={cn([cl.descriptionContent, 'd-flex', 'flex-column'])}>*/}
+                        {/*                <div className={cl.descriptionHeader}>*/}
+                        {/*                    <p className="mb-0">Процесс лечения</p>*/}
+                        {/*                </div>*/}
+                        {/*                <div className={cl.descriptionText}>*/}
+                        {/*                    <p className="mb-0">*/}
+                        {/*                        При осмотре полости рта, выявили небольшую пломбу с небной поверхности*/}
+                        {/*                        центрального резца.*/}
+                        {/*                        Приняли решение провести внутрикоронковое отбеливание.*/}
+                        {/*                    </p>*/}
+                        {/*                </div>*/}
+                        {/*                <div className={cl.descriptionText}>*/}
+                        {/*                    <p className="mb-0">*/}
+                        {/*                        Определили исходный цвет депульпированного зуба. Провели*/}
+                        {/*                        внутрикоронковое отбеливание*/}
+                        {/*                        центрального резца препаратом Opalescence Endo Relif*/}
+                        {/*                    </p>*/}
+                        {/*                </div>*/}
+                        {/*            </div>*/}
+                        {/*            <div className={cn([cl.descriptionContent, 'd-flex', 'd-md-none', 'flex-column'])}>*/}
+                        {/*                <div className={cl.descriptionHeader}>*/}
+                        {/*                    <p className="mb-0">Врач</p>*/}
+                        {/*                </div>*/}
+                        {/*                <div className={cn([cl.person, 'd-flex', 'align-items'])}>*/}
+                        {/*                    <div*/}
+                        {/*                        className={cl.personAvatar}*/}
+                        {/*                        style={{backgroundImage: 'url(/media/employeesSlider/nasima.jpg)'}}*/}
+                        {/*                    />*/}
+                        {/*                    <div className={cn([cl.personText, 'd-flex', 'flex-column'])}>*/}
+                        {/*                        <p className={cn([cl.personTextPosition, 'mb-0'])}>Врач-ортодонт</p>*/}
+                        {/*                        <p className={cn([cl.personTextName, 'mb-0'])}>Иванова Алекснадра</p>*/}
+                        {/*                    </div>*/}
+                        {/*                </div>*/}
+                        {/*                <Button onClick={openModalHandler} className="btn" colorStyle="outlined">*/}
+                        {/*                    Записаться*/}
+                        {/*                </Button>*/}
+                        {/*            </div>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*</SwiperSlide>*/}
                     </Swiper>
                 </div>
             </div>

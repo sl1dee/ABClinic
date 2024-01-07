@@ -46,11 +46,11 @@ const TherapyServicesContainer = () => {
 				img="/media/therapyService/dental-treatment.jpg"
 			/>
 			<TreatmentTypes preHeader />
-			<OurWorks />
+			{/* <OurWorks /> */}
 			<Diagnostics />
 			<Favorites favorites={favorites} />
 			<EmployeesSlider sliderHeaderText="Врачи по направлению" />
-			<PricesForTherapy />
+			{/* <PricesForTherapy /> */}
 			<SignUp />
 		</>
 	)

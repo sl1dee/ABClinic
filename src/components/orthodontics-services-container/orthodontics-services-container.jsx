@@ -45,10 +45,10 @@ const OrthodonticsServicesContainer = () => {
 				img="/media/orthodonticsService/orthodontics.jpg"
 			/>
 			<OrthodonticsTypes preHeader />
-			<OurWorks />
+			{/* <OurWorks /> */}
 			<Diagnostics />
 			<Favorites favorites={favorites} />
-			<PricesForOrthodontics />
+			{/* <PricesForOrthodontics /> */}
 			<SignUp />
 		</>
 	)

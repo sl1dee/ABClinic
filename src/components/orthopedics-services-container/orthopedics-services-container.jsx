@@ -46,11 +46,11 @@ const OrthopedicsServicesContainer = () => {
 				img="/media/orthopedics-services/orthopedics-services.jpg"
 			/>
 			<OrthopedicsTypes preHeader />
-			<OurWorks />
+			{/* <OurWorks /> */}
 			<Diagnostics />
 			<Favorites favorites={favorites} />
 			<EmployeesSlider sliderHeaderText="Врачи по направлению" />
-			<PricesForOrthopedics />
+			{/* <PricesForOrthopedics /> */}
 			<SignUp />
 		</>
 	)
