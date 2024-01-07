@@ -59,15 +59,15 @@ const ServicesCard = ({ title }) => {
 							<img className={cl.cardImg} src={imgSrc} alt="asd" />
 						</div>
 					) : (
-						<div key={id} className={cl.card}>
+						<Link key={id} className={cl.card} to={href}>
 							<div className={cl.cardTextWrapper}>
 								<div className={cl.cardTitle}>{title}</div>
 								<div className={cl.cardInformation}>{information}</div>
 							</div>
-							<Link to={href}>
-								<div className={cl.cardType}>{type}</div>
-							</Link>
-						</div>
+							<div className={cl.cardType}>{type}</div>
+						</Link>
+
+						// </div>
 					)
 				)}
 			</div>
