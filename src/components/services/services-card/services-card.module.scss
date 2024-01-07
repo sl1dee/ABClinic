@@ -48,13 +48,14 @@
   }
 
   &Type {
+    display: inline-block;
     font-size: 18px;
     font-weight: 500;
     color: colors.$mainColor;
     padding: 4px 20px 4px 20px;
     background-color: colors.$additionalColor;
     border-radius: 82px;
-    align-self: start;
+    //align-self: start;
   }
 }
 
