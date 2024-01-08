@@ -1,23 +1,23 @@
-import useDisableScroll from '@hooks/use-disable-scroll.js';
-import { setSignUpIsOpen } from '@store/modules/modals.js';
-import cn from 'classnames';
-import React, { useRef, useState } from 'react';
-import InputMask from 'react-input-mask';
-import { useDispatch } from 'react-redux';
+import useDisableScroll from '@hooks/use-disable-scroll.js'
+import { setSignUpIsOpen } from '@store/modules/modals.js'
+import cn from 'classnames'
+import React, { useRef, useState } from 'react'
+import InputMask from 'react-input-mask'
+import { useDispatch } from 'react-redux'
 
-import Button from '@ui/button/index.js';
+import Button from '@ui/button/index.js'
 
-import cl from './sign-up-modal.module.scss';
+import cl from './sign-up-modal.module.scss'
 
 export default function SignUpModal() {
-	const [isOk, setIsOk] = useState(2);
-	const [isWasClosed, setIsWasClosed] = useState(false);
-	const [isDisabled, setIsDisabled] = useState(false);
-	
-	const form = useRef();
-	const dispatch = useDispatch();
-	
-	useDisableScroll();
+	const [isOk, setIsOk] = useState(1)
+	const [isWasClosed, setIsWasClosed] = useState(false)
+	const [isDisabled, setIsDisabled] = useState(false)
+
+	const form = useRef()
+	const dispatch = useDispatch()
+
+	useDisableScroll()
 
 	const closeHandler = () => {
 		setIsWasClosed(true)
@@ -26,13 +26,18 @@ export default function SignUpModal() {
 	}
 
 	const submitForm = (e) => {
-		e.preventDefault();
-		
-		setIsDisabled(true);
-		
-		const fd = new FormData(form.current);
-		
-		if(fd.get('phone').split(/[-_()^\s*$]+/).join('').length === 12){
+		e.preventDefault()
+
+		setIsDisabled(true)
+
+		const fd = new FormData(form.current)
+
+		if (
+			fd
+				.get('phone')
+				.split(/[-_()^\s*$]+/)
+				.join('').length === 12
+		) {
 			fetch('/api/handler_request', { method: 'post', body: fd })
 				.then((resp) => resp.json())
 				.then((res) => {
@@ -41,10 +46,10 @@ export default function SignUpModal() {
 					} else {
 						setIsOk(0)
 					}
-					setIsDisabled(false);
+					setIsDisabled(false)
 				})
-		}else{
-			setIsDisabled(false);
+		} else {
+			setIsDisabled(false)
 			alert('Заполните номер телефона')
 		}
 	}
@@ -64,22 +69,42 @@ export default function SignUpModal() {
 						<>
 							<div className={cn([cl.text, 'd-flex', 'flex-column'])}>
 								<p className={cn([cl.request, 'mb-0'])}>Запись на прием</p>
-								<p className={cn([cl.request2, 'mb-0'])}>Мы рады предложить вам нашу помощь в решении любых вопросов и проблем. Заполните форму обратного звонка, и наши специалисты свяжутся с вами.</p>
+								<p className={cn([cl.request2, 'mb-0'])}>
+									Мы рады предложить вам нашу помощь в решении любых вопросов и проблем. Заполните форму обратного
+									звонка, и наши специалисты свяжутся с вами.
+								</p>
 							</div>
 
-							<form className="d-flex flex-column" ref={form} onSubmit={(e) => {submitForm(e)}}>
+							<form
+								className="d-flex flex-column"
+								ref={form}
+								onSubmit={(e) => {
+									submitForm(e)
+								}}
+							>
 								<div className={cn([cl.askBlockFields, 'd-flex', 'flex-column'])}>
 									<div className="d-flex flex-column">
-										<input name="name" placeholder="Имя" type="text" disabled={isDisabled}/>
+										<input name="name" placeholder="Имя" type="text" disabled={isDisabled} />
 									</div>
 									<div className="d-flex flex-column">
-										<InputMask mask="+7 999 999-99-99" name="phone" size="16" placeholder="Телефон" required disabled={isDisabled}/>
+										<InputMask
+											mask="+7 999 999-99-99"
+											name="phone"
+											size="16"
+											placeholder="Телефон"
+											required
+											disabled={isDisabled}
+										/>
 									</div>
 								</div>
 								<div className="d-flex flex-column">
-									<input type='submit' value='Отправить' className={cl.btn} disabled={isDisabled}/>
+									<input type="submit" value="Отправить" className={cl.btn} disabled={isDisabled} />
 									<p className={cl.textCenter}>
-										Нажимая на кнопку, вы соглашаетесь<br />с <a href="/policy" target="_blank">Политикой конфиденциальности</a>
+										Нажимая на кнопку, вы соглашаетесь
+										<br />с{' '}
+										<a href="/policy" target="_blank">
+											Политикой конфиденциальности
+										</a>
 									</p>
 								</div>
 							</form>

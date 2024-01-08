@@ -11,7 +11,7 @@ const DoctorsDetailContainer = () => {
 		<>
 			<HeroScreen />
 			<Education />
-			<OurWorks />
+			{/* <OurWorks /> */}
 			<SignUp />
 			<EmployeesSlider sliderHeaderText="Врачи по направлению" />
 		</>
