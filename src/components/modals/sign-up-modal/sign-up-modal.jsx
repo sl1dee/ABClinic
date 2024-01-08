@@ -10,7 +10,7 @@ import Button from '@ui/button/index.js'
 import cl from './sign-up-modal.module.scss'
 
 export default function SignUpModal() {
-	const [isOk, setIsOk] = useState(1)
+	const [isOk, setIsOk] = useState(2)
 	const [isWasClosed, setIsWasClosed] = useState(false)
 	const [isDisabled, setIsDisabled] = useState(false)
 
