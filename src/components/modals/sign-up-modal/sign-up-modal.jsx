@@ -102,7 +102,7 @@ export default function SignUpModal() {
 									<p className={cl.textCenter}>
 										Нажимая на кнопку, вы соглашаетесь
 										<br />с{' '}
-										<a href="/policy" target="_blank">
+										<a href="/privacy-policy" target="_blank">
 											Политикой конфиденциальности
 										</a>
 									</p>
