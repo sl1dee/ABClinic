@@ -1,4 +1,3 @@
-import Filters from '@components/doctors-container/filters/filters.jsx'
 import cn from 'classnames'
 import React, {useMemo} from 'react'
 import {Link} from 'react-router-dom'
@@ -121,15 +120,16 @@ const DoctorsContainer = () => {
                                 <div className={cl.photo}>
                                     <img src={img} alt=""/>
                                 </div>
-                            </Link>
-                            <div className={cn([cl.info, 'd-flex', 'flex-column', 'justify-content-between'])}>
-                                <div className={cn([cl.infoText, 'd-flex', 'flex-column'])}>
-                                    <p className={cn([cl.infoTextName, 'mb-0'])}>{name}</p>
-                                    <p className={cn([cl.infoTextPosition, 'mb-0'])}>{qualification}</p>
-                                    <p className={cn([cl.infoTextPrice, 'mb-0'])}>{price}</p>
-                                    <p className={cn([cl.infoTextBadge, 'mb-0'])}>{information}</p>
+
+                                <div className={cn([cl.info, 'd-flex', 'flex-column', 'justify-content-between'])}>
+                                    <div className={cn([cl.infoText, 'd-flex', 'flex-column'])}>
+                                        <p className={cn([cl.infoTextName, 'mb-0'])}>{name}</p>
+                                        <p className={cn([cl.infoTextPosition, 'mb-0'])}>{qualification}</p>
+                                        <p className={cn([cl.infoTextPrice, 'mb-0'])}>{price}</p>
+                                        <p className={cn([cl.infoTextBadge, 'mb-0'])}>{information}</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     ))}
                 </div>

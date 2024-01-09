@@ -2,10 +2,10 @@ import Diagnostics from '@components/diagnostics'
 import EmployeesSlider from '@components/employees-slider'
 import Favorites from '@components/favorites'
 import HeroScreen from '@components/hero-screen'
-import OurWorks from '@components/our-works'
-import PricesForOrthopedics from '@components/prices-for-services/prices-for-orthopedics/index.js'
 import SignUp from '@components/sign-up'
 import { OrthopedicsTypes } from '@components/treatment-types/index.js'
+
+import cl from './orthopedics-services-container.module.scss'
 
 const OrthopedicsServicesContainer = () => {
 	const favorites = {
@@ -39,7 +39,7 @@ const OrthopedicsServicesContainer = () => {
 		image2: '/media/favorites/one.jpg'
 	}
 	return (
-		<>
+		<div className={cl.servicesContainer}>
 			<HeroScreen
 				title="Ортопедия: импланты, коронки, виниры"
 				text="Искусство восстановления функциональности и эстетики зубов"
@@ -52,7 +52,7 @@ const OrthopedicsServicesContainer = () => {
 			<EmployeesSlider sliderHeaderText="Врачи по направлению" />
 			{/* <PricesForOrthopedics /> */}
 			<SignUp />
-		</>
+		</div>
 	)
 }
 

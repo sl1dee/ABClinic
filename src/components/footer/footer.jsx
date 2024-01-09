@@ -38,8 +38,8 @@ const Footer = () => {
 								<p className={cn([cl.label, 'mb-0'])}>Свяжитесь с нами</p>
 							</div>
 							<div>
-								<a href="tel:+79171234567">
-									<p className={cn([cl.contact, 'mb-0'])}>+7 917 123 45 67</p>
+								<a href="tel:+73472000424">
+									<p className={cn([cl.contact, 'mb-0'])}>+7 347 200 04 24</p>
 								</a>
 							</div>
 						</div>
