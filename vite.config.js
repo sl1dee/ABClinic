@@ -16,7 +16,8 @@ export default defineConfig({
 			'@store': url.fileURLToPath(new URL('./src/store', import.meta.url)),
 			'@hooks': url.fileURLToPath(new URL('./src/hooks', import.meta.url)),
 			'@ui': url.fileURLToPath(new URL('./src/ui', import.meta.url)),
-			'@utils': url.fileURLToPath(new URL('./src/utils', import.meta.url))
+			'@utils': url.fileURLToPath(new URL('./src/utils', import.meta.url)),
+			'@helpers': url.fileURLToPath(new URL('./src/helpers', import.meta.url))
 		}
 	}
 })

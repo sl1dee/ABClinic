@@ -5,6 +5,9 @@ import React, { useRef, useState } from 'react'
 import InputMask from 'react-input-mask'
 import { useDispatch } from 'react-redux'
 
+import getRawPhoneFromParsedPhone from '@helpers/getRawPhoneFromParsedPhone.js'
+import parseRawPhone from '@helpers/parseRawPhone.js'
+
 import Button from '@ui/button/index.js'
 
 import cl from './sign-up-modal.module.scss'
@@ -13,8 +16,9 @@ export default function SignUpModal() {
 	const [isOk, setIsOk] = useState(2)
 	const [isWasClosed, setIsWasClosed] = useState(false)
 	const [isDisabled, setIsDisabled] = useState(false)
+	const [viewPhone, setViewPhone] = useState('')
+	const [phone, setPhone] = useState('')
 
-	const form = useRef()
 	const dispatch = useDispatch()
 
 	useDisableScroll()
@@ -30,7 +34,13 @@ export default function SignUpModal() {
 
 		setIsDisabled(true)
 
-		const fd = new FormData(form.current)
+		const fd = new FormData(e.target)
+
+		const fdPhone = fd.get('phone')
+
+		if (fdPhone.slice(0, 1) === '8') {
+			fd.set('phone', `+7${fdPhone.slice(1)}`)
+		}
 
 		if (
 			fd
@@ -46,12 +56,21 @@ export default function SignUpModal() {
 					} else {
 						setIsOk(0)
 					}
+				})
+				.finally(() => {
 					setIsDisabled(false)
 				})
 		} else {
 			setIsDisabled(false)
 			alert('Заполните номер телефона')
 		}
+	}
+	const changePhoneHandler = (event) => {
+		const rawPhone = getRawPhoneFromParsedPhone(event.target.value, viewPhone)
+		const newViewPhone = parseRawPhone(rawPhone)
+
+		setViewPhone(newViewPhone)
+		setPhone(rawPhone)
 	}
 
 	return (
@@ -75,26 +94,22 @@ export default function SignUpModal() {
 								</p>
 							</div>
 
-							<form
-								className="d-flex flex-column"
-								ref={form}
-								onSubmit={(e) => {
-									submitForm(e)
-								}}
-							>
+							<form className="d-flex flex-column" onSubmit={submitForm}>
 								<div className={cn([cl.askBlockFields, 'd-flex', 'flex-column'])}>
 									<div className="d-flex flex-column">
 										<input name="name" placeholder="Имя" type="text" disabled={isDisabled} />
 									</div>
 									<div className="d-flex flex-column">
-										<InputMask
-											mask="+7 999 999-99-99"
-											name="phone"
+										<input
+											onChange={changePhoneHandler}
+											value={viewPhone}
+											type="text"
 											size="16"
 											placeholder="Телефон"
 											required
 											disabled={isDisabled}
 										/>
+										<input name="phone" type="hidden" tabIndex={-1} readOnly value={phone} />
 									</div>
 								</div>
 								<div className="d-flex flex-column">
