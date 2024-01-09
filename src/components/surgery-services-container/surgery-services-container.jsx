@@ -1,10 +1,10 @@
 import Diagnostics from '@components/diagnostics'
 import Favorites from '@components/favorites'
 import HeroScreen from '@components/hero-screen'
-import OurWorks from '@components/our-works'
-import PricesForSurgery from '@components/prices-for-services/prices-for-surgery/index.js'
 import SignUp from '@components/sign-up'
 import { SurgeryTypes } from '@components/treatment-types'
+
+import cl from './surgery-services-container.module.scss'
 
 const SurgeryServicesContainer = () => {
 	const favorites = {
@@ -38,7 +38,7 @@ const SurgeryServicesContainer = () => {
 		image2: '/media/favorites/one.jpg'
 	}
 	return (
-		<>
+		<div className={cl.servicesContainer}>
 			<HeroScreen
 				title="Хирургия"
 				text="Доверьте заботу о своей улыбке опытным хирургам-стоматологам"
@@ -50,7 +50,7 @@ const SurgeryServicesContainer = () => {
 			<Favorites favorites={favorites} />
 			{/* <PricesForSurgery /> */}
 			<SignUp />
-		</>
+		</div>
 	)
 }
 

@@ -139,9 +139,9 @@ const Header = () => {
 				</div>
 				<div className={cn([cl.headerAdditional, 'd-flex', 'align-items-center'])}>
 					<div className={cn([cl.contacts, 'd-flex', 'align-items-center'])}>
-						<a href="tel:+79171234567" className={cn([cl.contactsPhone, 'd-none', 'd-xxl-flex'])}>
+						<a href="tel:+73472000424" className={cn([cl.contactsPhone, 'd-none', 'd-xxl-flex'])}>
 							<div>
-								<span>+7 917 123 45 67</span>
+								<span>+7 347 200 04 24</span>
 							</div>
 						</a>
 						<Button

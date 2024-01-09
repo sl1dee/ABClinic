@@ -2,10 +2,10 @@ import Diagnostics from '@components/diagnostics/index.js'
 import EmployeesSlider from '@components/employees-slider/index.js'
 import Favorites from '@components/favorites/index.js'
 import HeroScreen from '@components/hero-screen/index.js'
-import OurWorks from '@components/our-works/index.js'
-import PricesForPeriodontics from '@components/prices-for-services/prices-for-periodontics/index.js'
 import SignUp from '@components/sign-up/index.js'
 import { PeriodonticsTypes } from '@components/treatment-types/index.js'
+
+import cl from './periodontics-services-container.module.scss'
 
 const PeriodonticsServicesContainer = () => {
 	const favorites = {
@@ -39,7 +39,7 @@ const PeriodonticsServicesContainer = () => {
 		image2: '/media/favorites/one.jpg'
 	}
 	return (
-		<>
+		<div className={cl.servicesContainer}>
 			<HeroScreen
 				title="Пародонтология"
 				text="Наука о здоровье дёсен и профилактике заболеваний пародонта"
@@ -52,7 +52,7 @@ const PeriodonticsServicesContainer = () => {
 			<EmployeesSlider sliderHeaderText="Врачи по направлению" />
 			{/* <PricesForPeriodontics /> */}
 			<SignUp />
-		</>
+		</div>
 	)
 }
 

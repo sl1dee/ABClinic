@@ -2,10 +2,10 @@ import Diagnostics from '@components/diagnostics'
 import EmployeesSlider from '@components/employees-slider'
 import Favorites from '@components/favorites'
 import HeroScreen from '@components/hero-screen'
-import OurWorks from '@components/our-works'
-import PricesForTherapy from '@components/prices-for-services/prices-for-therapy'
 import SignUp from '@components/sign-up'
 import { TreatmentTypes } from '@components/treatment-types/index.js'
+
+import cl from './therapy-services-container.module.scss'
 
 const TherapyServicesContainer = () => {
 	const favorites = {
@@ -39,7 +39,7 @@ const TherapyServicesContainer = () => {
 		image2: '/media/favorites/one.jpg'
 	}
 	return (
-		<>
+		<div className={cl.servicesContainer}>
 			<HeroScreen
 				title="Лечение зубов"
 				text="Ваша улыбка — наша забота, профессиональное и комфортное лечение зубов"
@@ -52,7 +52,7 @@ const TherapyServicesContainer = () => {
 			<EmployeesSlider sliderHeaderText="Врачи по направлению" />
 			{/* <PricesForTherapy /> */}
 			<SignUp />
-		</>
+		</div>
 	)
 }
 

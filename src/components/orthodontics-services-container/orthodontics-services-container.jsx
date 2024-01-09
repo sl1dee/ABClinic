@@ -1,10 +1,10 @@
 import Diagnostics from '@components/diagnostics/index.js'
 import Favorites from '@components/favorites/index.js'
 import HeroScreen from '@components/hero-screen/index.js'
-import OurWorks from '@components/our-works/index.js'
-import PricesForOrthodontics from '@components/prices-for-services/prices-for-orthodontics/index.js'
 import SignUp from '@components/sign-up/index.js'
 import { OrthodonticsTypes } from '@components/treatment-types/index.js'
+
+import cl from './orthodontics-services-container.module.scss'
 
 const OrthodonticsServicesContainer = () => {
 	const favorites = {
@@ -38,7 +38,7 @@ const OrthodonticsServicesContainer = () => {
 		image2: '/media/favorites/one.jpg'
 	}
 	return (
-		<>
+		<div className={cl.servicesContainer}>
 			<HeroScreen
 				title="Ортодонтия: брекеты и элайнеры"
 				text="Важный шаг на пути к идеальной улыбке и здоровью зубов"
@@ -50,7 +50,7 @@ const OrthodonticsServicesContainer = () => {
 			<Favorites favorites={favorites} />
 			{/* <PricesForOrthodontics /> */}
 			<SignUp />
-		</>
+		</div>
 	)
 }
 
