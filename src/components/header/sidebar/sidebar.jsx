@@ -30,7 +30,7 @@ const Sidebar = () => {
 	const closeHandler = () => {
 		setIsWasClosed(true)
 
-		setTimeout(() => dispatch(setBurgerIsOpen(false)), 300)
+		setTimeout(() => dispatch(setBurgerIsOpen(false)), 310)
 	}
 
 	const navigationList = useMemo(
