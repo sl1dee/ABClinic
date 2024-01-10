@@ -19,6 +19,10 @@ const Dropdown = ({onChange}) => {
 			{
 				id: 2,
 				text: 'Взрослые'
+			},
+			{
+				id: 3,
+				text: 'Все'
 			}
 		],
 		[]
