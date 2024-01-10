@@ -5,44 +5,31 @@ import Dropdown from '@components/doctors-container/dropdown/index.js'
 
 import cl from './filters.module.scss'
 
-const Filters = () => {
+const Filters = ({ selectedFilters = [], onChange, filters = [] }) => {
 	const filtersList = useMemo(
 		() => [
 			{
 				id: 0,
-				text: 'Все'
+				name: 'Все'
 			},
-			{
-				id: 1,
-				text: 'Стоматолог-ортопед'
-			},
-			{
-				id: 2,
-				text: 'Ортодонт'
-			},
-			{
-				id: 3,
-				text: 'Пародонтолог'
-			},
-			{
-				id: 4,
-				text: 'Эндодонтист'
-			},
-			{
-				id: 5,
-				text: 'Стоматолог-хирург'
-			},
-			{
-				id: 6,
-				text: 'Стоматолог-терапевт'
-			},
-			{
-				id: 7,
-				text: 'Стоматолог общей практики'
-			}
+			...filters
 		],
-		[]
+		[filters]
 	)
+	const changeHandler = (id) => {
+		if (id === 0) {
+			onChange([])
+			return
+		}
+
+		if (selectedFilters.includes(id) && selectedFilters.length > 1) {
+			onChange(selectedFilters.filter((selectedId) => selectedId !== id))
+
+			return
+		}
+
+		onChange([...new Set([...selectedFilters, id])])
+	}
 	const { isDesktop } = useMatchMedia()
 
 	const filtersPerView = useMemo(() => {
@@ -67,11 +54,16 @@ const Filters = () => {
 			<div>
 				<Dropdown />
 			</div>
-			{/* </div> */}
 			<div className={cl.filtersList}>
 				{filtersList.slice(0, isFull ? undefined : START_FILTERS_LENGTH).map(({ id, text }) => (
-					<div key={id} className={cl.filtersItem}>
-						<span className={cl.item}>{text}</span>
+					<div onClick={() => changeHandler(id)} key={id} className={cl.filtersItem}>
+						<span
+							className={`${cl.item} ${
+								(id === 0 && !selectedFilters.length) || selectedFilters.includes(id) ? cl.active : ''
+							}`}
+						>
+							{text}
+						</span>
 					</div>
 				))}
 				{!isFull && restFiltersLength > 0 && (
