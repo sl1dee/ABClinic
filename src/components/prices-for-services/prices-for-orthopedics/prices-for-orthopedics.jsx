@@ -15,19 +15,19 @@ const PricesForOrthopedics = () => {
 		subServices: selectedFilters
 	})
 
-	const pricesList = useMemo(
-		() =>
-			Object.entries(services).map(([key, value], index) => ({
-				id: index,
-				title: key,
-				item: value.map(({ name, price }, itemIndex) => ({
-					id: itemIndex,
-					service: name,
-					cost: `${price} ₽`
-				}))
-			})),
-		[services]
-	)
+	const pricesList = useMemo(() => {
+		const { total_count: _, ...restServices } = services
+
+		return Object.entries(restServices).map(([key, value], index) => ({
+			id: index,
+			title: key,
+			item: value.map(({ name, price }, itemIndex) => ({
+				id: itemIndex,
+				service: name,
+				cost: `${price} ₽`
+			}))
+		}))
+	}, [services])
 
 	const [isOpen, setIsOpen] = useState(false)
 
