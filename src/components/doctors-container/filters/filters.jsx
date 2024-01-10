@@ -5,7 +5,7 @@ import Dropdown from '@components/doctors-container/dropdown/index.js'
 
 import cl from './filters.module.scss'
 
-const Filters = ({ selectedFilters = [], onChange, filters = [] }) => {
+const Filters = ({ filters = [], selectedFilters = [], onChange }) => {
 	const filtersList = useMemo(
 		() => [
 			{
@@ -16,6 +16,7 @@ const Filters = ({ selectedFilters = [], onChange, filters = [] }) => {
 		],
 		[filters]
 	)
+
 	const changeHandler = (id) => {
 		if (id === 0) {
 			onChange([])
@@ -55,7 +56,7 @@ const Filters = ({ selectedFilters = [], onChange, filters = [] }) => {
 				<Dropdown />
 			</div>
 			<div className={cl.filtersList}>
-				{filtersList.slice(0, isFull ? undefined : START_FILTERS_LENGTH).map(({ id, text }) => (
+				{filtersList.slice(0, isFull ? undefined : START_FILTERS_LENGTH).map(({ id, name: text }) => (
 					<div onClick={() => changeHandler(id)} key={id} className={cl.filtersItem}>
 						<span
 							className={`${cl.item} ${
