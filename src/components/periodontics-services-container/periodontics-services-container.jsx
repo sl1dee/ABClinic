@@ -2,6 +2,7 @@ import Diagnostics from '@components/diagnostics/index.js'
 import EmployeesSlider from '@components/employees-slider/index.js'
 import Favorites from '@components/favorites/index.js'
 import HeroScreen from '@components/hero-screen/index.js'
+import PricesForPeriodontics from '@components/prices-for-services/prices-for-periodontics/index.js'
 import SignUp from '@components/sign-up/index.js'
 import { PeriodonticsTypes } from '@components/treatment-types/index.js'
 
@@ -50,7 +51,7 @@ const PeriodonticsServicesContainer = () => {
 			<Diagnostics />
 			<Favorites favorites={favorites} />
 			<EmployeesSlider sliderHeaderText="Врачи по направлению" />
-			{/* <PricesForPeriodontics /> */}
+			<PricesForPeriodontics />
 			<SignUp />
 		</div>
 	)

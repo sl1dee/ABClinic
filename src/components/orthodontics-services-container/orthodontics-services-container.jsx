@@ -1,6 +1,7 @@
 import Diagnostics from '@components/diagnostics/index.js'
 import Favorites from '@components/favorites/index.js'
 import HeroScreen from '@components/hero-screen/index.js'
+import PricesForOrthodontics from '@components/prices-for-services/prices-for-orthodontics/index.js'
 import SignUp from '@components/sign-up/index.js'
 import { OrthodonticsTypes } from '@components/treatment-types/index.js'
 
@@ -48,7 +49,7 @@ const OrthodonticsServicesContainer = () => {
 			{/* <OurWorks /> */}
 			<Diagnostics />
 			<Favorites favorites={favorites} />
-			{/* <PricesForOrthodontics /> */}
+			<PricesForOrthodontics />
 			<SignUp />
 		</div>
 	)

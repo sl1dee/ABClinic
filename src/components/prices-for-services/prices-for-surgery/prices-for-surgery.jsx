@@ -1,11 +1,15 @@
+import { useGetServicesFiltersQuery } from '@store/modules/filters-api.js'
 import cn from 'classnames'
-import React from 'react'
+import React, { useState } from 'react'
 
-import Filters from '@components/doctors-container/filters/filters.jsx'
+import Filters from '@ui/filters/index.js'
 
 import cl from '../prices.module.scss'
 
 const PricesForSurgery = () => {
+	const [selectedFilters, setSelectedFilters] = useState([])
+
+	const { data: filters = [] } = useGetServicesFiltersQuery('Хирургия')
 	const pricesList = [
 		{
 			id: 0,
@@ -44,6 +48,7 @@ const PricesForSurgery = () => {
 		<div className={cl.prices}>
 			<div className="container">
 				<h3 className={cn([cl.pricesTitle, 'd-flex', 'mb-0'])}>Услуги по лечению зубов</h3>
+				<Filters filters={filters} selectedFilters={selectedFilters} onChange={setSelectedFilters} />
 				<div className={cn([cl.inputWrapper])}>
 					<input className={cl.input} placeholder="Поиск по услугам" />
 				</div>
