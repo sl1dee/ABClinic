@@ -113,7 +113,7 @@ const DoctorsContainer = () => {
                     {/*    <input className={cl.input} placeholder='Поиск по врачам'/>*/}
                     {/*</div>*/}
                 </div>
-                <Filters/>
+                {/*<Filters/>*/}
                 <div className={cl.doctorsCards}>
                     {doctorsList?.map(({id, href, img, name, qualification, price, information}) => (
                         <div key={id} className={cn([cl.employeesSlider, cl.employeesSliderSlide])}>

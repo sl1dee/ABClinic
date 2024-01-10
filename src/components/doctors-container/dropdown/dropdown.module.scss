@@ -64,6 +64,7 @@
 
         .line {
           gap: 10px;
+          display: flex;
 
           .point {
             content: url("/assets/img/doctors/RadiobuttonWhite.svg");
@@ -76,7 +77,7 @@
           }
         }
 
-        .line:active {
+        .active {
           gap: 10px;
 
           .point {
