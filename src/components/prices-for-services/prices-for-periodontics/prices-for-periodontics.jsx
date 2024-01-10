@@ -71,7 +71,7 @@ const PricesForPeriodontics = () => {
 						</div>
 					)}
 					<button onClick={() => setIsOpen(!isOpen)} className={`${cl.btn} ${isOpen ? cl.btnclose : ''}`}>
-						{/* Полный список */}+ {pricesList.length}
+						+124
 					</button>
 				</div>
 			</div>

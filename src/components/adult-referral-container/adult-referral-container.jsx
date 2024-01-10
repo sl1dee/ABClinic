@@ -7,6 +7,8 @@ import HeroScreen from '@components/hero-screen'
 import { ServicesCard } from '@components/services/services-card/index.js'
 import SignUp from '@components/sign-up'
 
+import cl from './adult-referral-container.module.scss'
+
 const favorites = {
 	header: 'Ваша улыбка в надежных руках',
 	items: [
@@ -40,7 +42,7 @@ const favorites = {
 
 const AdultReferralContainer = () => {
 	return (
-		<>
+		<div className={cl.adultContainer}>
 			<HeroScreen
 				title="Стоматология для взрослых"
 				text="Поможем вам сохранить здоровье ваших зубов и дёсен"
@@ -55,7 +57,7 @@ const AdultReferralContainer = () => {
 			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" />
 			{/* <Articles /> */}
 			<SignUp />
-		</>
+		</div>
 	)
 }
 

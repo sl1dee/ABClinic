@@ -8,6 +8,8 @@ import SignUp from '@components/sign-up/index.js'
 
 import ChildServicesCard from '../services/services-card/child-services-card.jsx'
 
+import cl from './children-referral-container.module.scss'
+
 const ChildrenReferralContainer = () => {
 	const favorites = {
 		header: 'Ваша улыбка в надежных руках',
@@ -40,7 +42,7 @@ const ChildrenReferralContainer = () => {
 		image2: '/media/favorites/four.jpg'
 	}
 	return (
-		<>
+		<div className={cl.childrenContainer}>
 			<HeroScreen
 				title="Детская стоматология"
 				text="В нашей стоматологии дети улыбаются без боли и страха"
@@ -55,7 +57,7 @@ const ChildrenReferralContainer = () => {
 			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" />
 			{/* <Articles /> */}
 			<SignUp />
-		</>
+		</div>
 	)
 }
 
