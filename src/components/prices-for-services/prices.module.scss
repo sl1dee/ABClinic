@@ -55,35 +55,73 @@
     padding: 50px 40px 50px 40px;
     background-color: colors.$whiteColor;
     border-radius: 30px;
-    gap: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 
-    .title {
-      font-size: 32px;
-      font-weight: 600;
-      color: colors.$mainTextColor;
-      padding-bottom: 30px;
+    .btn {
+      padding: 12px 80px;
+      text-align: center;
+      background-color: colors.$mainColor;
+      color: colors.$whiteColor;
+      border-radius: 60px;
+      font-size: 24px;
+      font-weight: 700;
+      transition: .3s;
+      align-self: center;
     }
 
-    .informationLines {
-      row-gap: 20px;
+    .btn:hover {
+      background-color: transparent;
+      border: 2px solid colors.$mainColor;
+      color: colors.$mainColor;
+    }
 
-      .information {
-        justify-content: space-between;
+    .btnclose {
+      display: none;
+    }
 
-        .service {
-          font-size: 24px;
-          font-weight: 500;
-          color: colors.$mainColor;
-          row-gap: 20px;
+    .blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+
+      .block {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .title {
+          font-size: 32px;
+          font-weight: 600;
+          color: colors.$mainTextColor;
         }
 
-        .cost {
-          font-size: 24px;
-          font-weight: 700;
-          color: colors.$mainColor;
+        .informationLines {
+          row-gap: 20px;
+
+          .information {
+            justify-content: space-between;
+
+            .service {
+              font-size: 24px;
+              font-weight: 500;
+              color: colors.$mainColor;
+              row-gap: 20px;
+              width: 70%;
+            }
+
+            .cost {
+              font-size: 24px;
+              font-weight: 700;
+              color: colors.$mainColor;
+            }
+          }
         }
       }
+
     }
+
   }
 }
 
@@ -140,29 +178,41 @@
       padding: 50px 40px 20px 40px;
       background-color: colors.$whiteColor;
       border-radius: 30px;
-      gap: 60px;
+      gap: 30px;
 
-      .title {
-        font-size: 32px;
-      }
+      .blocks {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
 
-      .informationLines {
-        row-gap: 20px;
+        .block {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
 
-        .information {
-          justify-content: space-between;
-
-          .service {
-            font-size: 24px;
-            font-weight: 500;
-            color: colors.$mainColor;
-            row-gap: 20px;
+          .title {
+            font-size: 32px;
           }
 
-          .cost {
-            font-size: 24px;
-            font-weight: 700;
-            color: colors.$mainColor;
+          .informationLines {
+            row-gap: 20px;
+
+            .information {
+              justify-content: space-between;
+
+              .service {
+                font-size: 24px;
+                font-weight: 500;
+                color: colors.$mainColor;
+                row-gap: 20px;
+              }
+
+              .cost {
+                font-size: 24px;
+                font-weight: 700;
+                color: colors.$mainColor;
+              }
+            }
           }
         }
       }
@@ -223,24 +273,41 @@
       padding: 40px 40px 20px 30px;
       background-color: colors.$whiteColor;
       border-radius: 30px;
-      gap: 60px;
+      gap: 30px;
 
-      .title {
-        font-size: 24px;
+      .btn {
+        padding: 10px 80px;
+        font-size: 16px;
       }
 
-      .informationLines {
-        row-gap: 10px;
+      .blocks {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
 
-        .information {
-          justify-content: space-between;
+        .block {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
 
-          .service {
-            font-size: 16px;
+          .title {
+            font-size: 24px;
           }
 
-          .cost {
-            font-size: 16px;
+          .informationLines {
+            row-gap: 10px;
+
+            .information {
+              justify-content: space-between;
+
+              .service {
+                font-size: 16px;
+              }
+
+              .cost {
+                font-size: 16px;
+              }
+            }
           }
         }
       }
@@ -302,25 +369,42 @@
       padding: 25px 20px 25px 20px;
       background-color: colors.$whiteColor;
       border-radius: 30px;
-      gap: 40px;
+      gap: 16px;
 
-      .title {
-        font-size: 18px;
-        padding-bottom: 16px;
+      .btn {
+        padding: 10px 80px;
+        font-size: 14px;
+        width: 100%;
       }
 
-      .informationLines {
-        row-gap: 10px;
+      .blocks {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
 
-        .information {
-          justify-content: space-between;
+        .block {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
 
-          .service {
-            font-size: 14px;
+          .title {
+            font-size: 18px;
           }
 
-          .cost {
-            font-size: 14px;
+          .informationLines {
+            row-gap: 10px;
+
+            .information {
+              justify-content: space-between;
+
+              .service {
+                font-size: 14px;
+              }
+
+              .cost {
+                font-size: 14px;
+              }
+            }
           }
         }
       }

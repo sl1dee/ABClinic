@@ -26,6 +26,8 @@ const PricesForTherapy = () => {
 		[services]
 	)
 
+	const [isOpen, setIsOpen] = useState(false)
+
 	return (
 		<div className={cl.prices}>
 			<div className="container">
@@ -35,19 +37,42 @@ const PricesForTherapy = () => {
 					<input className={cl.input} placeholder="Поиск по услугам" />
 				</div>
 				<div className={cn([cl.pricesList, 'd-flex', 'flex-column'])}>
-					{pricesList.map(({ title, id, item }) => (
-						<div key={id}>
-							<h4 className={cn([cl.title, 'd-flex', 'mb-0'])}>{title}</h4>
-							<div className={cn([cl.informationLines, 'd-flex', 'flex-column'])}>
-								{item.map(({ service, cost }) => (
-									<div className={cn([cl.information, 'd-flex'])}>
-										<span className={cl.service}>{service}</span>
-										<span className={cl.cost}>{cost}</span>
+					{isOpen ? (
+						<div className={cl.blocks}>
+							{pricesList.map(({ title, id, item }) => (
+								<div key={id} className={cl.block}>
+									<h4 className={cn([cl.title, 'd-flex', 'mb-0'])}>{title}</h4>
+									<div className={cn([cl.informationLines, 'd-flex', 'flex-column'])}>
+										{item.map(({ service, cost }) => (
+											<div className={cn([cl.information, 'd-flex'])}>
+												<span className={cl.service}>{service}</span>
+												<span className={cl.cost}>{cost}</span>
+											</div>
+										))}
 									</div>
-								))}
-							</div>
+								</div>
+							))}
 						</div>
-					))}
+					) : (
+						<div className={cl.blocks}>
+							{pricesList.slice(0, 1).map(({ title, id, item }) => (
+								<div key={id} className={cl.block}>
+									<h4 className={cn([cl.title, 'd-flex', 'mb-0'])}>{title}</h4>
+									<div className={cn([cl.informationLines, 'd-flex', 'flex-column'])}>
+										{item.slice(0, 6).map(({ service, cost }) => (
+											<div className={cn([cl.information, 'd-flex'])}>
+												<span className={cl.service}>{service}</span>
+												<span className={cl.cost}>{cost}</span>
+											</div>
+										))}
+									</div>
+								</div>
+							))}
+						</div>
+					)}
+					<button onClick={() => setIsOpen(!isOpen)} className={`${cl.btn} ${isOpen ? cl.btnclose : ''}`}>
+						{/* Полный список */}+ {pricesList.length}
+					</button>
 				</div>
 			</div>
 		</div>
