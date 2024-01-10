@@ -97,9 +97,9 @@ export default function YandexMap() {
 							<p className="contactsBlock-info-contact mb-0">Уфа, ул. Академика Королева, 24</p>
 						</div>
 						<div>
-							<a href="tel:+79171234567">
+							<a href="tel:+73472000424">
 								<div>
-									<p className="contactsBlock-info-contact mb-0">+7 917 123 45 67</p>
+									<p className="contactsBlock-info-contact mb-0">+7 347 200 04 24</p>
 								</div>
 							</a>
 						</div>
