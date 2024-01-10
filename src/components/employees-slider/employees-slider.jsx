@@ -72,22 +72,22 @@ export default function EmployeesSlider({sliderHeaderText}) {
                 qualification: 'Врач-стоматолог-терапевт',
                 information: 'Взрослый врач'
             },
+            // {
+            //     id: 7,
+            //     img: '/media/employeesSlider/aliya.jpg',
+            //     name: 'Сединкин Евгений',
+            //     qualification: 'Врач-стоматолог-ортопед',
+            //     information: 'Взрослый врач'
+            // },
             {
                 id: 7,
-                img: '/media/employeesSlider/aliya.jpg',
-                name: 'Сединкин Евгений',
-                qualification: 'Врач-стоматолог-ортопед',
-                information: 'Взрослый врач'
-            },
-            {
-                id: 8,
                 img: '/media/employeesSlider/alena.jpg',
                 name: 'Алена Исламгалеева',
                 qualification: 'Главная медсестра',
                 information: 'Главная медсестра'
             },
             {
-                id: 9,
+                id: 8,
                 img: '/media/employeesSlider/elvira.jpg',
                 name: 'Эльвира Яхина',
                 qualification: 'Администратор',
