@@ -1,6 +1,6 @@
-import { useGetServicesFiltersQuery } from '@store/modules/filters-api.js'
+import { useGetServiceFilteredQuery, useGetServicesFiltersQuery } from '@store/modules/filters-api.js'
 import cn from 'classnames'
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 
 import Filters from '@ui/filters/index.js'
 
@@ -10,40 +10,24 @@ const PricesForOrthodontics = () => {
 	const [selectedFilters, setSelectedFilters] = useState([])
 
 	const { data: filters = [] } = useGetServicesFiltersQuery('Брекеты, элайнеры')
-	const pricesList = [
-		{
-			id: 0,
-			title: 'Терапия взрослая',
-			item: [
-				{
-					id: 0,
-					service: 'Название услуги',
-					cost: '0 000 ₽'
-				},
-				{
-					id: 1,
-					service: 'Название услуги',
-					cost: '0 000 ₽'
-				}
-			]
-		},
-		{
-			id: 1,
-			title: 'Терапия детская',
-			item: [
-				{
-					id: 0,
-					service: 'Название услуги',
-					cost: '0 000 ₽'
-				},
-				{
-					id: 1,
-					service: 'Название услуги',
-					cost: '0 000 ₽'
-				}
-			]
-		}
-	]
+	const { data: services = {} } = useGetServiceFilteredQuery({
+		service: 'Брекеты, элайнеры',
+		subServices: selectedFilters
+	})
+
+	const pricesList = useMemo(
+		() =>
+			Object.entries(services).map(([key, value], index) => ({
+				id: index,
+				title: key,
+				item: value.map(({ name, price }, itemIndex) => ({
+					id: itemIndex,
+					service: name,
+					cost: `${price} ₽`
+				}))
+			})),
+		[services]
+	)
 	return (
 		<div className={cl.prices}>
 			<div className="container">
