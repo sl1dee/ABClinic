@@ -94,10 +94,11 @@ const SignUp = () => {
 											/>
 											<input name="phone" type="hidden" tabIndex={-1} readOnly value={phone} />
 										</div>
+										<div className="d-flex flex-column">
+											<input type="submit" value="Отправить" className={cl.btn} disabled={isDisabled} />
+										</div>
 									</div>
-									<div className="d-flex flex-column">
-										<input type="submit" value="Отправить" className={cl.btn} disabled={isDisabled} />
-									</div>
+									<div className={cl.bckgIcon} />
 								</form>
 							</>
 						) : (
@@ -107,7 +108,6 @@ const SignUp = () => {
 							</div>
 						)}
 					</div>
-					<div className={cl.bckgIcon} />
 
 					<div className={cl.signUpImage} />
 				</div>
