@@ -14,29 +14,29 @@ const Filters = ({ filters = [], selectedFilters = [], onChange }) => {
 		],
 		[filters]
 	)
-
+	const [activeFilter, setActiveFilter] = useState(null)
 	const changeHandler = (id) => {
 		if (id === 0) {
 			onChange([])
-
+			setActiveFilter(null)
 			return
 		}
 
 		if (selectedFilters.includes(id) && selectedFilters.length > 1) {
 			onChange(selectedFilters.filter((selectedId) => selectedId !== id))
+			setActiveFilter(null)
 
 			return
 		}
 
 		onChange([...new Set([...selectedFilters, id])])
+		setActiveFilter(id)
 	}
 
 	const { isDesktop } = useMatchMedia()
 
 	const filtersPerView = useMemo(() => {
 		switch (true) {
-			case isDesktop:
-				return 3
 			default:
 				return 5
 		}
@@ -55,7 +55,7 @@ const Filters = ({ filters = [], selectedFilters = [], onChange }) => {
 			<div className={cl.filtersList}>
 				{filtersList.slice(0, isFull ? undefined : START_FILTERS_LENGTH).map(({ id, name: text }) => (
 					<div onClick={() => changeHandler(id)} key={id} className={cl.filtersItem}>
-						<span className={cl.item}>{text}</span>
+						<span className={`${cl.item} ${activeFilter === id ? cl.active : ''}`}>{text}</span>
 					</div>
 				))}
 				{!isFull && restFiltersLength > 0 && (

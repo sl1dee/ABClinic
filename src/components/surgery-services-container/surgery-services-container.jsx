@@ -1,6 +1,7 @@
 import Diagnostics from '@components/diagnostics'
 import Favorites from '@components/favorites'
 import HeroScreen from '@components/hero-screen'
+import PricesForSurgery from '@components/prices-for-services/prices-for-surgery/index.js'
 import SignUp from '@components/sign-up'
 import { SurgeryTypes } from '@components/treatment-types'
 
@@ -48,7 +49,7 @@ const SurgeryServicesContainer = () => {
 			{/* <OurWorks /> */}
 			<Diagnostics />
 			<Favorites favorites={favorites} />
-			{/* <PricesForSurgery /> */}
+			<PricesForSurgery />
 			<SignUp />
 		</div>
 	)
