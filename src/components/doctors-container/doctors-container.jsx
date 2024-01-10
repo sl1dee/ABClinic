@@ -1,5 +1,5 @@
 import Filters from '@components/doctors-container/filters/index.js'
-import { useGetDoctorFilteredQuery } from '@store/modules/doctors-api.js'
+import { useGetDoctorFilteredQuery, useGetDoctorFiltersQuery } from '@store/modules/doctors-api.js'
 import cn from 'classnames'
 import React, { useMemo, useState } from 'react'
 import {Link} from 'react-router-dom'
@@ -9,7 +9,7 @@ import cl from './doctors-container.module.scss'
 const DoctorsContainer = () => {
   const [selectedFilters, setSelectedFilters] = useState([])
 
-  const { data: filters = [] } = useGetDoctorFilteredQuery({ directions: [], specialities: [] });
+  const { data: filters = [] } = useGetDoctorFiltersQuery({ directions: [], specialities: [] });
   const { data: doctors = [] } = useGetDoctorFilteredQuery({ directions: [], specialities: selectedFilters });
 
     return (

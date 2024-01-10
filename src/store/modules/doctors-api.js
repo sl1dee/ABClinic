@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const doctorsApi = createApi({
 	reducerPath: 'doctorsApi',
-	tagTypes: ['DoctorFiltered'],
+	tagTypes: ['DoctorFiltered', 'DoctorFilters'],
 	baseQuery: fetchBaseQuery({ baseUrl: 'https://abclinicufa.ru/' }),
 	endpoints: (builder) => ({
 		getDoctorFiltered: builder.query({
@@ -15,8 +15,19 @@ export const doctorsApi = createApi({
 				}
 			}),
 			providesTags: ['DoctorFiltered']
+		}),
+		getDoctorFilters: builder.query({
+			query: ({ directions = [], specialities = [] }) => ({
+				url: 'api/doctor_filters',
+				method: 'GET',
+				body: {
+					directions,
+					specialities
+				}
+			}),
+			providesTags: ['DoctorFilters']
 		})
 	})
 })
 
-export const { useGetDoctorFilteredQuery } = doctorsApi
+export const { useGetDoctorFilteredQuery, useGetDoctorFiltersQuery } = doctorsApi
