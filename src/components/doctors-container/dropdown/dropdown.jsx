@@ -5,7 +5,7 @@ import dropDown from '@assets/img/doctors/arrow-down.svg'
 
 import cl from '@components/doctors-container/dropdown/dropdown.module.scss'
 
-const Dropdown = () => {
+const Dropdown = ({onChange}) => {
 	const optionsList = useMemo(
 		() => [
 			{
@@ -41,7 +41,8 @@ const Dropdown = () => {
 					<div className={cn([cl.contentAdditionalLinks, 'd-flex', 'flex-column'])}>
 						{optionsList.map(({ id, text }) => (
 							<div onClick={() => selectHandler(id)} key={id}>
-								<div className={cn([cl.line, 'd-flex'])}>
+								{/*<div className={cn([cl.line, 'd-flex'])}>*/}
+								<div className={`${cl.line} ${selectedId === id ? cl.active : ''}`}>
 									<div className={cl.point}></div>
 									<div className={cl.text}>{text}</div>
 								</div>
