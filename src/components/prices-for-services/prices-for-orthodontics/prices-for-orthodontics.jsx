@@ -5,12 +5,17 @@ import React, { useMemo, useState } from 'react'
 import Filters from '@ui/filters/index.js'
 
 import cl from '../prices.module.scss'
+import useDebounce from "@hooks/use-debounce.js";
 
 const PricesForOrthodontics = () => {
 	const [selectedFilters, setSelectedFilters] = useState([])
+	const [search, setSearch] = useState('')
+
+	const debouncedSearch = useDebounce(search, 300)
 
 	const { data: filters = [] } = useGetServicesFiltersQuery('Брекеты, элайнеры')
 	const { data: services = { data: [] } } = useGetServiceFilteredQuery({
+		search: debouncedSearch,
 		service: 'Брекеты, элайнеры',
 		subServices: selectedFilters
 	})
@@ -33,7 +38,10 @@ const PricesForOrthodontics = () => {
 				<h3 className={cn([cl.pricesTitle, 'd-flex', 'mb-0'])}>Услуги по лечению зубов</h3>
 				<Filters filters={filters} selectedFilters={selectedFilters} onChange={setSelectedFilters} />
 				<div className={cn([cl.inputWrapper])}>
-					<input className={cl.input} placeholder="Поиск по услугам" />
+					<input
+						value={search} onChange={(event) => setSearch(event.target.value)}
+						className={cl.input} placeholder="Поиск по услугам"
+					/>
 				</div>
 				<div className={cn([cl.pricesList, 'd-flex', 'flex-column'])}>
 					{isOpen ? (
