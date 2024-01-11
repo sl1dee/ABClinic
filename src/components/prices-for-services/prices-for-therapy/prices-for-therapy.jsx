@@ -41,7 +41,7 @@ const PricesForTherapy = () => {
 						value={search} onChange={(event) => setSearch(event.target.value)}
 						className={cl.input} placeholder="Поиск по услугам" />
 				</div>
-				<div className={cn([cl.pricesList, 'd-flex', 'flex-column'])}>
+				<div className={`${cl.pricesList} ${isOpen || (services.total_count === undefined) ? 'gap-0' : ''}`}>
 					{isOpen ? (
 						<div className={cl.blocks}>
 							{pricesList.map(({ title, id, item }) => (
@@ -75,9 +75,20 @@ const PricesForTherapy = () => {
 							))}
 						</div>
 					)}
-					<button onClick={() => setIsOpen(!isOpen)} className={`${cl.btn} ${isOpen ? cl.btnclose : ''}`}>
-						{`+${services?.total_count || 0}`}
-					</button>
+					<div>
+						{(services.total_count === undefined) ? (
+							<div className={cl.notFound}>
+								Ничего не найдено
+							</div>
+						) : (
+							<div className='d-flex justify-content-center'>
+								<button onClick={() => setIsOpen(!isOpen)} className={`${cl.btn} ${isOpen ? cl.btnclose : ''}`}>
+									{`+${services?.total_count || 0}`}
+								</button>
+							</div>
+							)
+						}
+					</div>
 				</div>
 			</div>
 		</div>
