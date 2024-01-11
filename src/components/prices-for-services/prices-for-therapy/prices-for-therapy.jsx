@@ -19,7 +19,7 @@ const PricesForTherapy = () => {
 		service: 'Лечение зубов',
 		subServices: selectedFilters })
 
-	const pricesList = useMemo(() => services.data.map(({sub_name, items}, index) => ({
+	const pricesList = useMemo(() => (services.status !== 'false' ? services.data : []).map(({sub_name, items}, index) => ({
 			id: index,
 			title: sub_name,
 			item: items.map(({ name, price }, itemIndex) => ({
