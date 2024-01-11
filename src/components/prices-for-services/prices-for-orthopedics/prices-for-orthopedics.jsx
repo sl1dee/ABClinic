@@ -10,24 +10,20 @@ const PricesForOrthopedics = () => {
 	const [selectedFilters, setSelectedFilters] = useState([])
 
 	const { data: filters = [] } = useGetServicesFiltersQuery('Ортопедия')
-	const { data: services = {} } = useGetServiceFilteredQuery({
+	const { data: services = { data: [] } } = useGetServiceFilteredQuery({
 		service: 'Ортопедия',
 		subServices: selectedFilters
 	})
 
-	const pricesList = useMemo(() => {
-		const { total_count: _, ...restServices } = services
-
-		return Object.entries(restServices).map(([key, value], index) => ({
-			id: index,
-			title: key,
-			item: value.map(({ name, price }, itemIndex) => ({
-				id: itemIndex,
-				service: name,
-				cost: `${price} ₽`
-			}))
+	const pricesList = useMemo(() => services.data.map(({sub_name, items}, index) => ({
+		id: index,
+		title: sub_name,
+		item: items.map(({ name, price }, itemIndex) => ({
+			id: itemIndex,
+			service: name,
+			cost: `${price} ₽`
 		}))
-	}, [services])
+	})), [services.data])
 
 	const [isOpen, setIsOpen] = useState(false)
 
