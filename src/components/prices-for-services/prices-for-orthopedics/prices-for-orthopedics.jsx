@@ -36,7 +36,9 @@ const PricesForOrthopedics = () => {
 		<div className={cl.prices}>
 			<div className="container">
 				<h3 className={cn([cl.pricesTitle, 'd-flex', 'mb-0'])}>Услуги по лечению зубов</h3>
-				<Filters filters={filters} selectedFilters={selectedFilters} onChange={setSelectedFilters} />
+				<div>
+					<Filters filters={filters} selectedFilters={selectedFilters} onChange={setSelectedFilters} />
+				</div>
 				<div className={cn([cl.inputWrapper])}>
 					<input
 						value={search} onChange={(event) => setSearch(event.target.value)}
