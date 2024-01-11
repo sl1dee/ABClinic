@@ -74,7 +74,7 @@ const PricesForSurgery = () => {
 						</div>
 					)}
 					<button onClick={() => setIsOpen(!isOpen)} className={`${cl.btn} ${isOpen ? cl.btnclose : ''}`}>
-						+153
+						{`+${services?.total_count || 0}`}
 					</button>
 				</div>
 			</div>
