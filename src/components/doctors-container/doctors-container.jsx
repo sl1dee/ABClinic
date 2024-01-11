@@ -1,4 +1,5 @@
 import Filters from '@components/doctors-container/filters/index.js'
+import useDebounce from '@hooks/use-debounce.js'
 import { useGetDoctorFilteredQuery, useGetDoctorFiltersQuery } from '@store/modules/doctors-api.js'
 import cn from 'classnames'
 import React, { useMemo, useState } from 'react'
@@ -7,21 +8,25 @@ import {Link} from 'react-router-dom'
 import cl from './doctors-container.module.scss'
 
 const DoctorsContainer = () => {
+  const [search, setSearch] = useState('')
   const [selectedFilters, setSelectedFilters] = useState([])
+  const [selectedDirections, setSelectedDirections] = useState([])
 
-  const { data: filters = [] } = useGetDoctorFiltersQuery({ directions: [], specialities: [] });
-  const { data: doctors = [] } = useGetDoctorFilteredQuery({ directions: [], specialities: selectedFilters });
+  const debouncedSearch = useDebounce(search, 300)
+
+  const { data: filters = [] } = useGetDoctorFiltersQuery();
+  const { data: doctors = [] } = useGetDoctorFilteredQuery({ search: debouncedSearch, directions: selectedDirections, specialities: selectedFilters });
 
     return (
         <div className={cl.doctorsContainer}>
             <div className="container">
                 <div className={cl.titleWrapper}>
                     <h1 className={cl.title}>Врачи</h1>
-                    {/*<div className={cn([cl.inputWrapper])}>*/}
-                    {/*    <input className={cl.input} placeholder='Поиск по врачам'/>*/}
-                    {/*</div>*/}
+                    <div className={cn([cl.inputWrapper])}>
+                        <input value={search} onChange={(event) => setSearch(event.target.value)} className={cl.input} placeholder='Поиск по врачам'/>
+                    </div>
                 </div>
-                <Filters filters={filters} selectedFilters={selectedFilters} onChange={setSelectedFilters}/>
+                <Filters directions={filters?.directions} filters={filters?.specialities} selectedFilters={selectedFilters} onDirectionsChange={setSelectedDirections} onFiltersChange={setSelectedFilters}/>
                 <div className={cl.doctorsCards}>
                     {doctors?.map(({id,
                       image,

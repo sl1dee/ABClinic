@@ -7,7 +7,6 @@ const getRawPhoneFromParsedPhone = (parsedPhone, prevParsedPhone) => {
 		.split('')
 		.filter((char) => /[0-9]/.test(char))
 		.join('')
-	console.log(pureValue)
 	const phoneExitCode = pureValue.slice(0, 1) ? '8' : ''
 	const phoneServiceCode = pureValue.slice(1, 1 + 3)
 	const phoneOperatorCode = pureValue.slice(4, 4 + 3)
