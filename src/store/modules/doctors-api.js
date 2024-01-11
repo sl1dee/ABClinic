@@ -6,10 +6,11 @@ export const doctorsApi = createApi({
 	baseQuery: fetchBaseQuery({ baseUrl: 'https://abclinicufa.ru/' }),
 	endpoints: (builder) => ({
 		getDoctorFiltered: builder.query({
-			query: ({ directions = [], specialities = [] }) => ({
+			query: ({ search, directions = [], specialities = [] }) => ({
 				url: 'api/doctor_filtered',
 				method: 'POST',
 				body: {
+					...(search ? { word: search } : {}),
 					directions,
 					specialities
 				}
@@ -17,13 +18,9 @@ export const doctorsApi = createApi({
 			providesTags: ['DoctorFiltered']
 		}),
 		getDoctorFilters: builder.query({
-			query: ({ directions = [], specialities = [] }) => ({
+			query: () => ({
 				url: 'api/doctor_filters',
-				method: 'GET',
-				body: {
-					directions,
-					specialities
-				}
+				method: 'GET'
 			}),
 			providesTags: ['DoctorFilters']
 		})

@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-export const filtersApi = createApi({
-	reducerPath: 'filtersApi',
+export const servicesApi = createApi({
+	reducerPath: 'servicesApi',
 	tagTypes: ['ServicesFilters', 'ServiceFiltered'],
 	baseQuery: fetchBaseQuery({ baseUrl: 'https://abclinicufa.ru/' }),
 	endpoints: (builder) => ({
@@ -16,12 +16,13 @@ export const filtersApi = createApi({
 			providesTags: ['ServicesFilters']
 		}),
 		getServiceFiltered: builder.query({
-			query: ({ service, subServices = [] }) => ({
+			query: ({ search, service, subServices = [] }) => ({
 				url: 'api/service_filtered',
 				method: 'POST',
 				body: {
-					service,
-					sub_service: subServices
+					...(search ? { word: search } : {}),
+					...(subServices.length ? { sub_service: subServices } : {}),
+					service
 				}
 			}),
 			providesTags: ['ServiceFiltered']
@@ -29,4 +30,4 @@ export const filtersApi = createApi({
 	})
 })
 
-export const { useGetServicesFiltersQuery, useGetServiceFilteredQuery } = filtersApi
+export const { useGetServicesFiltersQuery, useGetServiceFilteredQuery } = servicesApi

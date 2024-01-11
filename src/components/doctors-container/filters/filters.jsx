@@ -5,11 +5,11 @@ import Dropdown from '@components/doctors-container/dropdown/index.js'
 
 import cl from './filters.module.scss'
 
-const Filters = ({ filters = [], selectedFilters = [], onChange }) => {
+const Filters = ({ directions = [], filters = [], selectedFilters = [], onFiltersChange, onDirectionsChange }) => {
 	const filtersList = useMemo(
 		() => [
 			{
-				id: 0,
+				id: -1,
 				name: 'Все'
 			},
 			...filters
@@ -18,18 +18,18 @@ const Filters = ({ filters = [], selectedFilters = [], onChange }) => {
 	)
 
 	const changeHandler = (id) => {
-		if (id === 0) {
-			onChange([])
+		if (id === -1) {
+			onFiltersChange([])
 			return
 		}
 
 		if (selectedFilters.includes(id) && selectedFilters.length > 1) {
-			onChange(selectedFilters.filter((selectedId) => selectedId !== id))
+			onFiltersChange(selectedFilters.filter((selectedId) => selectedId !== id))
 
 			return
 		}
 
-		onChange([...new Set([...selectedFilters, id])])
+		onFiltersChange([...new Set([...selectedFilters, id])])
 	}
 	const { isDesktop } = useMatchMedia()
 
@@ -53,14 +53,14 @@ const Filters = ({ filters = [], selectedFilters = [], onChange }) => {
 	return (
 		<div className={cl.filtersWrapper}>
 			<div>
-				<Dropdown />
+				<Dropdown directions={directions} onChange={onDirectionsChange} />
 			</div>
 			<div className={cl.filtersList}>
 				{filtersList.slice(0, isFull ? undefined : START_FILTERS_LENGTH).map(({ id, name: text }) => (
 					<div onClick={() => changeHandler(id)} key={id} className={cl.filtersItem}>
 						<span
 							className={`${cl.item} ${
-								(id === 0 && !selectedFilters.length) || selectedFilters.includes(id) ? cl.active : ''
+								(id === -1 && !selectedFilters.length) || selectedFilters.includes(id) ? cl.active : ''
 							}`}
 						>
 							{text}

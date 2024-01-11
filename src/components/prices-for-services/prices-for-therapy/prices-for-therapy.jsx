@@ -1,4 +1,4 @@
-import { useGetServiceFilteredQuery, useGetServicesFiltersQuery } from '@store/modules/filters-api.js'
+import { useGetServiceFilteredQuery, useGetServicesFiltersQuery } from '@store/modules/services-api.js'
 import cn from 'classnames'
 import React, { useEffect, useMemo, useState } from 'react'
 
