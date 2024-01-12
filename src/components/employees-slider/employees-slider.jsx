@@ -23,50 +23,49 @@ export default function EmployeesSlider({sliderHeaderText}) {
     const doctorsList = useMemo(
         () => [
             {
-                id: 0,
+                id: 1,
                 img: '/media/employeesSlider/aliya.jpg',
                 name: 'Алия Беглова',
                 qualification: 'Врач-ортодонт',
                 information: 'Взрослый врач',
-                href: '/doctor/12'
             },
             {
-                id: 1,
+                id: 2,
                 img: '/media/employeesSlider/nasima.jpg',
                 name: 'Насима Шагаева',
                 qualification: 'Врач-стоматолог-ортопед',
                 information: 'Взрослый врач'
             },
             {
-                id: 2,
+                id: 3,
                 img: '/media/employeesSlider/eliza.jpg',
                 name: 'Элиза Мигранова',
                 qualification: 'Врач-стоматолог-терапевт',
                 information: 'Взрослый врач'
             },
             {
-                id: 3,
+                id: 4,
                 img: '/media/employeesSlider/almaz.jpg',
                 name: 'Алмаз Гафурьянов',
                 qualification: 'Врач-гигиенист',
                 information: 'Взрослый врач'
             },
             {
-                id: 4,
+                id: 5,
                 img: '/media/employeesSlider/adel.jpg',
                 name: 'Адель Ахметова',
                 qualification: 'Врач-стоматолог-ортодонт',
                 information: 'Взрослый и детский врач'
             },
             {
-                id: 5,
+                id: 6,
                 img: '/media/employeesSlider/timur.jpg',
                 name: 'Тимур Ишмухаметов',
                 qualification: 'Стоматолог',
                 information: 'Взрослый врач'
             },
             {
-                id: 6,
+                id: 7,
                 img: '/media/employeesSlider/ilgiz.jpg',
                 name: 'Ильгиз Каримов',
                 qualification: 'Врач-стоматолог-терапевт',
@@ -80,14 +79,14 @@ export default function EmployeesSlider({sliderHeaderText}) {
             //     information: 'Взрослый врач'
             // },
             {
-                id: 7,
+                id: 8,
                 img: '/media/employeesSlider/alena.jpg',
                 name: 'Алена Исламгалеева',
                 qualification: 'Главная медсестра',
                 information: 'Главная медсестра'
             },
             {
-                id: 8,
+                id: 9,
                 img: '/media/employeesSlider/elvira.jpg',
                 name: 'Эльвира Яхина',
                 qualification: 'Администратор',
@@ -128,7 +127,7 @@ export default function EmployeesSlider({sliderHeaderText}) {
                 >
                     {doctorsList.map(({id, img, name, qualification, information, href}) => (
                         <SwiperSlide key={id} className={cn([cl.employeesSliderSlide, 'd-flex', 'flex-column'])}>
-                            <Link to={href}>
+                            <Link to={`/doctor/${id}`}>
                                 <EmployeesSliderCard img={img} information={information} name={name}
                                                      qualification={qualification}/>
                             </Link>
