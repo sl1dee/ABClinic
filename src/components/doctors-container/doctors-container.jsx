@@ -44,7 +44,7 @@ const DoctorsContainer = () => {
                                     <div className={cn([cl.infoText, 'd-flex', 'flex-column'])}>
                                         <p className={cn([cl.infoTextName, 'mb-0'])}>{name}</p>
                                       {speciality.map(({name: specialityName}) => <p className={cn([cl.infoTextPosition, 'mb-0'])}>{specialityName}</p>)}
-                                      {price && <p className={cn([cl.infoTextPrice, 'mb-0'])}>от {price} ₽</p>}
+                                      {price && <p className={cn([cl.infoTextPrice, 'mb-0'])}>от {price} ₽</p>}
                                       {direction.map(({name: directionName}) => <p className={cn([cl.infoTextBadge, 'mb-0'])}>{directionName}</p>)}
                                     </div>
                                 </div>

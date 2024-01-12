@@ -267,12 +267,10 @@
       }
 
       &Portrait {
-        display: none;
-        object-fit: cover;
-        object-position: top;
-        max-height: 248px;
+        object-position: center 15%;
         border-radius: 20px;
         width: 100%;
+				aspect-ratio: 1/1
         //height: 100%;
       }
     }
