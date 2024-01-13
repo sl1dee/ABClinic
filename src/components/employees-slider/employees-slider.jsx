@@ -79,14 +79,14 @@ export default function EmployeesSlider({sliderHeaderText}) {
             //     information: 'Взрослый врач'
             // },
             {
-                id: 8,
+                id: 9,
                 img: '/media/employeesSlider/alena.jpg',
                 name: 'Алена Исламгалеева',
                 qualification: 'Главная медсестра',
                 information: 'Главная медсестра'
             },
             {
-                id: 9,
+                id: 10,
                 img: '/media/employeesSlider/elvira.jpg',
                 name: 'Эльвира Яхина',
                 qualification: 'Администратор',

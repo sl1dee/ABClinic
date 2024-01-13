@@ -23,13 +23,17 @@ const HeroScreen = (props) => {
 						<div className={cl.detailInformationBlockQualification}>
 							{props.speciality.map(({ name: specialityName }) => specialityName)}
 						</div>
-						<div className={cl.detailInformationBlockPrice}>от {props.price} ₽</div>
-						<div className={cn(cl.detailInformationBlockInformation, 'd-flex')}>
-							{props.direction.map(({ name: directionName }) => directionName)}
-						</div>
+						{props.price && <div className={cl.detailInformationBlockPrice}>от {props.price} ₽</div>}
+						{props.direction && props.direction.length > 0 && (
+							<div className={cn(cl.detailInformationBlockInformation, 'd-flex')}>
+								{props.direction.map(({ name: directionName }) => directionName)}
+							</div>
+						)}
 						<div className={cl.bckgIcon} />
 						<div className={cn([cl.appointment, 'd-flex', 'flex-column'])}>
-							<Button onClick={openModalHandler} className={cl.btn}>Записаться</Button>
+							<Button onClick={openModalHandler} className={cl.btn}>
+								Записаться
+							</Button>
 							<div className={cl.appointmentText}>Ближайшая запись врача: с 1 декабря в 09:00</div>
 						</div>
 					</div>
