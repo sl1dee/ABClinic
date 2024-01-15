@@ -6,6 +6,7 @@
   user-select: none;
   border-radius: 0 0 35px 35px;
   overflow: hidden;
+  min-height: 490px;
 
   img {
     width: 100%;
@@ -69,6 +70,7 @@
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .info {
+    row-gap: 17px;
     &Text {
       &Name {
         font-size: 22px;
@@ -88,11 +90,15 @@
   }
 }
 @media (max-width: 768px) {
+  .photo {
+    min-height: 400px;
+  }
 
   .info {
     border-radius: 20px 20px 0 0;
     padding: 24px;
     min-height: 145px;
+    row-gap: 15px;
 
     &Text {
       row-gap: 5px;

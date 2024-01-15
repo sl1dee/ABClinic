@@ -22,6 +22,7 @@
       column-gap: 5px;
       position: relative;
       cursor: default;
+      cursor: pointer;
 
       span {
         color: colors.$additionalTextColor;
@@ -37,11 +38,12 @@
 
       &Menu {
         position: absolute;
-        top: -100px;
+        top: -10px;
         left: 50%;
+        opacity: 0;
         min-width: 352px;
         padding-top: 10px;
-        transform: translate(-50%, -100%);
+        transform: translate(-50%, 0);
         transition: top .3s ease, transform .3s ease;
         pointer-events: none;
         z-index: 1;
@@ -51,6 +53,7 @@
           border-radius: 30px;
           background-color: colors.$whiteColor;
           padding: 50px 40px;
+          box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
 
           &BigLink {
             span {
@@ -80,6 +83,7 @@
       &:hover {
         .linkMenu {
           top: 100%;
+          opacity: 1;
           transform: translate(-50%, 0);
           pointer-events: auto;
         }
@@ -122,7 +126,6 @@
 }
 
 .scrolled {
-  //box-shadow: 0 1px 32px colors.$mainColor;
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
   transition: ease .3s;
 }
