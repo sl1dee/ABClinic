@@ -34,7 +34,7 @@ const HeroScreen = (props) => {
 							<Button onClick={openModalHandler} className={cl.btn}>
 								Записаться
 							</Button>
-							<div className={cl.appointmentText}>Ближайшая запись врача: с 1 декабря в 09:00</div>
+							<div className={cl.appointmentText}>Запишитесь на первый прием и получите план лечения</div>
 						</div>
 					</div>
 					<img src={props.image} className={cl.detailInformationPortrait} alt="" />

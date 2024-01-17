@@ -90,30 +90,6 @@
           }
         }
 
-
-        //.text {
-        //  position: relative;
-        //  padding-left: 30px;
-        //  display: inline-block;
-        //
-        //
-        //  &::before {
-        //    content: url("/assets/img/doctors/RadiobuttonWhite.svg");
-        //    display: block;
-        //    width: 20px;
-        //    height: 20px;
-        //    border: 1.5px solid #EAEDF0;
-        //    position: absolute;
-        //    border-radius: 50%;
-        //    top: 0;
-        //    left: 0;
-        //  }
-        //  &::before:active {
-        //    content: url("/assets/img/doctors/RadiobuttonBlue.svg");
-        //  }
-        //}
-
-
         .radio:checked + .text::after {
           opacity: 1;
 
