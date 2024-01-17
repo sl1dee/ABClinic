@@ -122,11 +122,11 @@ const Header = () => {
 											<span>Контакты</span>
 										</Link>
 									</div>
-									<div>
-										<Link to="/stock">
-											<span>Акции</span>
-										</Link>
-									</div>
+									{/* <div> */}
+									{/*	<Link to="/stock"> */}
+									{/*		<span>Акции</span> */}
+									{/*	</Link> */}
+									{/* </div> */}
 									{/* <div> */}
 									{/*	<Link to="/blog"> */}
 									{/*		<span>Блог</span> */}
