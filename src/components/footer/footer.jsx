@@ -78,21 +78,21 @@ const Footer = () => {
 								<p className="mb-0">Врачи</p>
 							</Link>
 						</div>
-						<div>
-							<Link to="/">
-								<p className="mb-0">Наши работы</p>
-							</Link>
-						</div>
-						<div className="d-block d-lg-none">
-							<Link to="/stock">
-								<p className="mb-0">Акции</p>
-							</Link>
-						</div>
-						<div className="d-block d-lg-none">
-							<Link to="/blog">
-								<p className="mb-0">Блог</p>
-							</Link>
-						</div>
+						{/* <div> */}
+						{/*	<Link to="/"> */}
+						{/*		<p className="mb-0">Наши работы</p> */}
+						{/*	</Link> */}
+						{/* </div> */}
+						{/* <div className="d-block d-lg-none"> */}
+						{/*	<Link to="/stock"> */}
+						{/*		<p className="mb-0">Акции</p> */}
+						{/*	</Link> */}
+						{/* </div> */}
+						{/* <div className="d-block d-lg-none"> */}
+						{/*	<Link to="/blog"> */}
+						{/*		<p className="mb-0">Блог</p> */}
+						{/*	</Link> */}
+						{/* </div> */}
 						<div className="d-block d-lg-none">
 							<Link to="/">
 								<p className="mb-0">О компании</p>
@@ -103,23 +103,23 @@ const Footer = () => {
 								<p className="mb-0">Контакты</p>
 							</Link>
 						</div>
-						<div className="d-block d-lg-none">
-							<Link to="/">
-								<p className="mb-0">Отзывы</p>
-							</Link>
-						</div>
+						{/* <div className="d-block d-lg-none"> */}
+						{/*	<Link to="/"> */}
+						{/*		<p className="mb-0">Отзывы</p> */}
+						{/*	</Link> */}
+						{/* </div> */}
 					</div>
 					<div className={cn([cl.footerLinks, 'd-none', 'd-lg-flex', 'flex-column'])}>
-						<div>
-							<Link to="/stock">
-								<p className="mb-0">Акции</p>
-							</Link>
-						</div>
-						<div>
-							<Link to="/blog">
-								<p className="mb-0">Блог</p>
-							</Link>
-						</div>
+						{/* <div> */}
+						{/*	<Link to="/stock"> */}
+						{/*		<p className="mb-0">Акции</p> */}
+						{/*	</Link> */}
+						{/* </div> */}
+						{/* <div> */}
+						{/*	<Link to="/blog"> */}
+						{/*		<p className="mb-0">Блог</p> */}
+						{/*	</Link> */}
+						{/* </div> */}
 						<div>
 							<Link to="/">
 								<p className="mb-0">О компании</p>
@@ -130,11 +130,11 @@ const Footer = () => {
 								<p className="mb-0">Контакты</p>
 							</Link>
 						</div>
-						<div>
-							<Link to="/">
-								<p className="mb-0">Отзывы</p>
-							</Link>
-						</div>
+						{/* <div> */}
+						{/*	<Link to="/"> */}
+						{/*		<p className="mb-0">Отзывы</p> */}
+						{/*	</Link> */}
+						{/* </div> */}
 					</div>
 				</div>
 				<div
