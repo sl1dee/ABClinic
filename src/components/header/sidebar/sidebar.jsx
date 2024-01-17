@@ -100,12 +100,12 @@ const Sidebar = () => {
 						id: 0,
 						href: '/contacts',
 						text: 'Контакты'
-					},
-					{
-						id: 1,
-						href: '/stock',
-						text: 'Акции'
 					}
+					// {
+					// 	id: 1,
+					// 	href: '/stock',
+					// 	text: 'Акции'
+					// }
 					// {
 					// 	id: 2,
 					// 	href: '/blog',
