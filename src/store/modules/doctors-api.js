@@ -33,8 +33,19 @@ export const doctorsApi = createApi({
 				}
 			}),
 			providesTags: ['GetDoctor']
+		}),
+		getDoctorSlider: builder.query({
+			query: (id) => ({
+				url: 'api/doctor_slider',
+				method: 'POST',
+				body: {
+					id
+				}
+			}),
+			providesTags: ['GetDoctorSlider']
 		})
 	})
 })
 
-export const { useGetDoctorFilteredQuery, useGetDoctorFiltersQuery, useGetDoctorQuery } = doctorsApi
+export const { useGetDoctorFilteredQuery, useGetDoctorFiltersQuery, useGetDoctorQuery, useGetDoctorSliderQuery } =
+	doctorsApi
