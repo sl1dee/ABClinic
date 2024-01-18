@@ -1,6 +1,6 @@
 import arrowLeft from '@assets/img/employeesSlider/arrow-left.svg'
 import arrowRight from '@assets/img/employeesSlider/arrow-right.svg'
-import { useGetDoctorQuery } from '@store/modules/doctors-api.js'
+import { useGetDoctorFiltersQuery, useGetDoctorQuery, useGetDoctorSliderQuery } from '@store/modules/doctors-api.js'
 import cn from 'classnames'
 import React, { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
@@ -21,6 +21,9 @@ export default function EmployeesSlider({ sliderHeaderText }) {
 	const nextSwipeHandler = () => {
 		swiper?.slideNext()
 	}
+	// const { data:doctorsList } = useGetDoctorSliderQuery();
+
+
 	const doctorsList = useMemo(
 		() => [
 			{
