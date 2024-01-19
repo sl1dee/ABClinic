@@ -1,11 +1,12 @@
 @use '@assets/styles/vars/colors';
 
-.slider{
+.slider {
   overflow: visible;
+  width: 100%;
 }
 
 
-.employeesSlider{
+.employeesSlider {
   padding: 75px 0;
   background-color: colors.$additionalColor;
   overflow: hidden;
@@ -60,7 +61,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-  .employeesSlider{
+  .employeesSlider {
     padding: 55px 0;
 
     > div {
@@ -71,27 +72,30 @@
       font-size: 28px;
       letter-spacing: -0.56px;
     }
-      .swiper {
-        overflow: visible;
-      }
+
+    .swiper {
+      overflow: visible;
+    }
   }
 }
+
 @media (max-width: 768px) {
-  .employeesSlider{
+  .employeesSlider {
     padding: 40px 0;
 
     > div {
       row-gap: 20px;
     }
+
     &Header {
       font-size: 20px;
       letter-spacing: -0.4px;
     }
 
-      &Slide {
-        border-radius: 20px;
-        max-height: 395px;
-        max-width: 260px;
-      }
+    &Slide {
+      border-radius: 20px;
+      max-height: 395px;
+      max-width: 260px;
+    }
   }
 }
