@@ -66,8 +66,8 @@ export default function MainSlider() {
                                 <div className={cn([cl.textContent, 'd-flex', 'flex-column'])}>
                                     <h2 className="mb-0">Предупреждение лучше лечения: заботимся об улыбках заранее</h2>
                                     <p className="mb-0">
-                                        Современная стоматология в Уфе для взрослых и детей. Запишитесь на бесплатную
-                                        консультацию
+                                        Современная стоматология в Уфе для взрослых и детей. Запишитесь на первый прием
+                                        и получите план лечения.
                                     </p>
                                     <div className={cn([cl.btnWrapper, 'd-flex'])}>
                                         <Button onClick={openModalHandler} colorStyle="primary"

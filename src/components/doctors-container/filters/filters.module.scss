@@ -1,6 +1,6 @@
 @use '@assets/styles/vars/colors';
 
-.filtersWrapper{
+.filtersWrapper {
   padding-top: 45px;
   display: flex;
   justify-content: space-between;
@@ -112,18 +112,18 @@
     //}
   }
 
-  .filtersList{
+  .filtersList {
     display: flex;
     flex-wrap: wrap;
     width: 70%;
     gap: 10px;
   }
 
-
-  .filtersItem{
+  .filtersItem {
     display: flex;
   }
-  .item{
+
+  .item {
     padding: 12px 20px;
     font-size: 18px;
     font-weight: 600;
@@ -141,11 +141,13 @@
       background-color: colors.$mainColor;
     }
   }
-  .active{
+
+  .active {
     color: colors.$whiteColor;
     background-color: colors.$mainColor;
   }
 }
+
 @media (min-width: 992px) and (max-width: 1200px) {
 
   .filtersWrapper {
@@ -162,15 +164,15 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 992px){
+@media (min-width: 768px) and (max-width: 992px) {
 
-  .filtersWrapper{
+  .filtersWrapper {
     padding-top: 45px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 
-    .selectorWrapper{
+    .selectorWrapper {
       align-self: start;
 
       //.link {
@@ -272,7 +274,7 @@
     //  }
     //}
 
-    .filtersList{
+    .filtersList {
       display: flex;
       flex-wrap: nowrap;
       overflow-x: auto;
@@ -280,11 +282,12 @@
       width: 100%;
 
     }
+
     .filtersList::-webkit-scrollbar {
       background: transparent;
     }
 
-    .item{
+    .item {
       white-space: nowrap;
       font-size: 16px;
     }
@@ -292,19 +295,19 @@
 }
 
 @media (max-width: 768px) {
-  .filtersWrapper{
+  .filtersWrapper {
     flex-direction: column;
     gap: 20px;
 
-    .selectorWrapper{
+    .selectorWrapper {
     }
 
-    .selector{
+    .selector {
       font-size: 14px;
       justify-content: space-between;
 
 
-      &::after{
+      &::after {
         display: flex;
         align-items: center;
         content: url("@assets/img/doctors/arrow-bootom-320px.svg");
@@ -313,7 +316,7 @@
       }
     }
 
-    .filtersList{
+    .filtersList {
       display: flex;
       flex-wrap: nowrap;
       overflow-x: auto;
@@ -321,15 +324,17 @@
       width: 100%;
 
     }
+
     .filtersList::-webkit-scrollbar {
       background: transparent;
     }
 
 
-    .filtersItem{
+    .filtersItem {
 
     }
-    .item{
+
+    .item {
       font-size: 14px;
 
       white-space: nowrap;
