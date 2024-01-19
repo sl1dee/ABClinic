@@ -27,7 +27,7 @@ export default function EmployeesSlider({ sliderHeaderText, serviceId, isViewAll
 		swiper?.slideNext()
 	}
 
-	const { data: doctorsList } = useGetDoctorSliderQuery(serviceId, {skip: !isViewAll && !serviceId});
+	const { data: doctorsList = [] } = useGetDoctorSliderQuery(serviceId, {skip: !isViewAll && !serviceId});
 
 	return (
 		<section className={cl.employeesSlider}>
@@ -59,7 +59,7 @@ export default function EmployeesSlider({ sliderHeaderText, serviceId, isViewAll
 				>
 					{doctorsList.map(({ id, image, name, directions, speciality }) => (
 						<SwiperSlide key={id} className={cn([cl.employeesSliderSlide, 'd-flex', 'flex-column'])}>
-							<Link to={`/doctor/${id}`}>
+							<Link to={id ? `/doctor/${id}` : undefined}>
 								<EmployeesSliderCard img={image} information={directions} name={name} qualification={speciality} />
 							</Link>
 						</SwiperSlide>
