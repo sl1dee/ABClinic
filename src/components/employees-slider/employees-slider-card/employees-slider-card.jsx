@@ -22,10 +22,14 @@ const EmployeesSliderCard = ({ img, name, qualification, information }) => {
 			<div className={cn([cl.info, 'd-flex', 'flex-column', 'justify-content-between'])}>
 				<div className={cn([cl.infoText, 'd-flex', 'flex-column'])}>
 					<p className={cn([cl.infoTextName, 'mb-0'])}>{name}</p>
-					<p className={cn([cl.infoTextPosition, 'mb-0'])}>{qualification}</p>
+					{qualification.map((qualItem) => (
+						<p className={cn([cl.infoTextPosition, 'mb-0'])}>{qualItem}</p>
+					))}
 				</div>
 				<div className={cl.infoBadge}>
-					<p className="mb-0">{information}</p>
+					{information.map((infoItem) => (
+						<p className="mb-0">{infoItem}</p>
+					))}
 				</div>
 				<Button
 					onClick={openModalHandler}

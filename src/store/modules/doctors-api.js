@@ -39,7 +39,7 @@ export const doctorsApi = createApi({
 				url: 'api/doctor_slider',
 				method: 'POST',
 				body: {
-					id
+					...(id ? { id } : {})
 				}
 			}),
 			providesTags: ['GetDoctorSlider']

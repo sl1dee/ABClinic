@@ -54,7 +54,7 @@ const AdultReferralContainer = () => {
 					<ServicesCard title="Что вас беспокоит?" />
 				</div>
 			</div>
-			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" />
+			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" isViewAll />
 			{/* <Articles /> */}
 			<SignUp />
 		</div>

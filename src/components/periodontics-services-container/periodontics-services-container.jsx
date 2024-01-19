@@ -1,3 +1,5 @@
+import { useGetServicesQuery } from '@store/modules/services-api.js'
+
 import Diagnostics from '@components/diagnostics/index.js'
 import EmployeesSlider from '@components/employees-slider/index.js'
 import Favorites from '@components/favorites/index.js'
@@ -9,6 +11,12 @@ import { PeriodonticsTypes } from '@components/treatment-types/index.js'
 import cl from './periodontics-services-container.module.scss'
 
 const PeriodonticsServicesContainer = () => {
+	const {
+		data: { services: servicesList } = { services: [] }
+	} = useGetServicesQuery()
+
+	const currentServiceId = servicesList.find(({ name }) => name === 'Лечение десен')?.id
+
 	const favorites = {
 		header: 'Ваша улыбка в надежных руках',
 		items: [
@@ -50,7 +58,7 @@ const PeriodonticsServicesContainer = () => {
 			{/* <OurWorks /> */}
 			<Diagnostics />
 			<Favorites favorites={favorites} />
-			<EmployeesSlider sliderHeaderText="Врачи по направлению" />
+			<EmployeesSlider sliderHeaderText="Врачи по направлению" serviceId={currentServiceId} />
 			<PricesForPeriodontics />
 			<SignUp />
 		</div>

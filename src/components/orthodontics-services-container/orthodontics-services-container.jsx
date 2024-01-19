@@ -1,13 +1,21 @@
 import Diagnostics from '@components/diagnostics/index.js'
+import EmployeesSlider from '@components/employees-slider/index.js'
 import Favorites from '@components/favorites/index.js'
 import HeroScreen from '@components/hero-screen/index.js'
 import PricesForOrthodontics from '@components/prices-for-services/prices-for-orthodontics/index.js'
 import SignUp from '@components/sign-up/index.js'
 import { OrthodonticsTypes } from '@components/treatment-types/index.js'
+import { useGetServicesQuery } from '@store/modules/services-api.js'
 
 import cl from './orthodontics-services-container.module.scss'
 
 const OrthodonticsServicesContainer = () => {
+	const {
+		data: { services: servicesList } = { services: [] }
+	} = useGetServicesQuery()
+
+	const currentServiceId = servicesList.find(({ name }) => name === 'Брекеты, элайнеры')?.id
+
 	const favorites = {
 		header: 'Ваша улыбка в надежных руках',
 		items: [
@@ -49,6 +57,7 @@ const OrthodonticsServicesContainer = () => {
 			{/* <OurWorks /> */}
 			<Diagnostics />
 			<Favorites favorites={favorites} />
+			<EmployeesSlider sliderHeaderText="Врачи по направлению" serviceId={currentServiceId} />
 			<PricesForOrthodontics />
 			<SignUp />
 		</div>

@@ -49,7 +49,7 @@ const MainPage = () => {
 			<MainSlider />
 			<Services preHeader />
 			<Favorites favorites={favorites} />
-			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" />
+			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" isViewAll />
 			{/* <OurWorks /> */}
 			{/* <ReviewsSlider /> */}
 			{/* <Articles /> */}

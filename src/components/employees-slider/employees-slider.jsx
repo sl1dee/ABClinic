@@ -1,19 +1,24 @@
-import arrowLeft from '@assets/img/employeesSlider/arrow-left.svg'
-import arrowRight from '@assets/img/employeesSlider/arrow-right.svg'
-import { useGetDoctorFiltersQuery, useGetDoctorQuery, useGetDoctorSliderQuery } from '@store/modules/doctors-api.js'
-import cn from 'classnames'
-import React, { useMemo, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import { Navigation } from 'swiper'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import arrowLeft from '@assets/img/employeesSlider/arrow-left.svg';
+import arrowRight from '@assets/img/employeesSlider/arrow-right.svg';
+import { useGetDoctorFiltersQuery, useGetDoctorQuery, useGetDoctorSliderQuery } from '@store/modules/doctors-api.js';
+import cn from 'classnames';
+import React, { useMemo, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { Navigation } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import EmployeesSliderCard from '@components/employees-slider/employees-slider-card/employees-slider-card.jsx'
 
-import cl from './employees-slider.module.scss'
 
-export default function EmployeesSlider({ sliderHeaderText }) {
+import EmployeesSliderCard from '@components/employees-slider/employees-slider-card/employees-slider-card.jsx';
+
+
+
+import cl from './employees-slider.module.scss';
+
+
+export default function EmployeesSlider({ sliderHeaderText, serviceId, isViewAll }) {
 	const [swiper, setSwiper] = useState(null)
 	const prevSwipeHandler = () => {
 		swiper?.slidePrev()
@@ -21,87 +26,8 @@ export default function EmployeesSlider({ sliderHeaderText }) {
 	const nextSwipeHandler = () => {
 		swiper?.slideNext()
 	}
-	// const { data:doctorsList } = useGetDoctorSliderQuery();
 
-
-	const doctorsList = useMemo(
-		() => [
-			{
-				id: 1,
-				img: '/media/employeesSlider/aliya.jpg',
-				name: 'Алия Беглова',
-				qualification: 'Врач-ортодонт',
-				information: 'Взрослый врач'
-			},
-			{
-				id: 2,
-				img: '/media/employeesSlider/nasima.jpg',
-				name: 'Насима Шагаева',
-				qualification: 'Врач-стоматолог-ортопед',
-				information: 'Взрослый врач'
-			},
-			{
-				id: 3,
-				img: '/media/employeesSlider/eliza.jpg',
-				name: 'Элиза Мигранова',
-				qualification: 'Врач-стоматолог-терапевт',
-				information: 'Взрослый врач'
-			},
-			{
-				id: 4,
-				img: '/media/employeesSlider/almaz.jpg',
-				name: 'Алмаз Гафурьянов',
-				qualification: 'Врач-гигиенист',
-				information: 'Взрослый врач'
-			},
-			{
-				id: 5,
-				img: '/media/employeesSlider/adel.jpg',
-				name: 'Адель Ахметова',
-				qualification: 'Врач-стоматолог-ортодонт',
-				information: 'Взрослый и детский врач'
-			},
-			{
-				id: 6,
-				img: '/media/employeesSlider/timur.jpg',
-				name: 'Тимур Ишмухаметов',
-				qualification: 'Стоматолог',
-				information: 'Взрослый врач'
-			},
-			{
-				id: 7,
-				img: '/media/employeesSlider/ilgiz.jpg',
-				name: 'Ильгиз Каримов',
-				qualification: 'Врач-стоматолог-терапевт',
-				information: 'Взрослый врач'
-			},
-			// {
-			//     id: 7,
-			//     img: '/media/employeesSlider/aliya.jpg',
-			//     name: 'Сединкин Евгений',
-			//     qualification: 'Врач-стоматолог-ортопед',
-			//     information: 'Взрослый врач'
-			// },
-			{
-				id: 9,
-				img: '/media/employeesSlider/alena.jpg',
-				name: 'Алена Исламгалеева',
-				qualification: 'Главная медсестра',
-				information: 'Главная медсестра'
-			},
-			{
-				id: 10,
-				img: '/media/employeesSlider/elvira.jpg',
-				name: 'Эльвира Яхина',
-				qualification: 'Администратор',
-				information: 'Администратор'
-			}
-		],
-		[]
-	)
-
-	// const { id: doctorId } = useParams()
-	// const { data: doctor = false } = useGetDoctorQuery(doctorId)
+	const { data: doctorsList } = useGetDoctorSliderQuery(serviceId, {skip: !isViewAll && !serviceId});
 
 	return (
 		<section className={cl.employeesSlider}>
@@ -131,11 +57,10 @@ export default function EmployeesSlider({ sliderHeaderText }) {
 					loop={false}
 					className={cl.slider}
 				>
-					{doctorsList.map(({ id, img, name, qualification, information, href }) => (
+					{doctorsList.map(({ id, image, name, directions, speciality }) => (
 						<SwiperSlide key={id} className={cn([cl.employeesSliderSlide, 'd-flex', 'flex-column'])}>
 							<Link to={`/doctor/${id}`}>
-								<EmployeesSliderCard img={img} information={information} name={name} qualification={qualification} />
-								{/*<EmployeesSliderCard img={img} information={information} name={name} qualification={qualification} />*/}
+								<EmployeesSliderCard img={image} information={directions} name={name} qualification={speciality} />
 							</Link>
 						</SwiperSlide>
 					))}
