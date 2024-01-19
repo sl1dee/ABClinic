@@ -2,9 +2,15 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const servicesApi = createApi({
 	reducerPath: 'servicesApi',
-	tagTypes: ['ServicesFilters', 'ServiceFiltered'],
+	tagTypes: ['Services', 'ServicesFilters', 'ServiceFiltered'],
 	baseQuery: fetchBaseQuery({ baseUrl: 'https://abclinicufa.ru/' }),
 	endpoints: (builder) => ({
+		getServices: builder.query({
+			query: () => ({
+				url: 'api/services'
+			}),
+			providesTags: ['Services']
+		}),
 		getServicesFilters: builder.query({
 			query: (service) => ({
 				url: 'api/services_filters',
@@ -30,4 +36,4 @@ export const servicesApi = createApi({
 	})
 })
 
-export const { useGetServicesFiltersQuery, useGetServiceFilteredQuery } = servicesApi
+export const { useGetServicesQuery, useGetServicesFiltersQuery, useGetServiceFilteredQuery } = servicesApi

@@ -7,7 +7,6 @@ import HeroScreen from '@components/hero-screen/index.js'
 import SignUp from '@components/sign-up/index.js'
 
 import ChildServicesCard from '../services/services-card/child-services-card.jsx'
-
 import cl from './children-referral-container.module.scss'
 
 const ChildrenReferralContainer = () => {
@@ -54,7 +53,7 @@ const ChildrenReferralContainer = () => {
 					<ChildServicesCard title="Что вас беспокоит?" />
 				</div>
 			</div>
-			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" />
+			<EmployeesSlider sliderHeaderText="Заботливые профессионалы клиники" isViewAll />
 			{/* <Articles /> */}
 			<SignUp />
 		</div>

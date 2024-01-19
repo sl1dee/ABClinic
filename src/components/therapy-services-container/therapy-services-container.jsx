@@ -1,14 +1,29 @@
-import Diagnostics from '@components/diagnostics'
-import EmployeesSlider from '@components/employees-slider'
-import Favorites from '@components/favorites'
-import HeroScreen from '@components/hero-screen'
-import PricesForTherapy from '@components/prices-for-services/prices-for-therapy'
-import SignUp from '@components/sign-up'
-import { TreatmentTypes } from '@components/treatment-types/index.js'
+import { useGetServicesQuery } from '@store/modules/services-api.js';
 
-import cl from './therapy-services-container.module.scss'
+
+
+import Diagnostics from '@components/diagnostics';
+import EmployeesSlider from '@components/employees-slider';
+import Favorites from '@components/favorites';
+import HeroScreen from '@components/hero-screen';
+import PricesForTherapy from '@components/prices-for-services/prices-for-therapy';
+import SignUp from '@components/sign-up';
+import { TreatmentTypes } from '@components/treatment-types/index.js';
+
+
+
+import cl from './therapy-services-container.module.scss';
+
 
 const TherapyServicesContainer = () => {
+	const serviceTitle = 'Лечение зубов'
+
+	const {
+		data: { services: servicesList } = { services: [] }
+	} = useGetServicesQuery()
+
+	const currentServiceId = servicesList.find(({ name }) => name === serviceTitle)?.id
+
 	const favorites = {
 		header: 'Ваша улыбка в надежных руках',
 		items: [
@@ -42,7 +57,7 @@ const TherapyServicesContainer = () => {
 	return (
 		<div className={cl.servicesContainer}>
 			<HeroScreen
-				title="Лечение зубов"
+				title={serviceTitle}
 				text="Ваша улыбка — наша забота, профессиональное и комфортное лечение зубов"
 				img="/media/therapyService/dental-treatment.jpg"
 			/>
@@ -50,7 +65,7 @@ const TherapyServicesContainer = () => {
 			{/* <OurWorks /> */}
 			<Diagnostics />
 			<Favorites favorites={favorites} />
-			<EmployeesSlider sliderHeaderText="Врачи по направлению" />
+			<EmployeesSlider sliderHeaderText="Врачи по направлению" serviceId={currentServiceId} />
 			<PricesForTherapy />
 			<SignUp />
 		</div>

@@ -28,7 +28,7 @@ const DoctorsDetailContainer = () => {
 				}
 				{/* <OurWorks /> */}
 				<SignUp />
-				<EmployeesSlider sliderHeaderText="Врачи по направлению" />
+				<EmployeesSlider sliderHeaderText="Врачи по направлению" isViewAll />
 			</div>
 		)
 	}

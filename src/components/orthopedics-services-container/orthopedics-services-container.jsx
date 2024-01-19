@@ -5,10 +5,18 @@ import HeroScreen from '@components/hero-screen'
 import PricesForOrthopedics from '@components/prices-for-services/prices-for-orthopedics/index.js'
 import SignUp from '@components/sign-up'
 import { OrthopedicsTypes } from '@components/treatment-types/index.js'
+import { useGetServicesQuery } from '@store/modules/services-api.js'
 
 import cl from './orthopedics-services-container.module.scss'
 
 const OrthopedicsServicesContainer = () => {
+
+	const {
+		data: { services: servicesList } = { services: [] }
+	} = useGetServicesQuery()
+
+	const currentServiceId = servicesList.find(({ name }) => name === 'Ортопедия')?.id
+
 	const favorites = {
 		header: 'Ваша улыбка в надежных руках',
 		items: [
@@ -50,7 +58,7 @@ const OrthopedicsServicesContainer = () => {
 			{/* <OurWorks /> */}
 			<Diagnostics />
 			<Favorites favorites={favorites} />
-			<EmployeesSlider sliderHeaderText="Врачи по направлению" />
+			<EmployeesSlider sliderHeaderText="Врачи по направлению" serviceId={currentServiceId} />
 			<PricesForOrthopedics />
 			<SignUp />
 		</div>
