@@ -20,14 +20,14 @@
       padding-bottom: 20px;
     }
 
-    .inputWrapper{
+    .inputWrapper {
       position: relative;
       display: flex;
       align-items: center;
       width: 100%;
 
 
-      &::before{
+      &::before {
         position: absolute;
         left: 12px;
         content: url("@assets/img/doctors/search.svg");
@@ -36,7 +36,8 @@
         opacity: 0.7;
       }
     }
-    .input{
+
+    .input {
       padding-top: 12px;
       padding-bottom: 14px;
       padding-left: 52px;
@@ -121,7 +122,9 @@
                 color: colors.$mainColor;
                 row-gap: 20px;
                 width: 70%;
+                margin-bottom: 0;
               }
+
 
               .cost {
                 font-size: 24px;
@@ -149,14 +152,14 @@
       padding-bottom: 20px;
     }
 
-    .inputWrapper{
+    .inputWrapper {
       position: relative;
       display: flex;
       align-items: center;
       width: 100%;
 
 
-      &::before{
+      &::before {
         position: absolute;
         left: 12px;
         content: url("@assets/img/doctors/search.svg");
@@ -165,7 +168,8 @@
         opacity: 0.7;
       }
     }
-    .input{
+
+    .input {
       padding-top: 12px;
       padding-bottom: 14px;
       padding-left: 52px;
@@ -243,14 +247,14 @@
       padding-bottom: 20px;
     }
 
-    .inputWrapper{
+    .inputWrapper {
       position: relative;
       display: flex;
       align-items: center;
       width: 100%;
 
 
-      &::before{
+      &::before {
         position: absolute;
         left: 12px;
         content: url("@assets/img/doctors/search.svg");
@@ -259,7 +263,8 @@
         opacity: 0.7;
       }
     }
-    .input{
+
+    .input {
       padding-top: 12px;
       padding-bottom: 14px;
       padding-left: 52px;
@@ -347,14 +352,14 @@
         padding-bottom: 12px;
       }
 
-      .inputWrapper{
+      .inputWrapper {
         position: relative;
         display: flex;
         align-items: center;
         width: 100%;
 
 
-        &::before{
+        &::before {
           position: absolute;
           left: 12px;
           content: url("@assets/img/doctors/search.svg");
@@ -363,7 +368,8 @@
           opacity: 0.7;
         }
       }
-      .input{
+
+      .input {
         padding-top: 12px;
         padding-bottom: 14px;
         padding-left: 52px;

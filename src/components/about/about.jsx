@@ -16,7 +16,7 @@ export default function About() {
 			<div className="container d-flex flex-column">
 				<div className={cn([cl.aboutHeaderWrap, 'd-flex', 'flex-column', 'flex-lg-row', 'align-items-start'])}>
 					<div className="flex-grow-1">
-						<h2 className={cn([cl.aboutHeader, 'mb-0'])}>AB Clinic семейная стоматология в Уфе</h2>
+						<h1 className={cn([cl.aboutHeader, 'mb-0'])}>AB Clinic семейная стоматология в Уфе</h1>
 					</div>
 					<div className={cl.aboutDescription}>
 						<p className="mb-0">
@@ -26,7 +26,7 @@ export default function About() {
 						</p>
 					</div>
 				</div>
-				<Swiper slidesPerView={'auto'} spaceBetween={20} allowTouchMove={true} loop={false} className={cl.slider}>
+				<Swiper slidesPerView="auto" spaceBetween={20} allowTouchMove loop={false} className={cl.slider}>
 					<SwiperSlide className={cl.aboutSlide}>
 						<img src={one} alt="" />
 					</SwiperSlide>

@@ -51,7 +51,7 @@ const ChildServicesCard = ({ title }) => {
 
 	return (
 		<div className={cl.wrapper}>
-			{title && <h2 className={cl.title}>{title}</h2>}
+			{title && <h1 className={cl.title}>{title}</h1>}
 			<div className="services-tabsContent d-grid">
 				{cardInfoList.map(({ id, title, information, type, href, imgSrc }) =>
 					imgSrc ? (

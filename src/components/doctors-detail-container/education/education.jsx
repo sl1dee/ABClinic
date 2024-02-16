@@ -1,4 +1,3 @@
-import cn from 'classnames'
 import React from 'react'
 
 import cl from './education.module.scss'
@@ -10,12 +9,12 @@ const Education = (props) => {
 	return (
 		<div className={cl.eduactionContainer}>
 			<div className="container">
-				<div className={cl.title}>Образование</div>
+				<h1 className={cl.title}>Образование</h1>
 				<div className={cl.block}>
 					<ul className={cl.blockPoints}>
-						{props.education.map(education => <li className={cl.point}>
-							{education}
-						</li>)}
+						{props.education.map((education) => (
+							<li className={cl.point}>{education}</li>
+						))}
 					</ul>
 				</div>
 			</div>

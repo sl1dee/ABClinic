@@ -1,0 +1,80 @@
+@use '@assets/styles/vars/colors';
+
+.cookie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8px 20px 8px;
+  width: 390px;
+  height: 78px;
+  background-color: colors.$additionalColor;
+  z-index: 150;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  box-shadow: 0 0 18px -2px #00000044;
+  transition: .3s ease;
+
+  :active {
+    display: none;
+  }
+
+  &Text {
+    font-size: 16px;
+    color: #000000;
+  }
+
+  &Button {
+    font-size: 22px;
+    font-weight: 700;
+    border: 4px solid colors.$mainColor;
+    color: colors.$mainColor;
+    background-color: transparent;
+    padding: 0 15px;
+
+    :hover {
+      background-color: colors.$mainColor;
+      color: colors.$additionalColor;
+    }
+
+  }
+}
+
+@media (max-width: 992px) {
+  .cookie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 20px 0;
+    width: 100%;
+    height: 100%;
+    background-color: colors.$additionalColor;
+    z-index: 150;
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    box-shadow: 0 0 18px -2px #00000044;
+    transition: .3s ease;
+
+    &Text {
+      font-size: 16px;
+      color: #000000;
+    }
+
+    &Button {
+      font-size: 16px;
+      font-weight: 700;
+      border: 4px solid colors.$mainColor;
+      color: colors.$mainColor;
+      background-color: transparent;
+      padding: 3px 15px;
+
+      :hover {
+        background-color: colors.$mainColor;
+        color: colors.$additionalColor;
+      }
+
+    }
+  }
+}
