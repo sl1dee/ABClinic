@@ -64,7 +64,7 @@ export default function MainSlider() {
                         <div className="d-flex flex-column flex-md-row">
                             <div className={cn([cl.text, 'd-flex', 'flex-column', 'justify-content-between'])}>
                                 <div className={cn([cl.textContent, 'd-flex', 'flex-column'])}>
-                                    <h2 className="mb-0">Предупреждение лучше лечения: заботимся об улыбках заранее</h2>
+                                    <h1 className="mb-0">Предупреждение лучше лечения: заботимся об улыбках заранее</h1>
                                     <p className="mb-0">
                                         Современная стоматология в Уфе для взрослых и детей. Запишитесь на первый прием
                                         и получите план лечения.

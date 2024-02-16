@@ -53,7 +53,7 @@ const Stock = () => {
 						{/* <div className={stockImg} /> */}
 						<img src={img} alt="" className={cl.stockImg} />
 						<div className={cn([cl.stockBlock, 'd-flex', 'flex-column'])}>
-							<h3 className={cl.stockTitle}>{title}</h3>
+							<h1 className={cl.stockTitle}>{title}</h1>
 							<div className={cl.stockText}>{text}</div>
 							<div className="d-flex btnWrap">
 								<Button onClick={openModalHandler} className={cl.btn}>

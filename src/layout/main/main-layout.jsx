@@ -18,6 +18,7 @@ const MainLayout = ({ children }) => {
 			<Header />
 			{children}
 			<Footer />
+			{/* <Cookie /> */}
 			{burgerIsOpen && <Sidebar />}
 			{signUpIsOpen && <SignUpModal />}
 		</>

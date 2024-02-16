@@ -21,7 +21,7 @@ const HeroScreen = ({ title, text, img }) => {
 				<div className={cn([cl.detailInformation, 'd-flex', 'flex-column', 'flex-md-row'])}>
 					<div className={cn([cl.detailInformationBlock, 'd-flex', 'flex-column'])}>
 						<div className={cl.wrapper}>
-							<div className={cl.detailInformationBlockName}>{title}</div>
+							<h1 className={cl.detailInformationBlockName}>{title}</h1>
 							<div className="d-flex">
 								<div className={cl.detailInformationBlockInformation}>{text}</div>
 							</div>
