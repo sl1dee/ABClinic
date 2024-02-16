@@ -26,11 +26,15 @@ const EmployeesSliderCard = ({ img, name, qualification, information }) => {
 						<p className={cn([cl.infoTextPosition, 'mb-0'])}>{qualName}</p>
 					))}
 				</div>
-				<div className={cl.infoBadge}>
-					{information.map(({ name: infoName }) => (
-						<p className="mb-0">{infoName}</p>
-					))}
-				</div>
+				{information && information.length > 0 && (
+					<div className={cl.infoBadge}>
+						{information.map(({ name: infoName }) => (
+							<p className="mb-0" key={infoName}>
+								{infoName}
+							</p>
+						))}
+					</div>
+				)}
 				<Button
 					onClick={openModalHandler}
 					className={cn([cl.btn, 'd-block', 'd-xs-block', 'd-sm-block', 'd-md-block', 'd-lg-none'])}
