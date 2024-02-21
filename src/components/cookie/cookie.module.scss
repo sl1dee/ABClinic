@@ -8,7 +8,7 @@
   padding: 20px 0;
   background-color: colors.$additionalColor;
   z-index: 150;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   right: 0;
   width: 100%;
@@ -93,11 +93,12 @@
 @media (max-width: 768px) {
   .cookie {
     //padding: 20px 0;
+    position: sticky;
 
     &Policy {
-      font-size: 12px;
+      font-size: 10px;
       color: #000000;
-      width: 80%;
+      width: 100%;
     }
 
     &Button {

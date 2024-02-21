@@ -42,28 +42,27 @@ const Cookie = () => {
 
 	if (!accept) {
 		return (
-			// <div className={`${accept === true ? ' d-none' : ''}`}>
 			<div className={cn([cl.cookie])}>
-				{/* <div className={cn([cl.cookie, `${accept === true ? ' d-none' : ''}`])}> */}
-				{/* <div className={`${cl.cookie}${accept === true ? ' d-none' : ''}`}> */}
-				<div className="container d-flex justify-content-between align-items-center">
+				<div className="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
 					{/* <span className={cl.cookieText}>Мы используем cookies</span> */}
-					<span className={cl.cookiePolicy}>
+					<div className={cl.cookiePolicy}>
 						На сайте компании ООО "Стоматологический центр Бегловой" используется куки сетевых служб Яндекс и Google.
 						Продолжая просмотр сайта Вы выражаете своё согласие с{' '}
 						<Link to="/privacy-policy">
 							<span>Политикой безопасности хранения и обработки персональных данных</span>
 						</Link>{' '}
 						компании ООО "Стоматологический центр Бегловой", разработанной в соответствии с требованиями 152-ФЗ РФ.
-					</span>
-					<Button
-						// sizeStyle="SizeS"
-						colorStyle="outlined"
-						className={cl.cookieButton}
-						onClick={() => setCookie('cookies', 'true', { expires: new Date(2070, 1, 20) })}
-					>
-						Хорошо
-					</Button>
+					</div>
+					<div>
+						<Button
+							// sizeStyle="SizeS"
+							colorStyle="outlined"
+							className={cl.cookieButton}
+							onClick={() => setCookie('cookies', 'true', { expires: new Date(2070, 1, 20) })}
+						>
+							Хорошо
+						</Button>
+					</div>
 				</div>
 			</div>
 			// </div>
