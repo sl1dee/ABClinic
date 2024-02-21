@@ -4,33 +4,37 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 8px 20px 8px;
-  width: 390px;
-  height: 78px;
+  align-self: center;
+  padding: 20px 0;
   background-color: colors.$additionalColor;
   z-index: 150;
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 0;
+  right: 0;
+  width: 100%;
   box-shadow: 0 0 18px -2px #00000044;
   transition: .3s ease;
-
-  :active {
-    display: none;
-  }
+  margin: 0;
 
   &Text {
     font-size: 16px;
     color: #000000;
   }
 
+  &Policy {
+    font-size: 16px;
+    color: #000000;
+    width: 85%;
+  }
+
   &Button {
-    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
     font-weight: 700;
-    border: 4px solid colors.$mainColor;
     color: colors.$mainColor;
     background-color: transparent;
-    padding: 0 15px;
+    padding: 7px 20px;
 
     :hover {
       background-color: colors.$mainColor;
@@ -40,14 +44,16 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .cookie {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0 20px 0;
+    padding: 20px 0;
     width: 100%;
-    height: 100%;
+    gap: 20px;
+    //height: 60px;
+    //height: 100%;
     background-color: colors.$additionalColor;
     z-index: 150;
     position: sticky;
@@ -58,17 +64,48 @@
     transition: .3s ease;
 
     &Text {
-      font-size: 16px;
+      font-size: 14px;
       color: #000000;
     }
 
+    &Policy {
+      font-size: 14px;
+      color: #000000;
+      width: 85%;
+    }
+
     &Button {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 700;
-      border: 4px solid colors.$mainColor;
       color: colors.$mainColor;
       background-color: transparent;
-      padding: 3px 15px;
+      padding: 5px 15px;
+
+      :hover {
+        background-color: colors.$mainColor;
+        color: colors.$additionalColor;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cookie {
+    //padding: 20px 0;
+
+    &Policy {
+      font-size: 12px;
+      color: #000000;
+      width: 80%;
+    }
+
+    &Button {
+      font-size: 14px;
+      font-weight: 700;
+      color: colors.$mainColor;
+      background-color: transparent;
+      padding: 5px 15px;
 
       :hover {
         background-color: colors.$mainColor;

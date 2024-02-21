@@ -3,6 +3,7 @@ import { burgerIsOpenSelector, signUpIsOpenSelector } from '@store/selectors/mod
 import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 
+import Cookie from '@components/cookie/cookie'
 import Footer from '@components/footer'
 import Header from '@components/header'
 import Sidebar from '@components/header/sidebar'
@@ -18,7 +19,7 @@ const MainLayout = ({ children }) => {
 			<Header />
 			{children}
 			<Footer />
-			{/* <Cookie /> */}
+			<Cookie />
 			{burgerIsOpen && <Sidebar />}
 			{signUpIsOpen && <SignUpModal />}
 		</>
