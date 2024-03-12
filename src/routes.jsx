@@ -1,6 +1,5 @@
 import AdultReferralPage from '@pages/adult-referral-page'
 import ArticlePage from '@pages/article-page'
-import BlogPage from '@pages/blog-page'
 import ChildrenReferralPage from '@pages/children-referral-page'
 import ContactsPage from '@pages/contacts-page'
 import DoctorsDetailPage from '@pages/doctors-detail-page'

@@ -1,12 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import About from '@components/about'
-import Articles from '@components/articles'
 import EmployeesSlider from '@components/employees-slider'
 import Favorites from '@components/favorites/index.js'
 import MainSlider from '@components/main-slider'
-import OurWorks from '@components/our-works'
-import ReviewsSlider from '@components/reviews-slider'
 import Services from '@components/services'
 import YandexMap from '@components/yandex-map'
 
@@ -43,6 +40,25 @@ const MainPage = () => {
 		image1: '/media/favorites/two.jpg',
 		image2: '/media/favorites/one.jpg'
 	}
+
+	useEffect(() => {
+		document.title = 'AB Clinic | Доказательная стоматологическая клиника'
+		document
+			.querySelector('meta[property="og:title"]')
+			.setAttribute('content', 'AB Clinic | Доказательная стоматологическая клиника')
+		document
+			.querySelector('meta[name="description"]')
+			.setAttribute(
+				'content',
+				'Доказательная стомотологическая клиника AB Clinic оказывает услуги по лечению зубов в Уфе. Опытные специалисты найдут индивидуальный подход к каждому'
+			)
+		document
+			.querySelector('meta[property="og:description"]')
+			.setAttribute(
+				'content',
+				'Доказательная стомотологическая клиника AB Clinic оказывает услуги по лечению зубов в Уфе. Опытные специалисты найдут индивидуальный подход к каждому'
+			)
+	}, [])
 
 	return (
 		<MainLayout>
