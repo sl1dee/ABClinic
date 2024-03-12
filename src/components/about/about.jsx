@@ -1,3 +1,4 @@
+import five from '@media/about/five.jpg'
 import four from '@media/about/four.jpg'
 import one from '@media/about/one.jpg'
 import three from '@media/about/three.jpg'
@@ -38,6 +39,9 @@ export default function About() {
 					</SwiperSlide>
 					<SwiperSlide className={cl.aboutSlide}>
 						<img src={four} alt="" />
+					</SwiperSlide>
+					<SwiperSlide className={cl.aboutSlide}>
+						<img src={five} alt="" />
 					</SwiperSlide>
 				</Swiper>
 			</div>
