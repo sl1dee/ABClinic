@@ -8,7 +8,6 @@ a {
 }
 
 
-
 $mainColor: #484D72;
 $mainTextColor: #16171B;
 
@@ -56,7 +55,7 @@ $whiteColor: #fff;
       transition: opacity .3s ease, color .3s ease;
       position: relative;
       cursor: pointer;
-      text-wrap: none ;
+      text-wrap: none;
 
       &::after {
         height: 3px;
@@ -209,7 +208,7 @@ $whiteColor: #fff;
       border-radius: 30px;
       background-color: $whiteColor;
       row-gap: 40px;
-      text-wrap: none ;
+      text-wrap: none;
 
 
       .text {
@@ -304,7 +303,6 @@ $whiteColor: #fff;
 }
 
 
-
 @media (min-width: 992px) and (max-width: 1200px) {
   .container {
     max-width: none;
@@ -378,7 +376,7 @@ $whiteColor: #fff;
         padding: 30px;
         column-gap: 30px;
         grid-column: span 2;
-        text-wrap: none ;
+        text-wrap: none;
 
 
         .text {
@@ -428,7 +426,7 @@ $whiteColor: #fff;
       &-el {
         font-size: 28px;
         letter-spacing: -0.56px;
-        text-wrap: none ;
+        text-wrap: none;
 
 
         &::after {
@@ -514,7 +512,7 @@ $whiteColor: #fff;
       &-el {
         font-size: 20px;
         letter-spacing: -0.4px;
-        text-wrap: nowrap ;
+        text-wrap: nowrap;
 
 
         &::after {
@@ -523,10 +521,11 @@ $whiteColor: #fff;
         }
       }
 
-        //&-tabs::-webkit-scrollbar {
-        //  background: transparent;
-        //}
+      //&-tabs::-webkit-scrollbar {
+      //  background: transparent;
+      //}
     }
+
     &-tabs::-webkit-scrollbar {
       background: transparent;
     }

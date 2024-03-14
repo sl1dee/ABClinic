@@ -103,6 +103,11 @@ const Footer = () => {
 								<p className="mb-0">Контакты</p>
 							</Link>
 						</div>
+						<div>
+							<Link to="/blog">
+								<p className="mb-0">Блог</p>
+							</Link>
+						</div>
 						{/* <div className="d-block d-lg-none"> */}
 						{/*	<Link to="/"> */}
 						{/*		<p className="mb-0">Отзывы</p> */}
@@ -128,6 +133,11 @@ const Footer = () => {
 						<div>
 							<Link to="/contacts">
 								<p className="mb-0">Контакты</p>
+							</Link>
+						</div>
+						<div>
+							<Link to="/blog">
+								<p className="mb-0">Блог</p>
 							</Link>
 						</div>
 						{/* <div> */}
@@ -159,7 +169,7 @@ const Footer = () => {
 					<div>
 						<a href="https://ambity.ru" target="_blank" rel="noreferrer">
 							<div>
-								<p className={cn([cl.footerBottomLink, 'mb-0'])}>Дизайн и разработка сайта: Амбити</p>
+								<p className={cn([cl.footerBottomLink, 'mb-0'])}>Дизайн и разработка сайта - Амбити</p>
 							</div>
 						</a>
 					</div>

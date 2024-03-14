@@ -1,3 +1,9 @@
+import adultTeeth from '@media/blog/adultTeeth.jpg'
+import aligners from '@media/blog/aligners.jpg'
+import babyTeeth from '@media/blog/babyTeeth.jpg'
+import dentalExamination from '@media/blog/dentalExamination.jpg'
+import teethСleaning from '@media/blog/teethСleaning.jpg'
+import toothbrushes from '@media/blog/toothbrushes.jpg'
 import cn from 'classnames'
 import React, { useMemo } from 'react'
 import { Link } from 'react-router-dom'
@@ -8,77 +14,77 @@ const Blog = () => {
 	const blogList = useMemo(
 		() => [
 			{
-				id: 0,
-				img: '/media/blog/aligners.jpg',
+				id: 1,
+				img: aligners,
 				date: '11.11.23',
 				title: 'Элайнеры – исправление прикуса без брекетов',
 				information: 'Взрослым',
 				href: '/article'
 			},
 			{
-				id: 1,
-				img: '/media/blog/toothbrushes.jpg',
+				id: 2,
+				img: toothbrushes,
 				date: '11.11.23',
 				title: 'Как выбрать зубную щётку и пасту?',
 				information: 'Взрослым',
 				href: '/article'
 			},
 			{
-				id: 2,
-				img: '/media/blog/adultTeeth.jpg',
+				id: 3,
+				img: adultTeeth,
 				date: '11.11.23',
 				title: 'Пародонтит: профилактика и лечение',
 				information: 'Взрослым',
 				href: '/article'
 			},
 			{
-				id: 3,
-				img: '/media/blog/teethСleaning.jpg',
+				id: 4,
+				img: teethСleaning,
 				date: '11.11.23',
 				title: 'Как научить ребёнка чистить зубы?',
-				information: 'Детям',
-				href: '/article'
-			},
-			{
-				id: 4,
-				img: '/media/blog/babyTeeth.jpg',
-				date: '11.11.23',
-				title: 'Как ухаживать за молочными зубами?',
 				information: 'Детям',
 				href: '/article'
 			},
 			{
 				id: 5,
-				img: '/media/blog/dentalExamination.jpg',
-				date: '11.11.23',
-				title: 'Как подготовить ребёнка к посещению стоматолога?',
-				information: 'Детям',
-				href: '/article'
-			},
-			{
-				id: 6,
-				img: '/media/blog/teethСleaning.jpg',
-				date: '11.11.23',
-				title: 'Как научить ребёнка чистить зубы?',
-				information: 'Детям',
-				href: '/article'
-			},
-			{
-				id: 7,
-				img: '/media/blog/babyTeeth.jpg',
+				img: babyTeeth,
 				date: '11.11.23',
 				title: 'Как ухаживать за молочными зубами?',
 				information: 'Детям',
 				href: '/article'
 			},
 			{
-				id: 8,
-				img: '/media/blog/dentalExamination.jpg',
+				id: 6,
+				img: dentalExamination,
 				date: '11.11.23',
 				title: 'Как подготовить ребёнка к посещению стоматолога?',
 				information: 'Детям',
 				href: '/article'
 			}
+			// {
+			// 	id: 7,
+			// 	img: '/media/blog/teethСleaning.jpg',
+			// 	date: '11.11.23',
+			// 	title: 'Как научить ребёнка чистить зубы?',
+			// 	information: 'Детям',
+			// 	href: '/article'
+			// },
+			// {
+			// 	id: 8,
+			// 	img: '/media/blog/babyTeeth.jpg',
+			// 	date: '11.11.23',
+			// 	title: 'Как ухаживать за молочными зубами?',
+			// 	information: 'Детям',
+			// 	href: '/article'
+			// },
+			// {
+			// 	id: 9,
+			// 	img: '/media/blog/dentalExamination.jpg',
+			// 	date: '11.11.23',
+			// 	title: 'Как подготовить ребёнка к посещению стоматолога?',
+			// 	information: 'Детям',
+			// 	href: '/article'
+			// }
 		],
 		[]
 	)
