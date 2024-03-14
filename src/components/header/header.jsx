@@ -108,34 +108,39 @@ const Header = () => {
 							</div>
 						</div>
 					</div>
-					<div className={cn([cl.link, 'd-none', 'd-xxl-flex', 'align-items-center'])}>
-						<span className="mb-0">О клинике</span>
-						<img src={arrDown} alt="" />
-						<div className={cn([cl.linkMenu, 'd-flex', 'flex-column'])}>
-							<div className={cn([cl.content, 'd-flex', 'flex-column'])}>
-								<div className={cl.contentBigLink}>
-									<span>О клинике</span>
-								</div>
-								<div className={cn([cl.contentAdditionalLinks, 'd-flex', 'flex-column'])}>
-									<div>
-										<Link to="/contacts">
-											<span>Контакты</span>
-										</Link>
-									</div>
-									{/* <div> */}
-									{/*	<Link to="/stock"> */}
-									{/*		<span>Акции</span> */}
-									{/*	</Link> */}
-									{/* </div> */}
-									{/* <div> */}
-									{/*	<Link to="/blog"> */}
-									{/*		<span>Блог</span> */}
-									{/*	</Link> */}
-									{/* </div> */}
-								</div>
-							</div>
-						</div>
+					<div className={cn([cl.link, 'd-flex', 'align-items-center'])}>
+						<Link to="/contacts">
+							<span className="mb-0">Контакты</span>
+						</Link>
 					</div>
+					{/* <div className={cn([cl.link, 'd-none', 'd-xxl-flex', 'align-items-center'])}> */}
+					{/*	<span className="mb-0">О клинике</span> */}
+					{/*	<img src={arrDown} alt="" /> */}
+					{/*	<div className={cn([cl.linkMenu, 'd-flex', 'flex-column'])}> */}
+					{/*		<div className={cn([cl.content, 'd-flex', 'flex-column'])}> */}
+					{/*			<div className={cl.contentBigLink}> */}
+					{/*				<span>О клинике</span> */}
+					{/*			</div> */}
+					{/*			<div className={cn([cl.contentAdditionalLinks, 'd-flex', 'flex-column'])}> */}
+					{/*				<div> */}
+					{/*					<Link to="/contacts"> */}
+					{/*						<span>Контакты</span> */}
+					{/*					</Link> */}
+					{/*				</div> */}
+					{/*				/!* <div> *!/ */}
+					{/*				/!*	<Link to="/stock"> *!/ */}
+					{/*				/!*		<span>Акции</span> *!/ */}
+					{/*				/!*	</Link> *!/ */}
+					{/*				/!* </div> *!/ */}
+					{/*				/!* <div> *!/ */}
+					{/*				/!*	<Link to="/blog"> *!/ */}
+					{/*				/!*		<span>Блог</span> *!/ */}
+					{/*				/!*	</Link> *!/ */}
+					{/*				/!* </div> *!/ */}
+					{/*			</div> */}
+					{/*		</div> */}
+					{/*	</div> */}
+					{/* </div> */}
 				</div>
 				<div className={cn([cl.headerAdditional, 'd-flex', 'align-items-center'])}>
 					<div className={cn([cl.contacts, 'd-flex', 'align-items-center'])}>
