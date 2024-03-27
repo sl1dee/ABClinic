@@ -2,7 +2,7 @@ import adultTeeth from '@media/blog/adultTeeth.jpg'
 import aligners from '@media/blog/aligners.jpg'
 import babyTeeth from '@media/blog/babyTeeth.jpg'
 import dentalExamination from '@media/blog/dentalExamination.jpg'
-import teethСleaning from '@media/blog/teethСleaning.jpg'
+import teethCleaning from '@media/blog/teethСleaning.jpg'
 import toothbrushes from '@media/blog/toothbrushes.jpg'
 import cn from 'classnames'
 import React, { useMemo } from 'react'
@@ -39,7 +39,7 @@ const Blog = () => {
 			},
 			{
 				id: 4,
-				img: teethСleaning,
+				img: teethCleaning,
 				date: '11.11.23',
 				title: 'Как научить ребёнка чистить зубы?',
 				information: 'Детям',
