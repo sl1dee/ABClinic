@@ -17,7 +17,7 @@ export default function About() {
 			<div className="container d-flex flex-column">
 				<div className={cn([cl.aboutHeaderWrap, 'd-flex', 'flex-column', 'flex-lg-row', 'align-items-start'])}>
 					<div className="flex-grow-1">
-						<h1 className={cn([cl.aboutHeader, 'mb-0'])}>AB Clinic семейная стоматология в Уфе</h1>
+						<h2 className={cn([cl.aboutHeader, 'mb-0'])}>AB Clinic семейная стоматология в Уфе</h2>
 					</div>
 					<div className={cl.aboutDescription}>
 						<p className="mb-0">

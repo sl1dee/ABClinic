@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import React, { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -61,7 +62,7 @@ const ChildServicesCard = ({ title }) => {
 					) : (
 						<Link key={id} className={cl.card} to={href}>
 							<div className={cl.cardTextWrapper}>
-								<div className={cl.cardTitle}>{title}</div>
+								<h3 className={cn([cl.cardTitle, 'mb-0'])}>{title}</h3>
 								<div className={cl.cardInformation}>{information}</div>
 							</div>
 							<div className={cl.cardType}>{type}</div>

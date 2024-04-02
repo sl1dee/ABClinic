@@ -6,7 +6,7 @@ export default function Favorites(props) {
         <section className='favorites'>
             <div className='container d-flex flex-column'>
                 <div>
-                    <h1 className='mb-0 favorites-header'>{props.favorites.header}</h1>
+                    <h2 className='mb-0 favorites-header'>{props.favorites.header}</h2>
                 </div>
                 <div className='favorites-content'>
                     {
@@ -15,7 +15,7 @@ export default function Favorites(props) {
                                 className={`favorites-content-el d-flex flex-column flex-md-row-reverse flex-lg-column justify-content-between justify-content-md-end justify-content-lg-between${item?.dark ? ' dark' : ''}`}
                                 key={i}>
                                 <div className='text d-flex flex-column'>
-                                    <h1 className='text-header mb-0'>{item.header}</h1>
+                                    <h3 className='text-header mb-0'>{item.header}</h3>
                                     <p className='text-description mb-0'>{item.description}</p>
                                 </div>
                                 <div className='photo'>

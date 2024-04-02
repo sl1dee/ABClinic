@@ -75,7 +75,7 @@ const SignUp = () => {
                             <>
                                 <div className={cn([cl.signUpText, 'mb-0'])}>Жду вас у себя на приёме!</div>
                                 {/* <div className={cn([cl.text, 'd-flex', 'flex-column'])}> */}
-                                <h1 className={cn([cl.signUpTitle, 'mb-0'])}>Записаться на приём</h1>
+                                <h2 className={cn([cl.signUpTitle, 'mb-0'])}>Записаться на приём</h2>
 
                                 {/* </div> */}
 

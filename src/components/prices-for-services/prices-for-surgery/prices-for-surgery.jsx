@@ -39,7 +39,7 @@ const PricesForSurgery = () => {
     return (
         <div className={cl.prices}>
             <div className="container">
-                <h1 className={cn([cl.pricesTitle, 'd-flex', 'mb-0'])}>Услуги по лечению зубов</h1>
+                <h2 className={cn([cl.pricesTitle, 'd-flex', 'mb-0'])}>Услуги по лечению зубов</h2>
                 <div className={cl.pricesContent}>
                     <Filters filters={filters} selectedFilters={selectedFilters} onChange={setSelectedFilters}/>
 
@@ -57,11 +57,11 @@ const PricesForSurgery = () => {
                             <div className={cl.blocks}>
                                 {pricesList.map(({title, id, item}) => (
                                     <div key={id} className={cl.block}>
-                                        <h1 className={cn([cl.title, 'd-flex', 'mb-0'])}>{title}</h1>
+                                        <h3 className={cn([cl.title, 'd-flex', 'mb-0'])}>{title}</h3>
                                         <div className={cn([cl.informationLines, 'd-flex', 'flex-column'])}>
                                             {item.map(({service, cost}) => (
                                                 <div className={cn([cl.information, 'd-flex'])}>
-                                                    <h1 className={cl.service}>{service}</h1>
+                                                    <div className={cl.service}>{service}</div>
                                                     <span className={cl.cost}>{cost}</span>
                                                 </div>
                                             ))}

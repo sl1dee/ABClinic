@@ -31,7 +31,7 @@ const Diagnostics = () => {
 			<div className="container">
 				<div className={cn([cl.diagnosticsBlock, 'd-flex', 'flex-column'])}>
 					<div className={cn([cl.diagnosticsInformation, 'd-flex', 'flex-column', 'flex-xl-row'])}>
-						<h1 className={cl.diagnosticsTitle}>Диагностика</h1>
+						<h2 className={cl.diagnosticsTitle}>Диагностика</h2>
 						<div className={cl.diagnosticsText}>
 							Возможно, вам потребуются следующие процедуры, которые мы можем провести в нашей клинике, перед началом
 							основного лечения.
@@ -39,10 +39,10 @@ const Diagnostics = () => {
 					</div>
 					<div className={cn([cl.diagnosticsTable, 'd-grid'])}>
 						{diagnosticsList.map(({ id, text }) => (
-							<div key={id} className={cn([cl.tableContent, 'mb-0', 'd-flex'])}>
+							<h3 key={id} className={cn([cl.tableContent, 'mb-0', 'd-flex'])}>
 								<div className={cl.tablePoint} />
 								{text}
-							</div>
+							</h3>
 						))}
 					</div>
 				</div>

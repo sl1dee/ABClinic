@@ -32,7 +32,7 @@ export default function EmployeesSlider({sliderHeaderText, serviceId, isViewAll}
             <div className="container d-flex flex-column">
                 <div className="d-flex align-items-center">
                     <div className="flex-grow-1">
-                        <h1 className={cn([cl.employeesSliderHeader, 'mb-0'])}>{sliderHeaderText}</h1>
+                        <h2 className={cn([cl.employeesSliderHeader, 'mb-0'])}>{sliderHeaderText}</h2>
                     </div>
                     <div className={cn([cl.arrows, 'd-none', 'd-md-flex', 'align-items-center'])}>
                         <div onClick={prevSwipeHandler} className={cl.swiperButtonPrev}>

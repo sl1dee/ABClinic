@@ -1,6 +1,5 @@
 import { setSignUpIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
-import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
 
 import Button from '@ui/button/index.js'
@@ -21,7 +20,7 @@ const EmployeesSliderCard = ({ img, name, qualification, information }) => {
 			</div>
 			<div className={cn([cl.info, 'd-flex', 'flex-column', 'justify-content-between'])}>
 				<div className={cn([cl.infoText, 'd-flex', 'flex-column'])}>
-					<p className={cn([cl.infoTextName, 'mb-0'])}>{name}</p>
+					<h3 className={cn([cl.infoTextName, 'mb-0'])}>{name}</h3>
 					{qualification.map(({ name: qualName }) => (
 						<p className={cn([cl.infoTextPosition, 'mb-0'])}>{qualName}</p>
 					))}

@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import React, { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -51,7 +52,7 @@ const ServicesCard = ({ title }) => {
 
 	return (
 		<div className={cl.wrapper}>
-			{title && <h1 className={cl.title}>{title}</h1>}
+			{title && <h2 className={cl.title}>{title}</h2>}
 			<div className="services-tabsContent d-grid">
 				{cardInfoList.map(({ id, title, information, type, href, imgSrc }) =>
 					imgSrc ? (
@@ -61,7 +62,7 @@ const ServicesCard = ({ title }) => {
 					) : (
 						<Link key={id} className={cl.card} to={href}>
 							<div className={cl.cardTextWrapper}>
-								<div className={cl.cardTitle}>{title}</div>
+								<h3 className={cn([cl.cardTitle, 'mb-0'])}>{title}</h3>
 								<div className={cl.cardInformation}>{information}</div>
 							</div>
 							<div className={cl.cardType}>{type}</div>

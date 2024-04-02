@@ -5,6 +5,7 @@ import ChildrenReferralPage from '@pages/children-referral-page'
 import ContactsPage from '@pages/contacts-page'
 import DoctorsDetailPage from '@pages/doctors-detail-page'
 import DoctorsPage from '@pages/doctors-page'
+import Error404Page from '@pages/error-404-page/error-404-page.jsx'
 import OrthodonticsServicesPage from '@pages/orthodontics-services-page/index.js'
 import OrthopedicsServicesPage from '@pages/orthopedics-services-page/index.js'
 import PeriodonticsServicesPage from '@pages/periodontics-services-page/index.js'
@@ -77,6 +78,10 @@ const Routes = () => {
 		{
 			path: `/privacy-policy`,
 			element: <PrivacyPolicyPage />
+		},
+		{
+			path: `*`,
+			element: <Error404Page /> // страница 404
 		}
 	])
 
