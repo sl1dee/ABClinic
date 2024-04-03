@@ -115,7 +115,7 @@ export default function MainSlider() {
                         <div className="d-flex flex-column flex-md-row">
                             <div className={cn([cl.text, 'd-flex', 'flex-column', 'justify-content-between'])}>
                                 <div className={cn([cl.textContent, 'd-flex', 'flex-column'])}>
-                                    <h1 className="mb-0">Детская стоматология с заботой и профессионализмом</h1>
+                                    <h2 className="mb-0">Детская стоматология с заботой и профессионализмом</h2>
                                     <p className="mb-0">
                                         Наши стоматологи найдут подход к вашему ребёнку и сделают сеанс быстрым и
                                         безболезненным
@@ -166,7 +166,7 @@ export default function MainSlider() {
                         <div className="d-flex flex-column flex-md-row">
                             <div className={cn([cl.text, 'd-flex', 'flex-column', 'justify-content-between'])}>
                                 <div className={cn([cl.textContent, 'd-flex', 'flex-column'])}>
-                                    <h1 className="mb-0">Лечение зубов и десен в Уфе</h1>
+                                    <h2 className="mb-0">Лечение зубов и десен в Уфе</h2>
                                     <p className="mb-0">
                                         Современные методики лечения, доказательная медицина и новейшее
                                         стоматологическое оборудование
