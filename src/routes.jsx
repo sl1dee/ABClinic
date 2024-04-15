@@ -6,10 +6,12 @@ import ContactsPage from '@pages/contacts-page'
 import DoctorsDetailPage from '@pages/doctors-detail-page'
 import DoctorsPage from '@pages/doctors-page'
 import Error404Page from '@pages/error-404-page/error-404-page.jsx'
+import LoyaltyProgramPage from '@pages/loyalty-program-page/index.js'
 import OrthodonticsServicesPage from '@pages/orthodontics-services-page/index.js'
 import OrthopedicsServicesPage from '@pages/orthopedics-services-page/index.js'
 import PeriodonticsServicesPage from '@pages/periodontics-services-page/index.js'
 import PrivacyPolicyPage from '@pages/privacy-policy-page/index.js'
+import QualityDepartmentPage from '@pages/quality-department-page/index.js'
 import StockPage from '@pages/stock-page'
 import SurgeryServicesPage from '@pages/surgery-services-page/index.js'
 import TherapyServicesPage from '@pages/therapy-services-page/index.js'
@@ -78,6 +80,14 @@ const Routes = () => {
 		{
 			path: `/privacy-policy`,
 			element: <PrivacyPolicyPage />
+		},
+		{
+			path: `/loyalty-program`,
+			element: <LoyaltyProgramPage />
+		},
+		{
+			path: `/quality-department`,
+			element: <QualityDepartmentPage />
 		},
 		{
 			path: `*`,

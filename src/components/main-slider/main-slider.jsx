@@ -1,7 +1,8 @@
 import arrowLeft from '@assets/img/mainSlider/arrow-left.svg'
 import arrowRight from '@assets/img/mainSlider/arrow-right.svg'
 import union from '@assets/img/mainSlider/union.svg'
-import aliya from '@media/mainSlider/aliya.jpeg'
+import aliya from '@media/mainSlider/aliya.jpg'
+import hands from '@media/mainSlider/hands.jpg'
 import children from '@media/mainSlider/children.jpg'
 import procedure from '@media/mainSlider/procedure.jpg'
 import {setSignUpIsOpen} from '@store/modules/modals.js'
@@ -64,60 +65,8 @@ export default function MainSlider() {
                         <div className="d-flex flex-column flex-md-row">
                             <div className={cn([cl.text, 'd-flex', 'flex-column', 'justify-content-between'])}>
                                 <div className={cn([cl.textContent, 'd-flex', 'flex-column'])}>
-                                    <h1 className={cn([cl.textContentTitle, 'mb-0'])}>Предупреждение лучше лечения:
-                                        заботимся об улыбках заранее</h1>
-                                    <p className="mb-0">
-                                        Современная стоматология в Уфе для взрослых и детей. Запишитесь на первый прием
-                                        и получите план лечения.
-                                    </p>
-                                    <div className={cn([cl.btnWrapper, 'd-flex'])}>
-                                        <Button onClick={openModalHandler} colorStyle="primary"
-                                                className={cn([cl.btn, 'flex-md-grow-0'])}>
-                                            Записаться
-                                        </Button>
-                                    </div>
-                                </div>
-
-                                <div className={cn([cl.arrows, 'd-none', 'd-md-flex', 'align-items-center'])}>
-                                    <div onClick={prevSwipeHandler} className={cl.swiperButtonPrev}>
-                                        <img src={arrowLeft} alt=""/>
-                                    </div>
-                                    <span>
-										{activeSlide} / {slidesCount}
-									</span>
-                                    <div onClick={nextSwipeHandler} className={cl.swiperButtonNext}>
-                                        <img src={arrowRight} alt=""/>
-                                    </div>
-                                </div>
-
-                                <div className={cn([cl.bckgIcon, 'd-none', 'd-xxl-block'])}>
-                                    <img src={union} alt=""/>
-                                </div>
-                            </div>
-                            <div className={cl.photo}>
-                                <img src={aliya} alt=""/>
-                            </div>
-
-                            <div
-                                className={cn([cl.arrows, 'd-flex', 'd-md-none', 'align-items-center', 'justify-content-between'])}>
-                                <div onClick={prevSwipeHandler} className={cl.swiperButtonPrev}>
-                                    <img src={arrowLeft} alt=""/>
-                                </div>
-                                <span>
-									{activeSlide} / {slidesCount}
-								</span>
-                                <div onClick={nextSwipeHandler} className={cl.swiperButtonNext}>
-                                    <img src={arrowRight} alt=""/>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className={cl.mainSliderSlide}>
-                        <div className="d-flex flex-column flex-md-row">
-                            <div className={cn([cl.text, 'd-flex', 'flex-column', 'justify-content-between'])}>
-                                <div className={cn([cl.textContent, 'd-flex', 'flex-column'])}>
-                                    <h2 className={cn([cl.textContentTitle, 'mb-0'])}>Детская стоматология с заботой и
-                                        профессионализмом</h2>
+                                    <h1 className={cn([cl.textContentTitle, 'mb-0'])}>Детская стоматология с заботой и
+                                        профессионализмом</h1>
                                     <p className="mb-0">
                                         Наши стоматологи найдут подход к вашему ребёнку и сделают сеанс быстрым и
                                         безболезненным
@@ -215,57 +164,110 @@ export default function MainSlider() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    {/*    <SwiperSlide className={cl.mainSliderSlide}>*/}
-                    {/*        <div className="d-flex flex-column flex-md-row">*/}
-                    {/*            <div className={cn([cl.text, 'd-flex', 'flex-column', 'justify-content-between'])}>*/}
-                    {/*                <div className={cn([cl.textContent, 'd-flex', 'flex-column'])}>*/}
-                    {/*                    <h1 className="mb-0">Предупреждение лучше лечения: заботимся об улыбках заранее</h1>*/}
-                    {/*                    <p className="mb-0">*/}
-                    {/*                        Современная стоматология в Уфе для взрослых и детей. Запишитесь на бесплатную*/}
-                    {/*                        консультацию*/}
-                    {/*                    </p>*/}
-                    {/*                    <div className={cn([cl.btnWrapper, 'd-flex'])}>*/}
-                    {/*                        <Button onClick={openModalHandler} colorStyle="primary"*/}
-                    {/*                                className={cn([cl.btn, 'flex-md-grow-0'])}>*/}
-                    {/*                            Записаться*/}
-                    {/*                        </Button>*/}
-                    {/*                    </div>*/}
-                    {/*                </div>*/}
+                    <SwiperSlide className={cl.mainSliderSlide}>
+                        <div className="d-flex flex-column flex-md-row">
+                            <div className={cn([cl.text, 'd-flex', 'flex-column', 'justify-content-between'])}>
+                                <div className={cn([cl.textContent, 'd-flex', 'flex-column'])}>
+                                    <h2 className={cn([cl.textContentTitle, 'mb-0'])}>Запускаем программу
+                                        лояльности</h2>
+                                    <p className="mb-0">
+                                        Если вы прошли полное лечение по КТ и раз в 4 месяца проходили профессиональную
+                                        гигиену полости рта, то лечение кариеса выполним БЕСПЛАТНО
+                                    </p>
+                                    <div className={cn([cl.btnWrapper, 'd-flex'])}>
+                                        <Button onClick={openModalHandler} colorStyle="primary"
+                                                className={cn([cl.btn, 'flex-md-grow-0'])}>
+                                            Записаться
+                                        </Button>
+                                    </div>
+                                </div>
 
-                    {/*                <div className={cn([cl.arrows, 'd-none', 'd-md-flex', 'align-items-center'])}>*/}
-                    {/*                    <div onClick={prevSwipeHandler} className={cl.swiperButtonPrev}>*/}
-                    {/*                        <img src={arrowLeft} alt=""/>*/}
-                    {/*                    </div>*/}
-                    {/*                    <span>*/}
-                    {/*		{activeSlide} / {slidesCount}*/}
-                    {/*	</span>*/}
-                    {/*                    <div onClick={nextSwipeHandler} className={cl.swiperButtonNext}>*/}
-                    {/*                        <img src={arrowRight} alt=""/>*/}
-                    {/*                    </div>*/}
-                    {/*                </div>*/}
+                                <div className={cn([cl.arrows, 'd-none', 'd-md-flex', 'align-items-center'])}>
+                                    <div onClick={prevSwipeHandler} className={cl.swiperButtonPrev}>
+                                        <img src={arrowLeft} alt=""/>
+                                    </div>
+                                    <span>
+										{activeSlide} / {slidesCount}
+									</span>
+                                    <div onClick={nextSwipeHandler} className={cl.swiperButtonNext}>
+                                        <img src={arrowRight} alt=""/>
+                                    </div>
+                                </div>
 
-                    {/*                <div className={cn([cl.bckgIcon, 'd-none', 'd-xxl-block'])}>*/}
-                    {/*                    <img src={union} alt=""/>*/}
-                    {/*                </div>*/}
-                    {/*            </div>*/}
-                    {/*            <div className={cl.photo}>*/}
-                    {/*                <img src={aliya} alt=""/>*/}
-                    {/*            </div>*/}
+                                <div className={cn([cl.bckgIcon, 'd-none', 'd-xxl-block'])}>
+                                    <img src={union} alt=""/>
+                                </div>
+                            </div>
+                            <div className={cl.photo}>
+                                <img src={aliya} alt=""/>
+                            </div>
 
-                    {/*            <div*/}
-                    {/*                className={cn([cl.arrows, 'd-flex', 'd-md-none', 'align-items-center', 'justify-content-between'])}>*/}
-                    {/*                <div onClick={prevSwipeHandler} className={cl.swiperButtonPrev}>*/}
-                    {/*                    <img src={arrowLeft} alt=""/>*/}
-                    {/*                </div>*/}
-                    {/*                <span>*/}
-                    {/*	{activeSlide} / {slidesCount}*/}
-                    {/*</span>*/}
-                    {/*                <div onClick={nextSwipeHandler} className={cl.swiperButtonNext}>*/}
-                    {/*                    <img src={arrowRight} alt=""/>*/}
-                    {/*                </div>*/}
-                    {/*            </div>*/}
-                    {/*        </div>*/}
-                    {/*    </SwiperSlide>*/}
+                            <div
+                                className={cn([cl.arrows, 'd-flex', 'd-md-none', 'align-items-center', 'justify-content-between'])}>
+                                <div onClick={prevSwipeHandler} className={cl.swiperButtonPrev}>
+                                    <img src={arrowLeft} alt=""/>
+                                </div>
+                                <span>
+									{activeSlide} / {slidesCount}
+								</span>
+                                <div onClick={nextSwipeHandler} className={cl.swiperButtonNext}>
+                                    <img src={arrowRight} alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className={cl.mainSliderSlide}>
+                        <div className="d-flex flex-column flex-md-row">
+                            <div className={cn([cl.text, 'd-flex', 'flex-column', 'justify-content-between'])}>
+                                <div className={cn([cl.textContent, 'd-flex', 'flex-column'])}>
+                                    <h2 className={cn([cl.textContentTitle, 'mb-0'])}>Нам очень важно ваше мнение
+                                        :)</h2>
+                                    <p className="mb-0">
+                                        Отдел контроля качества для ваших вопросов, замечаний или мнений по улучшению
+                                        нашей клиники.
+                                    </p>
+                                    <div className={cn([cl.btnWrapper, 'd-flex'])}>
+                                        <Button onClick={openModalHandler} colorStyle="primary"
+                                                className={cn([cl.btn, 'flex-md-grow-0'])}>
+                                            Записаться
+                                        </Button>
+                                    </div>
+                                </div>
+
+                                <div className={cn([cl.arrows, 'd-none', 'd-md-flex', 'align-items-center'])}>
+                                    <div onClick={prevSwipeHandler} className={cl.swiperButtonPrev}>
+                                        <img src={arrowLeft} alt=""/>
+                                    </div>
+                                    <span>
+										{activeSlide} / {slidesCount}
+									</span>
+                                    <div onClick={nextSwipeHandler} className={cl.swiperButtonNext}>
+                                        <img src={arrowRight} alt=""/>
+                                    </div>
+                                </div>
+
+                                <div className={cn([cl.bckgIcon, 'd-none', 'd-xxl-block'])}>
+                                    <img src={union} alt=""/>
+                                </div>
+                            </div>
+                            <div className={cl.photo}>
+                                <img src={hands} alt=""/>
+                            </div>
+
+                            <div
+                                className={cn([cl.arrows, 'd-flex', 'd-md-none', 'align-items-center', 'justify-content-between'])}>
+                                <div onClick={prevSwipeHandler} className={cl.swiperButtonPrev}>
+                                    <img src={arrowLeft} alt=""/>
+                                </div>
+                                <span>
+									{activeSlide} / {slidesCount}
+								</span>
+                                <div onClick={nextSwipeHandler} className={cl.swiperButtonNext}>
+                                    <img src={arrowRight} alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                    </SwiperSlide>
                 </Swiper>
             </div>
         </section>

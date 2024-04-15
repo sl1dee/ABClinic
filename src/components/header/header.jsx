@@ -36,6 +36,16 @@ const Header = () => {
 	return (
 		<header className={`${cl.header} ${isScrolled ? cl.scrolled : ''}`}>
 			<div className="container d-flex align-items-center justify-content-between">
+				{/* <div> */}
+				{/*	<a id="specialButton" href="#"> */}
+				{/*		<img */}
+				{/*			src="https://lidrekon.ru/images/special.png" */}
+				{/*			id="glazd" */}
+				{/*			alt="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" */}
+				{/*			title="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" */}
+				{/*		/> */}
+				{/*	</a> */}
+				{/* </div> */}
 				<div className={cl.headerLogo}>
 					<Link to="/">
 						<img src={logo} alt="" />

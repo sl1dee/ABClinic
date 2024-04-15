@@ -1,0 +1,331 @@
+@use '@assets/styles/vars/colors';
+
+.howItWorks {
+  padding: 110px 0;
+
+  &Wrapper {
+
+    &Title {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 62.4px;
+      color: colors.$additionalTextColor;
+      letter-spacing: -2px;
+    }
+
+    &Group {
+      row-gap: 95px;
+      position: relative;
+
+      .block1 {
+        gap: 60px;
+
+        img {
+          max-width: 477px;
+          max-height: 318px;
+        }
+
+        .textGroup {
+          max-width: 535px;
+
+          &Title {
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 49.4px;
+            color: colors.$mainColor;
+          }
+
+          &Description {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 31.2px;
+            color: colors.$mainColor;
+          }
+        }
+      }
+
+      .block2 {
+
+        img {
+          max-width: 478px;
+          max-height: 393px;
+        }
+
+        .textGroup {
+          max-width: 535px;
+
+          &Title {
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 49.4px;
+            color: colors.$mainColor;
+          }
+
+          &Description {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 31.2px;
+            color: colors.$mainColor;
+          }
+        }
+      }
+
+      .block3 {
+        gap: 30px;
+
+        img {
+          max-width: 512px;
+          max-height: 439px;
+        }
+
+        .textGroup {
+          max-width: 595px;
+
+          &Title {
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 49.4px;
+            color: colors.$mainColor;
+          }
+
+          &Description {
+            font-size: 54px;
+            font-weight: 700;
+            line-height: 70.2px;
+            color: colors.$mainColor;
+          }
+        }
+      }
+
+      .road1 {
+        position: absolute;
+        top: 280px;
+        left: 300px;
+        max-width: 425.5px;
+        max-height: 136.01px;
+      }
+
+      .road2 {
+        position: absolute;
+        top: 830px;
+        left: 240px;
+        max-width: 618.57px;
+        max-height: 135.51px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .howItWorks {
+    padding: 85px 0 73px 0;
+
+    &Wrapper {
+
+      &Title {
+        font-size: 32px;
+        line-height: 41.6px;
+        letter-spacing: -1px;
+      }
+
+      &Group {
+        row-gap: 95px;
+        position: relative;
+
+        .block1 {
+          gap: 30px;
+
+          img {
+            max-width: 329px;
+            max-height: 219.96px;
+          }
+
+          .textGroup {
+            max-width: 363px;
+
+            &Title {
+              font-size: 28px;
+              line-height: 36.4px;
+            }
+
+            &Description {
+              font-size: 16px;
+              line-height: 20.8px;
+            }
+          }
+        }
+
+        .block2 {
+
+          img {
+            max-width: 329px;
+            max-height: 270.5px;
+          }
+
+          .textGroup {
+            max-width: 360px;
+
+            &Title {
+              font-size: 28px;
+              line-height: 36.4px;
+            }
+
+            &Description {
+              font-size: 16px;
+              line-height: 20.8px;
+            }
+          }
+        }
+
+        .block3 {
+          gap: 30px;
+
+          img {
+            max-width: 329px;
+            max-height: 282px;
+          }
+
+          .textGroup {
+            max-width: 369px;
+
+            &Title {
+              font-size: 28px;
+              line-height: 36.4px;
+            }
+
+            &Description {
+              font-size: 34px;
+              line-height: 44.2px;
+            }
+          }
+        }
+
+        .road1 {
+          position: absolute;
+          top: 195px;
+          left: 207px;
+          max-width: 362.93px;
+          max-height: 116.01px;
+        }
+
+        .road2 {
+          position: absolute;
+          top: 610px;
+          left: 192px;
+          max-width: 435.97px;
+          max-height: 95.51px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .howItWorks {
+    padding: 0 0 60px 0;
+
+    &Wrapper {
+
+      &Title {
+        font-size: 24px;
+        line-height: 31.2px;
+        letter-spacing: -2px;
+      }
+
+      &Group {
+        row-gap: 60px;
+        position: relative;
+
+        .block1 {
+          row-gap: 20px;
+
+          img {
+            max-width: 280px;
+            max-height: 187.97px;
+          }
+
+          .textGroup {
+            max-width: 280px;
+            row-gap: 10px;
+
+            &Title {
+              font-size: 20px;
+              line-height: 26px;
+            }
+
+            &Description {
+              font-size: 14px;
+              line-height: 18.2px;
+            }
+          }
+        }
+
+        .block2 {
+          row-gap: 20px;
+
+          img {
+            max-width: 280.08px;
+            max-height: 229.7px;
+          }
+
+          .textGroup {
+            max-width: 280px;
+            row-gap: 10px;
+
+            &Title {
+              font-size: 20px;
+              line-height: 26px;
+            }
+
+            &Description {
+              font-size: 14px;
+              line-height: 18.2px;
+            }
+          }
+        }
+
+        .block3 {
+          row-gap: 20px;
+
+          img {
+            max-width: 294px;
+            max-height: 252px;
+          }
+
+          .textGroup {
+            max-width: 280px;
+            row-gap: 10px;
+
+            &Title {
+              font-size: 20px;
+              line-height: 26px;
+            }
+
+            &Description {
+              font-size: 24px;
+              line-height: 31.2px;
+            }
+          }
+        }
+
+        .road1 {
+          top: 297px;
+          left: 56px;
+          max-width: 160.58px;
+          max-height: 52px;
+        }
+
+        .road2 {
+          top: 724px;
+          left: 26px;
+          max-width: 214px;
+          max-height: 69px;
+        }
+      }
+    }
+  }
+}
