@@ -1,4 +1,5 @@
 import call from '@media/chatButton/call.svg'
+import chat from '@media/chatButton/chat.svg'
 import close from '@media/chatButton/close.svg'
 import modal from '@media/chatButton/modal.svg'
 import open from '@media/chatButton/open.svg'
@@ -36,9 +37,14 @@ const ChatButton = () => {
 						>
 							<img src={call} alt="" className={cl.image} />
 						</Link>
-						{/* <div className={cn([cl.groupImages, 'd-flex', 'justify-content-center'])}> */}
-						{/*	<img src={chat} alt="" className={cl.image}/> */}
-						{/* </div> */}
+						<div
+							className={cn([cl.groupImages, 'd-flex', 'justify-content-center'])}
+							onClick={() => {
+								jivo_api.open()
+							}}
+						>
+							<img src={chat} alt="" className={cl.image} />
+						</div>
 						<Link
 							className={cn([cl.groupImages, 'd-flex', 'justify-content-center'])}
 							to="https://t.me/abclinic_beglova_aliya"

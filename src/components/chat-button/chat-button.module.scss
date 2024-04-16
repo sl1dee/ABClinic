@@ -15,6 +15,7 @@
       row-gap: 12px;
 
       &Images {
+        cursor: pointer;
 
         .image {
           width: 70px;
@@ -23,6 +24,7 @@
       }
 
       &Last {
+        cursor: pointer;
 
         .image {
           width: 102px;
