@@ -4,6 +4,7 @@ import { setSignUpIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
 import React from 'react'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import Button from '@ui/button/index.js'
 
@@ -24,13 +25,11 @@ const LoyaltyProgram = () => {
 					<div className={cl.descriptionText}>уникальная</div>
 					<h1 className={cl.descriptionTitle}>Программа лояльности AB Clinic</h1>
 					<div className="d-flex justify-content-center">
-						<Button
-							onClick={openModalHandler}
-							colorStyle="primary"
-							className={cn([cl.btn, 'd-flex', 'justify-content-center'])}
-						>
-							Записаться на прием и стать участником
-						</Button>
+						<Link to="">
+							<Button colorStyle="primary" className={cn([cl.btn, 'd-flex', 'justify-content-center'])}>
+								Записаться на прием и стать участником
+							</Button>
+						</Link>
 					</div>
 				</div>
 				<img src={tooth} alt="" className={cl.tooth} />

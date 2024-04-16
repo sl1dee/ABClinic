@@ -36,7 +36,7 @@ const HowItWorks = () => {
 							cl.block2,
 							'd-flex',
 							'flex-column-reverse',
-							'flex-md-column',
+							'flex-column',
 							'flex-md-row',
 							'align-items-center'
 						])}

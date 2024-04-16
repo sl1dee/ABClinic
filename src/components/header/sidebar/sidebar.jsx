@@ -93,25 +93,25 @@ const Sidebar = () => {
             },
             {
                 id: 1,
-                href: '/contacts',
-                header: 'Контакты'
-                // links: [
-                // 	{
-                // 		id: 0,
-                // 		href: '/contacts',
-                // 		text: 'Контакты'
-                // 	}
-                // {
-                // 	id: 1,
-                // 	href: '/stock',
-                // 	text: 'Акции'
-                // }
-                // {
-                // 	id: 2,
-                // 	href: '/blog',
-                // 	text: 'Блог'
-                // }
-                // ]
+                href: '',
+                header: 'О клинике',
+                links: [
+                    {
+                        id: 0,
+                        href: '/contacts',
+                        text: 'Контакты'
+                    },
+                    {
+                        id: 1,
+                        href: '/loyalty-program',
+                        text: 'Программа лояльности'
+                    },
+                    {
+                        id: 2,
+                        href: '/quality-department',
+                        text: 'Отдел качества'
+                    }
+                ]
             }
         ],
         []

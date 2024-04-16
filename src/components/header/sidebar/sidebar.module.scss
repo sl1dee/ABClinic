@@ -87,6 +87,7 @@
     scrollbar-width: none;
 
     animation: open .3s ease;
+
     &Closed {
       animation: close .3s ease forwards;
     }
@@ -119,7 +120,7 @@
       }
 
       &Links {
-        row-gap: 8px;
+        row-gap: 10px;
 
         &_header {
           color: #131313;

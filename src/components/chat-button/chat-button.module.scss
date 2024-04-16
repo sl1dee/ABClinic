@@ -1,0 +1,79 @@
+.chat {
+  //display: flex;
+  //left: 30px;
+  //width: 100%;
+  //height: 100%;
+  z-index: 100;
+  position: sticky;
+  bottom: 24px;
+  padding-right: 14px;
+
+  &Wrapper {
+    width: 102px;
+
+    .group {
+      row-gap: 12px;
+
+      &Images {
+        width: 70px;
+        height: 70px;
+        //width: 102px;
+        //height: 102px;
+
+        .img {
+          width: 70px;
+          height: 70px;
+          //width: 102px;
+          //height: 102px;
+        }
+      }
+
+      &Last {
+        padding-top: -12px;
+        width: 102px;
+        height: 102px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .chat {
+    //display: flex;
+    //left: 30px;
+    //width: 100%;
+    //height: 100%;
+    z-index: 100;
+    position: sticky;
+    bottom: 24px;
+    padding-right: 14px;
+
+    &Wrapper {
+      width: 92px;
+
+      .group {
+        row-gap: 8px;
+
+        &Images {
+          width: 60px;
+          height: 60px;
+          //width: 102px;
+          //height: 102px;
+
+          .img {
+            width: 60px;
+            height: 60px;
+            //width: 102px;
+            //height: 102px;
+          }
+        }
+
+        &Last {
+          padding-top: -12px;
+          width: 92px;
+          height: 92px;
+        }
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@ import ArticlePage from './pages/article-page/article-page.jsx'
 import main-page from './pages/main-page/main-page'
 import StockPage from './pages/stock-page/stock-page.jsx'
 import ContactsPage from "@pages/contacts-page/contacts-page.jsx";
+import ChatButton from "@components/chat-button/index.js";
 
 export default function App() {
 	return (
