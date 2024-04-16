@@ -4,9 +4,9 @@
   //width: 100%;
   //height: 100%;
   z-index: 100;
-  position: sticky;
+  position: fixed;
   bottom: 24px;
-  padding-right: 14px;
+  right: 14px;
 
   &Wrapper {
     width: 102px;
@@ -15,23 +15,19 @@
       row-gap: 12px;
 
       &Images {
-        width: 70px;
-        height: 70px;
-        //width: 102px;
-        //height: 102px;
 
-        .img {
+        .image {
           width: 70px;
           height: 70px;
-          //width: 102px;
-          //height: 102px;
         }
       }
 
       &Last {
-        padding-top: -12px;
-        width: 102px;
-        height: 102px;
+
+        .image {
+          width: 102px;
+          height: 102px;
+        }
       }
     }
   }
@@ -44,9 +40,9 @@
     //width: 100%;
     //height: 100%;
     z-index: 100;
-    position: sticky;
-    bottom: 24px;
-    padding-right: 14px;
+    //position: sticky;
+    bottom: 14px;
+    right: 4px;
 
     &Wrapper {
       width: 92px;
@@ -55,23 +51,19 @@
         row-gap: 8px;
 
         &Images {
-          width: 60px;
-          height: 60px;
-          //width: 102px;
-          //height: 102px;
 
-          .img {
+          .image {
             width: 60px;
             height: 60px;
-            //width: 102px;
-            //height: 102px;
           }
         }
 
         &Last {
-          padding-top: -12px;
-          width: 92px;
-          height: 92px;
+
+          .image {
+            width: 92px;
+            height: 92px;
+          }
         }
       }
     }

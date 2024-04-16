@@ -1,6 +1,8 @@
 import arrowLeft from '@assets/img/mainSlider/arrow-left.svg'
 import arrowRight from '@assets/img/mainSlider/arrow-right.svg'
-import union from '@assets/img/mainSlider/union.svg'
+import shield from '@media/mainSlider/shield.png'
+import union from '@media/mainSlider/union.png'
+import stars from '@media/mainSlider/stars.png'
 import aliya from '@media/mainSlider/aliya.jpg'
 import hands from '@media/mainSlider/hands.jpg'
 import children from '@media/mainSlider/children.jpg'
@@ -18,6 +20,7 @@ import Button from '@ui/button/button.jsx'
 import cl from './main-slider.module.scss'
 
 import {useDispatch} from 'react-redux'
+import {Link} from "react-router-dom";
 
 
 export default function MainSlider() {
@@ -174,12 +177,14 @@ export default function MainSlider() {
                                         Если вы прошли полное лечение по КТ и раз в 4 месяца проходили профессиональную
                                         гигиену полости рта, то лечение кариеса выполним БЕСПЛАТНО
                                     </p>
-                                    <div className={cn([cl.btnWrapper, 'd-flex'])}>
-                                        <Button onClick={openModalHandler} colorStyle="primary"
-                                                className={cn([cl.btn, 'flex-md-grow-0'])}>
-                                            Записаться
-                                        </Button>
-                                    </div>
+                                    <Link to='/loyalty-program'>
+                                        <div className={cn([cl.btnWrapper, 'd-flex'])}>
+                                            <Button colorStyle="primary"
+                                                    className={cn([cl.btn, 'flex-md-grow-0'])}>
+                                                Подробнее
+                                            </Button>
+                                        </div>
+                                    </Link>
                                 </div>
 
                                 <div className={cn([cl.arrows, 'd-none', 'd-md-flex', 'align-items-center'])}>
@@ -195,7 +200,7 @@ export default function MainSlider() {
                                 </div>
 
                                 <div className={cn([cl.bckgIcon, 'd-none', 'd-xxl-block'])}>
-                                    <img src={union} alt=""/>
+                                    <img src={shield} alt=""/>
                                 </div>
                             </div>
                             <div className={cl.photo}>
@@ -226,12 +231,14 @@ export default function MainSlider() {
                                         Отдел контроля качества для ваших вопросов, замечаний или мнений по улучшению
                                         нашей клиники.
                                     </p>
-                                    <div className={cn([cl.btnWrapper, 'd-flex'])}>
-                                        <Button onClick={openModalHandler} colorStyle="primary"
-                                                className={cn([cl.btn, 'flex-md-grow-0'])}>
-                                            Записаться
-                                        </Button>
-                                    </div>
+                                    <Link to='/quality-department'>
+                                        <div className={cn([cl.btnWrapper, 'd-flex'])}>
+                                            <Button colorStyle="primary"
+                                                    className={cn([cl.btn, 'flex-md-grow-0'])}>
+                                                Отдел качества
+                                            </Button>
+                                        </div>
+                                    </Link>
                                 </div>
 
                                 <div className={cn([cl.arrows, 'd-none', 'd-md-flex', 'align-items-center'])}>
@@ -247,7 +254,7 @@ export default function MainSlider() {
                                 </div>
 
                                 <div className={cn([cl.bckgIcon, 'd-none', 'd-xxl-block'])}>
-                                    <img src={union} alt=""/>
+                                    <img src={stars} alt=""/>
                                 </div>
                             </div>
                             <div className={cl.photo}>

@@ -3,8 +3,10 @@ import absoluteStars from '@media/qualityDepartment/absoluteStars.png'
 import hands from '@media/qualityDepartment/hands.jpg'
 import stars from '@media/qualityDepartment/stars.svg'
 import yandex from '@media/qualityDepartment/yandex.svg'
+import { setQualityIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import Button from '@ui/button/index.js'
@@ -12,6 +14,11 @@ import Button from '@ui/button/index.js'
 import cl from './quality-department.module.scss'
 
 const QualityDepartment = () => {
+	const dispatch = useDispatch()
+	const openModalHandler = () => {
+		dispatch(setQualityIsOpen(true))
+	}
+
 	return (
 		<div className={cl.quality}>
 			<div className={cn([cl.qualityWrapper, 'container', 'd-flex', 'flex-column'])}>
@@ -33,7 +40,7 @@ const QualityDepartment = () => {
 							нашей клиники. <br />
 							Мы обрабатываем каждую заявку лично и очень внимательно.
 						</div>
-						<Button colorStyle="primary" className={cl.btn}>
+						<Button onClick={openModalHandler} colorStyle="primary" className={cl.btn}>
 							Написать в отдел качества
 						</Button>
 					</div>

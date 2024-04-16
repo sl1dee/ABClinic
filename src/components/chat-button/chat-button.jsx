@@ -1,5 +1,4 @@
 import call from '@media/chatButton/call.svg'
-import chat from '@media/chatButton/chat.svg'
 import close from '@media/chatButton/close.svg'
 import modal from '@media/chatButton/modal.svg'
 import open from '@media/chatButton/open.svg'
@@ -28,37 +27,45 @@ const ChatButton = () => {
 				{isOpen ? (
 					<div className={cn([cl.group, 'd-flex', 'flex-column', 'align-items-center', 'justify-content-center'])}>
 						<div className={cn([cl.groupImages, 'd-flex', 'justify-content-center'])} onClick={openModalHandler}>
-							<img src={modal} alt="" />
+							<img src={modal} alt="" className={cl.image} />
 						</div>
 						<Link
 							className={cn([cl.groupImages, 'd-flex', 'justify-content-center'])}
 							to="tel:+73472000424"
 							title="Наш номер телефона"
 						>
-							<img src={call} alt="" />
+							<img src={call} alt="" className={cl.image} />
 						</Link>
-						<div className={cn([cl.groupImages, 'd-flex', 'justify-content-center'])}>
-							<img src={chat} alt="" />
-						</div>
-						<Link className={cn([cl.groupImages, 'd-flex', 'justify-content-center'])} to="/" target="_blank">
-							<img src={telegram} alt="" />
+						{/* <div className={cn([cl.groupImages, 'd-flex', 'justify-content-center'])}> */}
+						{/*	<img src={chat} alt="" className={cl.image}/> */}
+						{/* </div> */}
+						<Link
+							className={cn([cl.groupImages, 'd-flex', 'justify-content-center'])}
+							to="https://t.me/abclinic_beglova_aliya"
+							target="_blank"
+						>
+							<img src={telegram} alt="" className={cl.image} />
 						</Link>
 						<div className="d-flex flex-column align-items-center">
-							<Link className={cn([cl.groupImages, 'd-flex', 'justify-content-center'])} to="/" target="_blank">
-								<img src={whatsapp} alt="" />
+							<Link
+								className={cn([cl.groupImages, 'd-flex', 'justify-content-center'])}
+								to="https://wa.me/89869788503"
+								target="_blank"
+							>
+								<img src={whatsapp} alt="" className={cl.image} />
 							</Link>
 							<div
 								className={cn([cl.groupLast, 'd-flex', 'justify-content-center'])}
 								onClick={() => setIsOpen(!isOpen)}
 							>
-								<img src={close} alt="" />
+								<img src={close} alt="" className={cl.image} />
 							</div>
 						</div>
 					</div>
 				) : (
 					<div className={cn([cl.group, 'd-flex', 'flex-column'])}>
 						<div className={cl.groupLast} onClick={() => setIsOpen(!isOpen)}>
-							<img src={open} alt="" />
+							<img src={open} alt="" className={cl.image} />
 						</div>
 					</div>
 				)}

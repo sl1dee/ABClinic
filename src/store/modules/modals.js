@@ -8,6 +8,9 @@ const modalsSlice = createSlice({
 		setSignUpIsOpen: (state, action) => {
 			state.signUpIsOpen = action.payload
 		},
+		setQualityIsOpen: (state, action) => {
+			state.qualityIsOpen = action.payload
+		},
 		setBurgerIsOpen: (state, action) => {
 			state.burgerIsOpen = action.payload
 		}
@@ -16,6 +19,6 @@ const modalsSlice = createSlice({
 
 const { reducer, actions } = modalsSlice
 
-export const { setSignUpIsOpen, setBurgerIsOpen } = actions
+export const { setSignUpIsOpen, setQualityIsOpen, setBurgerIsOpen } = actions
 
 export default reducer
