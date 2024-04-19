@@ -92,7 +92,7 @@
   }
 
   &Additional {
-    column-gap: 30px;
+    column-gap: 15px;
 
     .contacts {
       column-gap: 20px;
@@ -107,21 +107,21 @@
       }
     }
 
-    .sidenavTrigger {
-      display: block;
-      position: relative;
-      width: 34px;
-      height: 21px;
-      cursor: pointer;
-
-      div, &::before, &::after {
-        width: 34px;
-        height: 3px;
-        background: colors.$mainColor;
-        content: "";
-        border-radius: 10px;
-      }
-    }
+    //.sidenavTrigger {
+    //  display: block;
+    //  position: relative;
+    //  width: 34px;
+    //  height: 21px;
+    //  cursor: pointer;
+    //
+    //  div, &::before, &::after {
+    //    width: 34px;
+    //    height: 3px;
+    //    background: colors.$mainColor;
+    //    content: "";
+    //    border-radius: 10px;
+    //  }
+    //}
   }
 }
 

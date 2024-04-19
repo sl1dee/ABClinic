@@ -52,7 +52,7 @@ export default function EmployeesSlider({sliderHeaderText, serviceId, isViewAll}
                         nextEl: '.employeesSlider .swiper-button-next',
                         prevEl: '.employeesSlider .swiper-button-prev'
                     }}
-                    loop={false}
+                    loop={true}
                     className={cl.slider}
                 >
                     {doctorsList.map(({id, image, name, directions, speciality}) => (

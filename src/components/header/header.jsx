@@ -1,4 +1,6 @@
 import arrDown from '@assets/img/header/arr_down.svg'
+import burger from '@assets/img/header/burger.svg'
+import eye from '@assets/img/header/eye.svg'
 import logo from '@assets/img/logos/logo_b_hor.svg'
 import { setBurgerIsOpen, setSignUpIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
@@ -36,16 +38,6 @@ const Header = () => {
 	return (
 		<header className={`${cl.header} ${isScrolled ? cl.scrolled : ''}`}>
 			<div className="container d-flex align-items-center justify-content-between">
-				{/* <div> */}
-				{/*	<a id="specialButton" href="#"> */}
-				{/*		<img */}
-				{/*			src="https://lidrekon.ru/images/special.png" */}
-				{/*			id="glazd" */}
-				{/*			alt="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" */}
-				{/*			title="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" */}
-				{/*		/> */}
-				{/*	</a> */}
-				{/* </div> */}
 				<div className={cl.headerLogo}>
 					<Link to="/">
 						<img src={logo} alt="" />
@@ -170,14 +162,23 @@ const Header = () => {
 								<span>+7 347 200 04 24</span>
 							</div>
 						</a>
-						<Button
-							onClick={openModalHandler}
-							sizeStyle="SizeS"
-							colorStyle="outlined"
-							className="d-none d-lg-flex justify-content-center"
-						>
-							Записаться
-						</Button>
+						<div className="d-flex flex-row flex-xxl-row-reverse align-items-center gap-3">
+							<div>
+								<a id="specialButton" href="#">
+									<img src={eye} id="glazd" alt="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" title="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" />
+								</a>
+							</div>
+							<div>
+								<Button
+									onClick={openModalHandler}
+									sizeStyle="SizeS"
+									colorStyle="outlined"
+									className="d-none d-lg-flex justify-content-center"
+								>
+									Записаться
+								</Button>
+							</div>
+						</div>
 					</div>
 					<div
 						className={cn([
@@ -190,6 +191,7 @@ const Header = () => {
 						])}
 						onClick={openBurgerHandler}
 					>
+						<img src={burger} alt="" />
 						<div />
 					</div>
 				</div>
