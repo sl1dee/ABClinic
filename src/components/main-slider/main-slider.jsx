@@ -56,10 +56,10 @@ export default function MainSlider() {
                         prevEl: '.mainSlider .mainSlider-slide .swiper-button-prev'
                     }}
                     onSlideChange={({activeIndex, slides}) => {
-                        updateCounts(activeIndex, slides.length)
+                        updateCounts(activeIndex, 4)
                     }}
                     onInit={({activeIndex, slides}) => {
-                        updateCounts(activeIndex, slides.length)
+                        updateCounts(activeIndex, 4)
                     }}
                     onSwiper={(swiper) => setSwiper(swiper)}
 
@@ -108,8 +108,8 @@ export default function MainSlider() {
                                     <img src={arrowLeft} alt=""/>
                                 </div>
                                 <span>
-									{activeSlide} / {slidesCount}
-								</span>
+                            		{activeSlide} / {slidesCount}
+                            	</span>
                                 <div onClick={nextSwipeHandler} className={cl.swiperButtonNext}>
                                     <img src={arrowRight} alt=""/>
                                 </div>
@@ -138,8 +138,8 @@ export default function MainSlider() {
                                         <img src={arrowLeft} alt=""/>
                                     </div>
                                     <span>
-                    		{activeSlide} / {slidesCount}
-                    	</span>
+                    		            {activeSlide} / {slidesCount}
+                    	            </span>
                                     <div onClick={nextSwipeHandler} className={cl.swiperButtonNext}>
                                         <img src={arrowRight} alt=""/>
                                     </div>
@@ -159,8 +159,8 @@ export default function MainSlider() {
                                     <img src={arrowLeft} alt=""/>
                                 </div>
                                 <span>
-                    	{activeSlide} / {slidesCount}
-                    </span>
+                    	            {activeSlide} / {slidesCount}
+                                </span>
                                 <div onClick={nextSwipeHandler} className={cl.swiperButtonNext}>
                                     <img src={arrowRight} alt=""/>
                                 </div>
