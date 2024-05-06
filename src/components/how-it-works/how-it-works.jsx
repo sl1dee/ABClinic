@@ -27,7 +27,7 @@ const HowItWorks = () => {
 						<img src={pic1} alt="" />
 						<div className={cn([cl.textGroup, 'd-flex', 'flex-column'])}>
 							<div className={cl.textGroupTitle}>Пройдите полное лечение</div>
-							<div className={cl.textGroupDescription}>по результатам КТ в нашей клинике</div>
+							<div className={cl.textGroupDescription}>в нашей клинике по результатам КТ</div>
 						</div>
 					</div>
 					<img src={road1} alt="" className={cl.road1} />
