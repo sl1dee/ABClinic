@@ -1,0 +1,168 @@
+@use '@assets/styles/vars/colors';
+
+.diagnosticsContainer {
+  background-color: colors.$additionalColor;
+  padding: 75px 0;
+
+  .diagnosticsBlock {
+    background-color: colors.$whiteColor;
+    padding: 50px 40px 50px 40px;
+    border-radius: 30px;
+    row-gap: 30px;
+
+    .diagnosticsInformation {
+      gap: 266px;
+
+      .diagnosticsTitle {
+        font-size: 38px;
+        font-weight: 700;
+        color: colors.$mainTextColor;
+        margin: 0;
+      }
+
+      .diagnosticsText {
+        font-size: 18px;
+        font-weight: 500;
+        color: colors.$mainTextColor;
+      }
+    }
+
+    .diagnosticsTable {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      .tableContent {
+        font-size: 20px;
+        font-weight: 600;
+        padding: 30px;
+        background-color: colors.$mainColor;
+        color: colors.$whiteColor;
+        border-radius: 20px;
+        gap: 20px;
+        align-items: center;
+
+        .tablePoint {
+          content: url("/media/services/point.svg");
+          width: 10px;
+          height: 10px;
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .diagnosticsContainer {
+    padding: 75px 0;
+
+    .diagnosticsBlock {
+      padding: 40px;
+      row-gap: 30px;
+
+      .diagnosticsInformation {
+        gap: 20px;
+      }
+
+      .diagnosticsTable {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .diagnosticsContainer {
+    padding: 55px 0;
+
+    .diagnosticsBlock {
+      padding: 40px;
+      border-radius: 30px;
+      padding-bottom: 30px;
+
+      .diagnosticsInformation {
+        gap: 16px;
+
+        .diagnosticsTitle {
+          font-size: 28px;
+          font-weight: 700;
+        }
+
+        .diagnosticsText {
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+
+      .diagnosticsTable {
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        .tableContent {
+          font-size: 16px;
+          font-weight: 600;
+          padding: 30px;
+          background-color: colors.$mainColor;
+          color: colors.$whiteColor;
+          border-radius: 20px;
+          gap: 20px;
+
+          .tablePoint {
+            content: url("/media/services/point.svg");
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .diagnosticsContainer {
+    background-color: colors.$additionalColor;
+    padding: 40px 0;
+
+    .diagnosticsBlock {
+      background-color: colors.$whiteColor;
+      padding: 30px 20px 30px 20px;
+      border-radius: 30px;
+      row-gap: 16px;
+
+      .diagnosticsInformation {
+        gap: 8px;
+
+        .diagnosticsTitle {
+          font-size: 20px;
+          font-weight: 700;
+          color: colors.$mainTextColor;
+          margin: 0;
+        }
+
+        .diagnosticsText {
+          font-size: 14px;
+          font-weight: 500;
+          color: colors.$mainTextColor;
+        }
+      }
+
+      .diagnosticsTable {
+        grid-template-columns: 1fr;
+        gap: 8px;
+
+        .tableContent {
+          font-size: 14px;
+          font-weight: 600;
+          padding: 10px 20px;
+          background-color: colors.$mainColor;
+          color: colors.$whiteColor;
+          border-radius: 15px;
+          gap: 20px;
+
+          .tablePoint {
+            content: url("/media/services/point.svg");
+          }
+        }
+      }
+    }
+  }
+}

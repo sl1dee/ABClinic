@@ -1,0 +1,126 @@
+@use '@assets/styles/vars/colors';
+
+.photo {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  border-radius: 0 0 35px 35px;
+  overflow: hidden;
+  min-height: 490px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+
+
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 30px 30px 0 0;
+  padding: 30px;
+  background-color: colors.$whiteColor;
+  min-height: 180px;
+  row-gap: 20px;
+
+  &Text {
+    row-gap: 6px;
+
+    &Name {
+      color: colors.$mainTextColor;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: -0.48px;
+    }
+
+    &Position {
+      color: colors.$mainColor;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 130%;
+    }
+  }
+
+  &Badge {
+    border-radius: 82px;
+    background: colors.$additionalColor;
+    padding: 4px 12px;
+    align-self: start;
+
+    p {
+      color: colors.$mainColor;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 130%;
+    }
+  }
+
+  .btn {
+    padding: 10px 15px 10px 15px;
+    text-align: center;
+    font-weight: 500;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .info {
+    row-gap: 17px;
+    min-height: 218px;
+    &Text {
+      &Name {
+        font-size: 22px;
+        letter-spacing: -0.44px;
+      }
+
+      &Position {
+        font-size: 16px;
+      }
+    }
+
+    &Badge {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .photo {
+    min-height: 400px;
+  }
+
+  .info {
+    border-radius: 20px 20px 0 0;
+    padding: 24px;
+    min-height: 187px;
+    row-gap: 15px;
+
+    &Text {
+      row-gap: 5px;
+
+      &Name {
+        font-size: 18px;
+        letter-spacing: -0.36px;
+      }
+
+      &Position {
+        font-size: 14px;
+      }
+    }
+
+    &Badge {
+      border-radius: 82px;
+      padding: 3px 10px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

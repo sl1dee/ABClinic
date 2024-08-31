@@ -1,0 +1,174 @@
+@use '@assets/styles/vars/colors';
+
+.loyalty {
+  padding: 120px 0 162px 0;
+  overflow: hidden;
+
+  &Wrapper {
+    gap: 60px;
+    position: relative;
+
+    .description {
+      max-width: 760px;
+      row-gap: 40px;
+
+      &Text {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 33.6px;
+        color: colors.$mainColor;
+      }
+
+      &Title {
+        font-size: 58px;
+        font-weight: 700;
+        line-height: 75.4px;
+        color: colors.$additionalTextColor;
+        text-align: center;
+        letter-spacing: -2px;
+      }
+
+      .btn {
+        align-self: start;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 21.6px;
+        padding: 16px 26px;
+      }
+
+    }
+
+    .shield {
+      max-width: 261.31px;
+      max-height: 306.2px;
+      position: absolute;
+      top: 5px;
+      left: -55px;
+    }
+
+    .tooth {
+      max-width: 317.4px;
+      max-height: 339.04px;
+      position: absolute;
+      top: 45px;
+      right: -75px;
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .loyalty {
+    padding: 120px 0 182px 0;
+
+    &Wrapper {
+      position: relative;
+
+      .description {
+        //max-width: 760px;
+        row-gap: 30px;
+      }
+
+      .shield {
+        top: 157px;
+        left: -28px;
+      }
+
+      .tooth {
+        top: 160px;
+        right: -50px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .loyalty {
+    padding: 80px 0 95px 0;
+
+    &Wrapper {
+
+      .description {
+        max-width: 402px;
+        row-gap: 20px;
+
+        &Text {
+          font-size: 24px;
+          line-height: 28.8px;
+        }
+
+        &Title {
+          font-size: 32px;
+          line-height: 41.6px;
+          text-align: center;
+          letter-spacing: 0;
+        }
+
+        .btn {
+          letter-spacing: -1px;
+        }
+
+      }
+
+      .shield {
+        max-width: 171.44px;
+        max-height: 200.9px;
+        top: 54px;
+        left: -25px;
+      }
+
+      .tooth {
+        max-width: 203.18px;
+        max-height: 217.04px;
+        top: 45px;
+        right: -28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .loyalty {
+    padding: 60px 0 155px 0;
+
+    &Wrapper {
+
+      .description {
+        max-width: 280px;
+        row-gap: 20px;
+
+        &Text {
+          font-size: 14px;
+          line-height: 16.8px;
+        }
+
+        &Title {
+          font-size: 24px;
+          line-height: 31.2px;
+          letter-spacing: -2px;
+        }
+
+        .btn {
+          font-size: 14px;
+          line-height: 16.8px;
+          padding: 12px 26px 12px 26px;
+          text-align: center;
+        }
+
+      }
+
+      .shield {
+        max-width: 106.02px;
+        max-height: 124.24px;
+        top: 212px;
+        left: 10px;
+      }
+
+      .tooth {
+        max-width: 143.37px;
+        max-height: 144.04px;
+        top: 175px;
+        right: -9px;
+      }
+    }
+  }
+}

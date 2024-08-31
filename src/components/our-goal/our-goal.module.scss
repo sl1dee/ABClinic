@@ -1,0 +1,262 @@
+@use '@assets/styles/vars/colors';
+
+.ourGoal {
+  padding: 150px 0 75px 0;
+
+  &Wrapper {
+    row-gap: 70px;
+
+    .block1 {
+      max-width: 780px;
+      row-gap: 40px;
+
+      &Question {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 33.6px;
+        color: colors.$mainColor;
+        letter-spacing: -1px;
+      }
+
+      &Description {
+        font-size: 58px;
+        font-weight: 700;
+        line-height: 75.4px;
+        color: colors.$additionalTextColor;
+        letter-spacing: -1px;
+        text-align: center;
+      }
+
+      &Look {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 33.6px;
+        color: colors.$mainColor;
+        letter-spacing: -1px;
+      }
+    }
+
+    .group {
+      gap: 20px;
+
+      &Block2 {
+        max-width: 495px;
+        padding: 40px;
+        border-radius: 30px;
+        position: relative;
+        background-color: #FFFFFF;
+
+        &Description {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 33.6px;
+          color: colors.$additionalTextColor;
+          letter-spacing: -1px;
+        }
+
+        img {
+          max-width: 145px;
+          max-height: 145px;
+          position: absolute;
+          bottom: -45px;
+          right: 60px;
+        }
+      }
+
+      &Block3 {
+        //max-width: 701px;
+        padding: 40px;
+        border-radius: 30px;
+        row-gap: 10px;
+        background-color: #FFFFFF;
+
+        &Cause {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 30px;
+          color: colors.$mainColor;
+        }
+
+        &Title {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 33.6px;
+          color: colors.$additionalTextColor;
+          letter-spacing: -1px;
+        }
+
+        &Group {
+          max-width: 650px;
+          gap: 50px;
+
+          &Description {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 30px;
+            color: colors.$mainColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .ourGoal {
+
+    &Wrapper {
+
+      .group {
+
+        &Block2 {
+          max-width: 470px;
+        }
+
+        &Block3 {
+          max-width: 470px;
+
+          &Group {
+            row-gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .ourGoal {
+    padding: 100px 0 45px 0;
+
+    &Wrapper {
+      row-gap: 44px;
+
+      .block1 {
+        max-width: 696px;
+        row-gap: 20px;
+
+        &Question {
+          font-size: 24px;
+          line-height: 28.8px;
+          letter-spacing: -1px;
+        }
+
+        &Description {
+          font-size: 32px;
+          line-height: 41.6px;
+          letter-spacing: -1px;
+        }
+
+        &Look {
+          font-size: 24px;
+          line-height: 28.8px;
+          letter-spacing: -1px;
+        }
+      }
+
+      .group {
+        row-gap: 20px;
+
+        &Block2 {
+          max-width: 728px;
+
+          img {
+            bottom: -75px;
+            right: 13px;
+          }
+        }
+
+        &Block3 {
+          max-width: 728px;
+          row-gap: 9px;
+
+          &Group {
+            row-gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .ourGoal {
+    padding: 60px 0 20px 0;
+
+    &Wrapper {
+      row-gap: 40px;
+
+      .block1 {
+        max-width: 280px;
+        row-gap: 20px;
+
+        &Question {
+          font-size: 14px;
+          line-height: 16.8px;
+        }
+
+        &Description {
+          font-size: 20px;
+          line-height: 26px;
+          letter-spacing: -1px;
+        }
+
+        &Look {
+          font-size: 14px;
+          line-height: 16.8px;
+        }
+      }
+
+      .group {
+        row-gap: 20px;
+
+        &Block2 {
+          max-width: 280px;
+          padding: 20px;
+          border-radius: 20px;
+
+          &Description {
+            font-size: 16px;
+            line-height: 22.4px;
+            letter-spacing: -1px;
+          }
+
+          img {
+            max-width: 76px;
+            max-height: 76px;
+            bottom: -52px;
+            right: 19px;
+          }
+        }
+
+        &Block3 {
+          max-width: 280px;
+          padding: 20px;
+          border-radius: 20px;
+          row-gap: 5px;
+
+          &Cause {
+            font-size: 14px;
+            line-height: 21px;
+          }
+
+          &Title {
+            font-size: 16px;
+            line-height: 22.4px;
+            letter-spacing: -1px;
+          }
+
+          &Group {
+            max-width: 240px;
+            row-gap: 10px;
+
+            &Description {
+              font-size: 14px;
+              line-height: 21px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

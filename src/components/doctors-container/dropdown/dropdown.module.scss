@@ -1,0 +1,372 @@
+@use '@assets/styles/vars/colors';
+
+.link {
+  column-gap: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.36px;
+  cursor: pointer;
+  border-radius: 100px;
+  background-color: colors.$whiteColor;
+  border: 2px solid colors.$whiteColor;
+  gap: 5px;
+  min-width: 256px;
+
+  &Title {
+    color: colors.$mainColor;
+  }
+
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  &Menu {
+    position: absolute;
+    top: -15px;
+    left: 62.7%;
+    min-width: 320px;
+    padding-top: 10px;
+    transform: translate(-50%, 0);
+    transition: top .3s ease, transform .3s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: 700;
+
+    .content {
+      row-gap: 20px;
+      border-radius: 30px;
+      background-color: colors.$whiteColor;
+      padding: 40px;
+
+      &BigLink {
+        span {
+          color: colors.$mainTextColor;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 120%;
+          letter-spacing: -0.64px;
+        }
+      }
+
+      &AdditionalLinks {
+        row-gap: 5px;
+        gap: 20px;
+
+        .line {
+          gap: 10px;
+          display: flex;
+
+          .point {
+            content: url("/assets/img/doctors/RadiobuttonWhite.svg");
+          }
+
+          .text {
+            color: colors.$mainColor;
+            position: relative;
+            display: inline-block;
+          }
+        }
+
+        .active {
+          gap: 10px;
+
+          .point {
+            content: url("/assets/img/doctors/RadiobuttonBlue.svg");
+          }
+
+          .text {
+            position: relative;
+            display: inline-block;
+          }
+        }
+
+        .radio:checked + .text::after {
+          opacity: 1;
+
+        }
+
+        > div {
+          span {
+            color: colors.$mainColor;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 110%;
+          }
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .linkMenu {
+      top: 100%;
+      transform: translate(-50%, 0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .link {
+    column-gap: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.36px;
+    cursor: pointer;
+    border-radius: 100px;
+    background-color: colors.$whiteColor;
+    border: 2px solid colors.$whiteColor;
+    gap: 5px;
+    max-width: 260px;
+
+    &Title {
+      color: colors.$mainColor;
+    }
+
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    &Menu {
+      position: absolute;
+      top: -15px;
+      left: 64%;
+      min-width: 330px;
+      padding-top: 10px;
+      transform: translate(-50%, 0);
+      transition: top .3s ease, transform .3s ease;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1;
+      font-size: 20px;
+      font-weight: 700;
+
+      .content {
+        row-gap: 20px;
+        border-radius: 30px;
+        background-color: colors.$whiteColor;
+        padding: 40px;
+
+        &BigLink {
+          span {
+            color: colors.$mainTextColor;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 120%;
+            letter-spacing: -0.64px;
+          }
+        }
+
+        &AdditionalLinks {
+          row-gap: 5px;
+
+          > div {
+            span {
+              color: colors.$mainColor;
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 110%;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .linkMenu {
+        top: 100%;
+        transform: translate(-50%, 0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .link {
+    column-gap: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.36px;
+    cursor: pointer;
+    border-radius: 100px;
+    background-color: colors.$whiteColor;
+    border: 2px solid colors.$whiteColor;
+    gap: 5px;
+    max-width: 260px;
+
+    &Title {
+      color: colors.$mainColor;
+      font-size: 16px;
+    }
+
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    &Menu {
+      position: absolute;
+      top: -15px;
+      left: 64%;
+      min-width: 330px;
+      padding-top: 10px;
+      transform: translate(-50%, 0);
+      transition: top .3s ease, transform .3s ease;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1;
+      font-size: 20px;
+      font-weight: 700;
+
+      .content {
+        row-gap: 20px;
+        border-radius: 30px;
+        background-color: colors.$whiteColor;
+        padding: 40px;
+
+        &BigLink {
+          span {
+            color: colors.$mainTextColor;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 120%;
+            letter-spacing: -0.64px;
+          }
+        }
+
+        &AdditionalLinks {
+          row-gap: 5px;
+
+          > div {
+            span {
+              color: colors.$mainColor;
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 110%;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .linkMenu {
+        top: 100%;
+        transform: translate(-50%, 0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .link {
+    column-gap: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.36px;
+    cursor: pointer;
+    border-radius: 100px;
+    background-color: colors.$whiteColor;
+    border: 2px solid colors.$whiteColor;
+    gap: 5px;
+    max-width: 260px;
+
+    &Title {
+      color: colors.$mainColor;
+      font-size: 14px;
+    }
+
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    &Menu {
+      position: absolute;
+      top: -15px;
+      left: 64%;
+      min-width: 330px;
+      padding-top: 10px;
+      transform: translate(-50%, 0);
+      transition: top .3s ease, transform .3s ease;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1;
+      font-size: 20px;
+      font-weight: 700;
+
+      .content {
+        row-gap: 20px;
+        border-radius: 30px;
+        background-color: colors.$whiteColor;
+        padding: 30px;
+
+        &BigLink {
+          span {
+            color: colors.$mainTextColor;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 120%;
+            letter-spacing: -0.64px;
+          }
+        }
+
+        &AdditionalLinks {
+          row-gap: 5px;
+
+          > div {
+            span {
+              color: colors.$mainColor;
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 110%;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .linkMenu {
+        top: 100%;
+        transform: translate(-50%, 0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+}

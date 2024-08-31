@@ -1,0 +1,151 @@
+@use '@assets/styles/vars/colors';
+@use '@assets/styles/mixins/helpers';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.title {
+  color: colors.$mainTextColor;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.76px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: colors.$whiteColor;
+  border-radius: 30px;
+  padding: 40px;
+  position: relative;
+  min-height: 290px;
+
+  &Img {
+    @include helpers.contain;
+  }
+
+  &TextWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &Title {
+    font-size: 24px;
+    font-weight: 600;
+    color: colors.$mainTextColor;
+  }
+
+  &Information {
+    font-size: 18px;
+    font-weight: 500;
+    color: colors.$mainColor;
+  }
+
+  &Type {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: colors.$mainColor;
+    padding: 4px 20px 4px 20px;
+    background-color: colors.$additionalColor;
+    border-radius: 82px;
+    align-self: start;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .card {
+    min-height: 272px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .title {
+    font-size: 28px;
+    letter-spacing: -0.56px;
+  }
+
+  .card {
+    padding: 30px;
+    min-height: 223px;
+
+    &Img {
+      @include helpers.contain;
+    }
+
+    &TextWrapper {
+      gap: 8px;
+    }
+
+    &Title {
+      font-size: 22px;
+    }
+
+    &Information {
+      font-size: 16px;
+    }
+
+    &Type {
+      font-size: 16px;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    gap: 20px;
+  }
+  .title {
+    font-size: 20px;
+    letter-spacing: -0.4px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: colors.$whiteColor;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    min-height: 150px;
+    max-width: 100%;
+    gap: 10px;
+
+    &Img {
+      @include helpers.contain;
+    }
+
+    &TextWrapper {
+      gap: 4px;
+    }
+
+    &Title {
+      font-size: 18px;
+      font-weight: 600;
+      color: colors.$mainTextColor;
+    }
+
+    &Information {
+      font-size: 13px;
+      font-weight: 500;
+      color: colors.$mainColor;
+    }
+
+    &Type {
+      font-size: 13px;
+      font-weight: 500;
+      color: colors.$mainColor;
+      padding: 4px 20px 4px 20px;
+      background-color: colors.$additionalColor;
+      border-radius: 82px;
+    }
+  }
+}

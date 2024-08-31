@@ -1,0 +1,215 @@
+@use '@assets/styles/vars/colors';
+
+.detailHeroScreen {
+  background-color: colors.$additionalColor;
+  padding: 68px 0 75px 0;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+
+  }
+
+  .detailInformation {
+    gap: 20px;
+
+    &Block {
+      max-height: 450px;
+      background-color: colors.$whiteColor;
+      border-radius: 30px;
+      padding: 90px 40px 90px 40px;
+      width: 100%;
+      position: relative;
+      z-index: 0;
+      gap: 22px;
+
+
+      &Name {
+        max-width: 450px;
+        font-size: 48px;
+        line-height: 57.6px;
+        letter-spacing: -2%;
+        font-weight: 700;
+        color: colors.$mainTextColor;
+      }
+
+      &Information {
+        font-size: 18px;
+        font-weight: 500;
+        color: colors.$additionalTextColor;
+        width: fit-content;
+      }
+
+      .bckgIcon {
+        position: absolute;
+        z-index: -1;
+        bottom: 18px;
+        right: 83px;
+        content: url("/assets/img/mainSlider/union.svg");
+      }
+    }
+
+    &Portrait {
+      width: 54%;
+      border-radius: 30px;
+    }
+  }
+}
+
+.btn {
+  align-self: start;
+  text-align: center;
+  padding: 16px 26px;
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .bckgIcon {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .detailHeroScreen {
+    background-color: colors.$additionalColor;
+    padding: 60px 0 75px 0;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+
+    }
+
+    .detailInformation {
+      gap: 20px;
+      max-height: 410px;
+
+      &Block {
+        max-height: 450px;
+        padding: 60px 40px 60px 40px;
+        background-color: colors.$whiteColor;
+        border-radius: 30px;
+        width: 100%;
+        position: relative;
+        z-index: 0;
+        row-gap: 22px;
+
+        &Name {
+          font-size: 48px;
+          line-height: 57.6px;
+          letter-spacing: -2%;
+          font-weight: 700;
+          color: colors.$mainTextColor;
+        }
+
+        .bckgIcon {
+          content: none;
+        }
+      }
+
+      &Portrait {
+        width: 60%;
+
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .detailHeroScreen {
+    background-color: colors.$additionalColor;
+    padding: 50px 0 55px 0;
+
+    .detailInformation {
+      gap: 20px;
+
+      &Block {
+        max-height: 410px;
+        background-color: colors.$whiteColor;
+        border-radius: 30px;
+        padding: 50px 40px 50px 40px;
+        width: 100%;
+        position: relative;
+        z-index: 0;
+        row-gap: 20px;
+
+        &Name {
+          font-size: 32px;
+          line-height: 40px;
+          color: colors.$mainTextColor;
+        }
+
+
+        &Information {
+          font-size: 16px;
+        }
+
+        .appointment {
+          padding-top: 20px;
+          gap: 13px;
+          max-width: 325px;
+
+          .appointmentText {
+            font-size: 14px;
+            font-weight: 500;
+            color: colors.$mainColor;
+          }
+        }
+
+        .bckgIcon {
+          content: none;
+        }
+      }
+
+      &Portrait {
+        width: 40%;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .detailHeroScreen {
+    background-color: colors.$additionalColor;
+    padding: 40px 0 40px 0;
+
+    .detailInformation {
+      gap: 20px;
+      align-items: center;
+
+      &Block {
+        background-color: colors.$whiteColor;
+        border-radius: 30px;
+        padding: 30px 20px 30px 20px;
+        row-gap: 16px;
+
+        &Name {
+          font-size: 24px;
+          line-height: 35px;
+          font-weight: 700;
+          color: colors.$mainTextColor;
+        }
+
+        &Information {
+          font-size: 16px;
+        }
+
+        .bckgIcon {
+          content: none;
+        }
+      }
+
+      &Portrait {
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+  }
+  .btn {
+    align-self: auto;
+  }
+}

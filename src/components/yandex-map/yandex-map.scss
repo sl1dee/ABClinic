@@ -1,0 +1,106 @@
+@use '@assets/styles/vars/colors';
+
+.contactsBlock {
+  padding: 75px 0 150px;
+  background-color: colors.$additionalColor;
+
+  &MapWrap {
+    position: relative;
+    z-index: 0;
+
+    &Map {
+      width: 100%;
+      min-height: 650px;
+      border-radius: 30px;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    &Info {
+      row-gap: 8px;
+      padding: 40px;
+      border-radius: 30px;
+      overflow: hidden;
+      background-color: colors.$whiteColor;
+      position: absolute;
+      top: 40px;
+      left: 40px;
+
+      &Header {
+        color: colors.$mainTextColor;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 140%;
+        letter-spacing: -0.6px;
+      }
+
+      &Contact {
+        color: colors.$mainTextColor;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 150%;
+      }
+
+      &Time {
+        color: colors.$mainColor;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 150%;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .contactsBlock {
+    padding: 55px 0 110px;
+
+    &Map {
+      min-height: 440px;
+    }
+
+    &Info {
+      &Header {
+        font-size: 28px;
+        letter-spacing: -0.56px;
+      }
+    }
+  }
+
+}
+@media (max-width: 768px) {
+  .contactsBlock {
+    padding: 40px 0 80px;
+
+    &Map {
+      min-height: 440px;
+      border-radius: 20px;
+      max-height: 550px;
+    }
+
+    &Info {
+      row-gap: 8px;
+      padding: 20px;
+      border-radius: 20px;
+      top: unset;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: 55px;
+      max-width: 260px;
+      width: 100%;
+
+      &Header {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+      }
+
+      &Contact {
+        font-size: 14px;
+      }
+
+      &Time {
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,350 @@
+@use '@assets/styles/vars/colors';
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+}
+
+.ask {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+  overflow: hidden;
+
+  &BlockClose {
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+
+    &::before {
+      content: url('@media/makeRecord/closeModal.svg');
+    }
+
+  }
+
+
+  //.askBlock {
+  //  opacity: 1;
+  //  transform: translate(0, 0);
+  //}
+
+  &Overlay {
+    position: absolute;
+    cursor: default;
+    z-index: -1;
+    background-color: rgba(53, 53, 53, 0.60);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  &Block {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 547px;
+    position: relative;
+    min-height: 680px;
+    width: calc(100% - 40px);
+    padding: 50px;
+    background-color: colors.$whiteColor;
+    border-radius: 30px;
+    column-gap: 55px;
+
+    animation: open .3s ease;
+
+    &Closed {
+      animation: close .3s ease;
+    }
+
+    &Text {
+      position: relative;
+      row-gap: 30px;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &Image {
+      background-size: cover;
+      background-position: center;
+      border-radius: 30px;
+      max-width: 340px;
+    }
+
+    .text {
+      row-gap: 20px;
+
+      .request {
+        color: colors.$mainTextColor;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.68px;
+      }
+
+      .request2 {
+        color: colors.$mainColor;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 150%;
+      }
+    }
+
+    form {
+      margin-bottom: 0;
+      row-gap: 20px;
+      width: 100%;
+
+      > div {
+        row-gap: 20px;
+      }
+
+      .askBlockFields {
+        width: 100%;
+        row-gap: 20px;
+
+        input {
+          padding: 14px 15px 14px 30px;
+          background: #FFFFFF;
+          border-radius: 60px;
+          border: 1px solid colors.$mainColor;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          width: 100%;
+          color: colors.$mainColor;
+
+          &::placeholder {
+            color: colors.$mainColor;
+            opacity: .6;
+          }
+        }
+
+        .comment {
+          padding: 15px 16px;
+          background: #FFFFFF;
+          border-radius: 10px;
+          border: 1px solid colors.$mainColor;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          width: 100%;
+          height: 152px;
+          color: colors.$mainColor;
+          word-wrap: break-word;
+
+          &::placeholder {
+            color: colors.$mainColor;
+            opacity: .6;
+            height: 152px;
+
+          }
+        }
+
+        #ask {
+          padding: 12px 13px;
+        }
+
+        > div {
+          width: 100%;
+          position: relative;
+        }
+      }
+
+      .btn {
+        padding: 10px 15px;
+        text-align: center;
+        background-color: colors.$mainColor;
+        color: colors.$whiteColor;
+        border-radius: 82px;
+        font-size: 18px;
+        font-weight: 500;
+        transition: .3s;
+        border: 2px solid colors.$mainColor;
+      }
+
+      .btn:hover {
+        background-color: transparent;
+        border: 2px solid colors.$mainColor;
+        color: colors.$mainColor;
+      }
+
+      p.textCenter {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 15px;
+        color: #999999;
+        margin: 0;
+        text-align: center;
+
+        a {
+          color: #999999;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+//@media (min-width: 992px) and (max-width: 1200px) {
+//  .ask {
+//    &Block {
+//      column-gap: 50px;
+//
+//      &Text {
+//        row-gap: 30px;
+//      }
+//
+//      &Image {
+//        min-width: 340px;
+//      }
+//    }
+//  }
+//}
+//
+//@media (min-width: 768px) and (max-width: 992px) {
+//  .ask {
+//    &Block {
+//      padding: 40px;
+//      column-gap: 50px;
+//      min-height: 474px;
+//
+//      &Text {
+//        row-gap: 30px;
+//      }
+//
+//      &Image {
+//        border-radius: 30px;
+//        max-width: 280px;
+//        min-width: 275px;
+//      }
+//
+//      .text {
+//        row-gap: 10px;
+//
+//        .request {
+//          font-size: 32px;
+//          letter-spacing: -0.56px;
+//        }
+//
+//        .request2 {
+//          font-size: 18px;
+//        }
+//      }
+//
+//      form {
+//        row-gap: 30px;
+//
+//        > div {
+//          row-gap: 20px;
+//        }
+//
+//        .askBlockFields {
+//          row-gap: 20px;
+//        }
+//
+//        .btn {
+//          padding: 10px 15px;
+//
+//        }
+//      }
+//    }
+//  }
+//}
+
+@media (max-width: 767px) {
+  .ask {
+    &Block {
+      padding: 30px 20px;
+      max-width: 350px;
+      min-height: 426px;
+
+      &Text {
+        row-gap: 16px;
+      }
+
+      .text {
+        row-gap: 8px;
+
+        .request {
+          font-size: 22px;
+          letter-spacing: -0.4px;
+        }
+
+        .request2 {
+          font-size: 16px;
+        }
+      }
+
+      form {
+        row-gap: 8px;
+
+        > div {
+          row-gap: 8px;
+        }
+
+        .askBlockFields {
+          row-gap: 8px;
+
+          .comment {
+            padding: 12px 16px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            border: 1px solid colors.$mainColor;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            width: 100%;
+            color: colors.$mainColor;
+
+            &::placeholder {
+              color: colors.$mainColor;
+              opacity: .6;
+            }
+          }
+        }
+
+        .btn {
+          padding: 10px 13px;
+        }
+
+        p.textCenter {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px;
+          color: #999999;
+          margin: 0;
+          text-align: center;
+
+          a {
+            color: #999999;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

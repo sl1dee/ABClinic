@@ -1,0 +1,30 @@
+@use '../vars/colors';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  user-select: none;
+}
+
+body {
+  overflow-x: hidden;
+  color: colors.$additionalTextColor;
+  background-color: colors.$mainTextColor;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bg-abclinic {
+  background-color: colors.$additionalColor;
+}

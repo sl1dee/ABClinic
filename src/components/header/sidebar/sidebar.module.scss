@@ -1,0 +1,198 @@
+@use '@assets/styles/vars/colors';
+
+@keyframes open {
+  0% {
+    //opacity: 0;
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+
+  animation: open .3s ease;
+
+  &Bckg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: -500px;
+    bottom: 0;
+    z-index: -1;
+    background-color: #00000070;
+    cursor: pointer;
+  }
+
+  .closer {
+    position: absolute;
+    top: 30px;
+    right: 37px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1;
+
+    &::after, &::before {
+      position: absolute;
+      content: '';
+      background-color: colors.$mainColor;
+      width: 22px;
+      height: 3px;
+      border-radius: 20px;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &Content {
+    background-color: colors.$whiteColor;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 340px;
+    padding: 20px 40px 20px 20px;
+    row-gap: 20px;
+    border-radius: 30px 0 0 30px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    animation: open .3s ease;
+
+    &Closed {
+      animation: close .3s ease forwards;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      display: none;
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-button {
+      width: 0;
+      height: 0;
+      display: none;
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 0;
+      display: none;
+      background: transparent;
+    }
+
+    .menu {
+      row-gap: 20px;
+
+      &Logo {
+        height: 45px;
+      }
+
+      &Links {
+        row-gap: 10px;
+
+        &_header {
+          color: #131313;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 120%;
+          letter-spacing: -0.4px;
+        }
+
+        &_link {
+          color: colors.$mainTextColor;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 110%;
+        }
+      }
+    }
+
+    .contacts {
+      row-gap: 16px;
+
+      &Info {
+        row-gap: 8px;
+
+        &_link {
+          column-gap: 12px;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+
+          p {
+            color: colors.$mainTextColor;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 150%;
+          }
+        }
+
+        &_time {
+          p {
+            color: colors.$mainColor;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 150%;
+          }
+        }
+      }
+
+      .btn {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    .closer {
+      right: 27px;
+    }
+
+    &Content {
+      max-width: 320px;
+      padding: 20px;
+      row-gap: 16px;
+
+      .menu {
+        row-gap: 16px;
+      }
+    }
+  }
+}

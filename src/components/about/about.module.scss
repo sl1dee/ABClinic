@@ -1,0 +1,122 @@
+@use '@assets/styles/vars/colors';
+
+.slider{
+  overflow: visible;
+  width: 100%;
+}
+
+.about {
+  padding: 75px 0;
+  background-color: colors.$additionalColor;
+  overflow: hidden;
+
+  > div {
+    row-gap: 50px;
+  }
+
+  .swiper {
+    overflow: visible;
+    width: 100%;
+  }
+
+  &HeaderWrap {
+    column-gap: 40px;
+  }
+
+  &Header {
+    color: colors.$mainTextColor;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.76px;
+  }
+
+  &Description {
+    color: #484D72;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    max-width: 710px;
+    width: 80%;
+  }
+
+  &Slide {
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    width: auto !important;
+
+    img {
+      max-height: 360px;
+      max-width: 600px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .about {
+    padding: 55px 0;
+
+    > div {
+      row-gap: 40px;
+    }
+    &Header {
+      font-size: 28px;
+      letter-spacing: -0.56px;
+    }
+
+    &HeaderWrap {
+      row-gap: 20px;
+    }
+
+    &Description {
+      max-width: unset;
+      width: 100%;
+    }
+
+    &Slide {
+      border-radius: 40px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 40px 0;
+
+    > div {
+      row-gap: 30px;
+    }
+    &Header {
+      font-size: 20px;
+      letter-spacing: -0.4px;
+    }
+
+    &HeaderWrap {
+      row-gap: 10px;
+    }
+
+    &Description {
+      max-width: unset;
+      width: 100%;
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    &Slide {
+      border-radius: 20px;
+
+      img {
+        max-width: 100%;
+        max-height: 170px;
+      }
+    }
+  }
+}

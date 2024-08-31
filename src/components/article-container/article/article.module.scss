@@ -1,0 +1,439 @@
+@use '@assets/styles/vars/colors';
+
+.article {
+  //padding: 0 103px 150px 103px;
+  margin: 0;
+  background-color: colors.$additionalColor;
+
+  .articleContent {
+    padding: 70px 143px 110px 143px;
+    gap: 40px;
+
+    .articlesRoute {
+      font-size: 18px;
+      font-weight: 500;
+      opacity: 0.5;
+      color: colors.$mainColor;
+    }
+
+    .articleTitle {
+      font-size: 38px;
+      font-weight: 700;
+      color: colors.$mainTextColor;
+    }
+
+    .toothbrushes {
+      border-radius: 30px;
+    }
+
+    .advices {
+      background-color: colors.$whiteColor;
+      padding: 60px 80px 60px 80px;
+      border-radius: 30px;
+      gap: 30px;
+
+      .adviceBlock {
+        gap: 10px;
+      }
+
+      .adviceTitle {
+        font-size: 24px;
+        font-weight: 600;
+        color: colors.$mainColor;
+
+      }
+
+      .adviceText {
+        font-size: 18px;
+        font-weight: 500;
+        color: colors.$mainColor;
+        opacity: 0.5;
+      }
+
+    }
+    .doctor {
+      grid-template-columns: 1fr 1fr;
+      background-color: colors.$mainColor;
+      padding: 40px 50px 40px 50px;
+      border-radius: 20px;
+      gap: 60px;
+
+      .doctorPortrait {
+        max-width: 94px;
+        max-height: 94px;
+        border-radius: 50px;
+      }
+
+      .doctorProfile {
+        width: 65%;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .doctorInformation {
+      }
+
+      .doctorProfession {
+        font-size: 16px;
+        font-weight: 600;
+        color: colors.$whiteColor;
+      }
+
+      .doctorName{
+        font-size: 18px;
+        font-weight: 600;
+        color: colors.$whiteColor;
+      }
+
+    }
+
+    .questions {
+      align-items: center;
+
+      .questionList {
+        font-size: 18px;
+        font-weight: 500;
+        color: colors.$whiteColor;
+      }
+
+      color: colors.$mainColor;
+    }
+
+  }
+  .signUpContainer {
+    background-color: colors.$additionalColor;
+    padding: 0 143px 150px 143px;
+
+    .signUpBlock {
+      gap: 18px;
+
+      .signUpInformation {
+        padding: 40px;
+        border-radius: 30px;
+        background-color: colors.$whiteColor;
+        width: 100%;
+
+        .signUpTitle {
+          font-size: 34px;
+          font-weight: 700;
+          color: colors.$mainTextColor;
+          padding-bottom: 20px;
+        }
+
+        .signUpText {
+          font-size: 16px;
+          font-weight: 500;
+          color: colors.$mainColor;
+          padding-bottom: 30px;
+        }
+
+        .askBlockFields {
+          row-gap: 20px;
+
+          input {
+            padding: 14px 15px 14px 30px;
+            background: colors.$whiteColor;
+            border-radius: 60px;
+            border: 1px solid colors.$mainColor;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            width: 100%;
+            color: colors.$mainColor;
+
+            &::placeholder {
+              color: colors.$mainColor;
+              opacity: .6;
+            }
+          }
+
+          #ask {
+            padding: 12px 13px;
+          }
+
+          > div {
+            width: 100%;
+            position: relative;
+          }
+
+          .btn {
+            padding: 10px 15px;
+            text-align: center;
+            line-height: 23px;
+          }
+        }
+      }
+
+      .signUpImage {
+        content: url("/media/articles/tools1920.jpg");
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .article {
+
+    .articleContent {
+      padding: 60px 0px 150px 0px;
+      gap: 40px;
+
+      .advices {
+        padding: 60px;
+      }
+    }
+    .signUpContainer {
+      padding: 0 0 150px 0;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .article {
+
+    .articleContent {
+      padding: 50px 0px 1px 0px;
+      gap: 40px;
+
+      .articlesRoute {
+        font-size: 16px;
+      }
+
+      .articleTitle {
+        font-size: 28px;
+      }
+      .advices {
+        padding: 50px 40px 50px 40px;
+        gap: 30px;
+        .adviceBlock {
+          gap: 10px;
+        }
+
+        .adviceTitle {
+          font-size: 22px;
+        }
+
+        .adviceText {
+          font-size: 16px;
+        }
+      }
+
+      .doctor {
+        padding: 40px 30px 40px 30px;
+        gap: 40px;
+
+        .doctorPortrait {
+          max-width: 64px;
+          max-height: 64px;
+        }
+
+        .doctorProfile {
+          width: 65%;
+          gap: 8px;
+        }
+
+        .doctorInformation {
+        }
+
+        .doctorProfession {
+          font-size: 14px;
+        }
+
+        .doctorName {
+          font-size: 16px;
+        }
+      }
+
+      .questions {
+
+        .questionList {
+          font-size: 16px;
+        }
+      }
+    }
+    .signUpContainer {
+      padding: 70px 0 150px 0;
+
+      .signUpBlock {
+        gap: 18px;
+
+        .signUpInformation {
+          padding: 40px;
+          border-radius: 30px;
+
+          .signUpTitle {
+            font-size: 24px;
+            padding-bottom: 20px;
+          }
+
+          .signUpText {
+            font-size: 14px;
+            padding-bottom: 30px;
+          }
+
+          .askBlockFields {
+            row-gap: 20px;
+
+            input {
+              padding: 14px 15px 14px 30px;
+            }
+
+            #ask {
+              padding: 12px 13px;
+            }
+
+            > div {
+              width: 100%;
+              position: relative;
+            }
+
+            .btn {
+              padding: 10px 15px;
+              text-align: center;
+              line-height: 23px;
+            }
+          }
+        }
+
+        .signUpImage {
+          //content: url("/media/articles/tools768.svg");
+          border-radius: 30px;
+          width: 45%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .article {
+
+    .articleContent {
+      padding: 40px 0px 0px 0px;
+      gap: 20px;
+
+      .articlesRoute {
+        font-size: 14px;
+      }
+
+      .articleTitle {
+        font-size: 20px;
+      }
+
+      .toothbrushes {
+        border-radius: 20px;
+      }
+
+      .advices {
+        border-radius: 20px;
+        padding: 30px 20px 30px 20px;
+        gap: 16px;
+
+        .adviceBlock {
+          gap: 10px;
+        }
+
+        .adviceTitle {
+          font-size: 16px;
+
+        }
+
+        .adviceText {
+          font-size: 14px;
+        }
+      }
+
+      .doctor {
+        padding: 20px;
+        gap: 26px;
+
+        .doctorPortrait {
+          max-width: 64px;
+          max-height: 64px;
+        }
+
+        .doctorProfile {
+          width: 100%;
+          gap: 8px;
+        }
+
+        .doctorInformation {
+        }
+
+        .doctorProfession {
+          font-size: 12px;
+          font-weight: 600;
+        }
+
+        .doctorName {
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+
+      .questions {
+
+        .questionList {
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+    .signUpContainer {
+      padding: 40px 0 110px 0;
+
+      .signUpBlock {
+        gap: 18px;
+
+        .signUpInformation {
+          padding: 30px 20px 30px 20px;
+          border-radius: 20px;
+
+          .signUpTitle {
+            font-size: 18px;
+            padding-bottom: 20px;
+          }
+
+          .signUpText {
+            font-size: 14px;
+            padding-bottom: 30px;
+          }
+
+          .askBlockFields {
+            row-gap: 20px;
+
+            input {
+              padding: 12px 12px 12px 30px;
+
+              &::placeholder {
+                opacity: .6;
+              }
+            }
+
+            #ask {
+              padding: 12px 13px;
+            }
+
+            > div {
+              width: 100%;
+              position: relative;
+            }
+
+            .btn {
+              padding: 10px 15px;
+              text-align: center;
+              line-height: 23px;
+            }
+          }
+        }
+
+        .signUpImage {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+

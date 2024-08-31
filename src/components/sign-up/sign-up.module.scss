@@ -1,0 +1,364 @@
+@use '@assets/styles/vars/colors';
+
+.signUpContainer {
+  background-color: colors.$additionalColor;
+  padding: 75px 0;
+
+  .signUpBlock {
+    gap: 18px;
+
+    .signUpInformation {
+      padding: 40px;
+      border-radius: 30px;
+      background-color: colors.$whiteColor;
+      width: 100%;
+      position: relative;
+      z-index: 0;
+
+      .text {
+        row-gap: 20px;
+        height: 100%;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+
+        .request {
+          color: colors.$mainTextColor;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 700;
+          letter-spacing: -0.68px;
+        }
+
+        .request2 {
+          color: colors.$mainColor;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 150%;
+        }
+      }
+
+      .signUpText {
+        font-size: 18px;
+        font-weight: 500;
+        color: colors.$mainColor;
+        padding-bottom: 10px;
+      }
+
+      .signUpTitle {
+        font-size: 34px;
+        font-weight: 700;
+        color: colors.$mainTextColor;
+        padding-bottom: 30px;
+      }
+
+      .askBlockFields {
+        max-width: 455px;
+        row-gap: 20px;
+
+        input {
+          padding: 14px 15px 14px 30px;
+          border-radius: 60px;
+          border: 1px solid colors.$mainColor;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          width: 100%;
+          color: colors.$mainColor;
+
+          &::placeholder {
+            color: colors.$mainColor;
+            opacity: .6;
+          }
+        }
+
+        .btn {
+          padding: 10px 15px;
+          text-align: center;
+          background-color: colors.$mainColor;
+          color: colors.$whiteColor;
+          border-radius: 82px;
+          font-size: 18px;
+          font-weight: 500;
+          transition: .3s;
+        }
+
+        .btn:hover {
+          background-color: transparent;
+          border: 2px solid colors.$mainColor;
+          color: colors.$mainColor;
+        }
+
+        #ask {
+          padding: 12px 13px;
+        }
+
+        > div {
+          width: 100%;
+          position: relative;
+        }
+
+        //.btn {
+        //  padding: 10px 15px;
+        //  text-align: center;
+        //  line-height: 23px;
+        //}
+      }
+
+      .bckgIcon {
+        position: absolute;
+        z-index: -1;
+        bottom: 18px;
+        right: 83px;
+        content: url("/media/signUp/union.svg");
+      }
+    }
+
+    .signUpImage {
+      content: url("/media/signUp/tools1920.svg");
+      border-radius: 30px;
+    }
+  }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .bckgIcon {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .signUpContainer {
+    padding: 75px 0;
+
+    .signUpBlock {
+
+      .signUpInformation {
+
+        .askBlockFields {
+          max-width: 455px;
+          row-gap: 20px;
+
+          input {
+            padding: 14px 15px 14px 30px;
+            background: colors.$whiteColor;
+            border-radius: 60px;
+            border: 1px solid colors.$mainColor;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            width: 100%;
+            color: colors.$mainColor;
+
+            &::placeholder {
+              color: colors.$mainColor;
+              opacity: .6;
+            }
+          }
+
+          #ask {
+            padding: 12px 13px;
+          }
+
+          > div {
+            width: 100%;
+            position: relative;
+          }
+
+          .btn {
+            padding: 10px 15px;
+            text-align: center;
+            line-height: 23px;
+          }
+        }
+
+        .bckgIcon {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .signUpContainer {
+    padding: 55px 0;
+
+    .signUpBlock {
+      gap: 18px;
+
+      .signUpInformation {
+        padding: 40px;
+        border-radius: 30px;
+        background-color: colors.$whiteColor;
+        width: 100%;
+        position: relative;
+        z-index: 0;
+
+        .text {
+          row-gap: 10px;
+
+          .request {
+            font-size: 32px;
+          }
+
+          .request2 {
+            font-size: 18px;
+          }
+        }
+
+        .signUpText {
+          font-size: 16px;
+          font-weight: 500;
+          color: colors.$mainColor;
+          padding-bottom: 10px;
+        }
+
+        .signUpTitle {
+          font-size: 28px;
+          font-weight: 700;
+          color: colors.$mainTextColor;
+          padding-bottom: 30px;
+        }
+
+        .askBlockFields {
+          max-width: 455px;
+          row-gap: 20px;
+
+          input {
+            padding: 14px 15px 14px 30px;
+            background: colors.$whiteColor;
+            border-radius: 60px;
+            border: 1px solid colors.$mainColor;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            width: 100%;
+            color: colors.$mainColor;
+
+            &::placeholder {
+              color: colors.$mainColor;
+              opacity: .6;
+            }
+          }
+
+          #ask {
+            padding: 12px 13px;
+          }
+
+          > div {
+            width: 100%;
+            position: relative;
+          }
+
+          .btn {
+            padding: 10px 15px;
+            text-align: center;
+            line-height: 20px;
+          }
+        }
+
+        .bckgIcon {
+          content: none;
+        }
+      }
+
+      .signUpImage {
+        content: url("/media/signUp/tools768.svg");
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .signUpContainer {
+    padding: 40px 0;
+
+    .signUpBlock {
+      gap: 0px;
+
+      .signUpInformation {
+        padding: 30px 20px 30px 20px;
+        border-radius: 30px;
+        background-color: colors.$whiteColor;
+        width: 100%;
+        position: relative;
+        z-index: 0;
+
+        .text {
+          row-gap: 8px;
+
+          .request {
+            font-size: 22px;
+          }
+
+          .request2 {
+            font-size: 16px;
+          }
+        }
+
+        .signUpText {
+          font-size: 14px;
+          font-weight: 500;
+          color: colors.$mainColor;
+          padding-bottom: 4px;
+        }
+
+        .signUpTitle {
+          font-size: 20px;
+          font-weight: 700;
+          color: colors.$mainTextColor;
+          padding-bottom: 16px;
+        }
+
+        .askBlockFields {
+          max-width: 666px;
+          row-gap: 20px;
+
+          input {
+            padding: 12px 30px 12px 30px;
+            background: colors.$whiteColor;
+            border-radius: 60px;
+            border: 1px solid colors.$mainColor;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 17px;
+            width: 100%;
+            color: colors.$mainColor;
+
+            &::placeholder {
+              color: colors.$mainColor;
+              opacity: .6;
+            }
+          }
+
+          #ask {
+            padding: 12px 13px;
+          }
+
+          > div {
+            width: 100%;
+            position: relative;
+          }
+
+          .btn {
+            padding: 10px 15px;
+            text-align: center;
+            line-height: 17px;
+          }
+        }
+
+        .bckgIcon {
+          content: none;
+        }
+      }
+
+      .signUpImage {
+        content: none;
+        border-radius: 30px;
+      }
+    }
+  }
+}

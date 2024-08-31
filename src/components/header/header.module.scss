@@ -1,0 +1,143 @@
+@use '@assets/styles/vars/colors';
+
+.header {
+  background-color: colors.$additionalColor;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 0;
+  z-index: 100;
+
+  &Logo {
+    img {
+      height: 51px;
+    }
+  }
+
+  &Links {
+    column-gap: 25px;
+
+    .link {
+      column-gap: 5px;
+      position: relative;
+      cursor: default;
+      cursor: pointer;
+
+      span {
+        color: colors.$additionalTextColor;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 110%;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      &Menu {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        opacity: 0;
+        min-width: 352px;
+        padding-top: 10px;
+        transform: translate(-50%, 0);
+        transition: top .3s ease, transform .3s ease;
+        pointer-events: none;
+        z-index: 1;
+
+        .content {
+          row-gap: 20px;
+          border-radius: 30px;
+          background-color: colors.$whiteColor;
+          padding: 50px 40px;
+          box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+
+          &BigLink {
+            span {
+              color: colors.$mainTextColor;
+              font-size: 32px;
+              font-weight: 700;
+              line-height: 120%;
+              letter-spacing: -0.64px;
+            }
+          }
+
+          &AdditionalLinks {
+            row-gap: 20px;
+
+            > div {
+              span {
+                color: colors.$mainTextColor;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 110%;
+              }
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .linkMenu {
+          top: 100%;
+          opacity: 1;
+          transform: translate(-50%, 0);
+          pointer-events: auto;
+        }
+      }
+    }
+  }
+
+  &Additional {
+    column-gap: 15px;
+
+    .contacts {
+      column-gap: 20px;
+
+      &Phone {
+        span {
+          color: colors.$mainTextColor;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 150%;
+        }
+      }
+    }
+
+    //.sidenavTrigger {
+    //  display: block;
+    //  position: relative;
+    //  width: 34px;
+    //  height: 21px;
+    //  cursor: pointer;
+    //
+    //  div, &::before, &::after {
+    //    width: 34px;
+    //    height: 3px;
+    //    background: colors.$mainColor;
+    //    content: "";
+    //    border-radius: 10px;
+    //  }
+    //}
+  }
+}
+
+.scrolled {
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+  transition: ease .3s;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 0;
+
+    &Logo {
+      img {
+        height: 45px;
+      }
+    }
+  }
+}

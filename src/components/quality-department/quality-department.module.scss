@@ -1,0 +1,312 @@
+@use '@assets/styles/vars/colors';
+
+.quality {
+  padding: 60px 0 204px 0;
+
+  &Wrapper {
+    row-gap: 20px;
+
+    &Block1 {
+      gap: 20px;
+
+      img {
+        max-width: 495px;
+        height: 424px;
+        border-radius: 30px;
+        object-fit: cover;
+      }
+
+      &Content {
+        max-width: 701px;
+        max-height: 424px;
+        border-radius: 30px;
+        padding: 60px;
+        row-gap: 20px;
+
+        &Title {
+          font-size: 38px;
+          font-weight: 700;
+          line-height: 45.6px;
+          color: colors.$additionalTextColor;
+          letter-spacing: -1px;
+        }
+
+        &Description {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 27px;
+          color: colors.$additionalTextColor;
+        }
+
+        .btn {
+          align-self: start;
+          padding: 16px 26px;
+        }
+      }
+    }
+
+    &Block2 {
+
+      &Content {
+        background-color: colors.$mainColor;
+        padding: 86px 103px;
+        border-radius: 30px;
+        position: relative;
+        width: 1216px;
+
+        &Left {
+          max-width: 540px;
+          row-gap: 20px;
+
+          .question {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 27px;
+            color: colors.$whiteColor;
+          }
+
+          .description {
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 49.4px;
+            color: colors.$whiteColor;
+            letter-spacing: -1px;
+          }
+
+          img {
+            max-width: 217px;
+            max-height: 37px;
+          }
+        }
+
+        &Right {
+          row-gap: 25px;
+
+          .card {
+            cursor: pointer;
+            background-color: colors.$whiteColor;
+            border-radius: 20px;
+            width: 310px;
+            height: 109px;
+
+            img {
+              max-width: 266px;
+              max-height: 71px;
+            }
+          }
+        }
+
+        .absoluteStars {
+          max-width: 301px;
+          max-height: 179px;
+          position: absolute;
+          bottom: -61px;
+          left: 537px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .quality {
+    padding: 60px 0 218px 0;
+
+    &Wrapper {
+
+      &Block1 {
+
+        img {
+          max-width: 362px;
+          height: 451px;
+          border-radius: 30px;
+        }
+
+        &Content {
+          max-width: 578px;
+          max-height: 451px;
+        }
+      }
+
+      &Block2 {
+
+        &Content {
+          padding: 60px 50px 111px;
+          width: 959px;
+
+          .absoluteStars {
+            bottom: -67px;
+            left: 358px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .quality {
+    padding: 60px 0 204px 0;
+
+    &Wrapper {
+      row-gap: 20px;
+
+      &Block1 {
+        gap: 10px;
+
+        img {
+          max-width: 300px;
+          height: 412px;
+        }
+
+        &Content {
+          max-width: 418px;
+          max-height: 412px;
+          padding: 40px;
+
+          &Title {
+            font-size: 32px;
+            line-height: 41.6px;
+          }
+
+          &Description {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+
+      &Block2 {
+
+        &Content {
+          padding: 40px 40px 80px 40px;
+          row-gap: 20px;
+          width: 728px;
+
+          &Left {
+            max-width: 648px;
+
+            .description {
+              font-size: 32px;
+              line-height: 41.6px;
+            }
+          }
+
+          &Right {
+            gap: 20px;
+          }
+
+          .absoluteStars {
+            max-width: 264px;
+            max-height: 157px;
+            bottom: -97px;
+            left: 256px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .quality {
+    padding: 28px 0 60px 0;
+
+    &Wrapper {
+      row-gap: 81px;
+
+      &Block1 {
+        row-gap: 10px;
+
+        img {
+          width: 280px;
+          height: 160px;
+          border-radius: 20px;
+        }
+
+        &Content {
+          max-width: 280px;
+          max-height: 330px;
+          border-radius: 20px;
+          padding: 30px 20px 30px 20px;
+          row-gap: 12px;
+
+          &Title {
+            font-size: 24px;
+            line-height: 28.8px;
+            letter-spacing: -1.5px;
+          }
+
+          &Description {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21px;
+          }
+
+          .btn {
+            padding: 12px 26px 12px 26px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 16.8px;
+            letter-spacing: -0.5px;
+          }
+        }
+      }
+
+      &Block2 {
+
+        &Content {
+          padding: 60px 20px 30px 20px;
+          row-gap: 14px;
+          width: 280px;
+
+          &Left {
+            max-width: 240px;
+            row-gap: 14px;
+
+            .question {
+              font-size: 14px;
+              line-height: 21px;
+            }
+
+            .description {
+              font-size: 20px;
+              font-weigh: 700;
+              line-height: 26px;
+              letter-spacing: -1px;
+            }
+
+            img {
+              max-width: 132px;
+              max-height: 20px;
+            }
+          }
+
+          &Right {
+            row-gap: 14px;
+
+            .card {
+              border-radius: 10px;
+              width: 244px;
+              height: 86px;
+
+              img {
+                max-width: 209.37px;
+                max-height: 56.02px;
+              }
+            }
+          }
+
+          .absoluteStars {
+            max-width: 177px;
+            max-height: 105px;
+            bottom: 437px;
+            left: 70px;
+          }
+        }
+      }
+    }
+  }
+}
+
+

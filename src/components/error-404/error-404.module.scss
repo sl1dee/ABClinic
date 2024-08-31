@@ -1,0 +1,159 @@
+
+.error {
+  padding: 140px 0 150px 0;
+
+  &Content {
+
+    .text {
+      row-gap: 30px;
+
+      .title {
+        margin-bottom: 0;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 57.6px;
+      }
+
+      .description {
+
+        p {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 27px;
+          max-width: 60%;
+        }
+      }
+
+      .link {
+        padding: 16px 26px 16px 26px;
+        border-radius: 100px;
+        background-color: #484D72;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.2px;
+        color: #FFFFFF;
+        align-self: start;
+        border: 1px solid #484D72;
+        transition: background-color .3s ease, color .3s ease;
+
+        &:hover {
+          color: #484D72;
+          background-color: transparent;
+        }
+      }
+    }
+
+    .images {
+      gap: 25px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .error {
+    padding: 68px 0 100px 0;
+
+    &Content {
+      gap: 40px;
+
+      .text {
+        row-gap: 20px;
+
+        .title {
+          font-size: 33px;
+          line-height: 39.6px;
+        }
+
+        .description {
+
+          p {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 27px;
+            max-width: 100%;
+          }
+        }
+
+        .link {
+          padding: 16px 26px 16px 26px;
+          border-radius: 100px;
+          background-color: #484D72;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 19.2px;
+          color: #FFFFFF;
+          align-self: start;
+        }
+      }
+
+      .images {
+        gap: 19px;
+
+        .four {
+          max-width: 121px;
+          max-height: 171px;
+        }
+
+        .teeth {
+          max-width: 173px;
+          max-height: 217.4px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .error {
+    padding: 60px 0 70px 0;
+
+    &Content {
+      gap: 30px;
+
+      .text {
+        row-gap: 20px;
+
+        .title {
+          font-size: 24px;
+          line-height: 28.8px;
+        }
+
+        .description {
+
+          p {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21px;
+            max-width: 100%;
+            text-align: center;
+          }
+        }
+
+        .link {
+          padding: 12px 15px 12px 15px;
+          border-radius: 100px;
+          background-color: #484D72;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 21px;
+          color: #FFFFFF;
+          align-self: start;
+        }
+      }
+
+      .images {
+        gap: 19px;
+
+        .four {
+          max-width: 40.3px;
+          max-height: 57px;
+        }
+
+        .teeth {
+          max-width: 57.7px;
+          max-height: 72.5px;
+        }
+      }
+    }
+  }
+}

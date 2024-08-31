@@ -1,0 +1,137 @@
+@use '@assets/styles/vars/colors';
+
+.filtersWrapper{
+  display: flex;
+  justify-content: space-between;
+
+  .filtersList{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .filtersItem{
+    display: flex;
+  }
+  .item{
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.36px;
+    cursor: pointer;
+    border-radius: 100px;
+    background-color: colors.$whiteColor;
+    color: colors.$mainColor;
+    border: 2px solid colors.$whiteColor;
+    transition: color .3s ease, background-color .3s ease;
+
+    &:hover {
+      color: colors.$whiteColor;
+      background-color: colors.$mainColor;
+    }
+  }
+  .active{
+    color: colors.$whiteColor;
+    background-color: colors.$mainColor;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+
+  .filtersWrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .filtersList {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 10px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+
+  .filtersWrapper{
+    //padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .selectorWrapper{
+      align-self: start;
+    }
+
+
+    .filtersList{
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      gap: 10px;
+      width: 100%;
+
+    }
+    .filtersList::-webkit-scrollbar {
+      background: transparent;
+    }
+
+    .item{
+      white-space: nowrap;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .filtersWrapper{
+    flex-direction: column;
+    gap: 20px;
+    //padding-bottom: 16px;
+
+
+    .selectorWrapper{
+    }
+
+    .selector{
+      font-size: 14px;
+      justify-content: space-between;
+
+
+      &::after{
+        display: flex;
+        align-items: center;
+        content: url("@assets/img/doctors/arrow-bootom-320px.svg");
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .filtersList{
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      gap: 10px;
+      width: 100%;
+
+    }
+    .filtersList::-webkit-scrollbar {
+      background: transparent;
+    }
+
+
+    .filtersItem{
+
+    }
+    .item{
+      font-size: 14px;
+
+      white-space: nowrap;
+    }
+  }
+
+
+}
+
+

@@ -1,0 +1,5 @@
+export { default as TreatmentTypes } from './treatment-types.jsx'
+export { default as OrthopedicsTypes } from './orthopedics-types.jsx'
+export { default as SurgeryTypes } from './surgery-types.jsx'
+export { default as OrthodonticsTypes } from './orthodontics-types.jsx'
+export { default as PeriodonticsTypes } from './periodontics-types.jsx'

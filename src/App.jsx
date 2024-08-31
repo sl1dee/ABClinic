@@ -1,34 +1,40 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Footer from './Bars/Footer/Footer'
-import Header from './Bars/Header/Header'
-import MakeRecord from './components/Modals/MakeRecord/MakeRecord.jsx'
-import DoctorPage from './Pages/Doctors-page/doctor-page.jsx'
-import ArticlePage from './Pages/article-page/ArticlePage.jsx'
-import Main from './Pages/Main/Main'
-import StockPage from './Pages/Stock-page/stock-page.jsx'
+import footer from './Bars/footer/footer'
+import header from './Bars/header/header'
+import MakeRecord from './components/modals/sign-up-modal/sign-up-modal.jsx'
+import DoctorsPage from '@pages/doctors-page/doctors-page.jsx'
+import ArticlePage from './pages/article-page/article-page.jsx'
+import main-page from './pages/main-page/main-page'
+import StockPage from './pages/stock-page/stock-page.jsx'
+import ContactsPage from "@pages/contacts-page/contacts-page.jsx";
+import ChatButton from "@components/chat-button/index.js";
+import QualityModal from "@components/modals/quality-modal/quality-modal.jsx";
 
 export default function App() {
 	return (
 		<>
-			<Header />
+			<header />
 			<main>
 				<Routes>
-					<Route path="/">
-						<Route index element={<Main />} />
-					</Route>
-					<Route path="/stock">
-						<Route index element={<StockPage />} />
-					</Route>
-					<Route path="/article">
-						<Route index element={<ArticlePage />} />
-					</Route>
-					<Route path="/doctors">
-						<Route index element={<DoctorPage />} />
-					</Route>
+					{/*<Route path="/">*/}
+					{/*	<Route index element={<main-page />} />*/}
+					{/*</Route>*/}
+					{/*<Route path="/stock">*/}
+					{/*	<Route index element={<StockPage />} />*/}
+					{/*</Route>*/}
+					{/*<Route path="/article">*/}
+					{/*	<Route index element={<ArticlePage />} />*/}
+					{/*</Route>*/}
+					{/*<Route path="/doctors">*/}
+					{/*	<Route index element={<DoctorsPage />} />*/}
+					{/*</Route>*/}
+					{/*<Route path="/contacts">*/}
+					{/*	<Route index element={<ContactsPage />} />*/}
+					{/*</Route>*/}
 				</Routes>
 			</main>
-			<Footer />
+			<footer />
 			<MakeRecord />
 		</>
 	)

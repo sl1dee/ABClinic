@@ -1,0 +1,40 @@
+@use '@assets/styles/vars/colors';
+
+.contactsWrapper{
+  padding: 70px 0 75px 0;
+  background-color: colors.$additionalColor;
+
+  .title{
+    color: colors.$mainTextColor;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.2px;
+
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .contactsWrapper {
+    padding: 60px 0 75px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .contactsWrapper {
+    padding: 50px 0 55px 0;
+
+    .title {
+      font-size: 36px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .contactsWrapper {
+    padding: 40px 0;
+
+    .title {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,229 @@
+@use '@assets/styles/vars/colors';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  border-radius: 30px;
+  background-color: colors.$mainColor;
+  row-gap: 40px;
+
+  .titleWrapper {
+
+    justify-content: space-between;
+
+    .title {
+      font-size: 32px;
+      font-weight: 700;
+      color: colors.$whiteColor;
+      margin-bottom: 0;
+      width: 36%;
+    }
+    .description {
+      font-size: 16px;
+      font-weight: 500;
+      color: colors.$whiteColor;
+      margin-bottom: 0;
+      width: 64%;
+    }
+  }
+
+  .cardsWrapper {
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .card {
+      padding: 40px;
+      border-radius: 30px;
+      background-color: colors.$whiteColor;
+
+      &Title {
+        font-size: 24px;
+        font-weight: 600;
+        color: colors.$additionalTextColor;
+        margin-bottom: 0;
+        padding-bottom: 12px;
+      }
+
+      &Text {
+        font-size: 18px;
+        font-weight: 500;
+        color: colors.$additionalTextColor;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .wrapper {
+    padding: 40px;
+    border-radius: 30px;
+    background-color: colors.$mainColor;
+
+    .titleWrapper {
+
+      justify-content: space-between;
+
+      .title {
+        font-size: 30px;
+        font-weight: 700;
+        color: colors.$whiteColor;
+        margin-bottom: 0;
+        width: 38%;
+      }
+      .description {
+        font-size: 16px;
+        font-weight: 500;
+        color: colors.$whiteColor;
+        margin-bottom: 0;
+        width: 62%;
+      }
+    }
+
+    .cardsWrapper {
+      gap: 20px;
+
+      .card {
+        padding: 30px;
+        border-radius: 30px;
+        background-color: colors.$whiteColor;
+
+
+        &Title {
+          font-size: 18px;
+          font-weight: 600;
+          color: colors.$additionalTextColor;
+          margin-bottom: 0;
+          padding-bottom: 12px;
+        }
+
+        &Text {
+          font-size: 16px;
+          font-weight: 500;
+          color: colors.$additionalTextColor;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .wrapper {
+    padding: 40px;
+    border-radius: 30px;
+    background-color: colors.$mainColor;
+    row-gap: 30px;
+
+    .titleWrapper {
+
+      justify-content: space-between;
+      gap: 20px;
+
+      .title {
+        font-size: 28px;
+        font-weight: 700;
+        color: colors.$whiteColor;
+        margin-bottom: 0;
+        width: 100%;
+      }
+      .description {
+        font-size: 16px;
+        font-weight: 500;
+        color: colors.$whiteColor;
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+
+    .cardsWrapper {
+      gap: 20px;
+      grid-template-columns: 1fr;
+
+      .card {
+        padding: 30px;
+        border-radius: 30px;
+        width: 100%;
+        background-color: colors.$whiteColor;
+
+        &Title {
+          font-size: 20px;
+          font-weight: 600;
+          color: colors.$additionalTextColor;
+          margin-bottom: 0;
+          padding-bottom: 12px;
+        }
+
+        &Text {
+          font-size: 16px;
+          font-weight: 500;
+          color: colors.$additionalTextColor;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: colors.$mainColor;
+    row-gap: 16px;
+
+
+    .titleWrapper {
+
+      justify-content: space-between;
+      gap: 8px;
+
+      .title {
+        font-size: 20px;
+        font-weight: 700;
+        color: colors.$whiteColor;
+        margin-bottom: 0;
+        width: 100%;
+      }
+      .description {
+        font-size: 14px;
+        font-weight: 500;
+        color: colors.$whiteColor;
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+
+    .cardsWrapper {
+      gap: 16px;
+      grid-template-columns: 1fr;
+
+      .card {
+        padding: 20px;
+        border-radius: 15px;
+        background-color: colors.$whiteColor;
+        width: 100%;
+
+
+        &Title {
+          font-size: 16px;
+          font-weight: 600;
+          color: colors.$additionalTextColor;
+          margin-bottom: 0;
+          padding-bottom: 8px;
+        }
+
+        &Text {
+          font-size: 14px;
+          font-weight: 500;
+          color: colors.$additionalTextColor;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
